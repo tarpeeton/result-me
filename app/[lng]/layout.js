@@ -38,7 +38,7 @@ export default function RootLayout({
                 <LanguageProvider lng={lng}>
                 <Header lng={lng} />
                     <main className="w-full bg-white relative">{children}</main>
-                    <Footer lng={lng}/>
+                    {/* <Footer lng={lng}/> */}
                 </LanguageProvider>
             </body>
         </html>

@@ -33,6 +33,7 @@ module.exports = {
       '3xl': '1440px',
       // => @media (min-width: 1440px) { ... }
       '4xl': '1600px',
+      '6xl': '1920px',
       '5xl': '2000px',
     },
     extend: {
@@ -46,9 +47,12 @@ module.exports = {
         titleDark: '#010101',
         titleDark50: '#7B7B7B',
         titleDark40: '#A6A6A6',
+        titleDark20: '#CCCCCC',
         bgDark: '#F8F8F8',
         bgCardDark: '#F4F3FF',
-        footerBgDark: '#1C1C1C'
+        footerBgDark: '#1C1C1C',
+        selectBg: '#F4F4F4',
+        seletcText: '#454545'
       },
     },
   },
