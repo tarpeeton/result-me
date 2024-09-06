@@ -48,7 +48,7 @@ const Result = () => {
 						<p className='text-[28px]  mdl:text-[40px]  4xl:text-[50px] text-center text-black font-bold'>2 890+</p>
 						<p className='text-[14px] mdl:text-[18px]   4xl:text-[20px] text-titleDark50'>{t('card_two')}</p>
 					</div>
-					<div className='mt-[97px] sm:w-[100%] md:w-[60%] mdx:w-[70%] mdl:w-[65%]  4xl:w-[50%]'>
+					<div className='mt-[97px] sm:w-[100%] md:w-[80%] mdx:w-[70%] mdl:w-[65%]  4xl:w-[50%]'>
 						<div className='relative w-[99px] h-[99px] flex flex-row 4xl:w-[126px] 4xl:h-[136px]'>
 							<Image
 								width={100}
@@ -105,7 +105,7 @@ const Result = () => {
 						<p className='text-[28px] 2xl:text-[40px]  mdl:text-[40px] 4xl:text-[50px] text-center text-black font-bold'>1.1$</p>
 						<p className='text-[14px] mdl:text-[18px] 4xl:text-[20px] text-titleDark50'>{t('card_three')}</p>
 					</div>
-					<div className='mt-[42px]   3xl:w-[45%]'>
+					<div className='mt-[42px] w-[50%]   3xl:w-[45%]'>
 						<Image
 							width={100}
 							height={100}
