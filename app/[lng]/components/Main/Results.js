@@ -42,14 +42,14 @@ const Result = () => {
 					</div>
 				</div> */}
 
-				{/* CARD TWO */}
-				<div className='bg-white100 rounded-[25px] p-[24px] mdl:justify-between mdl:basis-[48%] 2xl:basis-[32%] pr-0'>
+				{/* CARD ONE */}
+				<div className='bg-white100 max-h-[440px]  flex flex-col  items-center rounded-[25px] p-[24px] mdl:justify-between mdl:basis-[48%] 2xl:basis-[32%] pr-0'>
 					<div>
-						<p className='text-[28px] text-black font-bold'>1 550</p>
-						<p className='text-[14px] text-titleDark50'>{t('card_two')}</p>
+						<p className='text-[28px]  mdl:text-[40px]  4xl:text-[50px] text-center text-black font-bold'>2 890+</p>
+						<p className='text-[14px] mdl:text-[18px]   4xl:text-[20px] text-titleDark50'>{t('card_two')}</p>
 					</div>
-					<div className='mt-[97px]'>
-						<div className='relative w-[99px] h-[99px] flex flex-row'>
+					<div className='mt-[97px] sm:w-[100%] md:w-[60%] mdx:w-[70%] mdl:w-[65%]  4xl:w-[50%]'>
+						<div className='relative w-[99px] h-[99px] flex flex-row 4xl:w-[126px] 4xl:h-[136px]'>
 							<Image
 								width={100}
 								height={100}
@@ -74,38 +74,38 @@ const Result = () => {
 								alt='Ilustration'
 								className='object-cover w-full absolute left-[100px]'
 							/>
-							<div className='w-[99px] border-[4px] border-white100 h-[99px] bg-violet100 rounded-[50px] absolute left-[150px] text-white100 flex items-center justify-center text-[24px] font-semibold'>
-								1 550+
+							<div className='w-[99px] border-[4px] border-white100 h-[99px] bg-violet100 rounded-[50px] absolute left-[150px] text-white100 flex items-center justify-center text-[24px] font-semibold 4xl:w-[126px] 4xl:h-[126px] 4xl:rounded-[100px]'>
+							2 890+
 							</div>
 						</div>
 					</div>
 				</div>
 
-				{/* CARD THREE */}
-				<div className='bg-white100 rounded-[25px] p-[24px] mdl:justify-between mdl:basis-[48%] 2xl:basis-[32%] pr-0'>
+				{/* CARD TWO */}
+				<div className='bg-white100 max-h-[440px] flex flex-col  items-center rounded-[25px] p-[24px] mdl:justify-between mdl:basis-[100%] mdl:order-1 2xl:basis-[32%] pr-0 pb-0 '>
 					<div>
-						<p className='text-[28px] text-black font-bold'>58 700+</p>
-						<p className='text-[14px] text-titleDark50'>{t('card_three')}</p>
+						<p className='text-[28px] mdl:text-[40px]  text-center text-black font-bold 4xl:text-[50px]'>58 700+</p>
+						<p className='text-[14px] mdl:text-[18px]  4xl:text-[20px] text-titleDark50'>{t('card_three')}</p>
 					</div>
-					<div className='mt-[42px] mdl:mt-[97px]'>
+					<div className='mt-[42px] mdl:mt-[30px] 3xl:mt-[80px] w-full mdx:w-[100%] mdx:h-[90%] lg:h-[70%] lg:w-[100%]'>
 						<Image
 							width={400}
 							height={400}
 							src={progress}
 							quality={100}
 							alt='Ilustration'
-							className='object-cover w-full'
+							className='object-cover w-full mdx:w-[100%] mdx:h-[90%] mdl:h-[100%] mdx:object-contain  3xl:object-cover  3xl:h-[100%]'
 						/>
 					</div>
 				</div>
 
-				{/* CARD FOUR */}
-				<div className='bg-white100 rounded-[25px] p-[24px] mdl:justify-between mdl:basis-[100%] 2xl:basis-[32%] pr-0'>
+				{/* CARD THREE */}
+				<div className='bg-white100 max-h-[440px] flex flex-col  items-center rounded-[25px] p-[24px]  mdl:justify-between mdl:basis-[48%]  2xl:basis-[32%] pr-0 3xl:order-3'>
 					<div>
-						<p className='text-[28px] text-black font-bold'>1.1$</p>
-						<p className='text-[14px] text-titleDark50'>{t('card_three')}</p>
+						<p className='text-[28px] 2xl:text-[40px]  mdl:text-[40px] 4xl:text-[50px] text-center text-black font-bold'>1.1$</p>
+						<p className='text-[14px] mdl:text-[18px] 4xl:text-[20px] text-titleDark50'>{t('card_three')}</p>
 					</div>
-					<div className='mt-[42px]'>
+					<div className='mt-[42px]   3xl:w-[45%]'>
 						<Image
 							width={100}
 							height={100}
