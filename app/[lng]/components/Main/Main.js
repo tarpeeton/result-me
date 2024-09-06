@@ -2,7 +2,7 @@ import Banner from './Banner'
 import Result from './Results'
 import Services from './Services'
 import Cases from './Cases'
-
+import ProsesWork from './ProsesWork'
 
 
 const Main = () => {
@@ -14,6 +14,7 @@ const Main = () => {
 				<Result />
 				<Services/>
 				<Cases/>
+				<ProsesWork/>
 			</div>
 		</div>
 	)

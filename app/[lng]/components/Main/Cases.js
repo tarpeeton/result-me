@@ -3,6 +3,9 @@ import { useCustomTranslation } from '../../../i18n/client'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick/lib/slider'
+
+
+
 import Image from 'next/image'
 import caseimg from '@/public/images/case.png'
 import Link from 'next/link'
@@ -26,7 +29,7 @@ const Cases = () => {
 			  breakpoint: 1024,
 			  settings: {
 				slidesToShow: 2,
-					slidesToScroll: 2,
+					slidesToScroll: 1,
 				rows:1,
 				infinite: true,
 			  }
@@ -36,14 +39,18 @@ const Cases = () => {
 			  settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				initialSlide: 1
+				initialSlide: 1,
+				rows:1,
+				infinite: true,
 			  }
 			},
 			{
 			  breakpoint: 480,
 			  settings: {
 				slidesToShow: 1,
-				slidesToScroll: 1
+				slidesToScroll: 1,
+				rows:1,
+				infinite: true,
 			  }
 			}
 		]
@@ -65,7 +72,7 @@ const Cases = () => {
 			<div className='2xl:mt-[60px] '>
 				<Slider {...settings} className='w-full cursor-pointer'>
 					{/* First Slide */}
-					<div className='w-full mt-[20px] mdx:max-w-[500px] mdl:max-w-[700px] 2xl:max-w-[650px] 4xl:max-w-[700px]'>
+					<div className='w-full mt-[20px] mdx:max-w-[500px] mdl:max-w-[700px] slg:max-w-[350px] 2xl:max-w-[780px] 6xl:max-w-[910px]'>
 						<Image
 							src={caseimg}
 							width={500}
@@ -81,7 +88,7 @@ const Cases = () => {
 					</div>
 
 					{/* Second Slide */}
-					<div className='w-full mt-[20px] mdx:max-w-[500px] mdl:max-w-[700px] 2xl:max-w-[650px] 4xl:max-w-[700px]'>
+					<div className='w-full mt-[20px] mdx:max-w-[500px] mdl:max-w-[700px] slg:max-w-[350px] 2xl:max-w-[780px] 6xl:max-w-[910px]'>
 						<Image
 							src={caseimg}
 							width={500}
@@ -98,8 +105,8 @@ const Cases = () => {
 				</Slider>
 			</div>
 
-			<div className='mt-[40px] mdx:mt-[60px] w-[175px] px-[30px] py-[20px] mx-auto rounded-[100px] bg-violet100 flex items-center justify-center'>
-				<Link href='cases' className='text-white100 font-bold text-[14px]'>
+			<div className='mt-[40px] mdx:mt-[60px] w-[175px] h-[50px] px-[30px] py-[20px] mx-auto rounded-[100px] bg-violet100 flex items-center justify-center 4xl:w-[300px] 4xl:h-[62px]'>
+				<Link href='cases' className='text-white100 font-bold text-[14px] 4xl:text-[18px]'>
 				Все кейсы
 				</Link>
 			</div>
