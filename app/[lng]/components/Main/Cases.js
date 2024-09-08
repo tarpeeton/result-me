@@ -61,7 +61,7 @@ const Cases = () => {
 	return (
 		<div>
 			{/* Case Title */}
-			<div className='flex flex-col p-[24px]'>
+			<div className='flex flex-col p-[24px] w-full h-full'>
 				<p className='text-[28px] mdl:text-[50px] 3xl:text-[60px] font-bold'>
 					{t('case_title')}
 				</p>
@@ -69,9 +69,8 @@ const Cases = () => {
 					{t('case_subtitle')}
 				</p>
 			</div>
-
 			{/* Slider Section */}
-			<div className='2xl:mt-[60px] '>
+			<div className='2xl:mt-[60px] mdl:max-h-[500px] 4xl:max-h-[900px] '>
 				<Slider {...settings} className='w-full cursor-pointer'>
 					{/* First Slide */}
 					<div className='w-full mt-[20px] slg:max-w-[99%] 6xl:max-w-[99%]'>
