@@ -19,12 +19,10 @@ const PuzzlePiece = ({ id, imagePart, onClick, position, rotation }) => {
 
   return (
     <div
-      className={`absolute piece-${id} cursor-pointer`}
+      className={`absolute piece-${id} cursor-pointer w-[102px] h-[102px] 4xl:w-[400px] 4xl:h-[400px]`}
       style={{
         ...position,
-        width: '400px', // 400px width
-        height: '400px', // 400px height
-        border: '2px solid white',
+        border: '1px solid white',
         transform: `rotate(${rotation}deg)`,
       }}
       onClick={() => onClick(id)}
@@ -111,9 +109,9 @@ const Puzzle = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-violet100 rounded-[30px] mdl:rounded-[60px] 4xl:rounded-[100px] mt-[20px] mdl:mt-[25px] 4xl:mt-[30px] 4xl:py-[80px]">
-      <h1 className="text-white text-[28px] mdl:text-[40px] 4xl:text-[50px] mb-4">Соберите пазл и получите подарок!</h1>
-      <div className="relative w-[1200px] h-[800px] bg-violet100 mt-[40px] mdl:mt-[50px] 4xl:mt-[80px]">
+    <div className="flex px-[12px] py-[30px] flex-col items-center justify-center bg-violet100 rounded-[30px] mdl:rounded-[60px] 4xl:rounded-[100px] mt-[20px] mdl:mt-[25px] 4xl:mt-[30px] 4xl:py-[80px]">
+      <h1 className="text-white text-[28px] mdl:text-[40px] 4xl:text-[50px] mb-4 font-bold">Соберите пазл и получите подарок!</h1>
+      <div className="relative w-[100%] h-[204px]  4xl:w-[1200px] 4xl:h-[800px] bg-violet100 mt-[40px] mdl:mt-[50px] 4xl:mt-[80px] flex flex-row gap-0 ">
         {pieces.map((piece) => (
           <PuzzlePiece
             key={piece}
