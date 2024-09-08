@@ -4,6 +4,7 @@ import Services from './Services'
 import Cases from './Cases'
 import ProsesWork from './ProsesWork'
 import Blog from './Blog'
+import Partners from './Partners'
 
 const Main = () => {
 	return (
@@ -15,6 +16,7 @@ const Main = () => {
 				<Services/>
 				<Cases/>
 				<ProsesWork/>
+				<Partners />
 				<Blog/>
 			</div>
 		</div>
