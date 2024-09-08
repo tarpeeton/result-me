@@ -18,13 +18,14 @@ const Blog = () => {
 
 			<div className='flex flex-col gap-[40px] mdl:gap-[50px] slg:flex-row  slg:flex-wrap'>
 				<div className='card__blog slg:w-[45%]  cursor-pointer 2xl:w-[30%]'>
-					<div>
+					<div classNmae='slg:h-[200px]'>
 						<Image
 							width={600}
 							height={600}
 							quality={100}
 							alt='blog image'
 							src={blog}
+							className='object-contain w-full h-full'
 						/>
 					</div>
 					{/* ЕУЧе */}
@@ -49,13 +50,14 @@ const Blog = () => {
 				</div>
 				{/* СARD 2 */}
 				<div className='card__blog cursor-pointer slg:w-[45%] 2xl:w-[30%]'>
-					<div>
+					<div classNmae='slg:max-h-[200px]'>
 						<Image
 							width={600}
 							height={600}
 							quality={100}
 							alt='blog image'
 							src={blog2}
+							className='object-cover'
 						/>
 					</div>
 					{/* ЕУЧе */}
@@ -86,13 +88,14 @@ mdl:text-[18px] text-[#7B7B7B] leading-[24.38px] mdl:leading-[23px]'
 					</div>
 				</div>
 				<div className='card__blog cursor-pointer slg:w-[45%] 2xl:w-[30%]'>
-					<div>
+					<div classNmae='slg:max-h-[200px]'>
 						<Image
 							width={600}
 							height={600}
 							quality={100}
 							alt='blog image'
 							src={blog3}
+							className='object-cover'
 						/>
 					</div>
 					{/* ЕУЧе */}
@@ -123,13 +126,14 @@ mdl:text-[18px] text-[#7B7B7B] leading-[24.38px] mdl:leading-[23px]'
 					</div>
 				</div>
 				<div className='card__blog cursor-pointer slg:w-[45%] 2xl:w-[30%]'>
-					<div>
+					<div classNmae='lg:max-h-[200px]'>
 						<Image
 							width={600}
 							height={600}
 							quality={100}
 							alt='blog image'
 							src={blog}
+							className='object-contain'
 						/>
 					</div>
 					{/* ЕУЧе */}
