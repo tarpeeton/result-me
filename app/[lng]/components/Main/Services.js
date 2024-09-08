@@ -2,6 +2,14 @@ import { useCustomTranslation } from '../../../i18n/client'
 import { useParams } from 'next/navigation'
 import { GrLinkNext } from "react-icons/gr";
 
+// IMAGE 
+import Image from 'next/image'
+import web from '@/public/images/services/web.svg'
+import bot from '@/public/images/services/bot.svg'
+import smm from '@/public/images/services/smm.svg'
+import Group from '@/public/images/services/Group.svg'
+import seo from '@/public/images/services/seo.svg'
+import branding from '@/public/images/services/branding.svg'
 
 
 
@@ -11,6 +19,7 @@ const Services = () => {
 	return (
 	  <div className="w-full flex flex-col flex-wrap justify-between gap-6 mt-[20px] bg-[#F8F8F8] py-[24px] px-[16px] rounded-[30px] mdl:pl-[24px] mdl:pr-[14px]">
 		{/* Card 1 */}
+	
 
 		<div>
 			<p className='text-[28px] mdl:text-[50px] font-semibold text-titleDark'>{t('service_title')}</p>
@@ -18,10 +27,14 @@ const Services = () => {
 
 {/* =========================== START ===================================== */}
 <div className='flex  flex-col gap-[16px] mdl:gap-[24px] 2xl:flex 2xl:flex-row 2xl:flex-wrap 2xl:gap-[30px]'>
-		<div className="bg-white w-full rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col justify-between relative mdl:min-h-[302px] 2xl:w-[60%] cursor-pointer hover:bg-violet100 duration-[600ms] ease-in-out group">
+	{/* 1 */}
+		<div className="bg-white w-full rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col  relative mdl:min-h-[302px] 2xl:w-[60%] cursor-pointer hover:bg-violet100 duration-[600ms] ease-in-out group">
+		<div className='w-[50px] h-[50px] mb-[20px] mdx:w-[60px] mdx:h-[50px] mdx:mb-[50px] 3xl:w-[67px] 3xl:h-[67px] 3xl:mb-[55px]'>
+			<Image width={90} height={90} src={web} alt='service Image' className="object-cover group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:sepia-[100%]"/>
+		</div>
 		  <div>
 			<h2 className="text-xl mdl:text-[28px] font-semibold text-[#010101] group-hover:text-white">{t('card_titleOne')}</h2>
-			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white">
+			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[60%]">
 			 {t('card_textOne')}
 			</p>
 		  </div>
@@ -32,10 +45,13 @@ const Services = () => {
 		  </div>
 		</div>
 		{/* 2 */}
-		<div className="bg-white w-full rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col justify-between relative mdl:min-h-[302px] 2xl:w-[36%] cursor-pointer hover:bg-violet100 duration-[600ms] ease-in-out group">
+		<div className="bg-white w-full rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col  relative mdl:min-h-[302px] 2xl:w-[36%] cursor-pointer hover:bg-violet100 duration-[600ms] ease-in-out group">
+		<div className='w-[50px] h-[50px] mb-[20px] mdx:w-[60px] mdx:h-[50px] mdx:mb-[50px] 3xl:w-[67px] 3xl:h-[67px] 3xl:mb-[55px]'>
+			<Image width={90} height={90} src={bot} alt='service Image' className="object-cover group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:sepia-[100%]"/>
+		</div>
 		  <div>
 			<h2 className="text-xl mdl:text-[28px] font-semibold text-[#010101] group-hover:text-white">{t('card_titleTwo')}</h2>
-			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white">
+			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[80%]">
 			  {t('card_textTwo')}
 			</p>
 		  </div>
@@ -46,10 +62,13 @@ const Services = () => {
 		  </div>
 		</div>
 		{/* 3 */}
-		<div className="bg-white w-full rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col justify-between relative mdl:min-h-[302px] 2xl:w-[36%] cursor-pointer hover:bg-violet100 duration-[600ms] ease-in-out group">
+		<div className="bg-white w-full rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col  relative mdl:min-h-[302px] 2xl:w-[36%] cursor-pointer hover:bg-violet100 duration-[600ms] ease-in-out group">
+		<div className='w-[50px] h-[50px] mb-[20px] mdx:w-[60px] mdx:h-[50px] mdx:mb-[50px] 3xl:w-[67px] 3xl:h-[67px] 3xl:mb-[55px]'>
+			<Image width={90} height={90} src={smm} alt='service Image' className="object-cover group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:sepia-[100%]"/>
+		</div>
 		  <div>
 			<h2 className="text-xl mdl:text-[28px] font-semibold text-[#010101] group-hover:text-white">{t('card_titleThree')}</h2>
-			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white">
+			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[80%]">
 			 {t('card_textThree')}
 			</p>
 		  </div>
@@ -60,10 +79,13 @@ const Services = () => {
 		  </div>
 		</div>
 		{/* 4 */}
-		<div className="bg-white w-full rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col justify-between relative mdl:min-h-[302px] 2xl:w-[60%] cursor-pointer hover:bg-violet100 duration-[600ms] ease-in-out group">
+		<div className="bg-white w-full rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col  relative mdl:min-h-[302px] 2xl:w-[60%] cursor-pointer hover:bg-violet100 duration-[600ms] ease-in-out group">
+		<div className='w-[50px] h-[50px] mb-[20px] mdx:w-[60px] mdx:h-[50px] mdx:mb-[50px] 3xl:w-[67px] 3xl:h-[67px] 3xl:mb-[55px]'>
+			<Image width={90} height={90} src={Group} alt='service Image' className="object-cover group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:sepia-[100%]"/>
+		</div>
 		  <div>
 			<h2 className="text-xl mdl:text-[28px] font-semibold text-[#010101] group-hover:text-white">{t('card_titleFour')}</h2>
-			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white">
+			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[60%]">
 			  {t('card_textFour')}
 			</p>
 		  </div>
@@ -73,10 +95,13 @@ const Services = () => {
 			</div>
 		  </div>
 		</div>
-		<div className="bg-white w-full rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col justify-between relative mdl:min-h-[302px] 2xl:w-[48%] cursor-pointer hover:bg-violet100 duration-[600ms] ease-in-out group">
+		<div className="bg-white w-full rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col  relative mdl:min-h-[302px] 2xl:w-[48%] cursor-pointer hover:bg-violet100 duration-[600ms] ease-in-out group">
+		<div className='w-[50px] h-[50px] mb-[20px] mdx:w-[60px] mdx:h-[50px] mdx:mb-[50px] 3xl:w-[67px] 3xl:h-[67px] 3xl:mb-[55px]'>
+			<Image width={90} height={90} src={seo} alt='service Image' className="object-cover group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:sepia-[100%]"/>
+		</div>
 		  <div>
 			<h2 className="text-xl mdl:text-[28px] font-semibold text-[#010101] group-hover:text-white">{t('card_titleFive')}</h2>
-			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white">
+			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[60%]">
 			 {t('card_textFive')}
 			</p>
 		  </div>
@@ -87,10 +112,13 @@ const Services = () => {
 		  </div>
 		</div>
 		{/* 5 */}
-		<div className="bg-white w-full rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col justify-between relative mdl:min-h-[302px] 2xl:w-[48%] cursor-pointer hover:bg-violet100 duration-[600ms] ease-in-out group" >
+		<div className="bg-white w-full rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col  relative mdl:min-h-[302px] 2xl:w-[48%] cursor-pointer hover:bg-violet100 duration-[600ms] ease-in-out group" >
+			<div className='w-[50px] h-[50px] mb-[20px] mdx:w-[60px] mdx:h-[50px] mdx:mb-[50px] 3xl:w-[67px] 3xl:h-[67px] 3xl:mb-[55px]'>
+			<Image width={90} height={90} src={branding} alt='service Image' className="object-cover group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:sepia-[100%]"/>
+		</div>
 		  <div>
 			<h2 className="text-xl mdl:text-[28px] font-semibold text-[#010101]  group-hover:text-white">{t('card_titleSix')}</h2>
-			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white">
+			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[80%]">
 			  {t('card_textSix')}
 			</p>
 		  </div>
