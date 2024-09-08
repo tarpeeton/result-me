@@ -7,7 +7,7 @@ import Slider from 'react-slick/lib/slider'
 
 
 import Image from 'next/image'
-import caseimg from '@/public/images/case.png'
+import caseimg from '@/public/images/caseimg.jpg'
 import Link from 'next/link'
 
 const Cases = () => {
@@ -25,15 +25,17 @@ const Cases = () => {
 		autoplaySpeed: 3000, // Adjust the autoplay speed
 		arrows:false,
 		responsive: [
+			
 			{
 			  breakpoint: 1024,
 			  settings: {
-				slidesToShow: 2,
+				slidesToShow: 1,
 					slidesToScroll: 1,
 				rows:1,
 				infinite: true,
 			  }
 			},
+			
 			{
 			  breakpoint: 600,
 			  settings: {
@@ -72,7 +74,7 @@ const Cases = () => {
 			<div className='2xl:mt-[60px] '>
 				<Slider {...settings} className='w-full cursor-pointer'>
 					{/* First Slide */}
-					<div className='w-full mt-[20px] mdx:max-w-[500px] mdl:max-w-[700px] slg:max-w-[350px] 2xl:max-w-[780px] 6xl:max-w-[910px]'>
+					<div className='w-full mt-[20px] slg:max-w-[99%] 6xl:max-w-[99%]'>
 						<Image
 							src={caseimg}
 							width={500}
@@ -88,7 +90,7 @@ const Cases = () => {
 					</div>
 
 					{/* Second Slide */}
-					<div className='w-full mt-[20px] mdx:max-w-[500px] mdl:max-w-[700px] slg:max-w-[350px] 2xl:max-w-[780px] 6xl:max-w-[910px]'>
+					<div className='w-full mt-[20px] slg:max-w-[99%]  6xl:max-w-[99%]'>
 						<Image
 							src={caseimg}
 							width={500}
