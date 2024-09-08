@@ -13,7 +13,7 @@ import { BsYoutube } from 'react-icons/bs'
 const Footer = ({ lng }) => {
 	const { t } = useCustomTranslation(lng, 'footer')
 	return (
-		<div className='flex flex-col bg-footerBgDark  absolute bottom-0 w-full'>
+		<div className='flex flex-col bg-footerBgDark w-full'>
 			<div className='bg-violet100 flex items-center py-[40px] px-[16px] gap-[40px] 2xl:gap-0 2xl:justify-between 2xl:px-[20px] 6xl:px-[20px] mdx:justify-between mdx:gap-0'>
 				<h3 className='text-white100 text-[23px] font-bold 2xl:text-[40px] 6xl:text-[80px] mdx:text-[45px]'>
 					{t('no_pasient')}
