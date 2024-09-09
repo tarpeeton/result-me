@@ -8,6 +8,7 @@ import Partners from './Partners'
 import Puzzle from './Puzzle'
 import Reviews from './Reviews'
 import AboutUs from './AboutUs'
+import Soon from './Soon'
 
 const Main = () => {
 	return (
@@ -23,6 +24,7 @@ const Main = () => {
 				<Reviews />
 				<Partners />
 				<AboutUs/>
+				<Soon/>
 				<Blog/>
 			</div>
 		</div>
