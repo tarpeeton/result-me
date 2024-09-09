@@ -10,7 +10,7 @@ const Banner = () => {
 	const { t } = useCustomTranslation(lng, 'banner')
 
 	return (
-		<div className='w-full rounded-b-[30px] 2xl:rounded-b-[100px] bg-violet100 '>
+		<div className='w-full rounded-b-[30px] 2xl:rounded-b-[100px] bg-violet100 min-h-screen '>
 			<div className='w-full pt-[100px]  2xl:w-[80%] 2xl:mx-auto flex flex-col justify-center items-center'>
 				<div className='w-[80%] px-[16px] flex flex-col justify-center items-center text-center'>
 					<h1 className='text-[35px] font-bold text-white100 mdl:text-[70px] 4xl:text-[90px]'>{t('title')}</h1>

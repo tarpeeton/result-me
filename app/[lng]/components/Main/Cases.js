@@ -59,7 +59,7 @@ const Cases = () => {
 	};
 
 	return (
-		<div>
+		<div className='mt-[80px] mdl:mt-[100px] 2xl:mt-[200px]'>
 			{/* Case Title */}
 			<div className='flex flex-col p-[24px] w-full h-full'>
 				<p className='text-[28px] mdl:text-[50px] 3xl:text-[60px] font-bold'>
