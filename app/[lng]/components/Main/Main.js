@@ -6,6 +6,7 @@ import ProsesWork from './ProsesWork'
 import Blog from './Blog'
 import Partners from './Partners'
 import Puzzle from './Puzzle'
+import Reviews from './Reviews'
 
 const Main = () => {
 	return (
@@ -18,6 +19,7 @@ const Main = () => {
 				<Puzzle/>
 				<Cases/>
 				<ProsesWork/>
+				<Reviews />
 				<Partners />
 				<Blog/>
 			</div>
