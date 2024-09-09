@@ -16,9 +16,9 @@ export async function generateStaticParams() {
 export const metadata = {
     title: {
         template: "%s",
-        default: "Intermed Innovation"
+        default: "Result"
     },
-    description: "Intermed Innovation in Uzbekistan",
+    description: "Result ",
     icons: {
         icon: [
             '/favicon.ico'
