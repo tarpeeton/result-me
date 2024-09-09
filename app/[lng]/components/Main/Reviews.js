@@ -16,14 +16,14 @@ import { useRef } from 'react'
 
 
 const SampleNextArrow = ({ onClick }) => (
-	<div className='cursor-pointer text-[20px]' onClick={onClick}>
-		<GrLinkNext />
+	<div className='cursor-pointer text-[20px] w-[60px] h-[60px] rounded-[100px] border border-white100 flex items-center justify-center' onClick={onClick}>
+		<GrLinkNext className='text-white100' />
 	</div>
 )
 
 const SamplePrevArrow = ({ onClick }) => (
-	<div className='cursor-pointer text-[20px]' onClick={onClick}>
-		<GrLinkPrevious />
+	<div className='cursor-pointer text-[20px] w-[60px] h-[60px] rounded-[100px] border border-white100 flex items-center justify-center' onClick={onClick}>
+		<GrLinkPrevious className='text-white100' />
 	</div>
 )
 
@@ -33,18 +33,41 @@ const SamplePrevArrow = ({ onClick }) => (
 
 const Reviews = () => {
 	const sliderRef = useRef(null)
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-	arrows: false,
-    autoplaySpeed: 3000,
-    arrows: false, // Add arrows if needed
-  };
-
+	var settings = {
+		dots: false,
+		infinite: true,
+		speed: 900,
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		initialSlide: 0,
+		arrows: false,
+		responsive: [
+		  {
+			breakpoint: 1240,
+			settings: {
+			  slidesToShow: 2,
+			  slidesToScroll: 2,
+			  infinite: true,
+			  dots: true
+			}
+		  },
+		  {
+			breakpoint: 1100,
+			settings: {
+			  slidesToShow: 1,
+			  slidesToScroll: 1,
+			  initialSlide: 1
+			}
+		  },
+		  {
+			breakpoint: 480,
+			settings: {
+			  slidesToShow: 1,
+			  slidesToScroll: 1
+			}
+		  }
+		]
+	  };
   const handlePrev = () => {
 	if (sliderRef.current) {
 		sliderRef.current.slickPrev() // Trigger prev slide
@@ -59,30 +82,30 @@ const handleNext = () => {
 
   return (
     <div
-      className="relative w-full mt-[20px] mdl:mt-[30px] rounded-[30px] bg-cover bg-no-repeat px-5 py-8 bg-[#161616] bg-opacity-[90%]"
+      className="relative w-full mt-[20px] mdl:mt-[30px] rounded-[30px] bg-cover bg-no-repeat px-5 py-8 bg-[#161616] bg-opacity-[90%] mdl:px-[40px] mdl:py-[50px]"
       style={{ backgroundImage: `url(${revBG.src})` }}
     >
       {/* Top Decorative Image */}
-      <div className="w-[80%] absolute top-0 right-0 rounded-[30px] ">
-        <Image width={400} height={400} src={revTop} alt="revTop"  className='rounded-[30px] '/>
+      <div className=" absolute top-0 right-0 rounded-[30px]" >
+        <Image width={400} height={400} src={revTop} alt="revTop"  className='rounded-[30px]  '/>
       </div>
 
       {/* Reviews Title */}
-      <p className="text-[28px] text-white font-bold relative z-50 mb-6">Отзывы клиентов</p>
+      <p className="text-[28px] text-white font-bold relative z-50 mb-6 mdl:text-[50px] mdl:mb-[40px]">Отзывы клиентов</p>
 
       {/* Reviews Carousel */}
-      <Slider {...settings} ref={sliderRef} className='z-[99999]'>
-        <div className="rounded-[30px] p-4 bg-[#161616] bg-opacity-[50%]  text-white  z-[99999] min-h-[400px] border border-[#5A5A5A]">
-          <h3 className="text-[18px] font-semibold mb-2">Матьякуб Назарович</h3>
-          <p className="text-[14px] opacity-75 mb-4">Главврач Intermed</p>
-          <p className="text-[15px] leading-[18px]">
+      <Slider {...settings} ref={sliderRef} className='z-[99999] overflow-hidden'>
+        <div className="rounded-[30px] px-[20px] py-[25px] bg-[#161616] bg-opacity-[50%]  text-white  z-[99999] min-h-[400px] border border-[#5A5A5A] 2xl:max-w-[90%]">
+          <h3 className="text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]">Матьякуб Назарович</h3>
+          <p className="text-[14px] opacity-75 mb-[20px] text-[#7B7B7B]">Главврач Intermed</p>
+          <p className="text-[15px] leading-[18px] mdl:text-[20px] mdl-leading-[28px] ">
             Отличная работа! Команда профессионалов создала для нас сайт, который идеально отражает нашу клинику и помогает привлекать новых пациентов.
           </p>
         </div>
-        <div className="rounded-[30px] p-4 bg-[#161616]  bg-opacity-[50%] text-white  min-h-[400px] border border-[#5A5A5A]">
-          <h3 className="text-[18px] font-semibold mb-2">Матьякуб Назарович</h3>
-          <p className="text-[14px] opacity-75 mb-4">Главврач Intermed</p>
-          <p className="text-[15px] leading-[18px]">
+        <div className="rounded-[30px] px-[20px] py-[25px] bg-[#161616]  bg-opacity-[50%] 2xl:max-w-[90%] text-white  min-h-[400px] border border-[#5A5A5A]">
+          <h3 className="text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]">Матьякуб Назарович</h3>
+          <p className="text-[14px] opacity-75 mb-[20px] text-[#7B7B7B]">Главврач Intermed</p>
+          <p className="text-[15px] leading-[18px] mdl:text-[20px] mdl-leading-[28px] ">
             Отличная работа! Команда профессионалов создала для нас сайт, который идеально отражает нашу клинику и помогает привлекать новых пациентов.
           </p>
         </div>
@@ -91,17 +114,17 @@ const handleNext = () => {
 
       {/* Bottom Decorative Image */}
       <div className="absolute bottom-0 left-0">
-        <Image width={400} height={400} src={revBottom} alt="revBottom" className='rounded-[30px]' />
+        <Image width={400} height={400} src={revBottom} alt="revBottom" className='rounded-[30px] ' />
       </div>
 
       {/* Call to Action Button */}
-      <div className="text-center mt-6 flex items-center">
-        <button className="w-[80%] mx-auto py-[20px] px-[30px] bg-white text-violet100 font-bold text-[14px]  rounded-full hover:bg-gray-200 transition z-[99999]">
+      <div className="text-center mt-6 flex items-center justify-between">
+        <button className="w-[80%] 2xl:w-[20%] 2xl:mx-0 mx-auto py-[20px] px-[30px] bg-white text-violet100 font-bold text-[14px]  rounded-full hover:bg-gray-200 transition z-[99999]">
           Стать нашим клиентом
         </button>
 		<div className='sm:hidden flex flex-row gap-[8px] 2xl:flex z-[9999]'>
-					<SamplePrevArrow onClick={handlePrev} />
-					<SampleNextArrow onClick={handleNext} />
+					<SamplePrevArrow onClick={handlePrev}  />
+					<SampleNextArrow onClick={handleNext}  />
 				</div>
       </div>
     </div>
