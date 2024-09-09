@@ -35,9 +35,9 @@ const Reviews = () => {
 	var settings = {
 		dots: false,
 		infinite: true,
-		speed: 900,
+		speed: 600,
 		slidesToShow: 2,
-		slidesToScroll: 2,
+		slidesToScroll:1,
 		initialSlide: 0,
 		arrows: false,
 		responsive: [
@@ -45,7 +45,7 @@ const Reviews = () => {
 			breakpoint: 1240,
 			settings: {
 			  slidesToShow: 2,
-			  slidesToScroll: 2,
+			  slidesToScroll: 1,
 			  infinite: true,
 			  dots: true
 			}
@@ -97,14 +97,14 @@ const handleNext = () => {
         <div className="rounded-[30px] px-[20px] py-[25px] bg-[#161616] bg-opacity-[50%]  text-white  z-[99999] min-h-[400px] border border-[#5A5A5A] 2xl:max-w-[90%]">
           <h3 className="text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]">Матьякуб Назарович</h3>
           <p className="text-[14px] opacity-75 mb-[20px] text-[#7B7B7B]">Главврач Intermed</p>
-          <p className="text-[15px] leading-[18px] mdl:text-[20px] mdl-leading-[28px] ">
+          <p className="text-[15px] leading-[18px] mdl:text-[20px] mdl:leading-[28px]">
             Отличная работа! Команда профессионалов создала для нас сайт, который идеально отражает нашу клинику и помогает привлекать новых пациентов.
           </p>
         </div>
         <div className="rounded-[30px] px-[20px] py-[25px] bg-[#161616]  bg-opacity-[50%] 2xl:max-w-[90%] text-white  min-h-[400px] border border-[#5A5A5A]">
           <h3 className="text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]">Матьякуб Назарович</h3>
           <p className="text-[14px] opacity-75 mb-[20px] text-[#7B7B7B]">Главврач Intermed</p>
-          <p className="text-[15px] leading-[18px] mdl:text-[20px] mdl-leading-[28px] ">
+          <p className="text-[15px] leading-[18px] mdl:text-[20px] mdl:leading-[28px] ">
             Отличная работа! Команда профессионалов создала для нас сайт, который идеально отражает нашу клинику и помогает привлекать новых пациентов.
           </p>
         </div>

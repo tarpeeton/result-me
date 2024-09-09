@@ -49,41 +49,41 @@ const Header = ({ lng }) => {
 		>
 			<div className='hidden 2xl:flex items-center gap-[25px] 4xl:gap-[40px]'>
 				<Link
-					href='/uslugi'
-					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px] ${
-						isMainPage ? 'text-white' : 'text-titleDark'
+					href='/services'
+					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
 					{t('uslugi')}
 				</Link>
 				<Link
 					href='/keysi'
-					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px] ${
-						isMainPage ? 'text-white' : 'text-titleDark'
+					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
 					{t('keysi')}
 				</Link>
 				<Link
 					href='/blog'
-					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px] ${
-						isMainPage ? 'text-white' : 'text-titleDark'
+					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
 					{t('blog')}
 				</Link>
 				<Link
 					href='/about'
-					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px] ${
-						isMainPage ? 'text-white' : 'text-titleDark'
+					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
 					{t('about')}
 				</Link>
 				<Link
 					href='/getInfo'
-					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px] ${
-						isMainPage ? 'text-white' : 'text-titleDark'
+					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
 					{t('getInfo')}

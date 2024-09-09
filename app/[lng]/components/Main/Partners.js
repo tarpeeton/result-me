@@ -77,7 +77,7 @@ const Partners = () => {
 				>
 					<div className='flex flex-col'>
 						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between'>
-							<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%]  mdl:flex mdl:items-center mdl:min-h-[200px]'>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%]  mdl:flex mdl:items-center mdl:min-h-[200px]'>
 								<div>
 								<Image
 									src={One}
@@ -89,7 +89,7 @@ const Partners = () => {
 								</div>
 								
 							</div>
-							<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] md mdl:flex mdl:items-center mdl:min-h-[200px] '>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] md mdl:flex mdl:items-center mdl:min-h-[200px] '>
 								<div>
 								<Image
 									src={Two}
@@ -101,7 +101,7 @@ const Partners = () => {
 								</div>
 								
 							</div>
-							<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%]  mdl:flex mdl:items-center mdl:min-h-[200px]'>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%]  mdl:flex mdl:items-center mdl:min-h-[200px]'>
 								<div>
 								<Image
 									src={Three}
@@ -113,7 +113,7 @@ const Partners = () => {
 								</div>
 								
 							</div>
-							<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%]  mdl:flex mdl:items-center mdl:min-h-[200px]'>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%]  mdl:flex mdl:items-center mdl:min-h-[200px]'>
 								<div>
 								<Image
 									src={Four}
@@ -129,7 +129,7 @@ const Partners = () => {
 					</div>
 					<div className='flex flex-col mdl:flex-row mdl:flex-wrap'>
 					<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between'> 
-					<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] mdl:min-h-[200px]   mdl:flex mdl:items-center 	'>
+					<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] mdl:min-h-[200px]   mdl:flex mdl:items-center 	'>
 						<div>
 						<Image
 								src={Five}
@@ -141,7 +141,7 @@ const Partners = () => {
 						</div>
 						
 						</div>
-						<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
+						<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
 							<div>
 							<Image
 								src={Sixe}
@@ -153,7 +153,7 @@ const Partners = () => {
 							</div>
 							
 						</div>
-						<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+						<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
 							<div>
 							<Image
 								src={Seven}
@@ -173,7 +173,7 @@ const Partners = () => {
 
 {/* DESKTOP */}
 			<div className='hidden mt-[40px] 2xl:flex flex-row flex-wrap justify-evenly'>
-			<div className='rounded-[30px] bg-white100 py-[36px] px-[66px] mb-[20px]  2xl:w-[24%] 2xl:min-h-[250px] mdl:flex mdl:items-center '>
+			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  2xl:w-[24%] 2xl:min-h-[250px] mdl:flex mdl:items-center '>
 							<div>
 							<Image
 								src={One}
@@ -185,7 +185,7 @@ const Partners = () => {
 							</div>
 							
 						</div>
-			<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
+			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
 							<div>
 							<Image
 								src={Two}
@@ -197,7 +197,7 @@ const Partners = () => {
 							</div>
 							
 						</div>
-			<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
+			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
 							<div>
 							<Image
 								src={Three}
@@ -209,7 +209,7 @@ const Partners = () => {
 							</div>
 							
 						</div>
-			<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
+			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
 							<div>
 							<Image
 								src={Four}
@@ -221,7 +221,7 @@ const Partners = () => {
 							</div>
 							
 						</div>
-			<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
+			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
 							<div>
 							<Image
 								src={Five}
@@ -233,7 +233,7 @@ const Partners = () => {
 							</div>
 							
 						</div>
-			<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
+			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
 							<div>
 							<Image
 								src={Sixe}
@@ -245,7 +245,7 @@ const Partners = () => {
 							</div>
 							
 						</div>
-			<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
+			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
 							<div>
 							<Image
 								src={Seven}
@@ -257,7 +257,7 @@ const Partners = () => {
 							</div>
 							
 						</div>
-			<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
+			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
 							<div>
 							<Image
 								src={Eigth}
@@ -269,7 +269,7 @@ const Partners = () => {
 							</div>
 							
 						</div>
-			<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
+			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
 							<div>
 							<Image
 								src={Nine}
@@ -281,7 +281,7 @@ const Partners = () => {
 							</div>
 							
 						</div>
-			<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
+			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
 							<div>
 							<Image
 								src={Ten}
@@ -293,7 +293,7 @@ const Partners = () => {
 							</div>
 							
 						</div>
-			<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
+			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
 							<div>
 							<Image
 								src={Eleven}
@@ -305,7 +305,7 @@ const Partners = () => {
 							</div>
 							
 						</div>
-			<div className='rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
+			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
 							<div>
 							<Image
 								src={Tvelwe}

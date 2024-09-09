@@ -65,7 +65,7 @@ const Soon = () => {
         {Data.map((d, index) => (
           <div key={index} className="relative">
             <div
-              className={`2xl:w-[97%] rounded-[25px] w-full h-full px-[12px] bg-gray-900 pt-[24px]  ${
+              className={`2xl:w-[97%] cursor-pointer rounded-[25px] w-full h-full px-[12px] bg-gray-900 pt-[24px]  ${
                 d.isSoon ? '' : 'bg-white bg-opacity-50 backdrop-blur-xl'
               }`}
             >
