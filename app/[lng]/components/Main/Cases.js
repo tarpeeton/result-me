@@ -1,3 +1,4 @@
+"use client"
 import { useParams } from 'next/navigation'
 import { useCustomTranslation } from '../../../i18n/client'
 import "slick-carousel/slick/slick.css";
