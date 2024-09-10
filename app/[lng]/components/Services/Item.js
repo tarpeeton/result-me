@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 const ServiceItem = () => {
   return (
-	<div className='mx-[16px] mt-[20px] mdl:mt-[30px]'>
+	<div className='mx-[16px] 3xl:mx-[30px] mt-[20px] mdl:mt-[30px] '>
 		<div className='bg-white100  px-[16px] pt-[16px] rounded-[30px] flex flex-col 3xl:flex-row 3xl:justify-center 3xl:items-center 3xl:p-[40px]'>
 			{/* IMAGE */}
 			<div className='rounded-[30px] w-full mx-[12px] 3xl:w-[50%] 3xl:order-2'>

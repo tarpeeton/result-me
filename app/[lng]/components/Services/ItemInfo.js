@@ -4,7 +4,7 @@
 
 const ItemInfo = () => {
   return (
-	<div className='mt-[20px] mdl:mt-[20px] 3xl:mt-[25px] rounded-[30px] mdl:rounded-[40px]  flex flex-col 3xl:flex-row py-[30px] px-[24px] mdl:py-[50px] mdl:px-[40px] 3xl:py-[80px] 3xl:px-[70px] bg-white mx-[16px] mdl:mx-[20px] 3xl:mx-[30px]'>
+	<div className='mt-[20px] mdl:mt-[20px] 3xl:mt-[25px] rounded-[30px] mdl:rounded-[40px]  flex flex-col 3xl:flex-row py-[30px] px-[24px] mdl:py-[50px] mdl:px-[40px] 3xl:py-[80px] 3xl:px-[70px] bg-white mx-[16px] mdl:mx-[20px] 3xl:mx-[30px] '>
 		<div className='2xl:w-[50%]'>
 			<h2 className='text-[28px] 2xl:w-[80%] 4xl:w-[60%] mdl:text-[40px] 3xl:text-[50px]  font-bold'>Ваш успех начинается здесь</h2>
 		</div>

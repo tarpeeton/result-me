@@ -19,10 +19,10 @@ const Header = ({ lng }) => {
 	const [navbar, setNavbar] = useState(false)
 	const [isMainPage, setIsMainPage] = useState(false) // State to track if it's the main page
 
-	console.log(isMainPage, 'Nima bu')
+	
 	useEffect(() => {
 		const currentPath = window.location.pathname
-		console.log(currentPath, lng)
+		
 		// Check if the current path is the main page
 		setIsMainPage(currentPath === `/${lng}`)
 	}, [])
