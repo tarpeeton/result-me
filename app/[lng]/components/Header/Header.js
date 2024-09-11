@@ -94,7 +94,7 @@ const Header = ({ lng}) => {
 				<div className='absolute top-[70px] left-0 w-full h-screen bg-white z-50 flex flex-col  space-y-8 text-2xl'>
 					<Link
 						href='/about'
-						className='flex w-full justify-between items-center flex-row px-[20px] py-[15px] border-b-[1px] border-[#F0F0F0]'
+						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
 							{t('uslugi')}
@@ -103,7 +103,7 @@ const Header = ({ lng}) => {
 					</Link>
 					<Link
 						href='/cases'
-						className='flex w-full justify-between items-center flex-row px-[20px] py-[15px] border-b-[1px] border-[#F0F0F0]'
+						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
 							{t('keysi')}
@@ -113,7 +113,7 @@ const Header = ({ lng}) => {
 
 					<Link
 						href='/blog'
-						className='flex w-full justify-between items-center flex-row px-[20px] py-[15px] border-b-[1px] border-[#F0F0F0]'
+						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
 							{t('blog')}
@@ -123,7 +123,7 @@ const Header = ({ lng}) => {
 
 					<Link
 						href='/about'
-						className='flex w-full justify-between items-center flex-row px-[20px] py-[15px] border-b-[1px] border-[#F0F0F0]'
+						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
 							{t('about')}
@@ -133,7 +133,7 @@ const Header = ({ lng}) => {
 
 					<Link
 						href='/getInfo'
-						className='flex w-full justify-between items-center flex-row px-[20px] py-[15px] border-b-[1px] border-[#F0F0F0]'
+						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
 							{t('getInfo')}
@@ -183,7 +183,7 @@ const Header = ({ lng}) => {
 				</div>
 				<div className='flex 2xl:hidden items-center'>
 					<button onClick={toggleMenu} className='text-3xl '>
-						{isMenuOpen ? <AiOutlineClose  className='text-white'/> : <RxHamburgerMenu  className='text-white'/>}{' '}
+						{isMenuOpen ? <AiOutlineClose  className={`${isMainPage}text-white`}/> : <RxHamburgerMenu  className='text-white'/>}{' '}
 						{/* Меняем иконку в зависимости от состояния */}
 					</button>
 				</div>
