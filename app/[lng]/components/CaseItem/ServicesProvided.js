@@ -81,7 +81,7 @@ const providedService = [
   
   const ServicesProvided = () => {
 	return (
-	  <div className="mt-[20px] py-[30px] px-[24px]  rounded-[30px] bg-white  mdl:py-[50px] mdl:px-[40px] 3xl:flex 3xl:flex-row">
+	  <div className="mt-[20px] py-[30px] px-[24px]  rounded-[30px] bg-white  mdl:py-[50px] mdl:px-[40px] 3xl:flex 3xl:flex-row mdl:rounded-[40px] 3xl:rounded-[50px]">
 		{/* Заголовок */}
 		<div className="w-[50%] mb-6 mdl:mb-[50px] 3xl:w-[40%]">
 		  <p className="text-titleDark font-bold text-[28px] mdl:text-[40px] 3xl:text-[50px] 3xl:w-[10%]">Оказанные услуги</p>

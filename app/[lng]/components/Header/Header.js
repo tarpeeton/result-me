@@ -182,11 +182,16 @@ const Header = ({ lng}) => {
 					/>
 				</div>
 				<div className='flex 2xl:hidden items-center'>
-					<button onClick={toggleMenu} className='text-3xl '>
-						{isMenuOpen ? <AiOutlineClose  className={`${isMainPage}text-white`}/> : <RxHamburgerMenu  className='text-white'/>}{' '}
-						{/* Меняем иконку в зависимости от состояния */}
-					</button>
-				</div>
+  <button onClick={toggleMenu} className='text-3xl'>
+    {isMenuOpen ? (
+      <AiOutlineClose className={`${isMainPage ? 'text-white' : 'text-black'}`} />
+    ) : (
+      <RxHamburgerMenu className={`${isMainPage ? 'text-white' : 'text-black'}`} />
+    )}
+    {/* Меняем иконку в зависимости от состояния */}
+  </button>
+</div>
+
 			</div>
 		</div>
 	)

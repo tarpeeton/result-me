@@ -4,7 +4,7 @@ const Banner = ({ data }) => {
 
 	return (
 		<div
-			className='w-full rounded-[30px] py-[30px] px-[20px] 3xl:flex 3xl:flex-row 3xl:justify-center 3xl:items-center mt-[20px] mdl:mt-[30px]'
+			className='w-full rounded-[30px] py-[30px] px-[20px] 3xl:flex 3xl:flex-row 3xl:justify-center 3xl:items-center mt-[20px] mdl:mt-[30px]  mdl:rounded-[40px] 3xl:rounded-[50px]'
 			style={{
 				backgroundImage: `url(${banner.background.url})`,
 				backgroundSize: 'cover',
