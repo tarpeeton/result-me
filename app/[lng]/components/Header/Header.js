@@ -14,12 +14,12 @@ import { languages, cookieName } from '../../../i18n/settings'
 import { useCookies } from 'react-cookie'
 import CustomSelect from './CustomSelect' // Импортируем кастомный селект
 import { usePathname } from 'next/navigation'
-const Header = ({ lng}) => {
+const Header = ({ lng }) => {
 	const { t } = useCustomTranslation(lng, 'header')
 	const [cookies, setCookie] = useCookies([cookieName])
 	const [isMenuOpen, setIsMenuOpen] = useState(false) // Состояние для управления открытием/закрытием меню
 	const pathname = usePathname()
-	
+
 	// Check if it's the main page by checking if the pathname is exactly `/${lng}`
 	const isMainPage = pathname === `/${lng}`
 
@@ -182,16 +182,19 @@ const Header = ({ lng}) => {
 					/>
 				</div>
 				<div className='flex 2xl:hidden items-center'>
-  <button onClick={toggleMenu} className='text-3xl'>
-    {isMenuOpen ? (
-      <AiOutlineClose className={`${isMainPage ? 'text-white' : 'text-black'}`} />
-    ) : (
-      <RxHamburgerMenu className={`${isMainPage ? 'text-white' : 'text-black'}`} />
-    )}
-    {/* Меняем иконку в зависимости от состояния */}
-  </button>
-</div>
-
+					<button onClick={toggleMenu} className='text-3xl'>
+						{isMenuOpen ? (
+							<AiOutlineClose
+								className={`${isMainPage ? 'text-white' : 'text-black'}`}
+							/>
+						) : (
+							<RxHamburgerMenu
+								className={`${isMainPage ? 'text-white' : 'text-black'}`}
+							/>
+						)}
+						{/* Меняем иконку в зависимости от состояния */}
+					</button>
+				</div>
 			</div>
 		</div>
 	)
