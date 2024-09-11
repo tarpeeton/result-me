@@ -91,7 +91,7 @@ const Header = ({ lng}) => {
 			</div>
 
 			{isMenuOpen && (
-				<div className='absolute top-[80px] left-0 w-full h-screen bg-white z-50 flex flex-col items-center justify-center space-y-8 text-2xl'>
+				<div className='absolute top-[70px] left-0 w-full h-screen bg-white z-50 flex flex-col  space-y-8 text-2xl'>
 					<Link
 						href='/about'
 						className='flex w-full justify-between items-center flex-row px-[20px] py-[15px] border-b-[1px] border-[#F0F0F0]'
