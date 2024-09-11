@@ -30,7 +30,7 @@ const Banner = () => {
 				<div className='w-full mt-[30px] relative'>
 					<Image
 						src={my}
-						width={500}
+						width={1200}
 						height={500}
 						quality={100}
 						alt='banner image'
@@ -38,7 +38,7 @@ const Banner = () => {
 					/>
 					<Image
 						src={blur}
-						width={400}
+						width={1200}
 						height={400}
 						quality={100}
 						alt='banner image'

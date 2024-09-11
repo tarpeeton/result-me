@@ -1,31 +1,27 @@
 'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
 import { useCustomTranslation } from '../../../i18n/client'
 import { RxHamburgerMenu } from 'react-icons/rx'
+import { AiOutlineClose } from 'react-icons/ai' // Иконка для закрытия
+import { GrLinkNext } from 'react-icons/gr' // Иконка для стрелки
+import { BsFillTelephoneFill } from 'react-icons/bs'
 import logo from '@/public/svg/logoSVG.svg'
 import footerLogo from '@/public/svg/footerLogo.svg'
-import { useState, useEffect } from 'react'
-import { BsFillTelephoneFill } from 'react-icons/bs'
-import { Select } from 'antd'
 import Link from 'next/link'
 import { languages, cookieName } from '../../../i18n/settings'
 import { useCookies } from 'react-cookie'
-
-const { Option } = Select
-
-const Header = ({ lng }) => {
+import CustomSelect from './CustomSelect' // Импортируем кастомный селект
+import { usePathname } from 'next/navigation'
+const Header = ({ lng}) => {
 	const { t } = useCustomTranslation(lng, 'header')
 	const [cookies, setCookie] = useCookies([cookieName])
-	const [navbar, setNavbar] = useState(false)
-	const [isMainPage, setIsMainPage] = useState(false) // State to track if it's the main page
-
+	const [isMenuOpen, setIsMenuOpen] = useState(false) // Состояние для управления открытием/закрытием меню
+	const pathname = usePathname()
 	
-	useEffect(() => {
-		const currentPath = window.location.pathname
-		
-		// Check if the current path is the main page
-		setIsMainPage(currentPath === `/${lng}`)
-	}, [])
+	// Check if it's the main page by checking if the pathname is exactly `/${lng}`
+	const isMainPage = pathname === `/${lng}`
 
 	const handleLanguageChange = newLng => {
 		setCookie(cookieName, newLng, { path: '/' })
@@ -42,10 +38,14 @@ const Header = ({ lng }) => {
 		window.location.href = newPath
 	}
 
+	const toggleMenu = () => {
+		setIsMenuOpen(!isMenuOpen) // Открыть или закрыть меню
+	}
+
 	return (
 		<div
 			className={`w-full flex justify-between px-[20px] py-[16px] 
-			${isMainPage ? 'bg-violet100' : 'bg-white'}`} // Conditionally apply background color
+            ${isMainPage ? 'bg-violet100' : 'bg-white'}`} // Зависимость от флага isMainPage
 		>
 			<div className='hidden 2xl:flex items-center gap-[25px] 4xl:gap-[40px]'>
 				<Link
@@ -57,7 +57,7 @@ const Header = ({ lng }) => {
 					{t('uslugi')}
 				</Link>
 				<Link
-					href='/keysi'
+					href='/cases'
 					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
@@ -90,18 +90,71 @@ const Header = ({ lng }) => {
 				</Link>
 			</div>
 
+			{isMenuOpen && (
+				<div className='absolute top-[80px] left-0 w-full h-screen bg-white z-50 flex flex-col items-center justify-center space-y-8 text-2xl'>
+					<Link
+						href='/about'
+						className='flex w-full justify-between items-center flex-row px-[20px] py-[15px] border-b-[1px] border-[#F0F0F0]'
+					>
+						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
+							{t('uslugi')}
+						</p>
+						<GrLinkNext className='text-titleDark' />
+					</Link>
+					<Link
+						href='/cases'
+						className='flex w-full justify-between items-center flex-row px-[20px] py-[15px] border-b-[1px] border-[#F0F0F0]'
+					>
+						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
+							{t('keysi')}
+						</p>
+						<GrLinkNext className='text-titleDark' />
+					</Link>
+
+					<Link
+						href='/blog'
+						className='flex w-full justify-between items-center flex-row px-[20px] py-[15px] border-b-[1px] border-[#F0F0F0]'
+					>
+						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
+							{t('blog')}
+						</p>
+						<GrLinkNext className='text-titleDark' />
+					</Link>
+
+					<Link
+						href='/about'
+						className='flex w-full justify-between items-center flex-row px-[20px] py-[15px] border-b-[1px] border-[#F0F0F0]'
+					>
+						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
+							{t('about')}
+						</p>
+						<GrLinkNext className='text-titleDark' />
+					</Link>
+
+					<Link
+						href='/getInfo'
+						className='flex w-full justify-between items-center flex-row px-[20px] py-[15px] border-b-[1px] border-[#F0F0F0]'
+					>
+						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
+							{t('getInfo')}
+						</p>
+						<GrLinkNext className='text-titleDark' />
+					</Link>
+				</div>
+			)}
+
 			<div>
 				<Image
 					src={isMainPage ? footerLogo : logo}
 					width={130}
 					quality={100}
 					height={40}
-					alt='Picture of the author'
+					alt='Logo'
 				/>
 			</div>
 
 			<div className='flex items-center gap-3'>
-				<div className='hidden 2xl:flex '>
+				<div className='hidden 2xl:flex'>
 					<button
 						className={`w-[50px] h-[50px] border-[1px] border-[white] rounded-[100%] flex items-center justify-center ${
 							isMainPage ? 'bg-inherit' : 'bg-selectBg'
@@ -117,37 +170,24 @@ const Header = ({ lng }) => {
 					<p className='font-bold text-white100 text-[16px]'>{t('getInfo')}</p>
 				</button>
 
-				<div
-					className='flex items-center justify-center 2xl:hidden'
-					onClick={() => setNavbar(!navbar)}
-				>
-					<button className='w-[40px] h-[40px] border-[1px] border-[white] rounded-[100%] flex items-center justify-center'>
-						<RxHamburgerMenu className='text-white100' />
-					</button>
-				</div>
-
-				<div className='hidden 2xl:flex w-[90px] h-[50px]'>
-					<Select
+				<div className='hidden 2xl:flex w-[150px] h-[50px]'>
+					<CustomSelect
 						value={lng}
 						onChange={handleLanguageChange}
-						className={`w-[80px] h-[50px] ${isMainPage ? 'bg-[#9A93F6]' : 'bg-selectBg' } rounded-full text-seletcText font-bold text-center`}
-						bordered={false}
-						dropdownClassName='custom-dropdown'
-					>
-						<Option value='ru' className='text-seletcText'>
-							Ру
-						</Option>
-						<Option value='uz' className='text-seletcText'>
-							Uz
-						</Option>
-						<Option value='en' className='text-seletcText'>
-							En
-						</Option>
-					</Select>
+						options={[
+							{ value: 'ru', label: 'Ру' },
+							{ value: 'uz', label: 'Uz' },
+							{ value: 'en', label: 'En' },
+						]}
+					/>
+				</div>
+				<div className='flex 2xl:hidden items-center'>
+					<button onClick={toggleMenu} className='text-3xl '>
+						{isMenuOpen ? <AiOutlineClose  className='text-white'/> : <RxHamburgerMenu  className='text-white'/>}{' '}
+						{/* Меняем иконку в зависимости от состояния */}
+					</button>
 				</div>
 			</div>
-
-			{navbar ? <div>Salom</div> : null}
 		</div>
 	)
 }
