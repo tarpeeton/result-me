@@ -170,7 +170,7 @@ const Header = ({ lng }) => {
 					<p className='font-bold text-white100 text-[16px]'>{t('getInfo')}</p>
 				</button>
 
-				<div className='hidden 2xl:flex w-[150px] h-[50px]'>
+				<div className='flex 3xl:w-[150px]  3xl:h-[50px]'>
 					<CustomSelect
 						value={lng}
 						onChange={handleLanguageChange}

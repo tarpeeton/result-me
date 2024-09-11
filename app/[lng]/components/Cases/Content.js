@@ -124,7 +124,7 @@ const Content = () => {
                 className="object-cover w-full h-full"
               />
               {/* Hidden content that appears on hover */}
-              <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
+              <div className="hidden 3xl:absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 3xl:flex justify-center items-center">
                 <div className='h-[100px]'>
                   <div className='flex flex-row gap-[80px] items-center justify-center'>
                     <div className='flex flex-col gap-[5px]'>
