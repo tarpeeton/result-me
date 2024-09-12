@@ -17,14 +17,13 @@ const Banner = () => {
 					<p className='w-[90%] text-[15px] font-semibold text-white100 mt-[10px] mdl:text-[18px] '>
 						{t('subtitle')}
 					</p>
-					<Link
-						href='predloshenya'
+					<button
 						className='bg-white100 rounded-[60px] px-[30px] py-[20px] w-[230px] mt-[30px] mdl:w-[300px]'
 					>
 						<p className='text-violet100 text-[14px] font-bold mdl:text-[18px]'>
 							{t('getInfo')}
 						</p>
-					</Link>
+					</button>
 				</div>
 
 				<div className='w-full mt-[30px] relative'>

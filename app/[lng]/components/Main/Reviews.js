@@ -86,7 +86,7 @@ const handleNext = () => {
     >
       {/* Top Decorative Image */}
       <div className=" absolute top-0 right-0 rounded-[30px]" >
-        <Image width={400} height={400} src={revTop} alt="revTop"  className='rounded-[30px]  '/>
+        <Image width={400} height={400} src={revTop} alt="revTop"  className='rounded-[30px]  opacity-40 '/>
       </div>
 
       {/* Reviews Title */}
@@ -113,7 +113,7 @@ const handleNext = () => {
 
       {/* Bottom Decorative Image */}
       <div className="absolute bottom-0 left-0">
-        <Image width={400} height={400} src={revBottom} alt="revBottom" className='rounded-[30px] ' />
+        <Image width={400} height={400} src={revBottom} alt="revBottom" className='rounded-[30px] opacity-40 ' />
       </div>
 
       {/* Call to Action Button */}

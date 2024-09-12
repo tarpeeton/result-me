@@ -91,7 +91,7 @@ const Header = ({ lng }) => {
 			</div>
 
 			{isMenuOpen && (
-				<div className='absolute top-[70px] left-0 w-full h-screen bg-white z-50 flex flex-col  space-y-8 text-2xl'>
+				<div className='absolute top-[70px] left-0 w-full h-[100%] bg-white z-[99999] flex flex-col  space-y-8 text-2xl'>
 					<Link
 						href='/about'
 						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
@@ -143,7 +143,7 @@ const Header = ({ lng }) => {
 				</div>
 			)}
 
-			<div>
+			<Link href='/'>
 				<Image
 					src={isMainPage ? footerLogo : logo}
 					width={130}
@@ -151,7 +151,7 @@ const Header = ({ lng }) => {
 					height={40}
 					alt='Logo'
 				/>
-			</div>
+			</Link>
 
 			<div className='flex items-center gap-3'>
 				<div className='hidden 2xl:flex'>
