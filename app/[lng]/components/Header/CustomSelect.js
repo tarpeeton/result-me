@@ -27,11 +27,11 @@ const CustomSelect = ({ value, onChange, options }) => {
 
             {/* Выпадающий список */}
             {isOpen && (
-                <ul className="absolute w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-10">
+                <ul className="absolute w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
                     {options.map((option) => (
                         <li
                             key={option.value}
-                            className={`px-[16px] py-[16px] cursor-pointer hover:bg-violet100 transition ${
+                            className={`px-[8px] py-[8px] cursor-pointer hover:bg-slate-400 transition flex flex-row gap-[8px] ${
                                 option.value === selectedOption ? 'bg-blue-50' : ''
                             }`}
                             onClick={() => handleOptionClick(option.value)}

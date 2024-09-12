@@ -14,6 +14,8 @@
     "@mui/material": "^6.1.0",
     "accept-language": "^3.0.20",
     "antd": "^5.20.5",
+    "country-flag-icons": "^1.5.13",
+    "flag-icons": "^7.2.3",
     "framer-motion": "^11.5.4",
     "gsap": "^3.12.5",
     "i18next": "^23.14.0",

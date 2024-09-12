@@ -15,7 +15,7 @@ import { useCookies } from 'react-cookie'
 import CustomSelect from './CustomSelect' // Импортируем кастомный селект
 import { usePathname } from 'next/navigation'
 import ServiceModal from '../Modal/SeriviceModal'
-
+import { GB, RU, UZ } from 'country-flag-icons/react/3x2'
 
 
 const Header = ({ lng }) => {
@@ -191,9 +191,9 @@ const Header = ({ lng }) => {
 						value={lng}
 						onChange={handleLanguageChange}
 						options={[
-							{ value: 'ru', label: 'Ру' },
-							{ value: 'uz', label: 'Uz' },
-							{ value: 'en', label: 'En' },
+							{ value: 'ru', label: <><RU width="20" /> Ру</> },
+							{ value: 'uz', label: <><UZ width="20" /> Uz</> },
+							{ value: 'en', label: <><GB width="20" /> En</> }
 						]}
 					/>
 				</div>
