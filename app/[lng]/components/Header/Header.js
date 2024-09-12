@@ -103,9 +103,10 @@ const Header = ({ lng }) => {
 				</button>
 			</div>
 
+			{/* MOBILE NAVIGATION */}
 			{isMenuOpen && (
 				<div className='absolute top-[70px] left-0 w-full h-[100%] bg-white z-[99999] flex flex-col  space-y-8 text-2xl'>
-					<Link
+					<a
 						href='/services'
 						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
 					>
@@ -113,8 +114,8 @@ const Header = ({ lng }) => {
 							{t('uslugi')}
 						</p>
 						<GrLinkNext className='text-titleDark' />
-					</Link>
-					<Link
+					</a>
+					<a
 						href='/cases'
 						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
 					>
@@ -122,9 +123,9 @@ const Header = ({ lng }) => {
 							{t('keysi')}
 						</p>
 						<GrLinkNext className='text-titleDark' />
-					</Link>
+					</a>
 
-					<Link
+					<a
 						href='/blog'
 						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
 					>
@@ -132,9 +133,9 @@ const Header = ({ lng }) => {
 							{t('blog')}
 						</p>
 						<GrLinkNext className='text-titleDark' />
-					</Link>
+					</a>
 
-					<Link
+					<a
 						href='/about'
 						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
 					>
@@ -142,7 +143,7 @@ const Header = ({ lng }) => {
 							{t('about')}
 						</p>
 						<GrLinkNext className='text-titleDark' />
-					</Link>
+					</a>
 
 					<button
 						onClick={openModal
@@ -170,7 +171,7 @@ const Header = ({ lng }) => {
 
 			<div className='flex items-center gap-3'>
 				<div className='hidden 2xl:flex'>
-					<button
+					<Link href='tel:+998900228073'
 						className={`w-[50px] h-[50px] border-[1px] border-[white] rounded-[100%] flex items-center justify-center ${
 							isMainPage ? 'bg-inherit' : 'bg-selectBg'
 						}`}
@@ -178,7 +179,7 @@ const Header = ({ lng }) => {
 						<BsFillTelephoneFill
 							className={`${isMainPage ? 'text-white' : 'text-violet100'}`}
 						/>
-					</button>
+					</Link>
 				</div>
 
 					<button onClick={openModal} className='bg-violet100 hidden mdx:block w-[230px] h-[50px] border rounded-[30px]'>

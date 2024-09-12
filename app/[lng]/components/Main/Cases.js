@@ -11,6 +11,28 @@ import Image from 'next/image'
 import caseimg from '@/public/images/caseimg.jpg'
 import Link from 'next/link'
 
+
+const caseData = [
+	{
+		image: caseimg,
+		title: 'Intermed Innovation',
+		description: 'Сайт | SEO',
+		slug: 'case1',
+		id: 1
+	},
+	{
+		image: caseimg,
+		title: 'Another Case',
+		description: 'Development | Marketing',
+		slug: 'case2',
+		id: 2
+	}
+]
+
+
+
+
+
 const Cases = () => {
 	const {lng} = useParams()
 	const { t } = useCustomTranslation(lng, 'result')
@@ -74,36 +96,30 @@ const Cases = () => {
 			<div className='2xl:mt-[60px] mdl:max-h-[500px] 4xl:max-h-[900px] '>
 				<Slider {...settings} className='w-full cursor-pointer'>
 					{/* First Slide */}
-					<div className='w-full mt-[20px] slg:max-w-[99%] 6xl:max-w-[99%]'>
-						<Image
-							src={caseimg}
-							width={500}
-							height={500}
-							quality={100}
-							alt='banner image'
-							className='object-cover w-full h-full'
-						/>
-						<div className='mt-[20px] 3xl:mt-[25px] flex flex-col gap-[4px]'>
-							<p className='text-[20px] font-semibold  mdx:text-[28px] 4xl:text-[35px]'>Intermed Innovation</p>
-							<p className='text-[14px] text-violet100 mdx:text-[18px] font-semibold'>Сайт | SEO</p>
-						</div>
-					</div>
-
-					{/* Second Slide */}
-					<div className='w-full mt-[20px] slg:max-w-[99%]  6xl:max-w-[99%]'>
-						<Image
-							src={caseimg}
-							width={500}
-							height={400}
-							quality={100}
-							alt='banner image'
-							className='object-contain w-full h-full'
-						/>
-						<div className='mt-[20px] 3xl:mt-[25px] flex flex-col gap-[4px]'>
-							<p className='text-[20px] font-semibold  mdx:text-[28px] 4xl:text-[35px]'>Another Case</p>
-							<p className='text-[14px] text-violet100 mdx:text-[18px] font-semibold'>Development | Marketing</p>
-						</div>
-					</div>
+					{caseData.map((item) => (
+            <div key={item.id} className="w-full mt-[20px] slg:max-w-[99%] 6xl:max-w-[99%]">
+              <Link href={`/cases/${item.slug}`} passHref>
+                <div>
+                  <Image
+                    src={item.image}
+                    width={500}
+                    height={500}
+                    quality={100}
+                    alt="banner image"
+                    className="object-cover w-full h-full"
+                  />
+                  <div className="mt-[20px] 3xl:mt-[25px] flex flex-col gap-[4px]">
+                    <p className="text-[20px] font-semibold  mdx:text-[28px] 4xl:text-[35px]">
+                      {item.title}
+                    </p>
+                    <p className="text-[14px] text-violet100 mdx:text-[18px] font-semibold">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          ))}
 				</Slider>
 			</div>
 

@@ -53,7 +53,6 @@ const SimilarNews = () => {
 
 	  <div className='3xl:absolute right-[20px] bottom-[-50px]'>
 			<Links/>
-
 			</div>
     </div>
   );

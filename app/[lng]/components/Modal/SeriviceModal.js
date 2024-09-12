@@ -1,6 +1,8 @@
-"use client"
+'use client';
+
 import { IoClose } from "react-icons/io5";
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
+import InputMask from 'react-input-mask';
 import {
   Dialog,
   DialogTitle,
@@ -17,28 +19,29 @@ const ServiceModal = ({ isOpen, onClose }) => {
     service: '',
     comment: '',
   });
-  const [isSubmitted, setIsSubmitted] = useState(false); // State to control the success modal
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   // Handle input changes
-  const handleChange = (e) => {
+  const handleChange = useCallback((e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
-    });
-  };
+    }));
+  }, []);
 
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form data submitted:', formData);
-    setIsSubmitted(true); // Show success modal after submission
-    onClose(); // Close the form modal when the form is submitted
+    setIsSubmitted(true);
+    onClose();
+    localStorage.removeItem('formData');
   };
 
   // Close success modal
   const handleCloseSuccessModal = () => {
-    setIsSubmitted(false); // Close the success modal
+    setIsSubmitted(false);
   };
 
   return (
@@ -48,19 +51,31 @@ const ServiceModal = ({ isOpen, onClose }) => {
         open={isOpen}
         onClose={onClose}
         fullWidth
-        maxWidth="sm"
-        className="rounded-[30px] mdl:rounded-[40px] 3xl:rounded-[100px] py-[25px] px-[20px]"
+        PaperProps={{
+          sx: {
+            maxWidth: '460px',
+            borderRadius: { xs: '20px', mdl: '30px' },
+            padding: { xs: '2px 20px', mdl: '30px 25px' },
+          },
+        }}
       >
-        <DialogTitle className="text-[23px] mdl:text-[30px] 3xl:text-[30px] font-bold flex flex-row justify-between">
+        <DialogTitle
+          sx={{
+            fontSize: { xs: '23px', mdl: '30px' },
+            display: 'flex',
+            justifyContent: 'space-between',
+            fontWeight: 'bold',
+          }}
+        >
           Оставить заявку
-          <div onClick={onClose} className="cursor-pointer">
-            <IoClose className="text-titleDark" />
+          <div onClick={onClose} style={{ cursor: 'pointer' }}>
+            <IoClose />
           </div>
         </DialogTitle>
         <DialogContent>
           <form>
             {/* Name Input */}
-            <div className="mb-4">
+            <div style={{ marginBottom: '16px' }}>
               <input
                 type="text"
                 id="name"
@@ -68,36 +83,59 @@ const ServiceModal = ({ isOpen, onClose }) => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-[#F0F0F0] rounded-[10px]"
+                style={{
+                  width: '100%',
+                  padding: '12px',
+                  border: '1px solid #F0F0F0',
+                  borderRadius: '10px',
+                }}
                 placeholder="Имя"
               />
             </div>
 
-            {/* Phone Input */}
-            <div className="mb-4">
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
+            {/* Phone Input with Mask */}
+            <div style={{ marginBottom: '16px' }}>
+              <InputMask
+                mask="+998 (99) 999-99-99"
                 value={formData.phone}
                 onChange={handleChange}
-                required
-                className="w-full p-3 border border-[#F0F0F0] rounded-[10px]"
-                placeholder="Номер телефона"
-              />
+              >
+                {() => (
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    style={{
+                      width: '100%',
+                      padding: '12px',
+                      border: '1px solid #F0F0F0',
+                      borderRadius: '10px',
+                    }}
+                    placeholder="Номер телефона"
+                  />
+                )}
+              </InputMask>
             </div>
 
             {/* Service Select */}
-            <div className="mb-4">
+            <div style={{ marginBottom: '16px' }}>
               <select
                 id="service"
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-[#F0F0F0] rounded-[10px]"
+                style={{
+                  width: '100%',
+                  padding: '12px',
+                  border: '1px solid #F0F0F0',
+                  borderRadius: '10px',
+                }}
               >
-                <option value="" disabled>Выберите услугу</option>
+                <option value="" disabled>
+                  Выберите услугу
+                </option>
                 <option value="Web Development">Разработка сайтов</option>
                 <option value="Telegram Bot">Разработка Telegram-ботов</option>
                 <option value="SMM">SMM</option>
@@ -106,22 +144,37 @@ const ServiceModal = ({ isOpen, onClose }) => {
             </div>
 
             {/* Comment Input */}
-            <div className="mb-4">
+            <div style={{ marginBottom: '16px' }}>
               <input
                 id="comment"
                 name="comment"
                 value={formData.comment}
                 onChange={handleChange}
-                className="w-full p-3 border border-[#F0F0F0] rounded-[10px]"
+                style={{
+                  width: '100%',
+                  padding: '12px',
+                  border: '1px solid #F0F0F0',
+                  borderRadius: '10px',
+                }}
                 placeholder="Комментарий"
               />
             </div>
           </form>
         </DialogContent>
-        <DialogActions className="w-full">
+        <DialogActions style={{ width: '100%' }}>
           <Button
             onClick={handleSubmit}
-            className=" w-[90%] text-[14px] 3xl:w-[80%] mx-auto rounded-[100px] py-[20px] mdl:text-[18px] font-bold px-[30px] bg-violet100 text-center text-white"
+            sx={{
+              width: '90%',
+              fontSize: { xs: '14px', mdl: '18px' },
+              mx: 'auto',
+              borderRadius: '100px',
+              py: '20px',
+              fontWeight: 'bold',
+              px: '30px',
+              backgroundColor: '#7B72EB',
+              color: 'white',
+            }}
           >
             Отправить
           </Button>
@@ -130,38 +183,55 @@ const ServiceModal = ({ isOpen, onClose }) => {
 
       {/* Success Modal */}
       <Dialog
-        open={isSubmitted} // This will open the success modal after submission
+        open={isSubmitted}
         onClose={handleCloseSuccessModal}
         fullWidth
-        maxWidth="sm"
-        maxHeiht='sm'
-        sx={{
-          borderRadius: {
-            xs: '30px', // For small screens
-            mdl: '40px', // For medium screens
-            '3xl': '100px', // For extra large screens
-          },
-          padding: {
-            xs: '25px 20px', // For small screens
-            mdl: '30px', // For medium screens
-            '3xl': '40px 90px', // For extra large screens
+        PaperProps={{
+          sx: {
+            maxWidth: '460px',
+            borderRadius: { xs: '20px', mdl: '30px' },
+            padding: { xs: '2px 20px', mdl: '30px 25px' },
           },
         }}
-        className="rounded-[30px] mdl:rounded-[40px] 3xl:rounded-[100px] py-[25px] px-[90px]"
       >
-        <DialogContent className="text-center flex flex-col items-center">
-          <FaCheckCircle className="text-violet100 text-[50px] mb-4" />
-          <h2 className="text-[20px] mdl:text-[24px] 3xl:text-[28px] font-bold">
+        <DialogContent
+          sx={{
+            textAlign: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <FaCheckCircle
+            style={{ color: '#7B72EB', fontSize: '80px', marginBottom: '16px' }}
+          />
+          <h2
+            style={{
+              fontSize: '20px',
+              fontWeight: 'bold',
+              marginBottom: '8px',
+            }}
+          >
             Заявка отправлена!
           </h2>
-          <p className="text-[16px] text-gray-500 mt-2">
+          <p style={{ fontSize: '16px', color: 'gray', marginTop: '8px' }}>
             Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.
           </p>
         </DialogContent>
-        <DialogActions className="w-full">
+        <DialogActions style={{ width: '100%' }}>
           <Button
             onClick={handleCloseSuccessModal}
-            className=" w-[90%] text-[14px] 3xl:w-[80%] mx-auto rounded-[100px] py-[20px] mdl:text-[18px] font-bold px-[30px] bg-violet100 text-center text-white"
+            sx={{
+              width: '90%',
+              fontSize: { xs: '14px', mdl: '18px' },
+              mx: 'auto',
+              borderRadius: '100px',
+              py: '20px',
+              fontWeight: 'bold',
+              px: '30px',
+              backgroundColor: '#7B72EB',
+              color: 'white',
+            }}
           >
             Ок
           </Button>
