@@ -39,8 +39,8 @@ const Contact = () => {
 
       {/* MAP */}
       <div className='rounded-[30px] mt-[20px] overflow-hidden'>
-        <iframe
-          src="https://yandex.ru/map-widget/v1/?ll=69.288984%2C41.351260&z=16&pt=69.288984,41.351260,pm2rdl"
+      <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.2748492827023!2d69.2889842154165!3d41.35126017926439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef5065e8f8b75%3A0x4d3e54d40716bb48!2sUzbekistan!5e0!3m2!1sen!2sus!4v1633117786010!5m2!1sen!2sus"
           width="100%"
           height="400px"
           frameBorder="0"
