@@ -51,11 +51,13 @@ const ServiceModal = ({ isOpen, onClose }) => {
         open={isOpen}
         onClose={onClose}
         fullWidth
+        className='z-[99999]'
         PaperProps={{
           sx: {
             maxWidth: '460px',
             borderRadius: { xs: '20px', mdl: '30px' },
             padding: { xs: '2px 20px', mdl: '30px 25px' },
+            zIndex: 99999, // Set z-index for the main modal
           },
         }}
       >
@@ -65,6 +67,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             display: 'flex',
             justifyContent: 'space-between',
             fontWeight: 'bold',
+            zIndex: 99999, // Set z-index for DialogTitle
           }}
         >
           Оставить заявку
@@ -72,7 +75,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             <IoClose />
           </div>
         </DialogTitle>
-        <DialogContent>
+        <DialogContent sx={{ zIndex: 99999 }} className='z-[99999999]'>
           <form>
             {/* Name Input */}
             <div style={{ marginBottom: '16px' }}>
@@ -161,7 +164,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             </div>
           </form>
         </DialogContent>
-        <DialogActions style={{ width: '100%' }}>
+        <DialogActions sx={{ width: '100%', zIndex: 99999 }}>
           <Button
             onClick={handleSubmit}
             sx={{
@@ -191,6 +194,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             maxWidth: '460px',
             borderRadius: { xs: '20px', mdl: '30px' },
             padding: { xs: '2px 20px', mdl: '30px 25px' },
+            zIndex: 99999, // Set z-index for the success modal
           },
         }}
       >
@@ -200,6 +204,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            zIndex: 99999, // Set z-index for DialogContent
           }}
         >
           <FaCheckCircle
@@ -218,7 +223,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.
           </p>
         </DialogContent>
-        <DialogActions style={{ width: '100%' }}>
+        <DialogActions sx={{ width: '100%', zIndex: 99999 }}>
           <Button
             onClick={handleCloseSuccessModal}
             sx={{
