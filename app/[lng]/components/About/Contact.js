@@ -16,7 +16,6 @@ const Contact = () => {
 				Связаться с нами
 				</Link>
           </div>
-				
 			</div>
 			<div className='flex flex-col mdl:flex-row 3xl:mdl:flex-col mt-[20px] 3xl:w-[50%]'>
         <div className='flex flex-col'>
