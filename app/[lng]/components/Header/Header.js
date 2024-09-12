@@ -106,7 +106,7 @@ const Header = ({ lng }) => {
 			{isMenuOpen && (
 				<div className='absolute top-[70px] left-0 w-full h-[100%] bg-white z-[99999] flex flex-col  space-y-8 text-2xl'>
 					<Link
-						href='/about'
+						href='/services'
 						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
