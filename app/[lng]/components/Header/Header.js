@@ -14,12 +14,25 @@ import { languages, cookieName } from '../../../i18n/settings'
 import { useCookies } from 'react-cookie'
 import CustomSelect from './CustomSelect' // Импортируем кастомный селект
 import { usePathname } from 'next/navigation'
+import ServiceModal from '../Modal/SeriviceModal'
+
+
+
 const Header = ({ lng }) => {
 	const { t } = useCustomTranslation(lng, 'header')
 	const [cookies, setCookie] = useCookies([cookieName])
 	const [isMenuOpen, setIsMenuOpen] = useState(false) // Состояние для управления открытием/закрытием меню
 	const pathname = usePathname()
 
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const openModal = () => {
+	  setIsModalOpen(true);
+	};
+  
+	// Close modal function
+	const closeModal = () => {
+	  setIsModalOpen(false);
+	};
 	// Check if it's the main page by checking if the pathname is exactly `/${lng}`
 	const isMainPage = pathname === `/${lng}`
 
@@ -80,14 +93,14 @@ const Header = ({ lng }) => {
 				>
 					{t('about')}
 				</Link>
-				<Link
-					href='/getInfo'
+				<button
+				onClick={openModal}
 					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
 					{t('getInfo')}
-				</Link>
+				</button>
 			</div>
 
 			{isMenuOpen && (
@@ -131,17 +144,19 @@ const Header = ({ lng }) => {
 						<GrLinkNext className='text-titleDark' />
 					</Link>
 
-					<Link
-						href='/getInfo'
+					<button
+						onClick={openModal
+							}	
 						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
 							{t('getInfo')}
 						</p>
 						<GrLinkNext className='text-titleDark' />
-					</Link>
+					</button>
 				</div>
 			)}
+				<ServiceModal isOpen={isModalOpen} onClose={closeModal}/>
 
 			<Link href='/'>
 				<Image
@@ -166,7 +181,7 @@ const Header = ({ lng }) => {
 					</button>
 				</div>
 
-				<button className='bg-violet100 hidden mdx:block w-[230px] h-[50px] border rounded-[30px]'>
+					<button onClick={openModal} className='bg-violet100 hidden mdx:block w-[230px] h-[50px] border rounded-[30px]'>
 					<p className='font-bold text-white100 text-[16px]'>{t('getInfo')}</p>
 				</button>
 

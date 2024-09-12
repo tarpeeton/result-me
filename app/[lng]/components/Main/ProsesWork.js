@@ -3,8 +3,17 @@ import Link from 'next/link';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick/lib/slider';
+import { useState } from 'react';
+
+import ServiceModal from '../Modal/SeriviceModal'
+
 
 const ProsesWork = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+
+// SLIDER
   const settings = {
     dots: false,
     infinite: false,
@@ -39,6 +48,16 @@ const ProsesWork = () => {
       },
     ],
   };
+
+const openModal = () => {
+	  setIsModalOpen(true);
+	};
+  
+	// Close modal function
+	const closeModal = () => {
+	  setIsModalOpen(false);
+	};
+
   
 
   return (
@@ -55,9 +74,9 @@ const ProsesWork = () => {
             </div>
             <div className='relative w-full  mt-[200px] 3xl:absolute 3xl:bottom-[25px] 3xl:right-[25px]'>
             <div className='py-[20px] absolute  bottom-[20px] right-[20px] px-[30px] rounded-[100px] bg-white text-center  mdl:w-[300px] 4xl:w-[370px]'>
-              <Link href='free' className='text-[14px] font-bold text-violet100 mdl:text-[18px] 4xl:text-[20px]'>
+              <button onClick={openModal} className='text-[14px] font-bold text-violet100 mdl:text-[18px] 4xl:text-[20px]'>
                 Бесплатная консультация
-              </Link>
+              </button>
             </div> 
              </div>
            
@@ -124,6 +143,9 @@ const ProsesWork = () => {
           </div>
         </div>
       </div>
+
+      {/* MODAL */}
+      <ServiceModal isOpen={isModalOpen} onClose={closeModal}/>
     </div>
   );
 };

@@ -1,6 +1,8 @@
-import Link from 'next/link';
+"use client"
 import { FaCheck } from "react-icons/fa";
 
+import { useState } from 'react'
+import ServiceModal from '../Modal/SeriviceModal'
 const CostCardData = [
 	{
 	  title: "Одностраничный сайт",
@@ -66,6 +68,16 @@ const CostCardData = [
   ];
 
 const CostCard = () => {
+	const [isModalOpen, setIsModalOpen] = useState(false)
+
+	const openModal = () => {
+		setIsModalOpen(true)
+	}
+
+	// Close modal function
+	const closeModal = () => {
+		setIsModalOpen(false)
+	}
   return (
     <div className='bg-white100 px-[24px] pt-[30px] rounded-[30px] flex flex-col 3xl:flex-col  3xl:p-[40px] mx-[16px] mt-[20px] 3xl:mx-[30px]'>
       <div>
@@ -108,12 +120,13 @@ const CostCard = () => {
               <p className='text-violet100 font-bold text-[28px]'>{card.price}</p>
             </div>
             {/* Update the button section with bottom 20px */}
-            <Link href={card.link} className='text-white text-center text-[18px] font-bold w-[90%] mx-auto py-[30px] 3xl:py-[24px] px-[20px] bg-violet100 rounded-[100px] text-center mt-[7px] absolute left-0 right-0 bottom-[20px]'>
+            <button onClick={openModal} className='text-white text-center text-[18px] font-bold w-[90%] mx-auto py-[30px] 3xl:py-[24px] px-[20px] bg-violet100 rounded-[100px]  mt-[7px] absolute left-0 right-0 bottom-[20px]'>
               Оставить заявку
-            </Link>
+            </button>
           </div>
         ))}
       </div>
+	  <ServiceModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };

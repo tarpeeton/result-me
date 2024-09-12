@@ -43,12 +43,12 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { name: 'Сайты', href: '#'  , slug: 'slug' },
-    { name: 'Telegram-боты', href: '#' , slug: 'slug' },
-    { name: 'SMM', href: '#' , slug: 'slug' },
-    { name: 'Реклама', href: '#' , slug: 'slug' },
-    { name: 'SEO', href: '#'  , slug: 'slug'},
-    { name: 'Брендинг', href: '#' , slug: 'slug' },
+    { name: 'Сайты', href: '#'  , slug: 'web-development' },
+    { name: 'Telegram-боты', href: '#' , slug: 'telegram-bot-development' },
+    { name: 'SMM', href: '#' , slug: 'smm' },
+    { name: 'Реклама', href: '#' , slug: 'ads-launch' },
+    { name: 'SEO', href: '#'  , slug: 'seo'},
+    { name: 'Брендинг', href: '#' , slug: 'branding' },
   ];
 
   useEffect(() => {

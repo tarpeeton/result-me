@@ -4,22 +4,38 @@ import { GrLinkNext } from 'react-icons/gr'
 import logo from '@/public/svg/footerLogo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-
+import { useState } from 'react'
 import { FaInstagram } from 'react-icons/fa'
 import { LiaTelegramPlane } from 'react-icons/lia'
 import { FaFacebookF } from 'react-icons/fa'
 import { BsYoutube } from 'react-icons/bs'
+import ServiceModal from '../Modal/SeriviceModal'
 
 const Footer = ({ lng }) => {
+	const [isModalOpen, setIsModalOpen] = useState(false)
+
+	const openModal = () => {
+		setIsModalOpen(true)
+	}
+
+	// Close modal function
+	const closeModal = () => {
+		setIsModalOpen(false)
+	}
+
 	const { t } = useCustomTranslation(lng, 'footer')
+
 	return (
 		<div className='flex flex-col bg-footerBgDark w-full'>
-			<div className='bg-violet100 flex items-center py-[40px] px-[16px] gap-[40px] 2xl:gap-0 2xl:justify-between 2xl:px-[20px] 6xl:px-[20px] mdx:justify-between mdx:gap-0'>
+			<button
+				onClick={openModal}
+				className='bg-violet100 flex items-center py-[40px] px-[16px] gap-[40px] 2xl:gap-0 2xl:justify-between 2xl:px-[20px] 6xl:px-[20px] mdx:justify-between mdx:gap-0'
+			>
 				<h3 className='text-white100 text-[23px] font-bold 2xl:text-[40px] 6xl:text-[80px] mdx:text-[45px]'>
 					{t('no_pasient')}
 				</h3>
 				<GrLinkNext className='text-white100 w-[40px] h-[40px] 2xl:w-[40px] mdx:w-[50px] mdx:h-[50px] 2xl:h-[40px] 6xl:w-[85px] 6xl:h-[85px]' />
-			</div>
+			</button>
 
 			<div className=' flex flex-col mt-[30px] px-[16px]'>
 				<div className='lg:flex lg:flex-row lg:items-center  4xl:flex 4xl:flex-row '>
@@ -91,17 +107,21 @@ const Footer = ({ lng }) => {
 									{t('address_title')}
 								</h5>
 								<div>
-								<p className='text-[15px] font-medium text-titleDark20 mdx:text-[18px]'>
-									{t('some_address')}
-								</p>
-								<Link href='map' className='flex items-center gap-[6px] group'>
-									<p className='text-violet100 text-[14px] font-bold mdx:text-[16px]'>
-										{t('show_map')}
+									<p className='text-[15px] font-medium text-titleDark20 mdx:text-[18px]'>
+										{t('some_address')}
 									</p>
-									<GrLinkNext className='text-violet100 w-[20px] h-[20px] transition-transform duration-400 group-hover:translate-x-[6px]' />
-								</Link>
+									<Link
+										href='https://maps.google.com/maps?q=41.351260,69.288984&ll=41.351260,69.288984&z=16'
+										className='flex items-center gap-[6px] group'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										<p className='text-violet100 text-[14px] font-bold mdx:text-[16px]'>
+											{t('show_map')}
+										</p>
+										<GrLinkNext className='text-violet100 w-[20px] h-[20px] transition-transform duration-400 group-hover:translate-x-[6px]' />
+									</Link>
 								</div>
-								
 							</div>
 						</div>
 					</div>
@@ -124,6 +144,7 @@ const Footer = ({ lng }) => {
 					</div>
 				</div>
 			</div>
+			<ServiceModal isOpen={isModalOpen} onClose={closeModal} />
 		</div>
 	)
 }

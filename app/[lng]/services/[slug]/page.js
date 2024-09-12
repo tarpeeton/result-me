@@ -15,7 +15,6 @@ const Service = () => {
 		<CostCard/>
 		<div className='px-[24px]'>
 		<Case/>
-
 		</div>
 		<Blog/>
 		</div>

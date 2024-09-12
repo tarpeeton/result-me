@@ -27,7 +27,7 @@ const Info = () => {
 			</div>
 			<div className='flex flex-col gap-[7px]'>
 				<div className='border-b border-white'>
-				<Link href='litsenyialink' className='text-[28px] text-white100 font-bold mdl:text-[40px]  '>
+				<Link href='https://document.birdarcha.uz/certificate/legal-entity/2875c7eb-48ec-4ff3-91f6-fd8a394f8439/pdf?download' className='text-[28px] text-white100 font-bold mdl:text-[40px]  '>
 				Свидетельство
 				</Link>
 				</div>
