@@ -45,24 +45,24 @@ const WinnerInfo = () => {
   }, []);
 
   return (
-    <div className='winner-container flex flex-col w-full h-full rounded-[30px] bg-violet100 relative overflow-hidden pb-[30px] mt-[20px] mdl:mt-[25px] 3xl:mt-[30px] 2xl:pb-[100px] mdl:pb-[100px] '>
-      <div className='relative overflow-hidden h-[116px] mdl:h-[160px] 2xl:h-[295px]'>
-        <Image src={Winner} width={131} height={121} quality={100} alt='Winner Image' className='absolute top-0 right-[-50px] mdl:top-[20px] mdl:right-[30px] 2xl:w-[291px] 2xl:h-[291px] object-contain'/>
+    <div className='winner-container flex flex-col w-full rounded-[30px] bg-violet100 relative overflow-hidden pb-[30px] mt-[20px] mdl:mt-[25px] 3xl:mt-[30px] mdl:pb-[100px] xl:pb-[20px] '>
+      <div className='relative overflow-hidden h-[116px] mdl:h-[160px] 4xl:h-[295px] 2xl:h-[250px]'>
+        <Image src={Winner} width={131} height={121} quality={100} alt='Winner Image' className='absolute top-0 right-[-50px] mdl:top-[20px] mdl:right-[30px] 2xl:w-[200px] 2xl:h-[250px] 4xl:w-[291px] 4xl:h-[291px] object-contain'/>
       </div>
-      <div className='flex flex-col gap-[8px] mdl:gap-[10px] 4xl:gap-[30px] w-[80%] mx-auto 2xl:w-[70%]'>
+      <div className='flex flex-col gap-[8px] mdl:gap-[10px] 4xl:gap-[30px] w-[80%] mx-auto 4xl:w-[70%]'>
         <div className='text-center'>
-          <p className='winner-text text-[12px] leading-[19px] text-white100 mdl:text-[18px] mdl:leading-[28px] 2xl:text-[25px] 2xl:leading-[30.48px]'>Поздравляем! Вы получили подарок</p>
+          <p className='winner-text text-[12px] leading-[19px] text-white100 mdl:text-[18px] mdl:leading-[28px] 4xl:text-[25px] 4xl:leading-[30.48px] xl:text-[30px] '>Поздравляем! Вы получили подарок</p>
         </div>
         <div className='text-center'>
-          <h2 className='winner-text text-[28px] font-bold text-white100 leading-[34.13px] mdl:text-[40px] mdl:leading-[48.76px] 2xl:text-[90px] 2xl:leading-[109.71px]'>БЕСПЛАТНЫЙ РАЗБОР ВАШЕГО ПРОЕКТА</h2>
+          <h2 className='winner-text text-[28px] font-bold text-white100 leading-[34.13px] mdl:text-[40px] mdl:leading-[48.76px] 4xl:text-[90px] xl:text-[45px] xl:mt-[30px] 4xl:leading-[109.71px]'>БЕСПЛАТНЫЙ РАЗБОР ВАШЕГО ПРОЕКТА</h2>
         </div>
       </div>  
 
-      <div className='flex flex-col 2xl:flex-col 2xl:mt-[200px] '>
-      <div className='relative w-[70px] h-[70px] mt-[20px] mdl:w-[137px]  mdl:h-[179px] 2xl:h-[353px] 2xl:w-[250px] 2xl:order-1  '>
-        <Image src={arrowWinner} width={400} height={400} quality={100} alt='Winner Image' className='winner-arrow absolute left-[40px] top-[-20px] mdl:left-[40px] 2xl:left-[150px] '/>
+      <div className='flex flex-col 4xl:flex-col 4xl:mt-[200px] '>
+      <div className='relative w-[70px] h-[70px] mt-[20px] mdl:w-[137px]  mdl:h-[179px] xl:h-[300px] 4xl:h-[353px] 4xl:w-[250px] 4xl:order-1  '>
+        <Image src={arrowWinner} width={400} height={400} quality={100} alt='Winner Image' className='winner-arrow absolute left-[40px] top-[-20px] mdl:left-[40px] 2xl:left-[150px] 4xl:left-[150px] '/>
       </div>
-      <Link href='ggg' className='mt-[15px] winner-button bg-white100 w-[70%] mx-auto py-[20px] px-[30px] rounded-[100px] text-center mdl:w-[40%]  2xl:w-[30%] mdl:mt-[-150px]'>
+      <Link href='tel:/+998905092562' className='mt-[15px] winner-button bg-white100 w-[70%] mx-auto py-[20px] px-[30px] rounded-[100px] text-center mdl:w-[40%] xl:w-[30%]  4xl:w-[30%] mdl:mt-[-150px]'>
         <p href='zayafka' className=' text-violet100 text-[14px] font-bold mdl:text-[18px]'> 
           Связаться с нами
         </p>
@@ -132,7 +132,7 @@ const Puzzle = () => {
         <WinnerInfo />
       ) : (
         <div className="flex px-[12px] py-[30px] flex-col items-center justify-center bg-violet100 rounded-[30px] mdl:rounded-[60px] 4xl:rounded-[100px] mt-[20px] mdl:mt-[25px] 4xl:mt-[30px] 4xl:py-[80px]">
-          <h1 className="text-white text-[28px] mx-auto w-[90%] mdl:text-[40px] 4xl:text-[50px] mb-4 font-bold">Соберите пазл и получите подарок!</h1>
+          <h1 className="text-white text-[28px] mx-auto w-[90%] mdl:w-[60%] 2xl:w-[30%] mdl:text-[40px] 4xl:text-[50px] mb-4 font-bold text-center ">Соберите пазл и получите подарок!</h1>
           <div className="grid grid-cols-3 grid-rows-2 gap-0 w-full max-w-[600px] mdl:max-w-[800px] 4xl:max-w-[1200px]">
             <PuzzlePiece id={1} imagePart={imageMap[1]} onClick={handleClick} rotation={rotations[1]} />
             <PuzzlePiece id={2} imagePart={imageMap[2]} onClick={handleClick} rotation={rotations[2]} />

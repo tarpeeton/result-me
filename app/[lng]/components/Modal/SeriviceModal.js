@@ -36,7 +36,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
     console.log('Form data submitted:', formData);
 
     // Telegram Bot API URL
-    const TELEGRAM_API_URL = `https://api.telegram.org/bot7364268562:AAFNdGFTuTrNivKRj-Bmdh2yT_WLu83zsm0/sendMessage`;
+    const TELEGRAM_API_URL = 'https://api.telegram.org/bot7364268562:AAFNdGFTuTrNivKRj-Bmdh2yT_WLu83zsm0/sendMessage'
 
     // Message to be sent to Telegram
     const message = `
@@ -100,6 +100,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
           </div>
         </DialogTitle>
         <DialogContent sx={{ zIndex: 99999 }} className='z-[99999999]'>
+          {/* Form submission handled here */}
           <form onSubmit={handleSubmit}>
             {/* Name Input */}
             <div style={{ marginBottom: '16px' }}>
@@ -126,13 +127,13 @@ const ServiceModal = ({ isOpen, onClose }) => {
                 mask="+998 (99) 999-99-99"
                 value={formData.phone}
                 onChange={handleChange}
+                required
               >
                 {() => (
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
-                    required
                     style={{
                       width: '100%',
                       padding: '12px',
@@ -177,6 +178,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
                 name="comment"
                 value={formData.comment}
                 onChange={handleChange}
+                required
                 style={{
                   width: '100%',
                   padding: '12px',
@@ -186,27 +188,28 @@ const ServiceModal = ({ isOpen, onClose }) => {
                 placeholder="Комментарий"
               />
             </div>
+
+            {/* Submit Button inside the form */}
+            <DialogActions sx={{ width: '100%', zIndex: 99999 }}>
+              <Button
+                type="submit"
+                sx={{
+                  width: '90%',
+                  fontSize: { xs: '14px', mdl: '18px' },
+                  mx: 'auto',
+                  borderRadius: '100px',
+                  py: '20px',
+                  fontWeight: 'bold',
+                  px: '30px',
+                  backgroundColor: '#7B72EB',
+                  color: 'white',
+                }}
+              >
+                Отправить
+              </Button>
+            </DialogActions>
           </form>
         </DialogContent>
-        <DialogActions sx={{ width: '100%', zIndex: 99999 }}>
-          <Button
-            type="submit"
-            onClick={handleSubmit}
-            sx={{
-              width: '90%',
-              fontSize: { xs: '14px', mdl: '18px' },
-              mx: 'auto',
-              borderRadius: '100px',
-              py: '20px',
-              fontWeight: 'bold',
-              px: '30px',
-              backgroundColor: '#7B72EB',
-              color: 'white',
-            }}
-          >
-            Отправить
-          </Button>
-        </DialogActions>
       </Dialog>
 
       {/* Success Modal */}

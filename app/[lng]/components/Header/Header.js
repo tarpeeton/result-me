@@ -59,10 +59,10 @@ const Header = ({ lng }) => {
 			className={`w-full flex justify-between px-[20px] z-[999] py-[16px] 
             ${isMainPage ? 'bg-violet100' : 'bg-white'}`} // Зависимость от флага isMainPage
 		>
-			<div className='hidden 2xl:flex items-center gap-[25px] 4xl:gap-[40px]'>
+			<div className='hidden 2xl:flex items-center gap-[25px] 4xl:gap-[40px] xl:w-[30%] 4xl:w-[25%]'>
 				<Link
 					href='/services'
-					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+					className={`font-montserrat font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
@@ -70,7 +70,7 @@ const Header = ({ lng }) => {
 				</Link>
 				<Link
 					href='/cases'
-					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+					className={`font-montserrat font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
@@ -78,7 +78,7 @@ const Header = ({ lng }) => {
 				</Link>
 				<Link
 					href='/blog'
-					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+					className={`font-montserrat font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
@@ -86,27 +86,19 @@ const Header = ({ lng }) => {
 				</Link>
 				<Link
 					href='/about'
-					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+					className={`font-montserrat font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
 					{t('about')}
 				</Link>
-				<button
-					onClick={openModal}
-					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
-						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
-					}`}
-				>
-					{t('getInfo')}
-				</button>
 			</div>
 			{/* MOBILE NAVIGATION */}
 			{isMenuOpen && (
-				<div className='absolute top-[70px] left-0 w-full h-[100%] bg-white z-[999] flex flex-col  space-y-8 text-2xl'>
+				<div className='absolute top-[70px] left-0 w-full h-[100%] bg-white z-[99999999] flex flex-col text-2xl'>
 					<a
 						href='/services'
-						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
+						className='flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
 							{t('uslugi')}
@@ -115,7 +107,7 @@ const Header = ({ lng }) => {
 					</a>
 					<a
 						href='/cases'
-						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
+						className='font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
 							{t('keysi')}
@@ -125,7 +117,7 @@ const Header = ({ lng }) => {
 
 					<a
 						href='/blog'
-						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
+						className='font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
 							{t('blog')}
@@ -135,7 +127,7 @@ const Header = ({ lng }) => {
 
 					<a
 						href='/about'
-						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
+						className='font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
 							{t('about')}
@@ -143,18 +135,18 @@ const Header = ({ lng }) => {
 						<GrLinkNext className='text-titleDark' />
 					</a>
 
-					<button
-						onClick={openModal}
-						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
+					<Link
+						href='tel:/+998905092562'
+						
+						className='font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0] z-[99999999999999]'
 					>
-						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
-							{t('getInfo')}
+						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-violet100'>
+						+998 (90) 509-25-62
 						</p>
-						<GrLinkNext className='text-titleDark' />
-					</button>
+						
+					</Link>
 				</div>
 			)}
-		<ServiceModal isOpen={isModalOpen} onClose={closeModal} />
 			<Link href='/'>
 				<Image
 					src={isMainPage ? footerLogo : logo}
@@ -168,7 +160,7 @@ const Header = ({ lng }) => {
 				<div className='hidden 2xl:flex'>
 					<Link
 						href='tel:+998900228073'
-						className={`w-[50px] h-[50px] border-[1px] border-[white] rounded-[100%] flex items-center justify-center ${
+						className={`font-montserrat w-[50px] h-[50px] border-[1px] border-[white] rounded-[100%] flex items-center justify-center ${
 							isMainPage ? 'bg-inherit' : 'bg-selectBg'
 						}`}
 					>
@@ -182,16 +174,16 @@ const Header = ({ lng }) => {
 					onClick={openModal}
 					className='bg-violet100 hidden mdx:block w-[230px] h-[50px] border rounded-[30px]'
 				>
-					<p className='font-bold text-white100 text-[16px]'>{t('getInfo')}</p>
+					<p className='font-robotoFlex font-bold text-white100 text-[16px]'>{t('getInfo')}</p>
 				</button>
-
-				<div className='flex 3xl:w-[150px]  3xl:h-[50px]'>
+				<ServiceModal isOpen={isModalOpen} onClose={closeModal} />
+				<div className='font-robotoFlex flex 3xl:w-[150px]  3xl:h-[50px]'>
 					<CustomSelect
 						value={lng}
 						onChange={handleLanguageChange}
 						options={[
 							{
-								value: 'ru',
+								value: 'Ру',
 								label: (
 									<>
 										<RU width='20' /> Ру
@@ -199,7 +191,7 @@ const Header = ({ lng }) => {
 								),
 							},
 							{
-								value: 'uz',
+								value: 'Уз',
 								label: (
 									<>
 										<UZ width='20' /> Uz
@@ -207,7 +199,7 @@ const Header = ({ lng }) => {
 								),
 							},
 							{
-								value: 'en',
+								value: 'Ен',
 								label: (
 									<>
 										<GB width='20' /> En
@@ -221,7 +213,7 @@ const Header = ({ lng }) => {
 					<button onClick={toggleMenu} className='text-3xl'>
 						{isMenuOpen ? (
 							<AiOutlineClose
-								className={`${isMainPage ? 'text-white' : 'text-black'}`}
+								className={`font-montserrat ${isMainPage ? 'text-white' : 'text-black'}`}
 							/>
 						) : (
 							<RxHamburgerMenu

@@ -1,11 +1,19 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import  React , { useState, useEffect, useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from 'next/image';
 import { gsap } from "gsap";
 import Link from 'next/link';
-import caseimg from '@/public/images/caseimg.jpg';
+
+import interlab from '@/public/images/cases/interlab.jpg';
+import mrj from '@/public/images/cases/mrj.jpg';
+import inst from '@/public/images/cases/inst.jpg';
+import dr from '@/public/images/cases/dr.jpg';
+import inter from '@/public/images/cases/inter.jpg';
+
+import caseDesckription from '@/public/images/Vector.png';
+ 
 
 // Items for filtering
 const items = [
@@ -24,8 +32,8 @@ const data = [
     id: 1,
     banner: {
       title: "Intermed Innovation",
-      shortDescription: "Сайт | SEO",
-      photo: caseimg,
+      shortDescription: "Сайт SEO",
+      photo: inter,
     },
     statistics: [
       { value: "+30%", label: "конверсия" },
@@ -37,48 +45,48 @@ const data = [
   {
     id: 2,
     banner: {
-      title: "Branding Project",
-      shortDescription: "Брендинг | Логотип",
-      photo: caseimg,
+      title: "Interlab",
+      shortDescription: "Сайт SEO",
+      photo: interlab,
     },
     statistics: [
-      { value: "+25%", label: "узнаваемость бренда" },
-      { value: "+60%", label: "лояльность клиентов" },
+      { value: "+45%", label: "узнаваемость бренда" },
+      { value: "+70%", label: "лояльность клиентов" },
     ],
-    serviceType: { name: "Branding" },
+    serviceType: { name: "Web Development SEO" },
   },
   {
     id: 3,
     banner: {
-      title: "SEO Optimization",
-      shortDescription: "SEO | Оптимизация",
-      photo: caseimg,
+      title: "MRJ Trade",
+      shortDescription: "Сайт SEO",
+      photo: mrj,
     },
     statistics: [
       { value: "+80%", label: "органический трафик" },
       { value: "+50%", label: "позиции в поисковиках" },
     ],
-    serviceType: { name: "SEO" },
+    serviceType: { name: "Web Development SEO" },
   },
   {
     id: 4,
     banner: {
-      title: "Telegram Bot Creation",
-      shortDescription: "Telegram-бот | SMM",
-      photo: caseimg,
+      title: "Prime medical center",
+      shortDescription: "SMM Реклама",
+      photo: inst,
     },
     statistics: [
       { value: "+40%", label: "автоматизация" },
       { value: "+70%", label: "удержание клиентов" },
     ],
-    serviceType: { name: "Telegram Bots" },
+    serviceType: { name: "SMM" },
   },
   {
     id: 5,
     banner: {
-      title: "Social Media Marketing",
-      shortDescription: "SMM | Маркетинг",
-      photo: caseimg,
+      title: "Dr Odil Alisherovich",
+      shortDescription: "SMM Маркетинг",
+      photo: dr,
     },
     statistics: [
       { value: "+90%", label: "вовлеченность" },
@@ -170,7 +178,7 @@ const Content = () => {
         {items.map((item) => (
           <div key={item.id} className="text-center">
             <button
-              className={`text-[20px] font-medium ${
+              className={`text-[20px] font-semibold ${
                 selected === item.id ? "text-violet100" : "text-titleDark"
               }`}
               onClick={() => handleSelect(item.id, item.type)}
@@ -213,7 +221,7 @@ const Content = () => {
                         <p className="text-white100 text-[18px] 3xl:text-[50px] font-bold">
                           {stat.value}
                         </p>
-                        <p className="text-white100 text-[18px] 3xl:text-[20px] font-medium">
+                        <p className="text-white100 text-[18px] 3xl:text-[20px] font-medium font-robotoFlex">
                           {stat.label}
                         </p>
                       </div>
@@ -227,8 +235,22 @@ const Content = () => {
               <p className="text-[20px] font-semibold mdx:text-[28px] 4xl:text-[35px]">
                 {item.banner.title}
               </p>
-              <p className="text-[14px] text-violet100 mdx:text-[18px] font-semibold">
-                {item.banner.shortDescription}
+              <p className="text-[14px] text-violet100 mdx:text-[18px] font-semibold w-full flex flex-row ">
+              {item.banner.shortDescription.split(' ').map((word, index) => (
+                        <React.Fragment key={index}>
+                          {index > 0 && (
+                            <Image
+                              src={caseDesckription}
+                              width={40}
+							  quality={100}
+                              height={40}
+                              alt="separator"
+                              className="mx-[6px] w-[14px] h-[14px] mdl:w-[20px] mdl:h-[20px] "
+                            />
+                          )}
+                          <span>{word}</span>
+                        </React.Fragment>
+                      ))}
               </p>
             </div>
           </Link>

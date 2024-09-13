@@ -101,7 +101,7 @@ const CostCard = () => {
 							{card.description.split('\n').map((line, lineIndex) => (
 								<p
 									key={lineIndex}
-									className='text-[15px] mdl:text-[18px] text-[#454545] font-normal'
+									className='text-[15px] mdl:text-[18px] text-[#454545] font-normal font-robotoFlex'
 								>
 									{line}
 								</p>
@@ -115,7 +115,7 @@ const CostCard = () => {
 										<FaCheck className='text-violet100' />
 									</div>
 									<div className='flex items-center'>
-										<p className='text-[#010101] text-[15px] font-medium'>
+										<p className='text-[#010101] text-[15px] font-medium font-robotoFlex'>
 											{service}
 										</p>
 									</div>

@@ -82,7 +82,7 @@ const FAQAccordion = () => {
             style={{ height: activeIndex === index ? 'auto' : 0, opacity: activeIndex === index ? 1 : 0 }}
           >
             <div className="p-[20px] mt-[-20px] bg-white mdl:p-[20px] mdl:mt-[-20px] 2xl:p-[40px] 2xl:mt-[-50px] 3xl:p-[40px] 3xl:mt-[-40px]">
-              <p className="text-[15px] text-[#454545] font-medium mdl:text-[20px]">{item.answer}</p>
+              <p className="text-[15px] text-[#454545] font-medium mdl:text-[20px] font-robotoFlex ">{item.answer}</p>
             </div>
           </div>
         </div>

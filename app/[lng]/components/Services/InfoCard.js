@@ -53,7 +53,7 @@ const InfoCard = () => {
               <p className='text-[23px] mdl:text-[40px] text-white100 font-bold 4xl:text-[50px]'>Подход под каждого</p>
             </div>
             <div className='mt-[15px] mdl:text-[18px] w-[85%]  mdl:mt-[40px]'>
-              <p className='text-[14px] mdl:text-[18px] text-white100 4xl:text-[20px]'>
+              <p className='text-[14px] mdl:text-[18px] text-white100 4xl:text-[20px] font-robotoFlex'>
 			  Разработка уникальных решений, учитывающих специфику вашего бизнеса
               </p>
             </div>
@@ -64,7 +64,7 @@ const InfoCard = () => {
               <p className='text-[23px] mdl:text-[40px] text-titleDark font-bold 4xl:text-[50px]'>Современный дизайн</p>
             </div>
             <div className='mt-[15px] mdl:text-[18px] w-[85%]  mdl:mt-[40px]'>
-              <p className='text-[14px] mdl:text-[18px] text-[#454545] 4xl:text-[20px]'>
+              <p className='text-[14px] mdl:text-[18px] text-[#454545] 4xl:text-[20px] font-robotoFlex'>
 			  Создание визуально привлекательных и функциональных сайтов, которые запоминаются
               </p>
             </div>
@@ -75,7 +75,7 @@ const InfoCard = () => {
               <p className='text-[23px] mdl:text-[40px] text-titleDark font-bold 4xl:text-[50px]'>SEO-оптимизация</p>
             </div>
             <div className='mt-[15px] w-[85%] mdl:mt-[40px]'>
-              <p className='text-[14px] mdl:text-[18px] 4xl:text-[20px] text-[#454545]'>
+              <p className='text-[14px] mdl:text-[18px] 4xl:text-[20px] text-[#454545] font-robotoFlex'>
 			  Повышение видимости вашего сайта в поисковых системах для привлечения целевых клиентов
               </p>
             </div>
@@ -92,7 +92,7 @@ const InfoCard = () => {
             <p className='text-[23px] text-white font-bold'>Подход под каждого</p>
           </div>
           <div className='mt-[15px] w-[85%]'>
-            <p className='text-[14px] text-white'>
+            <p className='text-[14px] text-white font-robotoFlex'>
              Разработка уникальных решений, учитывающих специфику вашего бизнеса
             </p>
           </div>
@@ -102,7 +102,7 @@ const InfoCard = () => {
             <p className='text-[23px] text-titleDark font-bold'>Современный дизайн</p>
           </div>
           <div className='mt-[15px] w-[85%]'>
-            <p className='text-[14px] text-[#454545]'>
+            <p className='text-[14px] text-[#454545] font-robotoFlex'>
              Создание визуально привлекательных и функциональных сайтов, которые запоминаются
             </p>
           </div>
@@ -112,7 +112,7 @@ const InfoCard = () => {
             <p className='text-[23px] text-titleDark font-bold'>SEO-оптимизация</p>
           </div>
           <div className='mt-[15px] w-[85%]'>
-            <p className='text-[14px] text-[#454545]'>
+            <p className='text-[14px] text-[#454545] font-robotoFlex'>
               Повышение видимости вашего сайта в поисковых системах для привлечения целевых клиентов
             </p>
           </div>

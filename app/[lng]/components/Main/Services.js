@@ -93,7 +93,7 @@ const Services = () => {
 		</div>
 		  <div>
 			<h2 className="text-xl mdl:text-[28px] font-semibold text-[#010101] group-hover:text-white">{data[0].name}</h2>
-			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[60%]">
+			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[60%] font-robotoFlex">
 			 {data[0].shortDescription}
 			</p>
 		  </div>
@@ -110,7 +110,7 @@ const Services = () => {
 		</div>
 		  <div>
 			<h2 className="text-xl mdl:text-[28px] font-semibold text-[#010101] group-hover:text-white">{data[1].name}</h2>
-			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[80%]">
+			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[80%] font-robotoFlex">
 			  {data[1].shortDescription}
 			</p>
 		  </div>
@@ -127,7 +127,7 @@ const Services = () => {
 		</div>
 		  <div>
 			<h2 className="text-xl mdl:text-[28px] font-semibold text-[#010101] group-hover:text-white">{data[2].name}</h2>
-			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[80%]">
+			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[80%] font-robotoFlex">
 			{data[2].shortDescription}
 			</p>
 		  </div>
@@ -144,7 +144,7 @@ const Services = () => {
 		</div>
 		  <div>
 			<h2 className="text-xl mdl:text-[28px] font-semibold text-[#010101] group-hover:text-white">{data[3].name}</h2>
-			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[60%]">
+			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[60%] font-robotoFlex">
 			  {data[3].shortDescription}
 			</p>
 		  </div>
@@ -160,7 +160,7 @@ const Services = () => {
 		</div>
 		  <div>
 			<h2 className="text-xl mdl:text-[28px] font-semibold text-[#010101] group-hover:text-white">{data[4].name}</h2>
-			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[60%]">
+			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[60%] font-robotoFlex">
 			 {data[4].shortDescription}
 			</p>
 		  </div>
@@ -177,7 +177,7 @@ const Services = () => {
 		</div>
 		  <div>
 			<h2 className="text-xl mdl:text-[28px] font-semibold text-[#010101]  group-hover:text-white">{data[5].name}</h2>
-			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[80%]">
+			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[80%] font-robotoFlex">
 			  {data[5].shortDescription}
 			</p>
 		  </div>

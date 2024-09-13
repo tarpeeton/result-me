@@ -54,7 +54,7 @@ const Blog = () => {
               <p className='w-full text-[20px] text-titleDark font-semibold mdl:text-[25px] mdl:leading-[30.48px]'>
                 {blogItem.title}
               </p>
-              <p className='text-[14px] text-[#7B7B7B] leading-[24.38px] mdl:text-[18px] mdl:leading-[23px]'>
+              <p className='text-[14px] text-[#7B7B7B] leading-[24.38px] mdl:text-[18px] mdl:leading-[23px] font-robotoFlex'>
                 {blogItem.description}
               </p>
             </div>

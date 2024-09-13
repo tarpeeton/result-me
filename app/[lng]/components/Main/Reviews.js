@@ -115,10 +115,10 @@ const Reviews = () => {
 					<h3 className='text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]'>
 						Матьякуб Назарович
 					</h3>
-					<p className='text-[14px] opacity-75 mb-[20px] text-[#7B7B7B]'>
+					<p className='text-[14px] opacity-75 mb-[20px] text-[#7B7B7B] font-robotoFlex'>
 						Главврач Intermed
 					</p>
-					<p className='text-[15px] leading-[18px] mdl:text-[20px] mdl:leading-[28px]'>
+					<p className='text-[15px] leading-[18px] mdl:text-[20px] mdl:leading-[28px] font-robotoFlex'>
 						Отличная работа! Команда профессионалов создала для нас сайт,
 						который идеально отражает нашу клинику и помогает привлекать новых
 						пациентов.
@@ -128,10 +128,10 @@ const Reviews = () => {
 					<h3 className='text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]'>
 						Матьякуб Назарович
 					</h3>
-					<p className='text-[14px] opacity-75 mb-[20px] text-[#7B7B7B]'>
+					<p className='text-[14px] opacity-75 mb-[20px] text-[#7B7B7B] font-robotoFlex'>
 						Главврач Intermed
 					</p>
-					<p className='text-[15px] leading-[18px] mdl:text-[20px] mdl:leading-[28px] '>
+					<p className='text-[15px] leading-[18px] mdl:text-[20px] mdl:leading-[28px] font-robotoFlex '>
 						Отличная работа! Команда профессионалов создала для нас сайт,
 						который идеально отражает нашу клинику и помогает привлекать новых
 						пациентов.

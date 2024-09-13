@@ -12,7 +12,7 @@ const AboutUs = () => {
 				<p className='text-[28px] text-white100 font-bold mdl:text-[50px]'>Result Agency — ваш путь к успеху</p>
 			</div>
 			<div className='mt-[24px] mdl:mt-[20px] 2xl:mt-[40px] mdl:w-[80%]'>
-				<span className='text-[14px] mdl:text-[18px] text-white100 font-medium'>
+				<span className='text-[14px] mdl:text-[18px] text-white100 font-medium font-robotoFlex'>
 				Result Agency — это команда профессионалов, которые превращают идеи в результат. Мы специализируемся на комплексных маркетинговых решениях, направленных на рост вашего бизнеса. С Result Agency вы получаете не просто услуги, а партнера, который работает на ваш успех
 				</span>
 			</div>

@@ -53,24 +53,6 @@ const Result = () => {
 			{/* RESULT CARDS */}
 			<div className='mt-[20px] mb-[30px] mdl:mb-[30px] 2xl:mb-[60px] flex flex-col gap-[12px] mdl:gap-[20px] mdl:flex-row mdl:flex-wrap 3xl:flex-row 3xl:justify-between'>
 				{/* CARD ONE */}
-				{/* <div className='bg-white100 rounded-[25px] p-[24px] mdl:justify-between mdl:basis-[48%] 2xl:basis-[23%]'>
-					<div>
-						<p className='text-[28px] text-black font-bold'>31</p>
-						<p className='text-[14px] text-titleDark50'>{t('card')}</p>
-					</div>
-					<div className='mt-[25px]'>
-						<Image
-							width={400}
-							height={400}
-							src={card}
-							quality={100}
-							alt='Ilustration'
-							className='object-cover w-full'
-						/>
-					</div>
-				</div> */}
-
-				{/* CARD ONE */}
 				<div className='bg-white100 max-h-[440px]  flex flex-col  items-center rounded-[25px] p-[24px] mdl:justify-between mdl:basis-[48%] 2xl:basis-[32%] pr-0'>
 					<div>
 						<div ref={sectionRef} className='flex justify-center'>
@@ -84,7 +66,7 @@ const Result = () => {
 								</p>
 							)}
 						</div>
-						<p className='text-[14px] mdl:text-[18px]   4xl:text-[20px] text-titleDark50'>
+						<p className='text-[14px] mdl:text-[18px]   4xl:text-[20px] text-titleDark50 font-robotoFlex'>
 							{t('card_two')}
 						</p>
 					</div>
@@ -141,7 +123,7 @@ const Result = () => {
 							</p>
 						)}
 
-						<p className='text-[14px] mdl:text-[18px]  4xl:text-[20px] text-titleDark50'>
+						<p className='text-[14px] mdl:text-[18px]  4xl:text-[20px] text-titleDark50 font-robotoFlex'>
 							{t('card_three')}
 						</p>
 					</div>
@@ -176,7 +158,7 @@ const Result = () => {
 							</p>
 						)}
 
-						<p className='text-[14px] mdl:text-[18px] 4xl:text-[20px] text-titleDark50'>
+						<p className='text-[14px] mdl:text-[18px] 4xl:text-[20px] text-titleDark50 font-robotoFlex'>
 							{t('card_three')}
 						</p>
 					</div>

@@ -95,7 +95,7 @@ const Services = () => {
 		</div>
 		  <div>
 			<h2 className="text-xl mdl:text-[28px] font-semibold text-[#010101] group-hover:text-white">{data[0].name}</h2>
-			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[60%]">
+			<p className="text-[#A6A6A6] mdl:text-[18px] leading-[20.4px] mt-[12px] group-hover:text-white 3xl:w-[60%] font-robotoFlex 3xl:leading-[23.5px]">
 			 {data[0].shortDescription}
 			</p>
 		  </div>

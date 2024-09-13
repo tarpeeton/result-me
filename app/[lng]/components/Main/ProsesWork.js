@@ -130,7 +130,7 @@ const ProsesWork = () => {
 						</p>
 					</div>
 					<div className='mt-[15px] w-[85%]'>
-						<p className='text-[14px] text-[#454545]'>
+						<p className='text-[14px] text-[#454545] font-robotoFlex'>
 							Мы тщательно прорабатываем все детали и фиксируем наши
 							обязательства в договоре.
 						</p>
@@ -143,7 +143,7 @@ const ProsesWork = () => {
 						</p>
 					</div>
 					<div className='mt-[15px] w-[85%]'>
-						<p className='text-[14px] text-[#454545]'>
+						<p className='text-[14px] text-[#454545] font-robotoFlex'>
 							На этом этапе мы окончательно согласовываем все детали проекта.
 						</p>
 					</div>
