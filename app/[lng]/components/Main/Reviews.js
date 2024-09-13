@@ -10,8 +10,7 @@ import { GrLinkNext } from 'react-icons/gr'
 import revTop from '@/public/images/reviews/revTop.png'
 import revBottom from '@/public/images/reviews/revBottom.png'
 import revBG from '@/public/images/reviews/revBG.png'
-import { useRef , useState } from 'react'
-
+import { useRef, useState } from 'react'
 
 const SampleNextArrow = ({ onClick }) => (
 	<div
@@ -88,7 +87,7 @@ const Reviews = () => {
 	const closeModal = () => {
 		setIsModalOpen(false)
 	}
-	
+
 	return (
 		<div
 			className='relative w-full mt-[20px] mdl:mt-[30px] rounded-[30px] bg-cover bg-no-repeat px-5 py-8 bg-[#161616] bg-opacity-[90%] mdl:px-[40px] mdl:py-[50px]'
@@ -111,11 +110,7 @@ const Reviews = () => {
 			</p>
 
 			{/* Reviews Carousel */}
-			<Slider
-				{...settings}
-				ref={sliderRef}
-				className='z-[99999] overflow-hidden'
-			>
+			<Slider {...settings} ref={sliderRef} className='z-[999] overflow-hidden'>
 				<div className='rounded-[30px] px-[20px] py-[25px] bg-[#161616] bg-opacity-[50%]  text-white  z-[99999] min-h-[400px] border border-[#5A5A5A] 2xl:max-w-[90%]'>
 					<h3 className='text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]'>
 						Матьякуб Назарович
@@ -158,7 +153,10 @@ const Reviews = () => {
 
 			{/* Call to Action Button */}
 			<div className='text-center mt-6 flex items-center justify-between'>
-				<button onClick = { openModal } className='w-[80%] 2xl:w-[20%] 2xl:mx-0 mx-auto py-[20px] px-[30px] bg-white text-violet100 font-bold text-[14px]  rounded-full hover:bg-gray-200 transition z-[99999]'>
+				<button
+					onClick={openModal}
+					className='w-[80%] 2xl:w-[20%] 2xl:mx-0 mx-auto py-[20px] px-[30px] bg-white text-violet100 font-bold text-[14px]  rounded-full hover:bg-gray-200 transition z-[999]'
+				>
 					Стать нашим клиентом
 				</button>
 				<div className='sm:hidden flex flex-row gap-[8px] 2xl:flex z-[9999]'>
@@ -167,7 +165,9 @@ const Reviews = () => {
 				</div>
 			</div>
 			{/* MODAL */}
-			<ServiceModal isOpen={isModalOpen} onClose={closeModal} />
+				{isModalOpen && (
+				<ServiceModal onClose={closeModal} />
+			)}
 		</div>
 	)
 }

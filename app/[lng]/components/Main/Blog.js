@@ -68,7 +68,7 @@ const Blog = () => {
         ))}
       </div>
 
-	  <Link href='/blog' className='py-[20px] px-[30px] bg-violet100 text-center text-white100 rounded-full w-[20%] mx-auto'>
+	  <Link href='/blog' className='py-[20px] px-[30px] bg-violet100 text-center text-white100 rounded-full w-[90%] mdl:w-[20%] mx-auto'>
 	  Все новости
 	  </Link>
     </div>

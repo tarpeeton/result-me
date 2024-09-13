@@ -36,7 +36,6 @@ const Footer = ({ lng }) => {
 				</h3>
 				<GrLinkNext className='text-white100 w-[40px] h-[40px] 2xl:w-[40px] mdx:w-[50px] mdx:h-[50px] 2xl:h-[40px] 6xl:w-[85px] 6xl:h-[85px]' />
 			</button>
-
 			<div className=' flex flex-col mt-[30px] px-[16px]'>
 				<div className='lg:flex lg:flex-row lg:items-center  4xl:flex 4xl:flex-row '>
 					{/* LOGO */}
@@ -144,7 +143,7 @@ const Footer = ({ lng }) => {
 					</div>
 				</div>
 			</div>
-			<ServiceModal isOpen={isModalOpen} onClose={closeModal} />
+			{isModalOpen && <ServiceModal onClose={closeModal} />}
 		</div>
 	)
 }

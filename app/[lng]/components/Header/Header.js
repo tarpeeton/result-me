@@ -17,22 +17,21 @@ import { usePathname } from 'next/navigation'
 import ServiceModal from '../Modal/SeriviceModal'
 import { GB, RU, UZ } from 'country-flag-icons/react/3x2'
 
-
 const Header = ({ lng }) => {
 	const { t } = useCustomTranslation(lng, 'header')
 	const [cookies, setCookie] = useCookies([cookieName])
 	const [isMenuOpen, setIsMenuOpen] = useState(false) // Состояние для управления открытием/закрытием меню
 	const pathname = usePathname()
 
-	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [isModalOpen, setIsModalOpen] = useState(false)
 	const openModal = () => {
-	  setIsModalOpen(true);
-	};
-  
+		setIsModalOpen(true)
+	}
+
 	// Close modal function
 	const closeModal = () => {
-	  setIsModalOpen(false);
-	};
+		setIsModalOpen(false)
+	}
 	// Check if it's the main page by checking if the pathname is exactly `/${lng}`
 	const isMainPage = pathname === `/${lng}`
 
@@ -94,7 +93,7 @@ const Header = ({ lng }) => {
 					{t('about')}
 				</Link>
 				<button
-				onClick={openModal}
+					onClick={openModal}
 					className={`font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
@@ -102,7 +101,6 @@ const Header = ({ lng }) => {
 					{t('getInfo')}
 				</button>
 			</div>
-
 			{/* MOBILE NAVIGATION */}
 			{isMenuOpen && (
 				<div className='absolute top-[70px] left-0 w-full h-[100%] bg-white z-[99999] flex flex-col  space-y-8 text-2xl'>
@@ -146,8 +144,7 @@ const Header = ({ lng }) => {
 					</a>
 
 					<button
-						onClick={openModal
-							}	
+						onClick={openModal}
 						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
@@ -157,8 +154,7 @@ const Header = ({ lng }) => {
 					</button>
 				</div>
 			)}
-				<ServiceModal isOpen={isModalOpen} onClose={closeModal}/>
-
+			{isModalOpen && <ServiceModal onClose={closeModal} />}
 			<Link href='/'>
 				<Image
 					src={isMainPage ? footerLogo : logo}
@@ -168,10 +164,10 @@ const Header = ({ lng }) => {
 					alt='Logo'
 				/>
 			</Link>
-
 			<div className='flex items-center gap-3'>
 				<div className='hidden 2xl:flex'>
-					<Link href='tel:+998900228073'
+					<Link
+						href='tel:+998900228073'
 						className={`w-[50px] h-[50px] border-[1px] border-[white] rounded-[100%] flex items-center justify-center ${
 							isMainPage ? 'bg-inherit' : 'bg-selectBg'
 						}`}
@@ -182,7 +178,10 @@ const Header = ({ lng }) => {
 					</Link>
 				</div>
 
-					<button onClick={openModal} className='bg-violet100 hidden mdx:block w-[230px] h-[50px] border rounded-[30px]'>
+				<button
+					onClick={openModal}
+					className='bg-violet100 hidden mdx:block w-[230px] h-[50px] border rounded-[30px]'
+				>
 					<p className='font-bold text-white100 text-[16px]'>{t('getInfo')}</p>
 				</button>
 
@@ -191,9 +190,30 @@ const Header = ({ lng }) => {
 						value={lng}
 						onChange={handleLanguageChange}
 						options={[
-							{ value: 'ru', label: <><RU width="20" /> Ру</> },
-							{ value: 'uz', label: <><UZ width="20" /> Uz</> },
-							{ value: 'en', label: <><GB width="20" /> En</> }
+							{
+								value: 'ru',
+								label: (
+									<>
+										<RU width='20' /> Ру
+									</>
+								),
+							},
+							{
+								value: 'uz',
+								label: (
+									<>
+										<UZ width='20' /> Uz
+									</>
+								),
+							},
+							{
+								value: 'en',
+								label: (
+									<>
+										<GB width='20' /> En
+									</>
+								),
+							},
 						]}
 					/>
 				</div>
