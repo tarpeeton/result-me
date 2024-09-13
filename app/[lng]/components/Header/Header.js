@@ -56,7 +56,7 @@ const Header = ({ lng }) => {
 
 	return (
 		<div
-			className={`w-full flex justify-between px-[20px] py-[16px] 
+			className={`w-full flex justify-between px-[20px] z-[999] py-[16px] 
             ${isMainPage ? 'bg-violet100' : 'bg-white'}`} // Зависимость от флага isMainPage
 		>
 			<div className='hidden 2xl:flex items-center gap-[25px] 4xl:gap-[40px]'>
@@ -103,7 +103,7 @@ const Header = ({ lng }) => {
 			</div>
 			{/* MOBILE NAVIGATION */}
 			{isMenuOpen && (
-				<div className='absolute top-[70px] left-0 w-full h-[100%] bg-white z-[99999] flex flex-col  space-y-8 text-2xl'>
+				<div className='absolute top-[70px] left-0 w-full h-[100%] bg-white z-[999] flex flex-col  space-y-8 text-2xl'>
 					<a
 						href='/services'
 						className='flex w-full justify-between items-center flex-row px-[20px] py-[20px] border-b-[1px] border-[#F0F0F0]'

@@ -34,7 +34,7 @@ const Banner = () => {
 					</p>
 					<button
 						onClick={openModal}
-						className='bg-white100 rounded-[60px] px-[30px] py-[20px] w-[230px] mt-[30px] mdl:w-[300px] z-[999]'
+						className='bg-white100 rounded-[60px] px-[30px] py-[20px] w-[230px] mt-[30px] mdl:w-[300px] z-[99]'
 					>
 						<p className='text-violet100 text-[14px] font-bold mdl:text-[18px]'>
 							{t('getInfo')}
