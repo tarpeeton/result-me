@@ -36,18 +36,10 @@ const Contact = () => {
         </div>
       </div>
 
+
       {/* Yandex Map */}
-      <div className='rounded-[30px] mt-[20px] overflow-hidden'>
-        <YMaps>
-          <Map
-            defaultState={{ center: [41.3513, 69.289], zoom: 12 }} // Adjust coordinates and zoom level as needed
-            width="100%"
-            height="400px"
-            className="rounded-[30px] 3xl:rounded-[40px] 3xl:h-[600px]"
-          >
-            <Placemark geometry={[41.3513, 69.289]} />
-          </Map>
-        </YMaps>
+      <div className='rounded-[30px] mt-[20px] overflow-hidden w-full h-[400px]'>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1018.9107190174738!2d69.29095451249238!3d41.35112539305633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef35418406693%3A0xf91e0631f842852c!2sINTERMED%20Innovation!5e0!3m2!1sru!2s!4v1726206787068!5m2!1sru!2s" width="800" height="600"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className='w-full h-full'></iframe>
       </div>
     </div>
   );

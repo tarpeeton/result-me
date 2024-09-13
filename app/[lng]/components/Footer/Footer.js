@@ -54,13 +54,13 @@ const Footer = ({ lng }) => {
 						{/* SOCIALS LINKS */}
 						<div className='flex flex-row items-center gap-[8px] mt-[10px] mdx:mt-[40px]'>
 							<Link
-								href='instagram'
+								href='https://www.instagram.com/result_med?igsh=MXQ3NnVncW4xbjBwMg=='
 								className='bg-[#383838] w-[30px] h-[30px]  rounded-[100%] flex items-center justify-center mdx:w-[40px] mdx:h-[40px]'
 							>
 								<FaInstagram className='text-white100' />
 							</Link>
 							<Link
-								href='instagram'
+								href='https://t.me/result_med'
 								className='bg-[#383838] w-[30px] h-[30px]  rounded-[100%] flex items-center justify-center mdx:w-[40px] mdx:h-[40px]'
 							>
 								<LiaTelegramPlane className='text-white100' />
