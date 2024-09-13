@@ -10,7 +10,7 @@ import interlab from '@/public/images/cases/interlab.jpg';
 import mrj from '@/public/images/cases/mrj.jpg';
 import inst from '@/public/images/cases/inst.jpg';
 import dr from '@/public/images/cases/dr.jpg';
-import inter from '@/public/images/cases/inter.jpg';
+import inter from '@/public/images/cases/inter.png';
 
 import caseDesckription from '@/public/images/Vector.png';
  
