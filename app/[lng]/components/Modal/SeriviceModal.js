@@ -48,16 +48,16 @@ const ServiceModal = ({ isOpen, onClose }) => {
     <>
       {/* Main Form Modal */}
       <Dialog
-        open={true}
+        open={isOpen}
         onClose={onClose}
         fullWidth
-        className='z-[99999] fixed'
+        className='z-[9999999]'
         PaperProps={{
           sx: {
             maxWidth: '460px',
             borderRadius: { xs: '20px', mdl: '30px' },
             padding: { xs: '2px 20px', mdl: '30px 25px' },
-            zIndex: 99999, // Set z-index for the main modal
+            zIndex: 9999999, // Set z-index for the main modal
           },
         }}
       >
@@ -67,7 +67,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             display: 'flex',
             justifyContent: 'space-between',
             fontWeight: 'bold',
-            zIndex: 99999, // Set z-index for DialogTitle
+            zIndex: 9999999, // Set z-index for DialogTitle
           }}
         >
           Оставить заявку
@@ -77,6 +77,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
         </DialogTitle>
         <DialogContent sx={{ zIndex: 99999 }} className='z-[99999999]'>
           <form>
+            {/* Name Input */}
             <div style={{ marginBottom: '16px' }}>
               <input
                 type="text"
@@ -94,6 +95,8 @@ const ServiceModal = ({ isOpen, onClose }) => {
                 placeholder="Имя"
               />
             </div>
+
+            {/* Phone Input with Mask */}
             <div style={{ marginBottom: '16px' }}>
               <InputMask
                 mask="+998 (99) 999-99-99"
@@ -118,6 +121,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
               </InputMask>
             </div>
 
+            {/* Service Select */}
             <div style={{ marginBottom: '16px' }}>
               <select
                 id="service"
@@ -141,6 +145,8 @@ const ServiceModal = ({ isOpen, onClose }) => {
                 <option value="SEO">SEO</option>
               </select>
             </div>
+
+            {/* Comment Input */}
             <div style={{ marginBottom: '16px' }}>
               <input
                 id="comment"
@@ -177,6 +183,8 @@ const ServiceModal = ({ isOpen, onClose }) => {
           </Button>
         </DialogActions>
       </Dialog>
+
+      {/* Success Modal */}
       <Dialog
         open={isSubmitted}
         onClose={handleCloseSuccessModal}

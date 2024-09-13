@@ -154,7 +154,7 @@ const Header = ({ lng }) => {
 					</button>
 				</div>
 			)}
-			{isModalOpen && <ServiceModal onClose={closeModal} />}
+		<ServiceModal isOpen={isModalOpen} onClose={closeModal} />
 			<Link href='/'>
 				<Image
 					src={isMainPage ? footerLogo : logo}

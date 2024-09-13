@@ -36,7 +36,7 @@ const CaseTitle = () => {
 					Хочу крутой проект!
 				</button>
 			</div>
-			{isModalOpen && <ServiceModal onClose={closeModal} />}
+			 <ServiceModal isOpen={isModalOpen} onClose={closeModal} />
 		</div>
 	)
 }

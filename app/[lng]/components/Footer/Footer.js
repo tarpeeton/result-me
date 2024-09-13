@@ -66,7 +66,7 @@ const Footer = ({ lng }) => {
 								<LiaTelegramPlane className='text-white100' />
 							</Link>
 							<Link
-								href='instagram'
+								href='https://www.facebook.com/people/Result-%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9-%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/61551538436032/'
 								className='bg-[#383838] w-[30px] h-[30px]  rounded-[100%] flex items-center justify-center mdx:w-[40px] mdx:h-[40px]'
 							>
 								<FaFacebookF className='text-white100' />
@@ -143,7 +143,7 @@ const Footer = ({ lng }) => {
 					</div>
 				</div>
 			</div>
-			{isModalOpen && <ServiceModal onClose={closeModal} />}
+			<ServiceModal isOpen={isModalOpen} onClose={closeModal} />
 		</div>
 	)
 }

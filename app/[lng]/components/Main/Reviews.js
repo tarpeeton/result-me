@@ -165,9 +165,7 @@ const Reviews = () => {
 				</div>
 			</div>
 			{/* MODAL */}
-				{isModalOpen && (
-				<ServiceModal onClose={closeModal} />
-			)}
+			<ServiceModal isOpen={isModalOpen} onClose={closeModal} />
 		</div>
 	)
 }

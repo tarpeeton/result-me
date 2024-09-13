@@ -42,7 +42,7 @@ const Banner = () => {
 					</button>
 				</div>
 				{/* Pass the modal open/close state to the modal component */}
-				{isModalOpen && <ServiceModal onClose={closeModal} />}
+        <ServiceModal isOpen={isModalOpen} onClose={closeModal} />
 				<div className='w-full mt-[30px] absolute bottom-0'>
 					<Image
 						src={my}

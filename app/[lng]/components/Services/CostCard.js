@@ -138,7 +138,7 @@ const CostCard = () => {
 					</div>
 				))}
 			</div>
-			{isModalOpen && <ServiceModal onClose={closeModal} />}
+			<ServiceModal isOpen={isModalOpen} onClose={closeModal} />
 		</div>
 	)
 }
