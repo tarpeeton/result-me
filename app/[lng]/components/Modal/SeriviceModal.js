@@ -1,5 +1,5 @@
-'use client';
-
+"use client";
+import axios from 'axios';
 import { IoClose } from "react-icons/io5";
 import React, { useState, useCallback } from 'react';
 import InputMask from 'react-input-mask';
@@ -31,12 +31,36 @@ const ServiceModal = ({ isOpen, onClose }) => {
   }, []);
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Form data submitted:', formData);
-    setIsSubmitted(true);
-    onClose();
-    localStorage.removeItem('formData');
+
+    // Telegram Bot API URL
+    const TELEGRAM_API_URL = `https://api.telegram.org/bot7364268562:AAFNdGFTuTrNivKRj-Bmdh2yT_WLu83zsm0/sendMessage`;
+
+    // Message to be sent to Telegram
+    const message = `
+      *Имя😉:* ${formData.name}\n
+      *Номер телефона📞:* ${formData.phone}\n
+      *Услуга💵:* ${formData.service}\n
+      *Комментарий❓:* ${formData.comment}
+    `;
+
+    try {
+      // Send the form data to Telegram Bot
+      await axios.post(TELEGRAM_API_URL, {
+        chat_id: 6593293680, // Replace with your Telegram chat ID
+        text: message,
+        parse_mode: 'Markdown',
+      });
+
+      // After successful submission
+      setIsSubmitted(true);
+      onClose();
+      localStorage.removeItem('formData');
+    } catch (error) {
+      console.error('Error sending message to Telegram:', error);
+    }
   };
 
   // Close success modal
@@ -76,7 +100,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
           </div>
         </DialogTitle>
         <DialogContent sx={{ zIndex: 99999 }} className='z-[99999999]'>
-          <form>
+          <form onSubmit={handleSubmit}>
             {/* Name Input */}
             <div style={{ marginBottom: '16px' }}>
               <input
@@ -166,6 +190,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
         </DialogContent>
         <DialogActions sx={{ width: '100%', zIndex: 99999 }}>
           <Button
+            type="submit"
             onClick={handleSubmit}
             sx={{
               width: '90%',
