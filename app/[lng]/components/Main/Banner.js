@@ -23,9 +23,9 @@ const Banner = () => {
   };
 
   return (
-    <div className="w-full rounded-b-[30px] 2xl:rounded-b-[100px] bg-violet100  relative">
+    <div className="w-full rounded-b-[30px] 2xl:rounded-b-[100px] bg-violet100  relative ">
       <div className="w-full pt-[100px]  2xl:w-[80%] 2xl:mx-auto flex flex-col justify-center items-center ">
-        <div className="w-[80%] px-[16px] flex flex-col justify-center items-center text-center mb-[200px]">
+        <div className="w-[80%] px-[16px] flex flex-col justify-center items-center text-center mb-[200px] mdl:mb-[360px] 3xl:mb-[500px]">
           <h1 className="text-[35px] font-bold text-white100 mdl:text-[70px] 4xl:text-[90px]">{t('title')}</h1>
           <p className="w-[90%] text-[15px] font-semibold text-white100 mt-[10px] mdl:text-[18px] ">
             {t('subtitle')}
