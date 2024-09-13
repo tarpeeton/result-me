@@ -23,9 +23,9 @@ const Banner = () => {
   };
 
   return (
-    <div className="w-full rounded-b-[30px] 2xl:rounded-b-[100px] bg-violet100 min-h-screen">
-      <div className="w-full pt-[100px]  2xl:w-[80%] 2xl:mx-auto flex flex-col justify-center items-center">
-        <div className="w-[80%] px-[16px] flex flex-col justify-center items-center text-center">
+    <div className="w-full rounded-b-[30px] 2xl:rounded-b-[100px] bg-violet100  relative">
+      <div className="w-full pt-[100px]  2xl:w-[80%] 2xl:mx-auto flex flex-col justify-center items-center ">
+        <div className="w-[80%] px-[16px] flex flex-col justify-center items-center text-center mb-[200px]">
           <h1 className="text-[35px] font-bold text-white100 mdl:text-[70px] 4xl:text-[90px]">{t('title')}</h1>
           <p className="w-[90%] text-[15px] font-semibold text-white100 mt-[10px] mdl:text-[18px] ">
             {t('subtitle')}
@@ -44,7 +44,7 @@ const Banner = () => {
         {/* Pass the modal open/close state to the modal component */}
         <ServiceModal isOpen={isModalOpen} onClose={closeModal} />
 
-        <div className="w-full mt-[30px] relative">
+        <div className="w-full mt-[30px] absolute bottom-0">
           <Image
             src={my}
             width={1200}
