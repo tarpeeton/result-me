@@ -65,7 +65,7 @@ const Result = () => {
 				{obtainedResult.map((item, index) => (
 					<div key={index} className="mb-6 3xl:mb-0">
 						<p className="text-[35px] mdl:text-[40px] font-medium text-[#010101]  3xl:text-[50px]">{item.result.ru}</p>
-						<p className="text-[14px] mdl:text-[20px] text-[#A6A6A6] 3xl:text-[18px]">{item.name.ru}</p>
+						<p className="text-[14px] mdl:text-[20px] text-[#A6A6A6] 3xl:text-[18px] font-robotoFlex">{item.name.ru}</p>
 					</div>
 				))}
 			</div>

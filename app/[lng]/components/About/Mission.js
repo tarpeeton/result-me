@@ -11,7 +11,7 @@ const MissinResult = () => {
 
 
 
-			<p className='font-medium text-[15px] mdl:text-[20px] text-titleDark 3xl:w-[80%] mt-[20px] 3xl:mt-[30px]'>Наша миссия — создавать долгосрочные маркетинговые решения, которые способствуют росту и развитию медицинских организаций. Мы ценим инновации, честность и стремимся к устойчивому результату</p>
+			<p className='font-medium text-[15px] mdl:text-[20px] text-titleDark 3xl:w-[80%] mt-[20px] 3xl:mt-[30px] font-robotoFlex'>Наша миссия — создавать долгосрочные маркетинговые решения, которые способствуют росту и развитию медицинских организаций. Мы ценим инновации, честность и стремимся к устойчивому результату</p>
 		</div>
 		<div className='w-full mb-[40px] min-h-[120px] mx-auto flex justify-center mdl:h-[200px] 3xl:w-[50%]'>
 		<div className='relative w-[90%] h-full mt-[40px]'>

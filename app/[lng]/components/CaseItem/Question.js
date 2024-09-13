@@ -12,7 +12,7 @@ const query = [
 		</div>
 		<ul className="flex flex-col mt-[20px] ml-[24px] 3xl:w-[60%]">
 		  {query.map((item, index) => (
-			<li key={index} className="text-[15px] list-disc font-medium text-titleDark mdl:text-[20px] 3xl:text-[25px]">
+			<li key={index} className="text-[15px] list-disc font-medium text-titleDark mdl:text-[20px] 3xl:text-[25px] font-robotoFlex">
 			  {item.name}
 			</li>
 		  ))}

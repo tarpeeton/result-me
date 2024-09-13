@@ -52,7 +52,7 @@ const MainBlogItem = () => {
 				</div>
 
 				{/* Access the description from the first item in the option array */}
-				<p className='text-[15px] mdl:text-[20px] 3xl:text-[22px] 3xl:font-normal text-[#454545] font-medium mt-[20px] mdl:mt-[30px] 3xl:mt-[50px]'>
+				<p className='text-[15px] mdl:text-[20px] 3xl:text-[22px] 3xl:font-normal text-[#454545] font-medium mt-[20px] mdl:mt-[30px] 3xl:mt-[50px] font-robotoFlex'>
 					{data.option[0].description.ru || 'Описание на русском отсутствует'}
 				</p>
 			</div>

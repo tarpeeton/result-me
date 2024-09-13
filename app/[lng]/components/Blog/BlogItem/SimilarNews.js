@@ -39,7 +39,7 @@ const SimilarNews = () => {
               <h3 className="text-[#010101] text-[18px] mdl:text-[25px] font-bold mb-2 3xl:text-[20px]">
                 {news.title}
               </h3>
-              <p className="text-[#7B7B7B] text-[14px] mdl:text-[18px] mb-4">
+              <p className="text-[#7B7B7B] text-[14px] mdl:text-[18px] mb-4 font-robotoFlex">
                 {news.description}
               </p>
               <span className="text-[#7B72EB] text-[14px] font-bold flex items-center mdl:text-[18px]">

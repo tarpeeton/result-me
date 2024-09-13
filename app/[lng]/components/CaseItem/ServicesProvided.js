@@ -100,7 +100,7 @@ const providedService = [
 			{item.description.ru.map((desc, i) => (
 							<li
 								key={i}
-								className="text-[15px] mdl:text-[20px] mb-1 relative before:content-['-'] before:absolute before:left-[-15px] before:text-[#000] list-none"
+								className="text-[15px] mdl:text-[20px] mb-1 relative before:content-['-'] before:absolute before:left-[-15px] before:text-[#000] list-none font-robotoFlex"
 							>
 								{desc}
 							</li>

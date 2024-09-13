@@ -11,19 +11,19 @@ const Info = () => {
 	<div className='rounded-[30px] bg-violet100 py-[30px] px-[20px] mx-[16px] relative  mdl:py-[50px] mdl:px-[40px] 3xl:rounded-[100px] 3xl:py-[80px] 3xl:px-[70px] mt-[20px] mdl:mt-[25px] 3xl:mt-[30px] overflow-hidden'>
 		<div className='relative z-50 3xl:w-[50%]'>
 		<div>
-			<div className='w-[80%] 3xl:w-[85%]'>
+			<div className='w-[80%] 3xl:w-[95%]'>
 				<h1 className='text-[28px] font-bold text-white100 mdl:text-[60px]'>RESULT AGENCY
 				ВАШ ПУТЬ К УСПЕХУ</h1>
 			</div>
 			<div className='mt-[12px] mdl:mt-[30px]'>
-				<p className='text-[14px] mdl:text-[18px] mdl:font-semibold font-medium text-white100'>Агентство, специализирующееся на комплексном продвижении медицинских учреждений и специалистов. Наша миссия — помогать медицинскому бизнесу расти, используя современные маркетинговые стратегии и IT-решения</p>
+				<p className='text-[14px] mdl:text-[18px] mdl:font-semibold font-medium text-white100 font-robotoFlex'>Агентство, специализирующееся на комплексном продвижении медицинских учреждений и специалистов. Наша миссия — помогать медицинскому бизнесу расти, используя современные маркетинговые стратегии и IT-решения</p>
 			</div>
 		</div>
 		<div className='w-full h-[1px] bg-[#A49DF2] mt-[30px] mb-[30px] mdl:mb-[40px] mdl:mt-[40px] 3xl:mt-[50px] 3xl:mb-[50px]'/>
 		<div className='flex flex-col gap-[30px] 3xl:flex-row'>
 			<div className='flex flex-col gap-[7px]'>
 				<p className='text-[28px] text-white100 font-bold mdl:text-[40px]'>6 октября</p>
-				<p className='text-[14px] text-[#FFFFFF] mdl:text-[20px]'>Дата основания</p>
+				<p className='text-[14px] text-[#FFFFFF] mdl:text-[20px] font-robotoFlex'>Дата основания</p>
 			</div>
 			<div className='flex flex-col gap-[7px]'>
 				<div className='border-b border-white'>
@@ -32,7 +32,7 @@ const Info = () => {
 				</Link>
 				</div>
 				
-				<p className='text-[14px] text-[#FFFFFF] mdl:text-[20px]'>Лицензия</p>
+				<p className='text-[14px] text-[#FFFFFF] mdl:text-[20px] font-robotoFlex'>Лицензия</p>
 			</div>
 		</div>
 

@@ -135,7 +135,7 @@ const Team = () => {
 				<h3 className='text-[28px] text-titleDark font-bold mdl:text-[50px] 3xl:text-[50px]'>
 					Наша команда
 				</h3>
-				<p className='text-[15px] text-[#7B7B7B] font-bold mdl:text-[20px] mt-[8px] w-[80%] mdl:w-[90%] 3xl:w-[45%]'>
+				<p className='text-[15px] text-[#7B7B7B] font-bold mdl:text-[20px] mt-[8px] w-[80%] mdl:w-[90%] 3xl:w-[45%] font-robotoFlex'>
 					Наша команда состоит из опытных специалистов, знающих свое дело
 				</p>
 			</div>
@@ -160,7 +160,7 @@ const Team = () => {
 							<h4 className='text-[15px] text-titleDark mdl:text-[25px] font-semibold'>
 								{member.fullName}
 							</h4>
-							<p className='text-[14px] text-[#A6A6A6] mdl:text-[18px]'>
+							<p className='text-[14px] text-[#A6A6A6] mdl:text-[18px] font-robotoFlex'>
 								{member.position}
 							</p>
 						</div>

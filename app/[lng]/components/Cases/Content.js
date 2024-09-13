@@ -53,7 +53,7 @@ const data = [
       { value: "+45%", label: "узнаваемость бренда" },
       { value: "+70%", label: "лояльность клиентов" },
     ],
-    serviceType: { name: "Web Development SEO" },
+    serviceType: { name: "Web Development" , name: 'SEO' },
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ const data = [
       { value: "+80%", label: "органический трафик" },
       { value: "+50%", label: "позиции в поисковиках" },
     ],
-    serviceType: { name: "Web Development SEO" },
+    serviceType: { name: "Web Development" },
   },
   {
     id: 4,
