@@ -4,6 +4,7 @@ import { languages } from '../i18n/settings';
 import { LanguageProvider } from '../i18n/locales/LanguageContext';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Head from 'next/head';
 
 export async function generateStaticParams() {
     if (!languages || !Array.isArray(languages)) {
@@ -15,15 +16,13 @@ export async function generateStaticParams() {
 export const metadata = {
     title: {
         template: "%s",
-        default: "Result"
+        default: "Result-Agency"
     },
-    description: "Result ",
+    description: "Your agency description here", // Bu joyni to'ldiring
     icons: {
-        icon: [
-            '/favicon.ico'
-        ]
+        icon: '/favicon.ico' // Favikonni to'g'ri yo'naltirish
     },
-    manifest: '/site.webmanifest'
+    manifest: '/site.webmanifest' // To'g'ri yo'l
 };
 
 export default function RootLayout({
@@ -32,8 +31,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang={lng} dir={dir(lng)}>
-            <head>
-                {/* Встраивание Google Analytics через gtag.js */}
+            <Head>
+                {/* Google Analytics */
+                }
+                <link rel="icon" href="/favicon.ico" sizes="any" />
                 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11414753579"></script>
                 <script
                     dangerouslySetInnerHTML={{
@@ -45,9 +46,9 @@ export default function RootLayout({
                         `,
                     }}
                 />
-            </head>
+            </Head>
             <body>
-                {/* Поддержка Google Tag Manager через noscript */}
+                {/* Google Tag Manager */}
                 <noscript>
                     <iframe
                         src="https://www.googletagmanager.com/ns.html?id=GTM-MDWVM3M"

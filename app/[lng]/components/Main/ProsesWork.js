@@ -1,10 +1,8 @@
-import Link from 'next/link'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick/lib/slider'
 import { useState } from 'react'
-
 import ServiceModal from '../Modal/SeriviceModal'
 
 const ProsesWork = () => {
@@ -118,9 +116,9 @@ const ProsesWork = () => {
 						</p>
 					</div>
 					<div className='py-[20px] px-[30px] rounded-[100px] bg-white text-center mt-[51px]'>
-						<Link href='free' className='text-[14px] font-bold text-violet100'>
+						<button onClick={openModal}  className='text-[14px] font-bold text-violet100'>
 							Бесплатная консультация
-						</Link>
+						</button>
 					</div>
 				</div>
 				<div className='w-full rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between mdl:mt-[20px]'>

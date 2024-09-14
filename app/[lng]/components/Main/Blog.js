@@ -1,27 +1,27 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import blog from '@/public/images/blog/blog.png'
-import blog2 from '@/public/images/blog/blog2.png'
-import blog3 from '@/public/images/blog/blog3.png'
+// import blog from '@/public/images/blog/blog.png'
+// import blog2 from '@/public/images/blog/blog2.png'
+// import blog3 from '@/public/images/blog/blog3.png'
 import { GrLinkNext } from 'react-icons/gr'
 
 const blogData = [
   {
-    title: 'Как социальные сети могут улучшить репутацию вашей компании',
-    description: 'От репутации компании зависит успех и развитие. Она предопределяет восприятие наименования потенциальными пациентами',
-    photo: blog,
+    title: 'Эффективный маркетинг для частных медицинских клиник: ключевые особенности',
+    description: 'Узнайте, как продвигать частную медицинскую клинику, привлекать больше пациентов и усиливать доверие с помощью проверенных маркетинговых стратегий.',
+    photo: '',
     slug: 'blog1'
   },
   {
-    title: 'Интерактивный опрос: оцените эффективность вашего маркетинга',
-    description: 'Интерактивный опрос представляет собой метод сбора данных, при котором участники активно взаимодействуют с вопросами, используя различные форматы ответов',
-    photo: blog2,
+    title: 'SEO для медицинских сайтов: лучшие советы для повышения видимости в интернете',
+    description: 'Узнайте, как с помощью SEO улучшить видимость медицинского сайта в поисковых системах, привлечь больше пациентов и повысить рейтинг клиники.',
+    photo: '',
     slug: 'blog2'
   },
   {
-    title: 'SEO для медицинских сайтов: Полное руководство',
-    description: 'Основы SEO состоят из нескольких ключевых элементов, которые важно понимать и правильно применять для успешного продвижения медицинских сайтов',
-    photo: blog3,
+    title: 'Эффективная стратегия контент-маркетинга для медицинской компании: как привлечь пациентов',
+    description: 'Узнайте, как разработать стратегию контент-маркетинга для медицинской компании, чтобы привлечь больше пациентов и повысить доверие к вашей клинике.',
+    photo: '',
     slug: 'blog3'
   }
 ];
@@ -41,14 +41,15 @@ const Blog = () => {
         {blogData.map((blogItem, index) => (
           <Link  href={`/blog/${blogItem.slug}`} key={index} className='card__blog slg:w-[45%] cursor-pointer 2xl:w-[30%]'>
             <div className='2xl:max-h-[500px]'>
-              <Image
+              {blogItem.photo && <Image
                 width={600}
                 height={600}
                 quality={100}
                 alt='blog image'
                 src={blogItem.photo}
                 className='object-contain w-full h-full'
-              />
+              /> }
+              
             </div>
             <div className='mt-[14px] flex flex-col gap-[8px]'>
               <p className='w-full text-[20px] text-titleDark font-semibold mdl:text-[25px] mdl:leading-[30.48px]'>
