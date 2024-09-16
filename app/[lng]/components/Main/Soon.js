@@ -6,11 +6,15 @@ import 'slick-carousel/slick/slick-theme.css';
 const Soon = () => {
   const Data = [
     {
-      img: 'https://ucarecdn.com/f1b525e5-c4c9-4aa1-948e-93b5f20f364c/-/preview/999x503/',
+      img: 'https://ucarecdn.com/01959c30-254f-4c22-921e-9bf13b9f45d7/-/preview/1000x981/',
       isSoon: false,
     },
     {
-      img: 'https://ucarecdn.com/f1b525e5-c4c9-4aa1-948e-93b5f20f364c/-/preview/999x503/',
+      img: 'https://ucarecdn.com/d609136f-34ee-4bbe-b0da-629f8c2ea340/-/preview/1000x981/',
+      isSoon: false,
+    },
+    {
+      img: 'https://ucarecdn.com/e133f08c-8257-4164-9243-c226521c4f6e/-/preview/1000x981/',
       isSoon: false,
     }
   ];
@@ -75,13 +79,13 @@ const Soon = () => {
                 width={300}
                 height={300}
                 quality={100}
-                className={`'object-contain rounded-[25px] w-full h-full' ${d.isSoon ? '' : 'bg-white bg-opacity-50 blur-[2px]'}`}
+                className={`'object-contain rounded-[25px] w-full h-full' ${d.isSoon ? '' : 'bg-white bg-opacity-50 blur-[4px]'}`}
               />
 				</div>
               
               {!d.isSoon && (
                 <div className="absolute inset-0 flex items-center justify-center w-[183px] mx-auto">
-                  <button className="bg-white p-[10px] rounded-[100px] text-[18px] w-full">Soon</button>
+                  <button className="bg-white p-[10px] rounded-[100px] text-[18px] w-full">Скоро</button>
                 </div>
               )}
             </div>

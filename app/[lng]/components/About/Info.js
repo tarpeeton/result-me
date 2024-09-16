@@ -32,7 +32,7 @@ const Info = () => {
 				</Link>
 				</div>
 				
-				<p className='text-[14px] text-[#FFFFFF] mdl:text-[20px] font-robotoFlex'>Лицензия</p>
+				<p className='text-[14px] text-[#FFFFFF] mdl:text-[20px] font-robotoFlex'>Скачать лицензию</p>
 			</div>
 		</div>
 

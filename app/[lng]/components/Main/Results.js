@@ -159,7 +159,7 @@ const Result = () => {
 						)}
 
 						<p className='text-[14px] mdl:text-[18px] 4xl:text-[20px] text-titleDark50 font-robotoFlex'>
-							{t('card_three')}
+							{t('card_four')}
 						</p>
 					</div>
 					<div className='mt-[42px] w-[50%]   3xl:w-[45%]'>

@@ -33,7 +33,6 @@ const ServiceModal = ({ isOpen, onClose }) => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form data submitted:', formData);
 
     // Telegram Bot API URL
     const TELEGRAM_API_URL = 'https://api.telegram.org/bot7364268562:AAFNdGFTuTrNivKRj-Bmdh2yT_WLu83zsm0/sendMessage'
@@ -124,7 +123,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             {/* Phone Input with Mask */}
             <div style={{ marginBottom: '16px' }}>
               <InputMask
-                mask="+998 (99) 999-99-99"
+                mask="+999 (99) 999-99-99"
                 value={formData.phone}
                 onChange={handleChange}
                 required
@@ -168,6 +167,9 @@ const ServiceModal = ({ isOpen, onClose }) => {
                 <option value="Telegram Bot">Разработка Telegram-ботов</option>
                 <option value="SMM">SMM</option>
                 <option value="SEO">SEO</option>
+                <option value="reklama">Запуск рекламы</option>
+                <option value="brending">Брендинг</option>
+                <option value="firmeniy stil">фирменный стиль</option>
               </select>
             </div>
 
