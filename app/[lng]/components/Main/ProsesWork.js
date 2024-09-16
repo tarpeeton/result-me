@@ -13,7 +13,7 @@ const ProsesWork = () => {
 		dots: false,
 		infinite: false,
 		speed: 500,
-		slidesToShow: 2,
+		slidesToShow: 3,
 		slidesToScroll: 1,
 		arrows: false,
 		autoplay: false,
@@ -58,8 +58,8 @@ const ProsesWork = () => {
 				<Slider {...settings} className='w-full'>
 					{/* CARD 1 */}
 					<div className='w-full mdl:max-w-full  4xl:max-w-[50%] rounded-[30px] bg-violet100 p-[30px] pb-[26px] relative flex flex-col justify-between mdl:pl-[40px] mdl:rounded-[60px] mdl:pt-[50px]  2xl:max-w-[98%] 3xl:min-w-[98%] 2xl:min-h-[450px]  4xl:min-h-[600px]'>
-						<div className='mdl:w-[80%]'>
-							<p className='text-[28px] mdl:text-[40px] text-white100 font-bold 4xl:text-[50px]'>
+						<div className='mdl:w-[80%] 4xl:w-[100%]'>
+							<p className='text-[28px] mdl:text-[30px] text-white100 font-bold 4xl:text-[50px]'>
 								Процесс работы максимально чистый и прозрачный
 							</p>
 						</div>
@@ -76,8 +76,8 @@ const ProsesWork = () => {
 					</div>
 					{/* CARD 2 */}
 					<div className='w-full mdl:min-w-full  4xl:max-w-[50%] rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between  xl:min-w-[90%]  2xl:max-w-[98%] 3xl:min-w-[98%] 2xl:min-h-[450px] 4xl:min-h-[600px]'>
-						<div className='w-[60%]'>
-							<p className='text-[23px] mdl:text-[40px] text-titleDark font-bold 4xl:text-[50px]'>
+						<div className='w-[60%] mdl:w-[70%]'>
+							<p className='text-[23px] mdl:text-[35px] text-titleDark font-bold 4xl:text-[50px]'>
 								РАБОТАЕМ ПО ДОГОВОРУ
 							</p>
 						</div>
@@ -92,7 +92,7 @@ const ProsesWork = () => {
 					{/* CARD 3 */}
 					<div className='w-full 2xl:max-w-[98%]  mdl:min-w-full 2xl:min-h-[450px]  rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between xl:min-w-[90%]  2xl:min-w-[98%] 4xl:min-h-[600px]'>
 						<div className='w-[60%]'>
-							<p className='text-[23px] mdl:text-[40px] text-titleDark font-bold 4xl:text-[50px]'>
+							<p className='text-[23px] mdl:text-[35px] text-titleDark font-bold 4xl:text-[50px]'>
 								УТВЕРЖДАЕМ ПЛАНЫ
 							</p>
 						</div>
