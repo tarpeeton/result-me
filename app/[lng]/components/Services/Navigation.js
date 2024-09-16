@@ -7,33 +7,34 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const Navigation = () => {
   const [activeNav, setActiveNav] = useState('Сайты');
-  const navRefs = useRef([]);
+  const navRefs = useRef([]);  // Array to store refs for `a` elements
+  const spanRefs = useRef([]); // Array to store refs for `span` elements
 
   const settings = {
     dots: false,
     infinite: true,
     speed: 900,
-    slidesToShow: 4, // Show 4 items at a time in mobile slider
+    slidesToShow: 4, 
     slidesToScroll: 1,
     initialSlide: 0,
-    arrows: false, // Optional: Hide arrows if not needed
+    arrows: false,
     responsive: [
       {
-        breakpoint: 1024, // For tablets and smaller devices
+        breakpoint: 1024, 
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768, // For smaller devices
+        breakpoint: 768, 
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480, // For very small devices
+        breakpoint: 480, 
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -43,32 +44,40 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { name: 'Сайты', href: '#'  , slug: 'web-development' },
-    { name: 'Telegram-боты', href: '#' , slug: 'telegram-bot-development' },
-    { name: 'SMM', href: '#' , slug: 'smm' },
-    { name: 'Реклама', href: '#' , slug: 'ads-launch' },
-    { name: 'SEO', href: '#'  , slug: 'seo'},
-    { name: 'Брендинг', href: '#' , slug: 'branding' },
+    { name: 'Сайты', href: '#', slug: 'web-development' },
+    { name: 'Telegram-боты', href: '#', slug: 'telegram-bot-development' },
+    { name: 'SMM', href: '#', slug: 'smm' },
+    { name: 'Реклама', href: '#', slug: 'ads-launch' },
+    { name: 'SEO', href: '#', slug: 'seo' },
+    { name: 'Брендинг', href: '#', slug: 'branding' },
   ];
 
-  useEffect(() => {
-    navRefs.current.forEach((ref) => {
-      if (ref) {
-        gsap.fromTo(ref, 
-          { width: '0%', opacity: 0 }, 
-          { width: '100%', opacity: 1, duration: 0.4, ease: "power2.out", paused: true }
-        );
+  const updateSpanWidths = () => {
+    navRefs.current.forEach((ref, index) => {
+      if (ref && spanRefs.current[index]) {
+        const aWidth = ref.offsetWidth;
+        spanRefs.current[index].style.width = `${aWidth}px`;
       }
     });
+  };
+
+  useEffect(() => {
+    // Ensure the span width matches the a element width on initial load and window resize
+    updateSpanWidths();
+    window.addEventListener('resize', updateSpanWidths);
+    return () => window.removeEventListener('resize', updateSpanWidths);
   }, []);
 
   useEffect(() => {
+    // Animate the span when activeNav changes
     navRefs.current.forEach((ref, index) => {
-      if (ref) {
+      const spanRef = spanRefs.current[index];
+      if (ref && spanRef) {
+        const aWidth = ref.offsetWidth;
         if (navItems[index].name === activeNav) {
-          gsap.to(ref, { width: '100%', opacity: 1, marginTop: '5px', duration: 0.3, ease: "power2.out" });
+          gsap.to(spanRef, { width: aWidth, opacity: 1, marginTop: '5px', duration: 0.3, ease: 'power2.out' });
         } else {
-          gsap.to(ref, { width: '0%', opacity: 0, duration: 0.1 });
+          gsap.to(spanRef, { width: '0%', opacity: 0, duration: 0.1 });
         }
       }
     });
@@ -77,22 +86,22 @@ const Navigation = () => {
   return (
     <>
       {/* FOR DESKTOP VIEW */}
-      <nav className="hidden 2xl:flex px-[20px] gap-[50px] border-t border-t-[#F0F0F0]   2xl:items-center"> {/* 10px gap between items */}
+      <nav className="hidden 2xl:flex px-[20px] gap-[50px] border-t border-t-[#F0F0F0] 2xl:items-center">
         {navItems.map((item, index) => (
-          <div key={item.name} className="flex flex-col items-center relative  justify-center  text-center py-[25px]">
+          <div key={item.name} className="flex flex-col items-center relative justify-center text-center pt-[25px]">
             <a
+              ref={(el) => (navRefs.current[index] = el)} // Ref for a element
               href={`/ru/services/${item.slug}`}
-              className={`text-[20px] font-semibold ${
-                activeNav === item.name ? 'text-[#7B72EB]' : 'text-black'
-              } hover:text-[#7B72EB] pb-1`}
+              className={`text-[20px] font-semibold ${activeNav === item.name ? 'text-[#7B72EB]' : 'text-black'} hover:text-[#7B72EB] pb-1`}
               onClick={() => setActiveNav(item.name)}
               style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}
             >
               {item.name}
             </a>
             <span
-              ref={el => (navRefs.current[index] = el)}
-              className="absolute bottom-[-15px] left-0 right-0 w-0 h-[5px] bg-[#7B72EB] rounded-tl-[5px] rounded-tr-[5px]"
+              ref={(el) => (spanRefs.current[index] = el)} // Ref for span element
+              className="absolute bottom-[-15px] left-0 h-[5px] bg-[#7B72EB] rounded-tl-[5px] rounded-tr-[5px]"
+              style={{ width: 0 }} // Start with width 0 for animation
             ></span>
           </div>
         ))}
@@ -102,20 +111,20 @@ const Navigation = () => {
       <nav className="2xl:hidden p-[20px]">
         <Slider {...settings}>
           {navItems.map((item, index) => (
-            <div key={item.name} className="flex flex-col items-center relative px-[10px]"> {/* Slider items */}
+            <div key={item.name} className="flex flex-col items-center relative px-[10px]">
               <a
+                ref={(el) => (navRefs.current[index] = el)} // Ref for a element
                 href={item.href}
-                className={`text-[15px] mdl:text-[20px] font-semibold ${
-                  activeNav === item.name ? 'text-[#7B72EB]' : 'text-black'
-                } hover:text-[#7B72EB] pb-1`}
+                className={`text-[15px] mdl:text-[20px] font-semibold ${activeNav === item.name ? 'text-[#7B72EB]' : 'text-black'} hover:text-[#7B72EB] pb-1`}
                 onClick={() => setActiveNav(item.name)}
                 style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}
               >
                 {item.name}
               </a>
               <span
-                ref={el => (navRefs.current[index] = el)}
-                className="absolute bottom-[-15px] left-0 right-0 w-0 h-[5px] bg-[#7B72EB] rounded-tl-[5px] rounded-tr-[5px]"
+                ref={(el) => (spanRefs.current[index] = el)} // Ref for span element
+                className="absolute bottom-[-15px] left-0 h-[5px] bg-[#7B72EB] rounded-tl-[5px] rounded-tr-[5px]"
+                style={{ width: 0 }} // Start with width 0 for animation
               ></span>
             </div>
           ))}
