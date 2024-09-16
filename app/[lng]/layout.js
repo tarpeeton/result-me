@@ -16,15 +16,16 @@ export async function generateStaticParams() {
 export const metadata = {
     title: {
         template: "%s",
-        default: "Result-Agency"
+        default: "Result Agency"
     },
-    description: "Your agency description here", // Bu joyni to'ldiring
+    description: "Result Agency in Uzbekistan",
     icons: {
-        icon: '/favicon.ico' // Favikonni to'g'ri yo'naltirish
+        icon: [
+            '/favicon.ico'
+        ]
     },
-    manifest: '/site.webmanifest' // To'g'ri yo'l
+    manifest: '/site.webmanifest'
 };
-
 export default function RootLayout({
     children,
     params: { lng }

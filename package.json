@@ -15,6 +15,7 @@
     "@pbe/react-yandex-maps": "^1.2.5",
     "accept-language": "^3.0.20",
     "axios": "^1.7.7",
+    "canvas-confetti": "^1.9.3",
     "country-flag-icons": "^1.5.13",
     "framer-motion": "^11.5.4",
     "gsap": "^3.12.5",
