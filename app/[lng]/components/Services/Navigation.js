@@ -77,9 +77,9 @@ const Navigation = () => {
   return (
     <>
       {/* FOR DESKTOP VIEW */}
-      <nav className="hidden 2xl:flex px-[20px] gap-[50px] "> {/* 10px gap between items */}
+      <nav className="hidden 2xl:flex px-[20px] gap-[50px] border-t border-t-[#F0F0F0]   2xl:items-center"> {/* 10px gap between items */}
         {navItems.map((item, index) => (
-          <div key={item.name} className="flex flex-col items-center relative  justify-center  text-center">
+          <div key={item.name} className="flex flex-col items-center relative  justify-center  text-center py-[25px]">
             <a
               href={`/ru/services/${item.slug}`}
               className={`text-[20px] font-semibold ${

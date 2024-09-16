@@ -28,7 +28,7 @@ const blogData = [
 
 const Blog = () => {
   return (
-    <div className='flex flex-col mt-[100px] gap-[40px] py-[30px] px-[12px] w-full rounded-[30px] mdl:rounded-[60px] 4xl:rounded-[100px] bg-[#F8F8F8] mdl:px-[40px] '>
+    <div className='flex flex-col mt-[100px] gap-[40px] py-[30px] px-[12px] w-full rounded-[30px] mdl:rounded-[60px] 4xl:rounded-[100px] bg-[#F8F8F8] mdl:px-[40px] 2xl:mb-[120px]'>
 
       <div className='ml-[12px] mdl:ml-[28px]'>
         <p className='text-[28px] mdl:text-[50px] font-bold text-titleDark'>
