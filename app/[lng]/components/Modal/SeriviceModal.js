@@ -74,7 +74,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
         open={isOpen}
         onClose={onClose}
         fullWidth
-        className='z-[9999999]'
+        className='z-[9999999999999]'
         PaperProps={{
           sx: {
             maxWidth: '460px',
@@ -90,7 +90,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             display: 'flex',
             justifyContent: 'space-between',
             fontWeight: 'bold',
-            zIndex: 9999999, // Set z-index for DialogTitle
+            zIndex: 99999999999, // Set z-index for DialogTitle
           }}
         >
           Оставить заявку

@@ -87,7 +87,7 @@ const Footer = ({ lng }) => {
 								</h4>
 								<div className='flex flex-col'>
 									<a
-										href='tel:998905092562'
+										href='tel:+998905092562'
 										className='text-titleDark20 text-[15px] font-medium mdx:text-[15px] hover:text-violet100'
 									>
 										+998 (90) 509-25-62

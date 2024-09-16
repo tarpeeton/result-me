@@ -24,6 +24,11 @@ const Header = ({ lng }) => {
   const pathname = usePathname();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+  const [isModalOpen2, setIsModalOpen2] = useState(false);
+  const isModalOpen2Handler = () =>  setIsModalOpen2(true)
+  const closeModal2 = () => setIsModalOpen2(false)
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -145,14 +150,14 @@ const Header = ({ lng }) => {
             <GrLinkNext className="text-titleDark" />
           </a>
 
-          <Link
-            href="tel:/+998905092562"
+          <button
+            onClick={isModalOpen2Handler}
             className="font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0] z-[99999999999999]"
           >
             <p className="font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-violet100">
-              +998 (90) 509-25-62
+            +998 (90) 022-80-73
             </p>
-          </Link>
+          </button>
         </div>
       )}
       <Link href="/">
@@ -205,7 +210,7 @@ const Header = ({ lng }) => {
                 value: "uz", // English language code
                 label: (
                   <>
-                    <UZ width="20" /> Уз
+                    <UZ width="20" /> O'z
                   </>
                 ),
               },
@@ -213,13 +218,16 @@ const Header = ({ lng }) => {
                 value: "en", // English language code
                 label: (
                   <>
-                    <GB width="20" /> Ен
+                    <GB width="20" /> En
                   </>
                 ),
               },
             ]}
           />
         </div>
+        {isModalOpen2 && (
+          <ServiceModal isOpen={isModalOpen2} onClose={closeModal2}/>
+        )}
         <div className="flex 2xl:hidden items-center">
           <button onClick={toggleMenu} className="text-3xl">
             {isMenuOpen ? (
