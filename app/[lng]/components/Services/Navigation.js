@@ -90,7 +90,7 @@ const Navigation = () => {
       </nav>
 
       {/* Mobile Carousel Navigation */}
-      <div className="2xl:hidden w-full  pt-[20px]">
+      <div className="2xl:hidden w-full  pt-[20px] border-t border-t-[#F0F0F0] ">
         <Carousel
           responsive={responsive}
           arrows={false}

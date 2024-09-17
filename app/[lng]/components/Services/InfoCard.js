@@ -11,12 +11,13 @@ const InfoCard = () => {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    speed: 2000,
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1300,

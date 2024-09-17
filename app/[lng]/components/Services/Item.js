@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import ServiceModal from '../Modal/SeriviceModal'
 import { useParams } from 'next/navigation'
-import slugImage from '@/public/images/slug/slug.png'  // Default fallback image
 import web from '@/public/images/serviceImage/web.jpg'
 import Add from '@/public/images/serviceImage/Add.jpg'
 import Branding from '@/public/images/serviceImage/Branding.jpg'
@@ -16,7 +15,7 @@ const ServiceItem = () => {
 	const { slug } = useParams()  // Get the slug from the URL
 	const [title, setTitle] = useState('')
 	const [description, setDescription] = useState('')
-	const [imageUrl, setImageUrl] = useState(slugImage)
+	const [imageUrl, setImageUrl] = useState()
 
 	// Data with slugs and information
 	const dataAndSlugFilter = [
@@ -91,7 +90,7 @@ const ServiceItem = () => {
 		<div className='mx-[16px] 3xl:mx-[30px] mt-[20px] mdl:mt-[30px] '>
 			<div className='bg-white100 px-[16px] pt-[16px] rounded-[30px] flex flex-col 3xl:flex-row 3xl:justify-center 3xl:items-center 3xl:p-[40px]'>
 				{/* IMAGE */}
-				<div className='rounded-[30px] w-full mx-[12px] 3xl:w-[50%] 3xl:order-2'>
+				<div className='rounded-[30px] w-full 3xl:mx-[12px] 3xl:w-[50%] 3xl:order-2'>
 					<Image
 						className='rounded-[30px] object-cover'
 						src={imageUrl}
@@ -115,7 +114,7 @@ const ServiceItem = () => {
 					</div>
 					<button
 						onClick={openModal}
-						className='w-[80%] 4xl:w-[30%] mt-[30px] mdl:mt-[40px] mdl:w-[40%] mdl:mx-0 mx-auto bg-[#7B72EB] rounded-[100px] py-[20px] px-[30px] text-center text-[14px] font-bold text-white100 3xl:text-[18px] 3xl:mt-[80px]'
+						className='w-[80%] mb-[20px] 4xl:w-[30%] mt-[30px] mdl:mt-[40px] mdl:w-[40%] mdl:mx-0 mx-auto bg-[#7B72EB] rounded-[100px] py-[20px] px-[30px] text-center text-[14px] font-bold text-white100 3xl:text-[18px] 3xl:mt-[80px]'
 					>
 						Оставить заявку
 					</button>
