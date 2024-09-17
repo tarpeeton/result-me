@@ -1,5 +1,5 @@
 "use client";
-import  React , { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from 'next/image';
@@ -13,7 +13,6 @@ import dr from '@/public/images/cases/dr.jpg';
 import inter from '@/public/images/cases/inter.png';
 
 import caseDesckription from '@/public/images/Vector.png';
- 
 
 // Items for filtering
 const items = [
@@ -34,6 +33,7 @@ const data = [
       title: "Intermed Innovation",
       shortDescription: "Сайт SEO",
       photo: inter,
+      slug: 'intermed'
     },
     statistics: [
       { value: "+30%", label: "конверсия" },
@@ -48,6 +48,7 @@ const data = [
       title: "Interlab",
       shortDescription: "Сайт SEO",
       photo: interlab,
+      slug: 'interlab'
     },
     statistics: [
       { value: "+45%", label: "узнаваемость бренда" },
@@ -61,6 +62,7 @@ const data = [
       title: "MRJ Trade",
       shortDescription: "Сайт SEO",
       photo: mrj,
+      slug: 'mrj-trade'
     },
     statistics: [
       { value: "+80%", label: "органический трафик" },
@@ -74,6 +76,7 @@ const data = [
       title: "Prime medical center",
       shortDescription: "SMM Реклама",
       photo: inst,
+      slug: 'prime-medical-center'
     },
     statistics: [
       { value: "+40%", label: "автоматизация" },
@@ -87,6 +90,7 @@ const data = [
       title: "Dr Odil Alisherovich",
       shortDescription: "SMM Маркетинг",
       photo: dr,
+      slug: 'dr-odil-alisherovich'
     },
     statistics: [
       { value: "+90%", label: "вовлеченность" },
@@ -199,7 +203,7 @@ const Content = () => {
       <div className="mx-[16px] 3xl:flex 3xl:flex-row 3xl:flex-wrap 3xl:gap-[100px] 3xl:mx-[30px]">
         {filteredData.map((item, idx) => (
           <Link
-            href={`/cases/${item.id}`}
+            href={`/cases/${item.banner.slug}`}  // Dynamic route based on slug
             key={idx}
             className="w-full mt-[20px] 3xl:w-[45%] 6xl:max-w-[99%] relative group cursor-pointer"
           >

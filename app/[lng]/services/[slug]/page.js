@@ -6,6 +6,9 @@ import Case from "@/app/[lng]/components/Main/Cases";
 import Blog from "@/app/[lng]/components/Main/Blog";
 
 const Service = () => {
+		
+
+
   return (
 	<div className='bg-[#F8F8F8] relative'>
 		<div className='pt-[20px] mdl:pt-[30px]'>

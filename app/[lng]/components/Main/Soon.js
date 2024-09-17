@@ -69,8 +69,8 @@ const Soon = () => {
         {Data.map((d, index) => (
           <div key={index} className="relative">
             <div
-              className={`2xl:w-[97%] cursor-pointer rounded-[25px] w-full h-full px-[12px] bg-gray-900 pt-[24px]  ${
-                d.isSoon ? '' : 'bg-white bg-opacity-50 backdrop-blur-xl'
+              className={`2xl:w-[95%] cursor-pointer rounded-[25px] w-full h-full px-[12px] bg-gray-900 pt-[24px]  ${
+                d.isSoon ? '' : 'bg-white  backdrop-blur-xl'
               }`}
             >
 				<div>
@@ -79,13 +79,13 @@ const Soon = () => {
                 width={300}
                 height={300}
                 quality={100}
-                className={`'object-contain rounded-[25px] w-full h-full' ${d.isSoon ? '' : 'bg-white bg-opacity-50 blur-[4px]'}`}
+                className={`'object-contain rounded-[25px] w-full h-full' ${d.isSoon ? '' : 'bg-black  blur-[5px] '}`}
               />
 				</div>
               
               {!d.isSoon && (
                 <div className="absolute inset-0 flex items-center justify-center w-[183px] mx-auto">
-                  <button className="bg-white p-[10px] rounded-[100px] text-[18px] w-full">Скоро</button>
+                  <button className="bg-white p-[10px] border-t border-[#F0F0F0] rounded-[100px] text-[18px] shadow-lg shadow-[#000] w-full">Скоро</button>
                 </div>
               )}
             </div>

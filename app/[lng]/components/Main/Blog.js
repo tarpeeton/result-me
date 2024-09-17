@@ -1,27 +1,27 @@
 import Link from 'next/link'
 import Image from 'next/image'
-// import blog from '@/public/images/blog/blog.png'
-// import blog2 from '@/public/images/blog/blog2.png'
-// import blog3 from '@/public/images/blog/blog3.png'
+import medicalMarketin from '@/public/images/blog/medicalMarketin.jpg'
+import blogImage from '@/public/images/blog/meditsiniskiySe0.jpg'
+import klinikcastniy from '@/public/images/blog/klinikcastniy.jpg'
 import { GrLinkNext } from 'react-icons/gr'
 
 const blogData = [
   {
     title: 'Эффективный маркетинг для частных медицинских клиник: ключевые особенности',
     description: 'Узнайте, как продвигать частную медицинскую клинику, привлекать больше пациентов и усиливать доверие с помощью проверенных маркетинговых стратегий.',
-    photo: '',
+    photo: medicalMarketin,
     slug: 'blog1'
   },
   {
     title: 'SEO для медицинских сайтов: лучшие советы для повышения видимости в интернете',
     description: 'Узнайте, как с помощью SEO улучшить видимость медицинского сайта в поисковых системах, привлечь больше пациентов и повысить рейтинг клиники.',
-    photo: '',
+    photo: blogImage,
     slug: 'blog2'
   },
   {
     title: 'Эффективная стратегия контент-маркетинга для медицинской компании: как привлечь пациентов',
     description: 'Узнайте, как разработать стратегию контент-маркетинга для медицинской компании, чтобы привлечь больше пациентов и повысить доверие к вашей клинике.',
-    photo: '',
+    photo: klinikcastniy,
     slug: 'blog3'
   }
 ];

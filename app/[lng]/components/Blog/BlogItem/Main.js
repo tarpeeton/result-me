@@ -2,6 +2,18 @@
 import Image from 'next/image';
 import SimilarNews from './SimilarNews';
 import { useParams } from 'next/navigation';
+import medicalMarketin from '@/public/images/blog/medicalMarketin.jpg'
+import blogImage from '@/public/images/blog/meditsiniskiySe0.jpg'
+import videoMarketing from '@/public/images/blog/video.jpg'
+import klinikcastniy from '@/public/images/blog/klinikcastniy.jpg'
+import target from '@/public/images/blog/Target.jpg'
+import patient from '@/public/images/blog/patient.jpg'
+import like from '@/public/images/blog/like.jpg'
+import brand from '@/public/images/blog/brand.jpg'
+import tv from '@/public/images/blog/tv.jpg'
+import crm from '@/public/images/blog/crm.jpg'
+import equipment from '@/public/images/blog/equipment.jpg'
+
 
 const data = [
 	{
@@ -19,7 +31,7 @@ const data = [
 	  },
 	  photo: {
 		id: 0,
-		url: '',
+		url: medicalMarketin,
 	  },
 	  orderNum: 0,
 	  text: `
@@ -77,7 +89,7 @@ const data = [
 	  },
 	  photo: {
 		id: 1,
-		url: '',
+		url: blogImage,
 	  },
 	  orderNum: 1,
 	  text: `
@@ -138,7 +150,7 @@ const data = [
 	  },
 	  photo: {
 		id: 2,
-		url: '', // Placeholder URL
+		url: klinikcastniy, // Placeholder URL
 	  },
 	  orderNum: 2,
 	  text: `
@@ -197,7 +209,7 @@ const data = [
 	  },
 	  photo: {
 		id: 3,
-		url: '', // Placeholder URL
+		url: videoMarketing, // Placeholder URL
 	  },
 	  orderNum: 3,
 	  text: `
@@ -255,7 +267,7 @@ const data = [
 	  },
 	  photo: {
 		id: 4,
-		url: '', // Placeholder URL
+		url: target, // Placeholder URL
 	  },
 	  orderNum: 4,
 	  text: `
@@ -313,7 +325,7 @@ const data = [
 	  },
 	  photo: {
 		id: 5,
-		url: '', // Placeholder URL
+		url: patient, // Placeholder URL
 	  },
 	  orderNum: 5,
 	  text: `
@@ -371,7 +383,7 @@ const data = [
 	  },
 	  photo: {
 		id: 6,
-		url: '', // Placeholder URL
+		url: like, // Placeholder URL
 	  },
 	  orderNum: 6,
 	  text: `
@@ -428,7 +440,7 @@ const data = [
 	  },
 	  photo: {
 		id: 7,
-		url: '', // Placeholder URL
+		url: brand, // Placeholder URL
 	  },
 	  orderNum: 7,
 	  text: `
@@ -486,7 +498,7 @@ const data = [
 	  },
 	  photo: {
 		id: 8,
-		url: '', // Placeholder URL
+		url: like, // Placeholder URL
 	  },
 	  orderNum: 8,
 	  text: `
@@ -543,7 +555,7 @@ const data = [
 	  },
 	  photo: {
 		id: 9,
-		url: '', // Placeholder URL
+		url: tv, // Placeholder URL
 	  },
 	  orderNum: 9,
 	  text: `
@@ -600,7 +612,7 @@ const data = [
 	  },
 	  photo: {
 		id: 10,
-		url: '', // Placeholder URL
+		url: crm, // Placeholder URL
 	  },
 	  orderNum: 10,
 	  text: `
@@ -659,7 +671,7 @@ const data = [
 	  },
 	  photo: {
 		id: 11,
-		url: '', // Placeholder URL
+		url: equipment, // Placeholder URL
 	  },
 	  orderNum: 11,
 	  text: `
@@ -709,7 +721,6 @@ const data = [
 
 const MainBlogItem = () => {
   const { slug } = useParams();
-	console.log(data)
   // Find the blog post by matching slug
   const blog = data.find(item => item.slug === slug);
 
@@ -734,7 +745,7 @@ const MainBlogItem = () => {
               quality={100}
               src={blog.photo.url}
               alt="Blog Image"
-              className="object-contain"
+              className="object-contain rounded-[20px] 2xl:rounded-[40px]"
             />
           </div>
         )}
