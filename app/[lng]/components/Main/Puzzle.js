@@ -13,6 +13,7 @@ import Six from '@/public/images/puzzle/Part6.png';
 import Winner from '@/public/images/puzzle/winner.png';
 import arrowWinner from '@/public/images/puzzle/arrowWinner.png';
 import Link from 'next/link'
+import ServiceModal from '../Modal/SeriviceModal'
 
 const PuzzlePiece = ({ id, imagePart, onClick, rotation }) => {
   useEffect(() => {
@@ -34,6 +35,10 @@ const PuzzlePiece = ({ id, imagePart, onClick, rotation }) => {
 };
 
 const WinnerInfo = () => {
+  const [modal , setModal] = useState(false);
+  const openModal = () => setModal(true);
+  const closeModal = () => setModal(false);
+
   useEffect(() => {
     // GSAP animation for WinnerInfo appearance
     const timeline = gsap.timeline();
@@ -57,16 +62,18 @@ const WinnerInfo = () => {
           <h2 className='winner-text text-[28px] font-bold text-white100 leading-[34.13px] mdl:text-[40px] mdl:leading-[48.76px] 4xl:text-[90px] xl:text-[45px] xl:mt-[30px] 4xl:leading-[109.71px]'>БЕСПЛАТНЫЙ РАЗБОР ВАШЕГО ПРОЕКТА</h2>
         </div>
       </div>  
+      
+      {<ServiceModal isOpen={modal} onClose={closeModal} />}
 
       <div className='flex flex-col 4xl:flex-col 4xl:mt-[200px] '>
       <div className='relative w-[70px] h-[70px] mt-[20px] mdl:w-[137px]  mdl:h-[179px] xl:h-[300px] 4xl:h-[353px] 4xl:w-[250px] 4xl:order-1  '>
         <Image src={arrowWinner} width={400} height={400} quality={100} alt='Winner Image' className='winner-arrow absolute left-[40px] top-[-20px] mdl:left-[40px] 2xl:left-[150px] 4xl:left-[150px] '/>
       </div>
-      <Link href='tel:/+998905092562' className='mt-[15px] winner-button bg-white100 w-[70%] mx-auto py-[20px] px-[30px] rounded-[100px] text-center mdl:w-[40%] xl:w-[30%]  4xl:w-[30%] mdl:mt-[-150px]'>
+      <button onClick={openModal} className='mt-[15px] winner-button bg-white100 w-[70%] mx-auto py-[20px] px-[30px] rounded-[100px] text-center mdl:w-[40%] xl:w-[30%]  4xl:w-[30%] mdl:mt-[-150px]'>
         <p href='zayafka' className=' text-violet100 text-[14px] font-bold mdl:text-[18px]'> 
           Связаться с нами
         </p>
-      </Link>
+      </button>
       </div>
       
     </div>
