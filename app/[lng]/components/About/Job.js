@@ -16,6 +16,7 @@ const Job = () => {
     age: "",
     specialization: "",
     experience: "",
+    phone: "",
     salary: "",
   });
 
@@ -35,7 +36,7 @@ const Job = () => {
     e.preventDefault();
     try {
       // Perform the API call
-      await createVakansy(formData);
+      await createVakansy(formData); // Make sure the phone number is included
       // Set submission success to true
       setIsSubmitted(true);
       // Reset form after submission
@@ -44,6 +45,7 @@ const Job = () => {
         age: "",
         specialization: "",
         experience: "",
+        phone: "",
         salary: "",
       });
     } catch (error) {
@@ -120,6 +122,15 @@ const Job = () => {
         />
         <input
           type="text"
+          name="phone"
+          placeholder="Номер телефона"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+          className="w-full p-4 rounded-[15px] bg-[#16161680] border border-[#5A5A5A] text-[#fff] placeholder-[#7B7B7B] text-[12px] mdl:text-[20px] mb-[12px] mdl:mb-[19px]"
+        />
+        <input
+          type="text"
           name="salary"
           placeholder="Желаемая ЗП"
           value={formData.salary}
@@ -141,7 +152,7 @@ const Job = () => {
           open={isSubmitted}
           onClose={handleCloseSuccessModal}
           fullWidth
-          className='z-[999]'
+          className="z-[999]"
           PaperProps={{
             sx: {
               maxWidth: "460px",

@@ -10,6 +10,7 @@ export const createVakansy = async (formData) => {
       age: formData.age,
       specialization: formData.specialization,
       experience: formData.experience,
+      phone: formData.phone,
       salary: formData.salary,
     });
     return response.data;
