@@ -99,7 +99,7 @@ const Services = () => {
 			 {data[0].shortDescription}
 			</p>
 		  </div>
-		  <div className="w-[71px] h-[71px] mdl:w-[91px] mdl:h-[91px] mb-[-20px] mr-[-20px] flex justify-end absolute right-0 bottom-0 border-[10px] border-[#F8F8F8] rounded-[100%]">
+		  <div className="w-[71px] h-[71px] mdl:w-[91px] mdl:h-[91px] mb-[-20px] mr-[-5px] flex justify-end absolute right-0 bottom-0 border-[10px] border-[#F8F8F8] rounded-[100%]">
 			<div className="w-full h-full bg-bgDark shadow-md rounded-full flex items-center justify-center">
 			 <GrLinkNext className='text-violet100 mdl:w-[25px] mdl:h-[25px]'/>
 			</div>
@@ -116,7 +116,7 @@ const Services = () => {
 			  {data[1].shortDescription}
 			</p>
 		  </div>
-		  <div className="w-[71px] h-[71px] mdl:w-[91px] mdl:h-[91px] mb-[-20px] mr-[-20px] flex justify-end absolute right-0 bottom-0 border-[10px] border-[#F8F8F8] rounded-[100%]">
+		  <div className="w-[71px] h-[71px] mdl:w-[91px] mdl:h-[91px] mb-[-20px] mr-[-5px] flex justify-end absolute right-0 bottom-0 border-[10px] border-[#F8F8F8] rounded-[100%]">
 			<div className="w-full h-full bg-bgDark shadow-md rounded-full flex items-center justify-center">
 			 <GrLinkNext className='text-violet100 mdl:w-[25px] mdl:h-[25px]'/>
 			</div>
@@ -133,7 +133,7 @@ const Services = () => {
 			{data[2].shortDescription}
 			</p>
 		  </div>
-		  <div className="w-[71px] h-[71px] mdl:w-[91px] mdl:h-[91px] mb-[-20px] mr-[-20px] flex justify-end absolute right-0 bottom-0 border-[10px] border-[#F8F8F8] rounded-[100%]">
+		  <div className="w-[71px] h-[71px] mdl:w-[91px] mdl:h-[91px] mb-[-20px] mr-[-10px] flex justify-end absolute right-0 bottom-0 border-[10px] border-[#F8F8F8] rounded-[100%]">
 			<div className="w-full h-full bg-bgDark shadow-md rounded-full flex items-center justify-center">
 			 <GrLinkNext className='text-violet100 mdl:w-[25px] mdl:h-[25px]'/>
 			</div>
@@ -150,7 +150,7 @@ const Services = () => {
 			  {data[3].shortDescription}
 			</p>
 		  </div>
-		  <div className="w-[71px] h-[71px] mdl:w-[91px] mdl:h-[91px] mb-[-20px] mr-[-20px] flex justify-end absolute right-0 bottom-0 border-[10px] border-[#F8F8F8] rounded-[100%]">
+		  <div className="w-[71px] h-[71px] mdl:w-[91px] mdl:h-[91px] mb-[-20px] mr-[-5px] flex justify-end absolute right-0 bottom-0 border-[10px] border-[#F8F8F8] rounded-[100%]">
 			<div className="w-full h-full bg-bgDark shadow-md rounded-full flex items-center justify-center">
 			 <GrLinkNext className='text-violet100 mdl:w-[25px] mdl:h-[25px]'/>
 			</div>
@@ -166,7 +166,7 @@ const Services = () => {
 			 {data[4].shortDescription}
 			</p>
 		  </div>
-		  <div className="w-[71px] h-[71px] mdl:w-[91px] mdl:h-[91px] mb-[-20px] mr-[-20px] flex justify-end absolute right-0 bottom-0 border-[10px] border-[#F8F8F8] rounded-[100%]">
+		  <div className="w-[71px] h-[71px] mdl:w-[91px] mdl:h-[91px] mb-[-20px] mr-[-10px] flex justify-end absolute right-0 bottom-0 border-[10px] border-[#F8F8F8] rounded-[100%]">
 			<div className="w-full h-full bg-bgDark shadow-md rounded-full flex items-center justify-center">
 			 <GrLinkNext className='text-violet100 mdl:w-[25px] mdl:h-[25px]'/>
 			</div>
@@ -183,7 +183,7 @@ const Services = () => {
 			  {data[5].shortDescription}
 			</p>
 		  </div>
-		  <div className="w-[71px] h-[71px] mdl:w-[91px] mdl:h-[91px] mb-[-20px] mr-[-20px] flex justify-end absolute right-0 bottom-0 border-[10px] border-[#F8F8F8] rounded-[100%]">
+		  <div className="w-[71px] h-[71px] mdl:w-[91px] mdl:h-[91px] mb-[-20px] mr-[-5px] flex justify-end absolute right-0 bottom-0 border-[10px] border-[#F8F8F8] rounded-[100%]">
 			<div className="w-full h-full bg-bgDark shadow-md rounded-full flex items-center justify-center">
 			 <GrLinkNext className='text-violet100 mdl:w-[25px] mdl:h-[25px]'/>
 			</div>
