@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 import img1 from '@/public/images/members/1.png';
-import img2 from '@/public/images/members/2.png';
 import img3 from '@/public/images/members/3.png';
 import img4 from '@/public/images/members/4.png';
 import img5 from '@/public/images/members/5.png';
@@ -13,8 +12,6 @@ import img10 from '@/public/images/members/10.png';
 import img11 from '@/public/images/members/11.png';
 import img12 from '@/public/images/members/12.png';
 import img13 from '@/public/images/members/13.png';
-import img14 from '@/public/images/members/14.png';
-import img15 from '@/public/images/members/15.png';
 import img16 from '@/public/images/members/16.png';
 
 
@@ -146,7 +143,7 @@ const Team = () => {
 						key={member.id}
 						className='flex flex-col min-h-[239px] w-[45%] mb-[20px] mdl:mb-[40px] 3xl:w-[24%] '
 					>
-						<div className='rounded-[10px] bg-[#FAFAFA] flex items-center justify-center'>
+						<div className='rounded-[10px] bg-[#FAFAFA] flex items-center justify-center py-[6px] px-[1px] mdl:py-[30px] mdl:px-[30px] 2xl:p-[40px]'>
 							<Image
 								src={member.photo}
 								width={340}
