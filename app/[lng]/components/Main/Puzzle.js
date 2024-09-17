@@ -12,7 +12,6 @@ import Five from '@/public/images/puzzle/Part5.png';
 import Six from '@/public/images/puzzle/Part6.png';
 import Winner from '@/public/images/puzzle/winner.png';
 import arrowWinner from '@/public/images/puzzle/arrowWinner.png';
-import Link from 'next/link'
 import ServiceModal from '../Modal/SeriviceModal'
 
 const PuzzlePiece = ({ id, imagePart, onClick, rotation }) => {

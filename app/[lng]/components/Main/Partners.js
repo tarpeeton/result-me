@@ -75,8 +75,8 @@ const Partners = () => {
 					{...settings}
 					className='flex mdl:flex mdl:flex-row'
 				>
-					<div className='flex flex-col'>
-						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between'>
+					<div className='flex flex-col '>
+						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between space-y-5 px-[10px]'>
 							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%]  mdl:flex mdl:items-center mdl:min-h-[200px]'>
 								<div>
 								<Image
@@ -87,7 +87,6 @@ const Partners = () => {
 									alt='partners Logo'
 								/>
 								</div>
-								
 							</div>
 							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] md mdl:flex mdl:items-center mdl:min-h-[200px] '>
 								<div>
@@ -99,7 +98,6 @@ const Partners = () => {
 									alt='partners Logo'
 								/>
 								</div>
-								
 							</div>
 							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%]  mdl:flex mdl:items-center mdl:min-h-[200px]'>
 								<div>
@@ -111,7 +109,6 @@ const Partners = () => {
 									alt='partners Logo'
 								/>
 								</div>
-								
 							</div>
 							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%]  mdl:flex mdl:items-center mdl:min-h-[200px]'>
 								<div>
@@ -123,200 +120,183 @@ const Partners = () => {
 									alt='partners Logo'
 								/>
 								</div>
-								
 							</div>
 						</div>
 					</div>
-					<div className='flex flex-col mdl:flex-row mdl:flex-wrap'>
-					<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between'> 
-					<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] mdl:min-h-[200px]   mdl:flex mdl:items-center 	'>
-						<div>
-						<Image
-								src={Five}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
-						</div>
-						
-						</div>
-						<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
-							<div>
-							<Image
-								src={Sixe}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
+					<div className='flex flex-col mdl:flex-row mdl:flex-wrap space-y-5 px-[10px]'>
+						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between space-y-5'>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] mdl:min-h-[200px]   mdl:flex mdl:items-center'>
+								<div>
+									<Image
+										src={Five}
+										width={400}
+										height={400}
+										quality={100}
+										alt='partners Logo'
+									/>
+								</div>
 							</div>
-							
-						</div>
-						<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
-							<div>
-							<Image
-								src={Seven}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center'>
+								<div>
+									<Image
+										src={Sixe}
+										width={400}
+										height={400}
+										quality={100}
+										alt='partners Logo'
+									/>
+								</div>
+							</div>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center'>
+								<div>
+									<Image
+										src={Seven}
+										width={400}
+										height={400}
+										quality={100}
+										alt='partners Logo'
+									/>
+								</div>
 							</div>
 						</div>
-					</div>
 					</div>
 				</Slider>
 			</div>
 
-
-
-{/* DESKTOP */}
-			<div className='hidden mt-[40px] 2xl:flex flex-row flex-wrap justify-evenly'>
-			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  2xl:w-[24%] 2xl:min-h-[250px] mdl:flex mdl:items-center '>
-							<div>
-							<Image
-								src={One}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
-							</div>
-							
-						</div>
-			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
-							<div>
-							<Image
-								src={Two}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
-							</div>
-							
-						</div>
-			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
-							<div>
-							<Image
-								src={Three}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
-							</div>
-							
-						</div>
-			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
-							<div>
-							<Image
-								src={Four}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
-							</div>
-							
-						</div>
-			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
-							<div>
-							<Image
-								src={Five}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
-							</div>
-							
-						</div>
-			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
-							<div>
-							<Image
-								src={Sixe}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
-							</div>
-							
-						</div>
-			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
-							<div>
-							<Image
-								src={Seven}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
-							</div>
-							
-						</div>
-			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
-							<div>
-							<Image
-								src={Eigth}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
-							</div>
-							
-						</div>
-			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
-							<div>
-							<Image
-								src={Nine}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
-							</div>
-							
-						</div>
-			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
-							<div>
-							<Image
-								src={Ten}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
-							</div>
-							
-						</div>
-			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
-							<div>
-							<Image
-								src={Eleven}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
-							</div>
-							
-						</div>
-			<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center '>
-							<div>
-							<Image
-								src={Tvelwe}
-								width={400}
-								height={400}
-								quality={100}
-								alt='partners Logo'
-							/>
-							</div>
-							
-						</div>
+			{/* DESKTOP */}
+			<div className='hidden mt-[40px] 2xl:flex flex-row flex-wrap justify-evenly space-y-5'>
+				<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  2xl:w-[24%] 2xl:min-h-[250px] mdl:flex mdl:items-center'>
+					<div>
+						<Image
+							src={One}
+							width={400}
+							height={400}
+							quality={100}
+							alt='partners Logo'
+						/>
+					</div>
+				</div>
+				<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center'>
+					<div>
+						<Image
+							src={Two}
+							width={400}
+							height={400}
+							quality={100}
+							alt='partners Logo'
+						/>
+					</div>
+				</div>
+				<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center'>
+					<div>
+						<Image
+							src={Three}
+							width={400}
+							height={400}
+							quality={100}
+							alt='partners Logo'
+						/>
+					</div>
+				</div>
+				<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center'>
+					<div>
+						<Image
+							src={Four}
+							width={400}
+							height={400}
+							quality={100}
+							alt='partners Logo'
+						/>
+					</div>
+				</div>
+				<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center'>
+					<div>
+						<Image
+							src={Five}
+							width={400}
+							height={400}
+							quality={100}
+							alt='partners Logo'
+						/>
+					</div>
+				</div>
+				<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center'>
+					<div>
+						<Image
+							src={Sixe}
+							width={400}
+							height={400}
+							quality={100}
+							alt='partners Logo'
+						/>
+					</div>
+				</div>
+				<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center'>
+					<div>
+						<Image
+							src={Seven}
+							width={400}
+							height={400}
+							quality={100}
+							alt='partners Logo'
+						/>
+					</div>
+				</div>
+				<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center'>
+					<div>
+						<Image
+							src={Eigth}
+							width={400}
+							height={400}
+							quality={100}
+							alt='partners Logo'
+						/>
+					</div>
+				</div>
+				<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center'>
+					<div>
+						<Image
+							src={Nine}
+							width={400}
+							height={400}
+							quality={100}
+							alt='partners Logo'
+						/>
+					</div>
+				</div>
+				<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center'>
+					<div>
+						<Image
+							src={Ten}
+							width={400}
+							height={400}
+							quality={100}
+							alt='partners Logo'
+						/>
+					</div>
+				</div>
+				<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center'>
+					<div>
+						<Image
+							src={Eleven}
+							width={400}
+							height={400}
+							quality={100}
+							alt='partners Logo'
+						/>
+					</div>
+				</div>
+				<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]   2xl:w-[24%] mdl:min-h-[250px] mdl:flex mdl:items-center'>
+					<div>
+						<Image
+							src={Tvelwe}
+							width={400}
+							height={400}
+							quality={100}
+							alt='partners Logo'
+						/>
+					</div>
+				</div>
 			</div>
 		</div>
 	)

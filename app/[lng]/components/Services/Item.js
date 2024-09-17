@@ -30,7 +30,7 @@ const ServiceItem = () => {
 				</div>
 				{/* TEXT INFo */}
 				<div className='flex flex-col mt-[30px] px-[20px] mdl:mt-[40px] 3xl:w-[50%]'>
-					<div className='w-[80%] 4xl:w-[70%]'>
+					<div className='w-[80%] 3xl:w-[90%] 4xl:w-[70%]'>
 						<h1 className='text-[28px] font-bold text-titleDark mdl:text-[40px] 3xl:text-[50px]'>
 							Разработка и продвижение сайтов
 						</h1>

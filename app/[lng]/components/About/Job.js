@@ -1,20 +1,25 @@
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+import { createVakansy } from "../../lib/api/api";
+import { FaCheckCircle } from "react-icons/fa";
+import { Dialog, DialogActions, DialogContent, Button } from "@mui/material"; // Assuming you're using Material-UI
 
-"use client"
-import React, { useState } from 'react';
-import Image from 'next/image';
-import revTop from '@/public/images/reviews/revTop.png';
-import revBottom from '@/public/images/reviews/revBottom.png';
-import revBG from '@/public/images/reviews/revBG.png';
+import revTop from "@/public/images/reviews/revTop.png";
+import revBottom from "@/public/images/reviews/revBottom.png";
+import revBG from "@/public/images/reviews/revBG.png";
 
 const Job = () => {
   // Define state for each input field
   const [formData, setFormData] = useState({
-    fullName: '',
-    age: '',
-    specialization: '',
-    experience: '',
-    salary: '',
+    fullName: "",
+    age: "",
+    specialization: "",
+    experience: "",
+    salary: "",
   });
+
+  const [isSubmitted, setIsSubmitted] = useState(false); // State for tracking submission success
 
   // Handle input changes
   const handleChange = (e) => {
@@ -26,19 +31,29 @@ const Job = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Perform necessary actions like API calls here
-    console.log('Form Data Submitted:', formData);
+    try {
+      // Perform the API call
+      await createVakansy(formData);
+      // Set submission success to true
+      setIsSubmitted(true);
+      // Reset form after submission
+      setFormData({
+        fullName: "",
+        age: "",
+        specialization: "",
+        experience: "",
+        salary: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
 
-    // Reset form after submission
-    setFormData({
-      fullName: '',
-      age: '',
-      specialization: '',
-      experience: '',
-      salary: '',
-    });
+  // Handle closing of the success modal
+  const handleCloseSuccessModal = () => {
+    setIsSubmitted(false);
   };
 
   return (
@@ -48,7 +63,13 @@ const Job = () => {
     >
       {/* Top Decorative Image - Background */}
       <div className="absolute top-0 right-0 rounded-[30px] z-0">
-        <Image width={400} height={400} src={revTop} alt="revTop" className='rounded-[30px] opacity-[40%]' />
+        <Image
+          width={400}
+          height={400}
+          src={revTop}
+          alt="revTop"
+          className="rounded-[30px] opacity-[40%]"
+        />
       </div>
 
       {/* Title */}
@@ -57,13 +78,17 @@ const Job = () => {
       </p>
 
       {/* Form */}
-      <form className="z-[99999] relative 3xl:w-[50%] 3xl:justify-center 3xl:flex 3xl:flex-col" onSubmit={handleSubmit}>
+      <form
+        className="z-[99] relative 3xl:w-[50%] 3xl:justify-center 3xl:flex 3xl:flex-col"
+        onSubmit={handleSubmit}
+      >
         <input
           type="text"
           name="fullName"
           placeholder="ФИО"
           value={formData.fullName}
           onChange={handleChange}
+          required
           className="w-full p-4 rounded-[15px] bg-[#16161680] border border-[#5A5A5A] text-[#fff] placeholder-[#7B7B7B] text-[12px] mdl:text-[20px] mb-[12px] mdl:mb-[19px]"
         />
         <input
@@ -72,6 +97,7 @@ const Job = () => {
           placeholder="Возраст"
           value={formData.age}
           onChange={handleChange}
+          required
           className="w-full p-4 rounded-[15px] bg-[#16161680] border border-[#5A5A5A] text-[#fff] placeholder-[#7B7B7B] text-[12px] mdl:text-[20px] mb-[12px] mdl:mb-[19px]"
         />
         <input
@@ -80,6 +106,7 @@ const Job = () => {
           placeholder="Специализация"
           value={formData.specialization}
           onChange={handleChange}
+          required
           className="w-full p-4 rounded-[15px] bg-[#16161680] border border-[#5A5A5A] text-[#fff] placeholder-[#7B7B7B] text-[12px] mdl:text-[20px] mb-[12px] mdl:mb-[19px]"
         />
         <input
@@ -88,6 +115,7 @@ const Job = () => {
           placeholder="Опыт работы"
           value={formData.experience}
           onChange={handleChange}
+          required
           className="w-full p-4 rounded-[15px] bg-[#16161680] border border-[#5A5A5A] text-[#fff] placeholder-[#7B7B7B] text-[12px] mdl:text-[20px] mb-[12px] mdl:mb-[19px]"
         />
         <input
@@ -96,6 +124,7 @@ const Job = () => {
           placeholder="Желаемая ЗП"
           value={formData.salary}
           onChange={handleChange}
+          required
           className="w-full p-4 rounded-[15px] bg-[#16161680] border border-[#5A5A5A] text-[#fff] placeholder-[#7B7B7B] text-[12px] mdl:text-[20px]"
         />
         <button
@@ -106,9 +135,81 @@ const Job = () => {
         </button>
       </form>
 
+      {/* Success Modal */}
+      {isSubmitted && (
+        <Dialog
+          open={isSubmitted}
+          onClose={handleCloseSuccessModal}
+          fullWidth
+          className='z-[999]'
+          PaperProps={{
+            sx: {
+              maxWidth: "460px",
+              borderRadius: { xs: "20px", mdl: "30px" },
+              padding: { xs: "2px 20px", mdl: "30px 25px" },
+              zIndex: 999, // Set z-index for the success modal
+            },
+          }}
+        >
+          <DialogContent
+            sx={{
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              zIndex: 999, // Set z-index for DialogContent
+            }}
+          >
+            <FaCheckCircle
+              style={{
+                color: "#7B72EB",
+                fontSize: "80px",
+                marginBottom: "16px",
+              }}
+            />
+            <h2
+              style={{
+                fontSize: "20px",
+                fontWeight: "bold",
+                marginBottom: "8px",
+              }}
+            >
+              Заявка отправлена!
+            </h2>
+            <p style={{ fontSize: "16px", color: "gray", marginTop: "8px" }}>
+              Ваша заявка отправлена менеджерам на рассмотрение
+            </p>
+          </DialogContent>
+          <DialogActions sx={{ width: "100%", zIndex: 99999 }}>
+            <Button
+              onClick={handleCloseSuccessModal}
+              sx={{
+                width: "90%",
+                fontSize: { xs: "14px", mdl: "18px" },
+                mx: "auto",
+                borderRadius: "100px",
+                py: "20px",
+                fontWeight: "bold",
+                px: "30px",
+                backgroundColor: "#7B72EB",
+                color: "white",
+              }}
+            >
+              Ок
+            </Button>
+          </DialogActions>
+        </Dialog>
+      )}
+
       {/* Bottom Decorative Image - Background */}
       <div className="absolute bottom-0 left-0 z-0">
-        <Image width={400} height={400} src={revBottom} alt="revBottom" className='rounded-[30px] opacity-[40%]' />
+        <Image
+          width={400}
+          height={400}
+          src={revBottom}
+          alt="revBottom"
+          className="rounded-[30px] opacity-[40%]"
+        />
       </div>
     </div>
   );

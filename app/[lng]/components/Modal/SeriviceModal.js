@@ -74,13 +74,13 @@ const ServiceModal = ({ isOpen, onClose }) => {
         open={isOpen}
         onClose={onClose}
         fullWidth
-        className='z-[9999999999999]'
+        className='z-[9999]'
         PaperProps={{
           sx: {
             maxWidth: '460px',
             borderRadius: { xs: '20px', mdl: '30px' },
             padding: { xs: '2px 20px', mdl: '30px 25px' },
-            zIndex: 9999999, // Set z-index for the main modal
+            zIndex: 9999, // Set z-index for the main modal
           },
         }}
       >
@@ -90,7 +90,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             display: 'flex',
             justifyContent: 'space-between',
             fontWeight: 'bold',
-            zIndex: 99999999999, // Set z-index for DialogTitle
+            zIndex: 9999, // Set z-index for DialogTitle
           }}
         >
           Оставить заявку
@@ -98,7 +98,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             <IoClose />
           </div>
         </DialogTitle>
-        <DialogContent sx={{ zIndex: 99999 }} className='z-[99999999]'>
+        <DialogContent sx={{ zIndex: 99999 }} className='z-[9999]'>
           {/* Form submission handled here */}
           <form onSubmit={handleSubmit}>
             {/* Name Input */}
@@ -192,7 +192,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             </div>
 
             {/* Submit Button inside the form */}
-            <DialogActions sx={{ width: '100%', zIndex: 99999 }}>
+            <DialogActions sx={{ width: '100%', zIndex: 9999 }}>
               <Button
                 type="submit"
                 sx={{
@@ -224,7 +224,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             maxWidth: '460px',
             borderRadius: { xs: '20px', mdl: '30px' },
             padding: { xs: '2px 20px', mdl: '30px 25px' },
-            zIndex: 99999, // Set z-index for the success modal
+            zIndex: 9999, // Set z-index for the success modal
           },
         }}
       >
@@ -234,7 +234,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            zIndex: 99999, // Set z-index for DialogContent
+            zIndex: 9999, // Set z-index for DialogContent
           }}
         >
           <FaCheckCircle
@@ -253,7 +253,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.
           </p>
         </DialogContent>
-        <DialogActions sx={{ width: '100%', zIndex: 99999 }}>
+        <DialogActions sx={{ width: '100%', zIndex: 9999 }}>
           <Button
             onClick={handleCloseSuccessModal}
             sx={{

@@ -10,7 +10,7 @@ const InfoCard = () => {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
     autoplay: false,
@@ -48,33 +48,33 @@ const InfoCard = () => {
       <div className='hidden slg:block w-full cursor-pointer'>
         <Slider {...settings} className='w-full'>
           {/* CARD 1 */}
-		  <div className='w-full mdl:min-w-full  4xl:max-w-[50%] rounded-[30px] bg-violet100 p-[30px] pb-[26px] flex flex-col justify-between  xl:min-w-[90%]  2xl:max-w-[98%] 3xl:min-w-[98%] 2xl:min-h-[450px] 4xl:min-h-[600px]'>
-            <div className='w-[60%]'>
+		  <div className='w-full mdl:min-w-full  4xl:max-w-[50%] rounded-[30px] bg-violet100 p-[30px] pb-[26px] flex flex-col justify-between  xl:min-w-[90%]  2xl:max-w-[98%] 3xl:min-w-[98%] 2xl:min-h-[450px] 4xl:min-h-[600px] 3xl:py-[80px] 3xl:px-[70px]'>
+            <div className='w-[60%] 3xl:w-[100%]'>
               <p className='text-[23px] mdl:text-[40px] text-white100 font-bold 4xl:text-[50px]'>Подход под каждого</p>
             </div>
             <div className='mt-[15px] mdl:text-[18px] w-[85%]  mdl:mt-[40px]'>
-              <p className='text-[14px] mdl:text-[18px] text-white100 4xl:text-[20px] font-robotoFlex'>
+              <p className='text-[14px] mdl:text-[18px] text-white100 4xl:text-[20px] font-robotoFlex 3xl:w-[100%] 3xl:text-[18px]'>
 			  Разработка уникальных решений, учитывающих специфику вашего бизнеса
               </p>
             </div>
           </div>
           {/* CARD 2 */}
-          <div className='w-full mdl:min-w-full  4xl:max-w-[50%] rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between  xl:min-w-[90%]  2xl:max-w-[98%] 3xl:min-w-[98%] 2xl:min-h-[450px] 4xl:min-h-[600px]'>
-            <div className='w-[60%]'>
+          <div className='w-full mdl:min-w-full  4xl:max-w-[50%] rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between  xl:min-w-[90%]  2xl:max-w-[98%] 3xl:min-w-[98%] 2xl:min-h-[450px] 4xl:min-h-[600px] 3xl:py-[80px] 3xl:px-[70px]'>
+            <div className='w-[60%] 3xl:w-[100%]'>
               <p className='text-[23px] mdl:text-[40px] text-titleDark font-bold 4xl:text-[50px]'>Современный дизайн</p>
             </div>
             <div className='mt-[15px] mdl:text-[18px] w-[85%]  mdl:mt-[40px]'>
-              <p className='text-[14px] mdl:text-[18px] text-[#454545] 4xl:text-[20px] font-robotoFlex'>
+              <p className='text-[14px] mdl:text-[18px] text-[#454545] 4xl:text-[20px] font-robotoFlex 3xl:w-[100%] 3xl:text-[18px]'>
 			  Создание визуально привлекательных и функциональных сайтов, которые запоминаются
               </p>
             </div>
           </div>
           {/* CARD 3 */}
-          <div className='w-full 2xl:max-w-[98%]  mdl:min-w-full 2xl:min-h-[450px]  rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between xl:min-w-[90%]  2xl:min-w-[98%] 4xl:min-h-[600px]'>
-            <div className='w-[60%]'>
+          <div className='w-full 2xl:max-w-[98%]  mdl:min-w-full 2xl:min-h-[450px]  rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between xl:min-w-[90%]  2xl:min-w-[98%] 4xl:min-h-[600px] 3xl:py-[80px] 3xl:px-[70px]'>
+            <div className='w-[60%] 3xl:w-[100%]'>
               <p className='text-[23px] mdl:text-[40px] text-titleDark font-bold 4xl:text-[50px]'>SEO-оптимизация</p>
             </div>
-            <div className='mt-[15px] w-[85%] mdl:mt-[40px]'>
+            <div className='mt-[15px] w-[85%] mdl:mt-[40px] 3xl:w-[100%] 3xl:text-[18px]'>
               <p className='text-[14px] mdl:text-[18px] 4xl:text-[20px] text-[#454545] font-robotoFlex'>
 			  Повышение видимости вашего сайта в поисковых системах для привлечения целевых клиентов
               </p>
