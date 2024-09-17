@@ -18,11 +18,13 @@ const Navigation = () => {
     slidesToScroll: 1,
     initialSlide: 0,
     arrows: false,
+    centerPadding: '40px',
     responsive: [
       {
         breakpoint: 1024, 
         settings: {
           slidesToShow: 3,
+          centerPadding: '40px',
           slidesToScroll: 1,
         },
       },
@@ -30,6 +32,7 @@ const Navigation = () => {
         breakpoint: 768, 
         settings: {
           slidesToShow: 3,
+          centerPadding: '40px',
           slidesToScroll: 1,
         },
       },
@@ -38,18 +41,19 @@ const Navigation = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
+          centerPadding: '40px'
         },
       },
     ],
   };
 
   const navItems = [
-    { name: 'Сайты', href: '#', slug: 'web-development' },
-    { name: 'Telegram-боты', href: '#', slug: 'telegram-bot-development' },
-    { name: 'SMM', href: '#', slug: 'smm' },
-    { name: 'Реклама', href: '#', slug: 'ads-launch' },
-    { name: 'SEO', href: '#', slug: 'seo' },
-    { name: 'Брендинг', href: '#', slug: 'branding' },
+    { name: 'Сайты',  slug: 'web-development' },
+    { name: 'Telegram-боты', slug: 'telegram-bot-development' },
+    { name: 'SMM', href: 'smm', slug: 'smm' },
+    { name: 'Реклама',  slug: 'ads-launch' },
+    { name: 'SEO', slug: 'seo' },
+    { name: 'Брендинг', slug: 'branding' },
   ];
 
   const updateSpanWidths = () => {
@@ -108,28 +112,27 @@ const Navigation = () => {
       </nav>
 
       {/* FOR MOBILE AND TABLET VIEW */}
-      <nav className="2xl:hidden p-[20px]">
-        <Slider {...settings}>
-          {navItems.map((item, index) => (
-            <div key={item.name} className="flex flex-col items-center relative px-[10px]">
-              <a
-                ref={(el) => (navRefs.current[index] = el)} // Ref for a element
-                href={item.href}
-                className={`text-[15px] mdl:text-[20px] font-semibold ${activeNav === item.name ? 'text-[#7B72EB]' : 'text-black'} hover:text-[#7B72EB] pb-1`}
-                onClick={() => setActiveNav(item.name)}
-                style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}
-              >
-                {item.name}
-              </a>
-              <span
-                ref={(el) => (spanRefs.current[index] = el)} // Ref for span element
-                className="absolute bottom-[-15px] left-0 h-[5px] bg-[#7B72EB] rounded-tl-[5px] rounded-tr-[5px]"
-                style={{ width: 0 }} // Start with width 0 for animation
-              ></span>
-            </div>
-          ))}
-        </Slider>
-      </nav>
+      <nav className=" 2xl:hidden py-[20px] px-[16px]">
+      <Slider {...settings}>
+        {navItems.map((item, index) => (
+          <div key={item.name} className="flex flex-col items-center relative px-2">
+            <a
+              ref={el => (navRefs.current[index] = el)}
+              href={`/ru/services/${item.slug}`}
+              className={`text-sm font-semibold ${activeNav === item.name ? 'text-[#7B72EB]' : 'text-black'} hover:text-[#7B72EB] pb-1`}
+              onClick={() => setActiveNav(item.name)}
+            >
+              {item.name}
+            </a>
+            <span
+              ref={el => (spanRefs.current[index] = el)}
+              className="absolute bottom-[-10px] h-1 bg-[#7B72EB] rounded"
+              style={{ width: 0 }}
+            ></span>
+          </div>
+        ))}
+      </Slider>
+    </nav>
     </>
   );
 };
