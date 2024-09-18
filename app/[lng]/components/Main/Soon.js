@@ -10,10 +10,6 @@ const Soon = () => {
       isSoon: false,
     },
     {
-      img: 'https://ucarecdn.com/d609136f-34ee-4bbe-b0da-629f8c2ea340/-/preview/1000x981/',
-      isSoon: false,
-    },
-    {
       img: 'https://ucarecdn.com/e133f08c-8257-4164-9243-c226521c4f6e/-/preview/1000x981/',
       isSoon: false,
     }

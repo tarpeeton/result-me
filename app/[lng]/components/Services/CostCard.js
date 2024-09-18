@@ -22,26 +22,7 @@ const CostCardData = {
       price: '300$',
       link: 'slug/odnostranichny-site',
     },
-    {
-      title: 'Одностраничный сайт Tilda',
-      description: `Гибкий сайт для специалиста или небольшой клиники разработанный на платформе Tilda. размер: 1 страница срок: 2 недели (при быстром получении запрашиваемой информации от клиента)`,
-      services: [
-        'Разработка сайта на конструкторе Tilda',
-        'Заполнение контентом на 2 языках',
-        'Интеграция с CMS панелью',
-        'Индексация в Google',
-        'SEO оптимизация под ключевые слова',
-        'Хостинг на 3 месяца',
-        'Доменное имя на 1 год',
-        'Экспорт кода (при желании заказчика)',
-      ],
-      price: '200$',
-      link: 'slug/odnostranichny-site-tilda',
-      specialFeatures: [
-        'Возможность редактирования после публикации (при оплате подписки на Tilda 10$ / ежемесячно)',
-        'Стильный и понятный дизайн',
-      ],
-    },
+  
     {
       title: 'Многостраничный сайт',
       description: ` Гибкий многостраничный сайт для специалиста или клиники. размер:5 страниц срок: 1 месяц (при быстром получении запрашиваемой информации от клиента)`,
@@ -63,26 +44,7 @@ const CostCardData = {
         'Возможность ведения блога',
       ],
     },
-    {
-      title: 'Многостраничный сайт Tilda',
-      description: `Гибкий сайт для специалиста или небольшой клиники разработанный на платформе Tilda размер: 5 страниц срок: 2 недели (при быстром получении запрашиваемой информации от клиента)`,
-      services: [
-        'Разработка сайта на конструкторе Tilda',
-        'Заполнение контентом на 2 языках',
-        'Интеграция с CMS панелью',
-        'Индексация в Google',
-        'SEO оптимизация под ключевые слова',
-        'Хостинг на 3 месяца',
-        'Доменное имя на 1 год',
-        'Экспорт кода',
-      ],
-      price: '500$',
-      link: 'slug/mnogostranichny-site-tilda',
-      specialFeatures: [
-        'Возможность редактирования после публикации (при оплате подписки на Tilda 10$ / ежемесячно)',
-        'Стильный и понятный дизайн',
-      ],
-    },
+    
     {
       title: 'Другой сайт',
       description: ` Разработка любого другого сайта исходя из вашего ТЗ срок: от 2 недель (при быстром получении запрашиваемой информации от клиента)`,
@@ -244,7 +206,7 @@ const CostCardData = {
         'Определение целевой аудитории',
         'Ежемесячный отчет по кампаниям',
       ],
-      price: '100$',
+      price: '200$',
       link: 'slug/ads-launch-google',
     },
     {
@@ -258,7 +220,7 @@ const CostCardData = {
         'Определение целевой аудитории',
         'Ежемесячный отчет по кампаниям',
       ],
-      price: '100$',
+      price: '200$',
       link: 'slug/ads-launch-facebook',
     },
   ],
@@ -371,7 +333,7 @@ const CostCard = () => {
         {filteredData.map((card, index) => (
           <div
             key={index}
-            className='relative w-full border px-[24px] py-[30px] border-[#F0F0F0] rounded-[30px] mt-[20px]  2xl:w-[calc(32.333%-16px)] pb-[150px]'
+            className='relative  w-full border px-[24px] py-[30px] border-[#F0F0F0] rounded-[30px] mt-[20px]  2xl:w-[calc(32.333%-16px)] pb-[150px]'
           >
             <div>
               <p className='text-[20px] font-semibold 2xl:font-bold mdl:text-[30px] text-titleDark'>
@@ -403,8 +365,8 @@ const CostCard = () => {
                 </div>
               ))}
             </div>
-            <div className='h-[1px] w-full bg-[#F0F0F0] mt-[25px]' />
-            <div className='mt-[25px]'>
+            <div className='h-[1px] w-full bg-[#F0F0F0] mt-[25px] mb-[40px]' />
+            <div className='absolute bottom-[120px]'>
               <p className='text-violet100 font-bold text-[28px]'>
                 {card.price}
               </p>
