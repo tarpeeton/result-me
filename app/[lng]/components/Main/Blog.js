@@ -39,7 +39,7 @@ const Blog = () => {
       {/* Render blogs using map() */}
       <div className='flex flex-col gap-[40px] mdl:gap-[50px] slg:flex-row'>
         {blogData.map((blogItem, index) => (
-          <Link  href={`/blog/${blogItem.slug}`} key={index} className='card__blog slg:w-[45%] cursor-pointer 2xl:w-[30%]'>
+          <Link  href={`/blog/${blogItem.slug}`} key={index} className='card__blog slg:w-[45%] cursor-pointer 2xl:w-[30%] relative'>
             <div className='2xl:max-h-[500px]'>
               {blogItem.photo && <Image
                 width={600}
@@ -51,7 +51,7 @@ const Blog = () => {
               /> }
               
             </div>
-            <div className='mt-[14px] flex flex-col gap-[8px]'>
+            <div className='mt-[14px] flex flex-col gap-[8px] 3xl:mb-[40px]'>
               <p className='w-full text-[20px] text-titleDark font-semibold mdl:text-[25px] mdl:leading-[30.48px]'>
                 {blogItem.title}
               </p>
@@ -59,7 +59,7 @@ const Blog = () => {
                 {blogItem.description}
               </p>
             </div>
-            <div className='mt-[8px] mdl:mt-[20px]'>
+            <div className='mt-[8px] mdl:mt-[20px] absolute bottom-0'>
                 <p className='text-violet100 text-[14px] font-bold flex items-center mdl:text-[18px]'>
                   Подробнее
                   <GrLinkNext className='text-violet100 ml-[8px]' />
