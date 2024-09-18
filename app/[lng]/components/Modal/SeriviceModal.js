@@ -1,7 +1,8 @@
 "use client";
 import axios from 'axios';
 import { IoClose } from "react-icons/io5";
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
+import { createService } from '../../lib/api/api';
 import InputMask from 'react-input-mask';
 import {
   Dialog,
@@ -20,6 +21,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
     comment: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
 
   // Handle input changes
   const handleChange = useCallback((e) => {
@@ -30,29 +32,23 @@ const ServiceModal = ({ isOpen, onClose }) => {
     }));
   }, []);
 
+  // Check if the form is valid (all fields are filled)
+  useEffect(() => {
+    const { name, phone, service, comment } = formData;
+    if (name && phone && service && comment) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
+  }, [formData]);
+
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Telegram Bot API URL
-    const TELEGRAM_API_URL = 'https://api.telegram.org/bot7364268562:AAFNdGFTuTrNivKRj-Bmdh2yT_WLu83zsm0/sendMessage'
-
-    // Message to be sent to Telegram
-    const message = `
-      *Имя😉:* ${formData.name}\n
-      *Номер телефона📞:* ${formData.phone}\n
-      *Услуга💵:* ${formData.service}\n
-      *Комментарий❓:* ${formData.comment}
-    `;
-
     try {
       // Send the form data to Telegram Bot
-      await axios.post(TELEGRAM_API_URL, {
-        chat_id: 6593293680, // Replace with your Telegram chat ID
-        text: message,
-        parse_mode: 'Markdown',
-      });
-
+      await createService(formData);
       // After successful submission
       setIsSubmitted(true);
       onClose();
@@ -169,7 +165,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
                 <option value="SEO">SEO</option>
                 <option value="reklama">Запуск рекламы</option>
                 <option value="brending">Брендинг</option>
-                <option value="firmeniy stil">фирменный стиль</option>
+                <option value="firmeniy stil">Фирменный стиль</option>
               </select>
             </div>
 
@@ -195,6 +191,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             <DialogActions sx={{ width: '100%', zIndex: 9999 }}>
               <Button
                 type="submit"
+                disabled={!isFormValid} // Disable the button if the form is not valid
                 sx={{
                   width: '90%',
                   fontSize: { xs: '14px', mdl: '18px' },
@@ -203,7 +200,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
                   py: '20px',
                   fontWeight: 'bold',
                   px: '30px',
-                  backgroundColor: '#7B72EB',
+                  backgroundColor: isFormValid ? '#7B72EB' : '#ccc', // Change color based on validity
                   color: 'white',
                 }}
               >
