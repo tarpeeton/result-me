@@ -6,23 +6,18 @@ import Image from 'next/image';
 import { gsap } from "gsap";
 import Link from 'next/link';
 
-import interlab from '@/public/images/cases/interlab.jpg';
-import mrj from '@/public/images/cases/mrj.jpg';
-import inst from '@/public/images/cases/inst.jpg';
-import dr from '@/public/images/cases/dr.jpg';
 import inter from '@/public/images/cases/inter.png';
-
 import caseDesckription from '@/public/images/Vector.png';
 
 // Items for filtering
 const items = [
   { id: 1, name: "Все", type: "all" },
-  { id: 2, name: "Сайты", type: "Web Development" },
+  { id: 2, name: "Сайты", type: "Сайт" },
   { id: 3, name: "Telegram-боты", type: "Telegram Bots" },
   { id: 4, name: "SMM", type: "SMM" },
-  { id: 5, name: "Реклама", type: "Advertising" },
+  { id: 5, name: "Реклама", type: "Реклама" },
   { id: 6, name: "SEO", type: "SEO" },
-  { id: 7, name: "Брендинг", type: "Branding" },
+  { id: 7, name: "Брендинг", type: "Брендинг" },
 ];
 
 // Example data with different service types and statistics
@@ -35,31 +30,13 @@ const data = [
       photo: inter,
       slug: 'intermed'
     },
-    statistics: [
-      {  },
-      
-    ],
-    serviceType: { name: "Web Development" },
+    statistics: [],
   },
-  // {
-  //   id: 2,
-  //   banner: {
-  //     title: "Interlab",
-  //     shortDescription: "Сайт SEO",
-  //     photo: interlab,
-  //     slug: 'interlab'
-  //   },
-  //   statistics: [
-  //     { value: "+45%", label: "узнаваемость бренда" },
-  //     { value: "+70%", label: "лояльность клиентов" },
-  //   ],
-  //   serviceType: { name: "Web Development" , name: 'SEO' },
-  // },
   {
     id: 2,
     banner: {
       title: "MRJ Trade",
-      shortDescription: "Сайт SEO",
+      shortDescription: "Сайт SEO Брендинг Реклама",
       photo: "https://ucarecdn.com/581a982e-f1c1-44c1-8dd4-1862300a3e0c/-/preview/1000x533/",
       slug: 'mrj-trade'
     },
@@ -68,13 +45,12 @@ const data = [
       { value: "+0,32$", label: "цена за клик" },
       { value: "+11,22%", label: "CTR" },
     ],
-    serviceType: { name: "Web Development" },
   },
   {
     id: 3,
     banner: {
       title: "Prime medical center",
-      shortDescription: "SMM Реклама",
+      shortDescription: "SMM Сайт",
       photo: 'https://ucarecdn.com/3d44d91c-b27b-41a0-9eb5-a02d51e18ad0/-/preview/1000x533/',
       slug: 'prime-medical-center'
     },
@@ -83,13 +59,12 @@ const data = [
       { value: "+23%", label: "посещаемость" },
       { value: "+18,200%", label: "посещений сайта / год" },
     ],
-    serviceType: { name: "SMM" },
   },
   {
     id: 4,
     banner: {
       title: "Dr Odil Alisherovich",
-      shortDescription: "SMM Маркетинг",
+      shortDescription: "Сайт SMM ",
       photo: 'https://ucarecdn.com/3821b6ff-68bf-49a0-95a1-3a97a2b24367/-/preview/1000x533/',
       slug: 'dr-odil-alisherovich'
     },
@@ -97,20 +72,16 @@ const data = [
       { value: "+750", label: "подписчиков в Telegram" },
       { value: "+1070", label: "подписчиков в Instagram" },
     ],
-    serviceType: { name: "SMM" },
   },
   {
     id: 5,
     banner: {
       title: "Mastona Med",
-      shortDescription: "",
+      shortDescription: "SMM",
       photo: 'https://ucarecdn.com/9838f328-be53-4820-beb0-50de671b5042/-/preview/1000x533/',
       slug: 'mostona-med'
     },
-    statistics: [
-      
-    ],
-    serviceType: { name: "SMM" },
+    statistics: [],
   },
   {
     id: 6,
@@ -125,7 +96,6 @@ const data = [
       { value: "0,10$", label: "цена за клик" },
       { value: "+14,22%", label: "CTR" },
     ],
-    serviceType: { name: "Advertising" },
   },
   {
     id: 7,
@@ -140,58 +110,44 @@ const data = [
       { value: "0,05$", label: "цена за клик" },
       { value: "11,64%", label: "CTR" },
     ],
-    serviceType: { name: "smm" },
   },
   {
     id: 8,
     banner: {
       title: "Нафиса Шухратовна",
-      shortDescription: "Реклама",
+      shortDescription: "Сайт Брендинг",
       photo: "https://ucarecdn.com/ff5c48de-f62f-43d3-930f-deda157f95d8/-/preview/1000x533/",
       slug: 'nafisa-shuxratovna'
     },
-    statistics: [
-      // { value: "2,450", label: "кликов на сайт" },
-      // { value: "0,05$", label: "цена за клик" },
-      // { value: "11,64%", label: "CTR" },
-    ],
-    serviceType: { name: "smm" },
+    statistics: [],
   },
-  
   {
     id: 10,
     banner: {
       title: "Хайрилло Рахматуллаевич",
-      shortDescription: "Реклама",
+      shortDescription: "Сайт Брендинг",
       photo: "https://ucarecdn.com/2ba0ba68-c9fe-4385-9455-ab649077f091/-/preview/1000x533/",
       slug: 'xayrullo-rahmatullaevich'
     },
     statistics: [
       { label: "Разработанный сайт стал успешным информационным ресурсом, который привлекает внимание потенциальных клиентов и повышает имидж врача. Фирменный стиль был успешно внедрен, что помогло повысить узнаваемость врача на рынке." },
-      
     ],
-    serviceType: { name: "smm" },
   },
   {
     id: 11,
     banner: {
       title: "Ant Group",
-      shortDescription: "Реклама",
+      shortDescription: "SMM",
       photo: 'https://ucarecdn.com/49c73bea-744c-4688-9381-749f0a02dddd/-/preview/1000x533/',
       slug: 'ant-group'
     },
-    statistics: [
-      // { value: "2,450", label: "кликов на сайт" },
-      // { value: "0,05$", label: "цена за клик" },
-      // { value: "11,64%", label: "CTR" },
-    ],
-    serviceType: { name: "smm" },
+    statistics: [],
   },
   {
     id: 12,
     banner: {
       title: "Алишер Бахромович",
-      shortDescription: "Реклама",
+      shortDescription: "Сайт Реклама SEO Брендинг",
       photo: "https://ucarecdn.com/63e07933-c844-4595-bb71-7f8daeb71e1a/-/preview/1000x533/",
       slug: 'alisher-baxromovich'
     },
@@ -200,56 +156,33 @@ const data = [
       { value: "0,11$", label: "цена за клик" },
       { value: "13,63%", label: "CTR" },
     ],
-    serviceType: { name: "smm" },
   },
   {
     id: 13,
     banner: {
       title: "Ахмедов Санджар Акбарович",
-      shortDescription: "Реклама",
+      shortDescription: "Сайт Реклама Брендинг",
       photo: "https://ucarecdn.com/15d5c5c4-5760-4093-a6a7-4df1af132578/-/preview/1000x533/",
       slug: 'sanjar-akbarovich'
     },
     statistics: [
       { value: '14,5 тыс', label: 'кликов на сайт' },
-			{ value: '0,07$', label: 'цена за клик' },
-			{ value: '14,11%', label: 'CTR' },
+      { value: '0,07$', label: 'цена за клик' },
+      { value: '14,11%', label: 'CTR' },
     ],
-    serviceType: { name: "smm" },
   },
   {
     id: 14,
     banner: {
       title: "Азиза Шахзадэевна",
-      shortDescription: "Реклама",
+      shortDescription: "Реклама Сайт",
       photo: "https://ucarecdn.com/c1131e2f-5cdb-4c1a-8a37-46bd923ceae2/-/preview/1000x533/",
       slug: 'aziza-shaxzadeevna'
     },
     statistics: [
       { label: "Разработанный сайт стал хорошим ресурсом для пациентов, предоставив всю информацию о враче в свободном доступе 24 / 7, что способствовало увеличению видимости в интернете." },
-    
     ],
-    serviceType: { name: "smm" },
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ];
 
 const Content = () => {
@@ -265,7 +198,7 @@ const Content = () => {
     if (type === "all") {
       setFilteredData(data); // Show all if "Все" is selected
     } else {
-      setFilteredData(data.filter(item => item.serviceType.name === type));
+      setFilteredData(data.filter(item => item.banner.shortDescription.includes(type)));
     }
   };
 
@@ -309,7 +242,7 @@ const Content = () => {
           infinite={false}
         >
           {items.map((item) => (
-            <div key={item.id} className="text-center" >
+            <div key={item.id} className="text-center">
               <button
                 className={`text-[15px] pb-[10px] font-semibold ${
                   selected === item.id ? "text-violet100" : "text-titleDark"
@@ -369,12 +302,12 @@ const Content = () => {
                 className="object-cover w-full h-full"
               />
               {/* Hidden content that appears on hover */}
-              <div className="hidden 3xl:absolute bottom-0  w-full h-full bg-black  opacity-0 group-hover:opacity-100 transition-opacity duration-300 3xl:flex justify-center items-center   bg-opacity-[70%] ">    {/* // bg-opacity-50 */} 
+              <div className="hidden 3xl:absolute bottom-0 w-full h-full bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 3xl:flex justify-center items-center bg-opacity-[70%]">
                 <div className="h-[100px] absolute bottom-[20px]">
                   <div className="flex flex-row gap-[40px] items-center justify-center">
                     {item.statistics.map((stat, statIdx) => (
                       <div key={statIdx} className="flex flex-col gap-[5px] text-center">
-                        <p className="text-white100 text-[18px] 3xl:text-[30px]  4xl:text-[50px] font-bold">
+                        <p className="text-white100 text-[18px] 3xl:text-[30px] 4xl:text-[50px] font-bold">
                           {stat.value}
                         </p>
                         <p className="text-white100 text-[18px] 4xl:text-[20px] font-medium 3xl:text-[18px] font-robotoFlex">
@@ -392,21 +325,21 @@ const Content = () => {
                 {item.banner.title}
               </p>
               <p className="text-[14px] text-violet100 mdx:text-[18px] font-semibold w-full flex flex-row ">
-              {item.banner.shortDescription.split(' ').map((word, index) => (
-                        <React.Fragment key={index}>
-                          {index > 0 && (
-                            <Image
-                              src={caseDesckription}
-                              width={40}
-							  quality={100}
-                              height={40}
-                              alt="separator"
-                              className="mx-[6px] w-[14px] h-[14px] mdl:w-[20px] mdl:h-[20px] "
-                            />
-                          )}
-                          <span>{word}</span>
-                        </React.Fragment>
-                      ))}
+                {item.banner.shortDescription.split(' ').map((word, index) => (
+                  <React.Fragment key={index}>
+                    {index > 0 && (
+                      <Image
+                        src={caseDesckription}
+                        width={40}
+                        quality={100}
+                        height={40}
+                        alt="separator"
+                        className="mx-[6px] w-[14px] h-[14px] mdl:w-[20px] mdl:h-[20px]"
+                      />
+                    )}
+                    <span>{word}</span>
+                  </React.Fragment>
+                ))}
               </p>
             </div>
           </Link>

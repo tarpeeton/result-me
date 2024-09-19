@@ -23,7 +23,7 @@ const CustomSelect = ({ value, onChange, options , main }) => {
       {/* Button displaying the current selection with flag and label */}
       <button
         onClick={toggleDropdown}
-    className={`w-full  ${main ?  `bg-[#9A93F6]` : `bg-[#F4F4F4]` } rounded-full flex items-center py-[10px] px-[12px] justify-center`}
+    className={`w-full  ${main ?  `bg-[#9A93F6]` : `bg-[#F4F4F4]` } rounded-full flex items-center py-[10px] px-[12px] mdl:py-[12px] mdl:px-[15px] justify-center`}
       >
         <span className={`${main ? `text-white100` : `text-[#454545]` } font-bold flex items-center gap-2`}>
           {selectedOption.label}
