@@ -352,12 +352,12 @@ const Content = () => {
       </div>
 
       {/* Cards Section (Filtered Data) */}
-      <div className="mx-[16px] flex flex-col gap-[5px] 2xl:flex 2xl:flex-row 2xl:flex-wrap 2xl:gap-[100px] 2xl:mx-[30px]">
+      <div className="mx-[16px] flex flex-col gap-[5px] 2xl:flex 2xl:flex-row 2xl:flex-wrap  2xl:justify-between 2xl:mx-[30px]">
         {filteredData.map((item, idx) => (
           <Link
             href={`/cases/${item.banner.slug}`}  // Dynamic route based on slug
             key={idx}
-            className="w-full mt-[20px] 3xl:w-[45%] 6xl:max-w-[99%] relative group cursor-pointer"
+            className="w-full mt-[20px] 3xl:w-[49%] 6xl:max-w-[99%] relative group cursor-pointer 2xl:mb-[80px]"
           >
             <div className="relative">
               <Image
@@ -369,8 +369,8 @@ const Content = () => {
                 className="object-cover w-full h-full"
               />
               {/* Hidden content that appears on hover */}
-              <div className="hidden 3xl:absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 3xl:flex justify-center items-center">
-                <div className="h-[100px]">
+              <div className="hidden 3xl:absolute bottom-0  w-full h-full bg-black  opacity-0 group-hover:opacity-100 transition-opacity duration-300 3xl:flex justify-center items-center   bg-opacity-[70%] ">    {/* // bg-opacity-50 */} 
+                <div className="h-[100px] absolute bottom-[20px]">
                   <div className="flex flex-row gap-[40px] items-center justify-center">
                     {item.statistics.map((stat, statIdx) => (
                       <div key={statIdx} className="flex flex-col gap-[5px] text-center">

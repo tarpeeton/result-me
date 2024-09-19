@@ -1,76 +1,156 @@
 'use client'; // Указываем, что этот компонент должен рендериться на стороне клиента
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import Image from 'next/image'
+import Image from 'next/image';
+import { useParams } from 'next/navigation';
 
-// Данные с изображениями
-const slider = [
-	{
-	  id: 1,
-	  url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/',
-	},
-	{
-	  id: 2,
-	  url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/',
-	},
-	{
-	  id: 3,
-	  url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/',
-	},
-	{
-	  id: 4,
-	  url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/',
-	},
-  ];
-  
+// Данные с изображениями и slug
+const sliderData = [
+  {
+    slug: 'prime-medical-center',
+    images: [
+      { id: 1, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+      { id: 2, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+    ],
+  },
+  {
+    slug: 'smile-design',
+    images: [
+      { id: 3, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+      { id: 4, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+    ],
+  },
+  {
+    slug: 'ant-group',
+    images: [
+      { id: 5, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+    ],
+  },
+  {
+    slug: 'dr-odil-alisherovich',
+    images: [
+      { id: 6, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+    ],
+  },
+  {
+    slug: 'mrj-trade',
+    images: [
+      { id: 7, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+    ],
+  },
+  {
+    slug: 'baxtiyor-nadjullayevich',
+    images: [
+      { id: 8, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+    ],
+  },
+  {
+    slug: 'mostona-med',
+    images: [
+      { id: 9, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+    ],
+  },
+  {
+    slug: 'nafisa-shuxratovna',
+    images: [
+      { id: 10, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+    ],
+  },
+  {
+    slug: 'xayrullo-rahmatullaevich',
+    images: [
+      { id: 11, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+    ],
+  },
+  {
+    slug: 'aziza-shaxzadeevna',
+    images: [
+      { id: 12, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+    ],
+  },
+  {
+    slug: 'alisher-baxromovich',
+    images: [
+      { id: 13, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+    ],
+  },
+  {
+    slug: 'sanjar-akbarovich',
+    images: [
+      { id: 14, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+    ],
+  },
+  {
+    slug: 'intermed',
+    images: [
+      { id: 15, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+    ],
+  },
+];
+
 // Параметры адаптивности
 const responsive = {
-	mobile: {
-		breakpoint: { max: 768, min: 0 },
-		items: 1, // Показывать 1 изображение на мобильных устройствах
-	},
-	tablet: {
-		breakpoint: { max: 1024, min: 769 },
-		items: 2, // Показывать 2 изображения на планшетах
-	},
-	desktop: {
-		breakpoint: { max: 3000, min: 1025 },
-		items: 2, // Показывать 2 изображения на десктопах
-	},
+  mobile: {
+    breakpoint: { max: 768, min: 0 },
+    items: 1, // Показывать 1 изображение на мобильных устройствах
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 769 },
+    items: 2, // Показывать 2 изображения на планшетах
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1025 },
+    items: 2, // Показывать 2 изображения на десктопах
+  },
 };
 
 const Images = () => {
-	return (
-		<div className="mt-[80px] mb-[80px] 3xl:mb-[200px]">
-			<h2 className="text-[28px] mdl:text-[50px]  font-bold mb-[20px] mdl:mb-[40px]">Итоги наглядно</h2>
+  const { slug } = useParams(); // Получаем slug из URL
+  const [filteredImages, setFilteredImages] = useState([]);
 
-			{/* Слайдер */}
-			<Carousel
-			responsive={responsive}
-			infinite={true}
-			autoPlay={true}
-			autoPlaySpeed={3000} // Скорость переключения
-			arrows={false} // Отключить стрелки
-			containerClass="carousel-container"
-			itemClass="carousel-item-padding-40-px"
-			>
-				{slider.map((item) => (
-					<div key={item.id} className="px-2 cursor-pointer">
-						<Image
-						width={1600}
-						height={670}
-						quality={100}
-							src={item.url}
-							alt={`Slide ${item.id}`}
-							className="object-cover w-full"
-						/>
-					</div>
-				))}
-			</Carousel>
-		</div>
-	);
+  useEffect(() => {
+    // Фильтруем изображения по slug
+    const sliderItem = sliderData.find((item) => item.slug === slug);
+    if (sliderItem) {
+      setFilteredImages(sliderItem.images);
+    }
+  }, [slug]); // Запускаем эффект при изменении slug
+
+  return (
+    <div className="mt-[80px] mb-[80px] 3xl:mb-[200px]">
+      <h2 className="text-[28px] mdl:text-[50px] font-bold mb-[20px] mdl:mb-[40px]">Итоги наглядно</h2>
+
+      {/* Слайдер */}
+      {filteredImages.length > 0 ? (
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={3000} // Скорость переключения
+          arrows={false} // Отключить стрелки
+          containerClass="carousel-container"
+          itemClass="carousel-item-padding-40-px"
+        >
+          {filteredImages.map((image) => (
+            <div key={image.id} className="px-2 cursor-pointer">
+              <Image
+                width={1600}
+                height={670}
+                quality={100}
+                src={image.url}
+                alt={`Slide ${image.id}`}
+                className="object-cover w-full"
+              />
+            </div>
+          ))}
+        </Carousel>
+      ) : (
+        <p>Нет изображений для отображения</p>
+      )}
+    </div>
+  );
 };
 
 export default Images;

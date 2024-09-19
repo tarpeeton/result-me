@@ -550,11 +550,11 @@ const CaseItemMain = () => {
           },
           "background": {
             "id": 4,
-            "url": 'https://ucarecdn.com/b06061bf-c6e0-405f-a3c8-8c00def0a94f/-/preview/999x272/' // Use imported image
+            "url": 'https://ucarecdn.com/853d47be-7a0c-45a0-9619-0ed5a03f3327/-/preview/999x272/' // Use imported image
           },
           "photo": {
             "id": 5,
-            "url": "https://ucarecdn.com/d6e7e984-22d9-47b3-ba35-530601731277/-/preview/1000x658/" // Use imported image
+            "url": "https://ucarecdn.com/63b3f68b-0b99-40fc-88e7-a4adab282de6/-/preview/1000x658/" // Use imported image
           },
           "logo": {
             "id": 6,

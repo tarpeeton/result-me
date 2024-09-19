@@ -6,7 +6,7 @@ const Banner = ({ data }) => {
 
   return (
     <div
-      className='w-full rounded-[30px] py-[30px] px-[20px] 3xl:flex 3xl:flex-row 3xl:justify-center 3xl:items-center mt-[20px] mdl:mt-[30px] mdl:rounded-[40px] 3xl:rounded-[50px] mdl:p-[0] '
+      className='w-full rounded-[30px]  3xl:flex 3xl:flex-row 3xl:justify-center 3xl:items-center mt-[20px] mdl:mt-[30px] mdl:rounded-[40px] 3xl:rounded-[50px] mdl:p-[0] '
       style={{
         backgroundImage: `url(${banner.background.url})`,
         backgroundSize: 'cover',
@@ -14,7 +14,7 @@ const Banner = ({ data }) => {
       }}
     >
 		
-      <div className='3xl:w-[60%] 3xl:flex 3xl:items-center 3xl:justify-center mb-[50px]'>
+      <div className='3xl:w-[60%] 3xl:flex 3xl:items-center 3xl:justify-center mb-[50px] py-[30px] px-[20px]'>
         <div className='3xl:w-[80%]'>
           <h1 className='text-white text-[35px] mdl:text-[50px] font-bold mb-[15px]'>
             {banner.title.ru}
