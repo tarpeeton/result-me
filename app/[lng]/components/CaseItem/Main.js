@@ -26,7 +26,7 @@ const CaseItemMain = () => {
             "ru": "Intermed Innovation",
             "en": "Intermed Innovation"
           },
-          "link": "https://intermed-innovation.com",
+          "link": "https://imed.uz/",
           "shortDescription": {
             "uz": "Крупнейший дилер медицинского оборудования в Узбекистане",
             "ru": "Крупнейший дилер медицинского оборудования в Узбекистане",
@@ -34,16 +34,16 @@ const CaseItemMain = () => {
           },
           "background": {
             "id": 1,
-            "url": "https://ucarecdn.com/e74e2b4a-231d-415c-9ed6-5f89d90f3da6/-/preview/800x600/"
+            "url": "https://ucarecdn.com/d885d0d5-f440-4e8f-8241-12e6e19f0882/-/preview/999x272/"
           },
           "photo": {
             "id": 2,
-            "url": "https://ucarecdn.com/10ee97fe-71fc-4ffe-a907-f4bb3377abed/-/preview/500x500/"
+            "url": "https://ucarecdn.com/50e91c1e-d7c1-4ce8-9087-d2a08922ddee/-/preview/1000x658/"
           },
-          "logo": {
-            "id": 3,
-            "url": "https://ucarecdn.com/67fd2b7e-e746-47a8-9f1a-91b8e135119e/-/preview/200x100/"
-          }
+          // "logo": {
+          //   "id": 3,
+          //   "url": "https://ucarecdn.com/67fd2b7e-e746-47a8-9f1a-91b8e135119e/-/preview/200x100/"
+          // }
         },
         "query": ["string"],
         "providedService": [
@@ -122,15 +122,15 @@ const CaseItemMain = () => {
         "banner": {
           "id": 1,
           "title": {
-            "uz": "MRJ TRADE",
-            "ru": "MRJ TRADE",
-            "en": "MRJ TRADE"
+            "uz": "Хужакулов Одил Алишерович",
+            "ru": "Хужакулов Одил Алишерович",
+            "en": "Хужакулов Одил Алишерович"
           },
-          "link": "https://mrj-trade.com",
+          "link": "https://dr-odil.uz/",
           "shortDescription": {
-            "uz": "«MRJ TRADE» ведущий поставщик лабораторного оборудования",
-            "ru": "«MRJ TRADE» ведущий поставщик лабораторного оборудования",
-            "en": "«MRJ TRADE» ведущий поставщик лабораторного оборудования"
+            "uz": "Врач-эксперт в области пренатальной диагностики",
+            "ru": "Врач-эксперт в области пренатальной диагностики",
+            "en": "Врач-эксперт в области пренатальной диагностики"
           },
           "background": {
             "id": 4,
@@ -177,7 +177,7 @@ const CaseItemMain = () => {
             "ru": "Prime Medical Center",
             "en": "Prime Medical Center"
           },
-          "link": "https://www.instagram.com/nargiza_xamidulayevna/",
+          "link": "https://pmcenter.uz/",
           "shortDescription": {
             "uz": "Гастроэнтерологический центр с большой историей (бывший GunchaMed)",
             "ru": "Гастроэнтерологический центр с большой историей (бывший GunchaMed)",
@@ -370,7 +370,199 @@ const CaseItemMain = () => {
           }
         ]
       }
-    }
+    },
+    {
+      "slug": "ant-group",
+      "data": {
+        "id": 1,
+        "banner": {
+          "id": 1,
+          "title": {
+            "uz": "ANT-GROUP",
+            "ru": "ANT-GROUP",
+            "en": "ANT-GROUP"
+          },
+          "link": "https://www.instagram.com/antgroup_uz/",
+          "shortDescription": {
+            "uz": "Фармацевтическая компания",
+            "ru": "Фармацевтическая компания",
+            "en": "Фармацевтическая компания"
+          },
+          "background": {
+            "id": 4,
+            "url": 'https://ucarecdn.com/58ffcb67-d2c8-400b-a9b1-2f5eb8085d2c/-/preview/999x272/' // Use imported image
+          },
+          "photo": {
+            "id": 5,
+            "url": "https://ucarecdn.com/61ec4e8a-5102-4acb-928b-a179a4960944/-/preview/1000x658/" // Use imported image
+          },
+          "logo": {
+            "id": 6,
+            "url": ''
+          }
+        },
+      }
+    },
+    {
+      "slug": "nafisa-shuxratovna",
+      "data": {
+        "id": 1,
+        "banner": {
+          "id": 1,
+          "title": {
+            "uz": "Хусеинова Нафиса Шухратовна",
+            "ru": "Хусеинова Нафиса Шухратовна",
+            "en": "Хусеинова Нафиса Шухратовна"
+          },
+          "link": "https://www.stom-tashkent.uz/",
+          "shortDescription": {
+            "uz": "Врач стоматолог-имплантолог, ортопед",
+            "ru": "Врач стоматолог-имплантолог, ортопед",
+            "en": "Врач стоматолог-имплантолог, ортопед"
+          },
+          "background": {
+            "id": 4,
+            "url": 'https://ucarecdn.com/58ffcb67-d2c8-400b-a9b1-2f5eb8085d2c/-/preview/999x272/' // Use imported image
+          },
+          "photo": {
+            "id": 5,
+            "url": "https://ucarecdn.com/61ec4e8a-5102-4acb-928b-a179a4960944/-/preview/1000x658/" // Use imported image
+          },
+          "logo": {
+            "id": 6,
+            "url": ''
+          }
+        },
+      }
+    },
+    {
+      "slug": "xayrullo-rahmatullaevich",
+      "data": {
+        "id": 1,
+        "banner": {
+          "id": 1,
+          "title": {
+            "uz": "Хашимов Хайрилло Рахматуллаевич",
+            "ru": "Хашимов Хайрилло Рахматуллаевич",
+            "en": "Хашимов Хайрилло Рахматуллаевич"
+          },
+          "link": "https://dr-khashimov.uz/",
+          "shortDescription": {
+            "uz": "Врач-кардиохирург с 17-летним опытом",
+            "ru": "Врач-кардиохирург с 17-летним опытом",
+            "en": "Врач-кардиохирург с 17-летним опытом"
+          },
+          "background": {
+            "id": 4,
+            "url": 'https://ucarecdn.com/f8c2f4bc-85dd-4be0-bf5c-80666c2d9b1a/-/preview/999x272/' // Use imported image
+          },
+          "photo": {
+            "id": 5,
+            "url": "https://ucarecdn.com/0a0ff189-884d-4c6d-a678-b8d3e8f40586/-/preview/1000x658/" // Use imported image
+          },
+          "logo": {
+            "id": 6,
+            "url": ''
+          }
+        },
+      }
+    },
+    {
+      "slug": "aziza-shaxzadeevna",
+      "data": {
+        "id": 1,
+        "banner": {
+          "id": 1,
+          "title": {
+            "uz": "Джураева Азиза Шахзадэевна",
+            "ru": "Джураева Азиза Шахзадэевна",
+            "en": "Джураева Азиза Шахзадэевна"
+          },
+          "link": "https://endocrinolog.uz/",
+          "shortDescription": {
+            "uz": "Врач-эндокринолог, кандидат медицинских наук",
+            "ru": "Врач-эндокринолог, кандидат медицинских наук",
+            "en": "Врач-эндокринолог, кандидат медицинских наук"
+          },
+          "background": {
+            "id": 4,
+            "url": 'https://ucarecdn.com/4f4f29bf-b1cb-4fee-80d8-41881f492d5a/-/preview/999x272/' // Use imported image
+          },
+          "photo": {
+            "id": 5,
+            "url": "https://ucarecdn.com/fd6c5143-76f4-42ee-8049-585c8c692e48/-/preview/1000x658/" // Use imported image
+          },
+          "logo": {
+            "id": 6,
+            "url": ''
+          }
+        },
+      }
+    },
+    {
+      "slug": "alisher-baxromovich",
+      "data": {
+        "id": 1,
+        "banner": {
+          "id": 1,
+          "title": {
+            "uz": "Курбанов Алишер Бахромович",
+            "ru": "Курбанов Алишер Бахромович",
+            "en": "Курбанов Алишер Бахромович"
+          },
+          "link": "https://alisher-lor.uz/",
+          "shortDescription": {
+            "uz": "ЛОР-хирург, владелец клиники YUNUSOBOD LOR 24/7",
+            "ru": "ЛОР-хирург, владелец клиники YUNUSOBOD LOR 24/7",
+            "en": "ЛОР-хирург, владелец клиники YUNUSOBOD LOR 24/7"
+          },
+          "background": {
+            "id": 4,
+            "url": 'https://ucarecdn.com/b06061bf-c6e0-405f-a3c8-8c00def0a94f/-/preview/999x272/' // Use imported image
+          },
+          "photo": {
+            "id": 5,
+            "url": "https://ucarecdn.com/d6e7e984-22d9-47b3-ba35-530601731277/-/preview/1000x658/" // Use imported image
+          },
+          "logo": {
+            "id": 6,
+            "url": ''
+          }
+        },
+      }
+    },
+    {
+      "slug": "sanjar-akbarovich",
+      "data": {
+        "id": 1,
+        "banner": {
+          "id": 1,
+          "title": {
+            "uz": "Ахмедов Санджар Акбарович",
+            "ru": "Ахмедов Санджар Акбарович",
+            "en": "Ахмедов Санджар Акбарович"
+          },
+          "link": "https://dr-psixoterapevt.uz/",
+          "shortDescription": {
+            "uz": "Врач-психотерапевт высшей категории, кандидат медицинских наук, доцент",
+            "ru": "Врач-психотерапевт высшей категории, кандидат медицинских наук, доцент",
+            "en": "Врач-психотерапевт высшей категории, кандидат медицинских наук, доцент"
+          },
+          "background": {
+            "id": 4,
+            "url": 'https://ucarecdn.com/b06061bf-c6e0-405f-a3c8-8c00def0a94f/-/preview/999x272/' // Use imported image
+          },
+          "photo": {
+            "id": 5,
+            "url": "https://ucarecdn.com/d6e7e984-22d9-47b3-ba35-530601731277/-/preview/1000x658/" // Use imported image
+          },
+          "logo": {
+            "id": 6,
+            "url": ''
+          }
+        },
+      }
+    },
 
 
 

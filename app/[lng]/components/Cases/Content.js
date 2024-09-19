@@ -60,12 +60,13 @@ const data = [
     banner: {
       title: "MRJ Trade",
       shortDescription: "Сайт SEO",
-      photo: mrj,
+      photo: "https://ucarecdn.com/581a982e-f1c1-44c1-8dd4-1862300a3e0c/-/preview/1000x533/",
       slug: 'mrj-trade'
     },
     statistics: [
-      { value: "+80%", label: "органический трафик" },
-      { value: "+50%", label: "позиции в поисковиках" },
+      { value: "+1,560", label: "кликов на сайт за месяц" },
+      { value: "+0,32$", label: "цена за клик" },
+      { value: "+11,22%", label: "CTR" },
     ],
     serviceType: { name: "Web Development" },
   },
@@ -74,7 +75,7 @@ const data = [
     banner: {
       title: "Prime medical center",
       shortDescription: "SMM Реклама",
-      photo: inst,
+      photo: 'https://ucarecdn.com/3d44d91c-b27b-41a0-9eb5-a02d51e18ad0/-/preview/1000x533/',
       slug: 'prime-medical-center'
     },
     statistics: [
@@ -89,12 +90,12 @@ const data = [
     banner: {
       title: "Dr Odil Alisherovich",
       shortDescription: "SMM Маркетинг",
-      photo: dr,
+      photo: 'https://ucarecdn.com/3821b6ff-68bf-49a0-95a1-3a97a2b24367/-/preview/1000x533/',
       slug: 'dr-odil-alisherovich'
     },
     statistics: [
-      { value: "+90%", label: "вовлеченность" },
-      { value: "+60%", label: "прирост подписчиков" },
+      { value: "+750", label: "подписчиков в Telegram" },
+      { value: "+1070", label: "подписчиков в Instagram" },
     ],
     serviceType: { name: "SMM" },
   },
@@ -103,7 +104,7 @@ const data = [
     banner: {
       title: "Mastona Med",
       shortDescription: "",
-      photo: dr,
+      photo: 'https://ucarecdn.com/9838f328-be53-4820-beb0-50de671b5042/-/preview/1000x533/',
       slug: 'mostona-med'
     },
     statistics: [
@@ -116,13 +117,13 @@ const data = [
     banner: {
       title: "Бахтиер Наджиюллаевич",
       shortDescription: "Реклама",
-      photo: dr,
+      photo: 'https://ucarecdn.com/59e5684a-271c-41ab-a8d2-1efe4622449e/-/preview/1000x533/',
       slug: 'baxtiyor-nadjullayevich'
     },
     statistics: [
-      { value: "4,820", label: "кликов на сайт" },
+      { value: "+4,820", label: "кликов на сайт" },
       { value: "0,10$", label: "цена за клик" },
-      { value: "8,22%", label: "CTR" },
+      { value: "+14,22%", label: "CTR" },
     ],
     serviceType: { name: "Advertising" },
   },
@@ -131,7 +132,7 @@ const data = [
     banner: {
       title: "Smile Design",
       shortDescription: "Реклама",
-      photo: dr,
+      photo: 'https://ucarecdn.com/319af659-eec1-45b4-9cfc-870415179a17/-/preview/1000x533/',
       slug: 'smile-design'
     },
     statistics: [
@@ -146,13 +147,13 @@ const data = [
     banner: {
       title: "Нафиса Шухратовна",
       shortDescription: "Реклама",
-      photo: dr,
+      photo: "https://ucarecdn.com/ff5c48de-f62f-43d3-930f-deda157f95d8/-/preview/1000x533/",
       slug: 'nafisa-shuxratovna'
     },
     statistics: [
-      { value: "2,450", label: "кликов на сайт" },
-      { value: "0,05$", label: "цена за клик" },
-      { value: "11,64%", label: "CTR" },
+      // { value: "2,450", label: "кликов на сайт" },
+      // { value: "0,05$", label: "цена за клик" },
+      // { value: "11,64%", label: "CTR" },
     ],
     serviceType: { name: "smm" },
   },
@@ -162,13 +163,12 @@ const data = [
     banner: {
       title: "Хайрилло Рахматуллаевич",
       shortDescription: "Реклама",
-      photo: dr,
+      photo: "https://ucarecdn.com/2ba0ba68-c9fe-4385-9455-ab649077f091/-/preview/1000x533/",
       slug: 'xayrullo-rahmatullaevich'
     },
     statistics: [
-      { value: "2,450", label: "кликов на сайт" },
-      { value: "0,05$", label: "цена за клик" },
-      { value: "11,64%", label: "CTR" },
+      { label: "Разработанный сайт стал успешным информационным ресурсом, который привлекает внимание потенциальных клиентов и повышает имидж врача. Фирменный стиль был успешно внедрен, что помогло повысить узнаваемость врача на рынке." },
+      
     ],
     serviceType: { name: "smm" },
   },
@@ -177,13 +177,13 @@ const data = [
     banner: {
       title: "Ant Group",
       shortDescription: "Реклама",
-      photo: dr,
+      photo: 'https://ucarecdn.com/49c73bea-744c-4688-9381-749f0a02dddd/-/preview/1000x533/',
       slug: 'ant-group'
     },
     statistics: [
-      { value: "2,450", label: "кликов на сайт" },
-      { value: "0,05$", label: "цена за клик" },
-      { value: "11,64%", label: "CTR" },
+      // { value: "2,450", label: "кликов на сайт" },
+      // { value: "0,05$", label: "цена за клик" },
+      // { value: "11,64%", label: "CTR" },
     ],
     serviceType: { name: "smm" },
   },
@@ -192,28 +192,28 @@ const data = [
     banner: {
       title: "Алишер Бахромович",
       shortDescription: "Реклама",
-      photo: dr,
+      photo: "https://ucarecdn.com/63e07933-c844-4595-bb71-7f8daeb71e1a/-/preview/1000x533/",
       slug: 'alisher-baxromovich'
     },
     statistics: [
-      { value: "2,450", label: "кликов на сайт" },
-      { value: "0,05$", label: "цена за клик" },
-      { value: "11,64%", label: "CTR" },
+      { value: "2,840", label: "кликов на сайт" },
+      { value: "0,11$", label: "цена за клик" },
+      { value: "13,63%", label: "CTR" },
     ],
     serviceType: { name: "smm" },
   },
   {
     id: 13,
     banner: {
-      title: "Санджар Акбарович",
+      title: "Ахмедов Санджар Акбарович",
       shortDescription: "Реклама",
-      photo: dr,
+      photo: "https://ucarecdn.com/15d5c5c4-5760-4093-a6a7-4df1af132578/-/preview/1000x533/",
       slug: 'sanjar-akbarovich'
     },
     statistics: [
-      { value: "2,450", label: "кликов на сайт" },
-      { value: "0,05$", label: "цена за клик" },
-      { value: "11,64%", label: "CTR" },
+      { value: '14,5 тыс', label: 'кликов на сайт' },
+			{ value: '0,07$', label: 'цена за клик' },
+			{ value: '14,11%', label: 'CTR' },
     ],
     serviceType: { name: "smm" },
   },
@@ -222,13 +222,12 @@ const data = [
     banner: {
       title: "Азиза Шахзадэевна",
       shortDescription: "Реклама",
-      photo: dr,
+      photo: "https://ucarecdn.com/c1131e2f-5cdb-4c1a-8a37-46bd923ceae2/-/preview/1000x533/",
       slug: 'aziza-shaxzadeevna'
     },
     statistics: [
-      { value: "2,450", label: "кликов на сайт" },
-      { value: "0,05$", label: "цена за клик" },
-      { value: "11,64%", label: "CTR" },
+      { label: "Разработанный сайт стал хорошим ресурсом для пациентов, предоставив всю информацию о враче в свободном доступе 24 / 7, что способствовало увеличению видимости в интернете." },
+    
     ],
     serviceType: { name: "smm" },
   },

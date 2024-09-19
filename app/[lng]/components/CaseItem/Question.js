@@ -3,12 +3,12 @@ import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 
-nafisa-shuxratovna
-xayrullo-rahmatullaevich
-ant-group
-alisher-baxromovich
-sanjar-akbarovich
-aziza-shaxzadeevna
+// nafisa-shuxratovna
+// xayrullo-rahmatullaevich
+// ant-group
+// alisher-baxromovich
+// sanjar-akbarovich
+// aziza-shaxzadeevna
 
 const Question = () => {
   const [filteredData, setFilteredData] = useState([]);
@@ -22,13 +22,16 @@ const Question = () => {
       ]
     },
     { slug: 'mrj-trade', data: [
-        { title: 'Крч все подготовить чтобы можно было запускаться. Там то се, сайт, реклама, брендинг егo' },
+        { title: 'Полная подготовка к запуску на рынок' },
+        { title: 'Создание сайта, брендинг и запуск рекламы' },
+        { title: 'Компания MRJ TRADE обратилась к нам с целью подготовки всех необходимых инструментов для успешного выхода на рынок. ' },
         
       ]
     },
     { slug: 'intermed', data: [
-        { title: 'Улучшение сайта, исправление ошибок' },
-        { title: 'Получение лидов через социальные сети' },
+        { title: 'Улучшение и доработка сайта' },
+        { title: 'Привлечение лидов с Instagram' },
+        { title: 'Компания обратилась с просьбой улучшить сайт и исправить существующие ошибки. Также был запрос на получение лидов через социальные сети.' },
       ]
     },
     { slug: 'smile-design', data: [
@@ -54,9 +57,37 @@ const Question = () => {
         { title: 'Задача 2 для MRJ Trade' }
       ]
     },
+    { slug: 'aziza-shaxzadeevna', data: [
+        { title: 'Увеличение видимости в интернете' },
+        { title: 'Увеличение числа пациентов' }
+      ]
+    },
+    { slug: 'alisher-baxromovich', data: [
+        { title: 'Привлечение пациентов' },
+        { title: 'Увеличение видимости в сети' }
+      ]
+    },
+    { slug: 'sanjar-akbarovich', data: [
+        { title: 'Увеличить число пациентов' },
+        { title: 'Сохранить базу пациентов' }
+      ]
+    },
+    { slug: 'nafisa-shuxratovna', data: [
+        { title: 'Создание сайта' },
+      ]
+    },
     { slug: 'dr-odil-alisherovich', data: [
-        { title: 'Задача 1 для Dr. Odil Alisherovich' },
-        { title: 'Задача 2 для Dr. Odil Alisherovich' }
+        { title: 'Укрепление имиджа' },
+        { title: 'Сохранение базы пациентов' }
+      ]
+    },
+    { slug: 'xayrullo-rahmatullaevich', data: [
+        { title: 'Повышение имиджа' },
+        { title: 'Увеличение видимости в сети' }
+      ]
+    },
+    { slug: 'ant-group', data: [
+        { title: 'Запрос на развитие SMM-стратегии' },
       ]
     },
     // You can add more slug-data pairs here
