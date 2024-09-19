@@ -22,15 +22,15 @@ const CaseItemMain = () => {
         "banner": {
           "id": 0,
           "title": {
-            "uz": "INTERMED INNOVATION",
-            "ru": "INTERMED INNOVATION",
-            "en": "INTERMED INNOVATION"
+            "uz": "Intermed Innovation",
+            "ru": "Intermed Innovation",
+            "en": "Intermed Innovation"
           },
           "link": "https://intermed-innovation.com",
           "shortDescription": {
-            "uz": "«INTERMED INNOVATION» надежный поставщик медицинского оборудования от ведущих производителей",
-            "ru": "«INTERMED INNOVATION» надежный поставщик медицинского оборудования от ведущих производителей",
-            "en": "«INTERMED INNOVATION» надежный поставщик медицинского оборудования от ведущих производителей"
+            "uz": "Крупнейший дилер медицинского оборудования в Узбекистане",
+            "ru": "Крупнейший дилер медицинского оборудования в Узбекистане",
+            "en": "Крупнейший дилер медицинского оборудования в Узбекистане"
           },
           "background": {
             "id": 1,
@@ -78,9 +78,9 @@ const CaseItemMain = () => {
           },
           "link": "https://mrj-trade.com",
           "shortDescription": {
-            "uz": "«MRJ TRADE» ведущий поставщик лабораторного оборудования",
-            "ru": "«MRJ TRADE» ведущий поставщик лабораторного оборудования",
-            "en": "«MRJ TRADE» ведущий поставщик лабораторного оборудования"
+            "uz": "Поставщик медицинского оборудования в странах Ближнего Востока и Африки",
+            "ru": "Поставщик медицинского оборудования в странах Ближнего Востока и Африки",
+            "en": "Поставщик медицинского оборудования в странах Ближнего Востока и Африки"
           },
           "background": {
             "id": 4,
@@ -165,6 +165,7 @@ const CaseItemMain = () => {
         ]
       }
     },
+    // s
     {
       "slug": "prime-medical-center",
       "data": {
@@ -172,15 +173,15 @@ const CaseItemMain = () => {
         "banner": {
           "id": 1,
           "title": {
-            "uz": "MRJ TRADE",
-            "ru": "MRJ TRADE",
-            "en": "MRJ TRADE"
+            "uz": "Prime Medical Center",
+            "ru": "Prime Medical Center",
+            "en": "Prime Medical Center"
           },
-          "link": "https://prime-medical-center",
+          "link": "https://www.instagram.com/nargiza_xamidulayevna/",
           "shortDescription": {
-            "uz": "«MRJ TRADE» ведущий поставщик лабораторного оборудования",
-            "ru": "«MRJ TRADE» ведущий поставщик лабораторного оборудования",
-            "en": "«MRJ TRADE» ведущий поставщик лабораторного оборудования"
+            "uz": "Гастроэнтерологический центр с большой историей (бывший GunchaMed)",
+            "ru": "Гастроэнтерологический центр с большой историей (бывший GunchaMed)",
+            "en": "Гастроэнтерологический центр с большой историей (бывший GunchaMed)"
           },
           "background": {
             "id": 4,
@@ -214,7 +215,194 @@ const CaseItemMain = () => {
           }
         ]
       }
+    },
+    // sdfsdfsdf
+    {
+      "slug": "smile-design",
+      "data": {
+        "id": 1,
+        "banner": {
+          "id": 1,
+          "title": {
+            "uz": "Smile Design",
+            "ru": "Smile Design",
+            "en": "Smile Design"
+          },
+          "link": "",
+          "shortDescription": {
+            "uz": "Стоматология с передовыми технологиями и безупречной репутацией",
+            "ru": "Стоматология с передовыми технологиями и безупречной репутацией",
+            "en": "Стоматология с передовыми технологиями и безупречной репутацией"
+          },
+          "background": {
+            "id": 4,
+            "url": 'https://ucarecdn.com/58ffcb67-d2c8-400b-a9b1-2f5eb8085d2c/-/preview/999x272/' // Use imported image
+          },
+          "photo": {
+            "id": 5,
+            "url": "https://ucarecdn.com/61ec4e8a-5102-4acb-928b-a179a4960944/-/preview/1000x658/" // Use imported image
+          },
+          "logo": {
+            "id": 6,
+            "url": ''
+          }
+        },
+        "query": ["lab equipment", "medical"],
+        "providedService": [
+          {
+            "id": 1,
+            "name": {
+              "uz": "Лабораторное оборудование",
+              "ru": "Лабораторное оборудование",
+              "en": "Lab equipment"
+            },
+            "description": {
+              "uz": "Описание лабораторного оборудования на узбекском",
+              "ru": "Описание лабораторного оборудования на русском",
+              "en": "Lab equipment description in English"
+            },
+            "orderNum": 1,
+            "active": true
+          }
+        ]
+      }
+    },
+    {
+      "slug": "baxtiyor-nadjullayevich",
+      "data": {
+        "id": 1,
+        "banner": {
+          "id": 1,
+          "title": {
+            "uz": "Шамирзаев Бахтиёр Наджиюллаевич",
+            "ru": "Шамирзаев Бахтиёр Наджиюллаевич",
+            "en": "Шамирзаев Бахтиёр Наджиюллаевич"
+          },
+          "link": "",
+          "shortDescription": {
+            "uz": "Врач-хирург высшей категории. Специалист по эндоскопическим операциям",
+            "ru": "Врач-хирург высшей категории. Специалист по эндоскопическим операциям",
+            "en": "Врач-хирург высшей категории. Специалист по эндоскопическим операциям"
+          },
+          "background": {
+            "id": 4,
+            "url": 'https://ucarecdn.com/58ffcb67-d2c8-400b-a9b1-2f5eb8085d2c/-/preview/999x272/' // Use imported image
+          },
+          "photo": {
+            "id": 5,
+            "url": "https://ucarecdn.com/61ec4e8a-5102-4acb-928b-a179a4960944/-/preview/1000x658/" // Use imported image
+          },
+          "logo": {
+            "id": 6,
+            "url": ''
+          }
+        },
+        "query": ["lab equipment", "medical"],
+        "providedService": [
+          {
+            "id": 1,
+            "name": {
+              "uz": "Лабораторное оборудование",
+              "ru": "Лабораторное оборудование",
+              "en": "Lab equipment"
+            },
+            "description": {
+              "uz": "Описание лабораторного оборудования на узбекском",
+              "ru": "Описание лабораторного оборудования на русском",
+              "en": "Lab equipment description in English"
+            },
+            "orderNum": 1,
+            "active": true
+          }
+        ]
+      }
+    },
+    // s
+
+
+
+    {
+      "slug": "mostona-med",
+      "data": {
+        "id": 1,
+        "banner": {
+          "id": 1,
+          "title": {
+            "uz": "Mastona Med",
+            "ru": "Mastona Med",
+            "en": "Mastona Med"
+          },
+          "link": "",
+          "shortDescription": {
+            "uz": "Клиника интегративной медицины по авторским методикам основателя Наргизы Хамидуллаевны",
+            "ru": "Клиника интегративной медицины по авторским методикам основателя Наргизы Хамидуллаевны",
+            "en": "Клиника интегративной медицины по авторским методикам основателя Наргизы Хамидуллаевны"
+          },
+          "background": {
+            "id": 4,
+            "url": 'https://ucarecdn.com/58ffcb67-d2c8-400b-a9b1-2f5eb8085d2c/-/preview/999x272/' // Use imported image
+          },
+          "photo": {
+            "id": 5,
+            "url": "https://ucarecdn.com/61ec4e8a-5102-4acb-928b-a179a4960944/-/preview/1000x658/" // Use imported image
+          },
+          "logo": {
+            "id": 6,
+            "url": ''
+          }
+        },
+        "query": ["lab equipment", "medical"],
+        "providedService": [
+          {
+            "id": 1,
+            "name": {
+              "uz": "Лабораторное оборудование",
+              "ru": "Лабораторное оборудование",
+              "en": "Lab equipment"
+            },
+            "description": {
+              "uz": "Описание лабораторного оборудования на узбекском",
+              "ru": "Описание лабораторного оборудования на русском",
+              "en": "Lab equipment description in English"
+            },
+            "orderNum": 1,
+            "active": true
+          }
+        ]
+      }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

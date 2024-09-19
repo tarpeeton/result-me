@@ -36,28 +36,27 @@ const data = [
       slug: 'intermed'
     },
     statistics: [
-      { value: "+30%", label: "конверсия" },
-      { value: "+75%", label: "посещаемость" },
-      { value: "+50%", label: "приток клиентов" },
+      {  },
+      
     ],
     serviceType: { name: "Web Development" },
   },
+  // {
+  //   id: 2,
+  //   banner: {
+  //     title: "Interlab",
+  //     shortDescription: "Сайт SEO",
+  //     photo: interlab,
+  //     slug: 'interlab'
+  //   },
+  //   statistics: [
+  //     { value: "+45%", label: "узнаваемость бренда" },
+  //     { value: "+70%", label: "лояльность клиентов" },
+  //   ],
+  //   serviceType: { name: "Web Development" , name: 'SEO' },
+  // },
   {
     id: 2,
-    banner: {
-      title: "Interlab",
-      shortDescription: "Сайт SEO",
-      photo: interlab,
-      slug: 'interlab'
-    },
-    statistics: [
-      { value: "+45%", label: "узнаваемость бренда" },
-      { value: "+70%", label: "лояльность клиентов" },
-    ],
-    serviceType: { name: "Web Development" , name: 'SEO' },
-  },
-  {
-    id: 3,
     banner: {
       title: "MRJ Trade",
       shortDescription: "Сайт SEO",
@@ -71,7 +70,7 @@ const data = [
     serviceType: { name: "Web Development" },
   },
   {
-    id: 4,
+    id: 3,
     banner: {
       title: "Prime medical center",
       shortDescription: "SMM Реклама",
@@ -79,13 +78,14 @@ const data = [
       slug: 'prime-medical-center'
     },
     statistics: [
-      { value: "+40%", label: "автоматизация" },
-      { value: "+70%", label: "удержание клиентов" },
+      { value: "+41%", label: "число обращений в клинику" },
+      { value: "+23%", label: "посещаемость" },
+      { value: "+18,200%", label: "посещений сайта / год" },
     ],
     serviceType: { name: "SMM" },
   },
   {
-    id: 5,
+    id: 4,
     banner: {
       title: "Dr Odil Alisherovich",
       shortDescription: "SMM Маркетинг",
@@ -98,6 +98,159 @@ const data = [
     ],
     serviceType: { name: "SMM" },
   },
+  {
+    id: 5,
+    banner: {
+      title: "Mastona Med",
+      shortDescription: "",
+      photo: dr,
+      slug: 'mostona-med'
+    },
+    statistics: [
+      
+    ],
+    serviceType: { name: "SMM" },
+  },
+  {
+    id: 6,
+    banner: {
+      title: "Бахтиер Наджиюллаевич",
+      shortDescription: "Реклама",
+      photo: dr,
+      slug: 'baxtiyor-nadjullayevich'
+    },
+    statistics: [
+      { value: "4,820", label: "кликов на сайт" },
+      { value: "0,10$", label: "цена за клик" },
+      { value: "8,22%", label: "CTR" },
+    ],
+    serviceType: { name: "Advertising" },
+  },
+  {
+    id: 7,
+    banner: {
+      title: "Smile Design",
+      shortDescription: "Реклама",
+      photo: dr,
+      slug: 'smile-design'
+    },
+    statistics: [
+      { value: "2,450", label: "кликов на сайт" },
+      { value: "0,05$", label: "цена за клик" },
+      { value: "11,64%", label: "CTR" },
+    ],
+    serviceType: { name: "smm" },
+  },
+  {
+    id: 8,
+    banner: {
+      title: "Нафиса Шухратовна",
+      shortDescription: "Реклама",
+      photo: dr,
+      slug: 'nafisa-shuxratovna'
+    },
+    statistics: [
+      { value: "2,450", label: "кликов на сайт" },
+      { value: "0,05$", label: "цена за клик" },
+      { value: "11,64%", label: "CTR" },
+    ],
+    serviceType: { name: "smm" },
+  },
+  
+  {
+    id: 10,
+    banner: {
+      title: "Хайрилло Рахматуллаевич",
+      shortDescription: "Реклама",
+      photo: dr,
+      slug: 'xayrullo-rahmatullaevich'
+    },
+    statistics: [
+      { value: "2,450", label: "кликов на сайт" },
+      { value: "0,05$", label: "цена за клик" },
+      { value: "11,64%", label: "CTR" },
+    ],
+    serviceType: { name: "smm" },
+  },
+  {
+    id: 11,
+    banner: {
+      title: "Ant Group",
+      shortDescription: "Реклама",
+      photo: dr,
+      slug: 'ant-group'
+    },
+    statistics: [
+      { value: "2,450", label: "кликов на сайт" },
+      { value: "0,05$", label: "цена за клик" },
+      { value: "11,64%", label: "CTR" },
+    ],
+    serviceType: { name: "smm" },
+  },
+  {
+    id: 12,
+    banner: {
+      title: "Алишер Бахромович",
+      shortDescription: "Реклама",
+      photo: dr,
+      slug: 'alisher-baxromovich'
+    },
+    statistics: [
+      { value: "2,450", label: "кликов на сайт" },
+      { value: "0,05$", label: "цена за клик" },
+      { value: "11,64%", label: "CTR" },
+    ],
+    serviceType: { name: "smm" },
+  },
+  {
+    id: 13,
+    banner: {
+      title: "Санджар Акбарович",
+      shortDescription: "Реклама",
+      photo: dr,
+      slug: 'sanjar-akbarovich'
+    },
+    statistics: [
+      { value: "2,450", label: "кликов на сайт" },
+      { value: "0,05$", label: "цена за клик" },
+      { value: "11,64%", label: "CTR" },
+    ],
+    serviceType: { name: "smm" },
+  },
+  {
+    id: 14,
+    banner: {
+      title: "Азиза Шахзадэевна",
+      shortDescription: "Реклама",
+      photo: dr,
+      slug: 'aziza-shaxzadeevna'
+    },
+    statistics: [
+      { value: "2,450", label: "кликов на сайт" },
+      { value: "0,05$", label: "цена за клик" },
+      { value: "11,64%", label: "CTR" },
+    ],
+    serviceType: { name: "smm" },
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 const Content = () => {
@@ -157,7 +310,7 @@ const Content = () => {
           infinite={false}
         >
           {items.map((item) => (
-            <div key={item.id} className="text-center">
+            <div key={item.id} className="text-center" >
               <button
                 className={`text-[15px] pb-[10px] font-semibold ${
                   selected === item.id ? "text-violet100" : "text-titleDark"
@@ -200,7 +353,7 @@ const Content = () => {
       </div>
 
       {/* Cards Section (Filtered Data) */}
-      <div className="mx-[16px] 3xl:flex 3xl:flex-row 3xl:flex-wrap 3xl:gap-[100px] 3xl:mx-[30px]">
+      <div className="mx-[16px] flex flex-col gap-[5px] 2xl:flex 2xl:flex-row 2xl:flex-wrap 2xl:gap-[100px] 2xl:mx-[30px]">
         {filteredData.map((item, idx) => (
           <Link
             href={`/cases/${item.banner.slug}`}  // Dynamic route based on slug
@@ -219,13 +372,13 @@ const Content = () => {
               {/* Hidden content that appears on hover */}
               <div className="hidden 3xl:absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 3xl:flex justify-center items-center">
                 <div className="h-[100px]">
-                  <div className="flex flex-row gap-[80px] items-center justify-center">
+                  <div className="flex flex-row gap-[40px] items-center justify-center">
                     {item.statistics.map((stat, statIdx) => (
-                      <div key={statIdx} className="flex flex-col gap-[5px]">
-                        <p className="text-white100 text-[18px] 3xl:text-[50px] font-bold">
+                      <div key={statIdx} className="flex flex-col gap-[5px] text-center">
+                        <p className="text-white100 text-[18px] 3xl:text-[30px]  4xl:text-[50px] font-bold">
                           {stat.value}
                         </p>
-                        <p className="text-white100 text-[18px] 3xl:text-[20px] font-medium font-robotoFlex">
+                        <p className="text-white100 text-[18px] 4xl:text-[20px] font-medium 3xl:text-[18px] font-robotoFlex">
                           {stat.label}
                         </p>
                       </div>
