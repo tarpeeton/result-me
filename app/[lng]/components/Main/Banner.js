@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button } from '@mui/material'
+// import { Button } from '@mui/material'
 import ServiceModal from '../Modal/SeriviceModal'
 import Image from 'next/image'
 import my from '@/public/images/Object.png'
@@ -25,8 +25,8 @@ const Banner = () => {
 	return (
 		<div className='w-full rounded-b-[30px] 2xl:rounded-b-[100px] bg-violet100  relative  mdl:h-[90vh] 4xl:h-[100vh]'>
 			<div className='w-full pt-[50px]  2xl:w-[80%] 2xl:mx-auto flex flex-col justify-center items-center '>
-				<div className='  2xl:w-[100%] flex flex-col justify-center items-center text-center mb-[200px] mdl:mb-[250px] 4xl:mb-[500px]'>
-					<h1 className='text-[35px] w-[70%] mdl:w-[50%] font-bold text-white100 mdl:text-[60px] sm:w-[60%] md:w-[50%] 2xl:w-[60%] 4xl:w-[75%] 4xl:text-[90px] font-montserrat'>
+				<div className=' 2xl:w-[100%] flex flex-col justify-center items-center text-center mb-[200px] mdl:mb-[250px] 4xl:mb-[500px]'>
+					<h1 className='text-[35px] w-[70%] mdl:w-[50%] font-bold text-white100 mdl:text-[60px] sm:w-[60%] md:w-[50%] 2xl:w-[35%] 3xl:w-[65%] 4xl:w-[75%] 4xl:text-[90px] font-montserrat'>
 						{t('title')}
 					</h1>
 					<p className='w-[70%] text-[15px] font-semibold text-white100 mt-[16px] mdl:text-[16px] font-montserrat '>

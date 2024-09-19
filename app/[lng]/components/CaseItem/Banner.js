@@ -24,18 +24,6 @@ const Banner = ({ data }) => {
           <p className='text-white text-[14px] mdl:text-[20px] 3xl:text-[21px] mb-[15px]'>
             {banner.shortDescription.ru}
           </p>
-
-          {/* Link */}
-          {banner.link && (
-            <a
-              href={banner.link}
-              className='text-white text-[14px] font-bold mdl:text-[20px] rounded-lg cursor-pointer mb-[50px]'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              {banner.link}
-            </a>
-          )}
         </div>
       </div>
 

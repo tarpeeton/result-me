@@ -5,7 +5,6 @@ import img3 from '@/public/images/members/3.png';
 import img4 from '@/public/images/members/4.png';
 import img5 from '@/public/images/members/5.png';
 import img6 from '@/public/images/members/6.png';
-import img7 from '@/public/images/members/7.png';
 import img8 from '@/public/images/members/8.png';
 import img9 from '@/public/images/members/9.png';
 import img10 from '@/public/images/members/10.png';
@@ -35,7 +34,7 @@ const teamData = [
 	{
 		id: 3,
 		fullName: 'Вероника ',
-		position: 'Designer',
+		position: 'Контент-менеджером',
 		photo: img3,
 		active: true,
 		orderNum: 3,
@@ -64,14 +63,7 @@ const teamData = [
 		active: true,
 		orderNum: 4,
 	},
-	{
-		id: 7,
-		fullName: 'Хожиакбар',
-		position: 'Администратор',
-		photo: img7,
-		active: true,
-		orderNum: 4,
-	},
+	
 	{
 		id: 8,
 		fullName: 'Абдухаким ',

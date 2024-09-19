@@ -58,15 +58,17 @@ const Contact = () => {
 
 			{/* Yandex Map */}
 			<div className='rounded-[30px] mt-[20px] overflow-hidden w-full h-[600px]'>
-				<iframe
-					src='https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d187.1900797665375!2d69.28894460444143!3d41.35145654981712!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1726489663801!5m2!1sru!2s'
-					width='600'
-					height='600'
-					allowfullscreen=''
-					loading='lazy'
-					referrerpolicy='no-referrer-when-downgrade'
-					className='w-full h-full rounded-[40px]'
-				></iframe>
+			<div style={{ position: 'relative', overflow: 'hidden' }} className='w-full h-full'>
+     
+      
+      <iframe
+        src="https://yandex.uz/map-widget/v1/?ll=69.289004%2C41.351469&mode=whatshere&whatshere%5Bpoint%5D=69.289088%2C41.351412&whatshere%5Bzoom%5D=17&z=20.2"
+		className='w-full h-full'	
+        frameBorder="1"
+        allowFullScreen={true}
+        style={{ position: 'relative' }}
+      ></iframe>
+    </div>
 			</div>
 		</div>
 	)
