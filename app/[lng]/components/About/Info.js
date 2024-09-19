@@ -9,7 +9,7 @@ import AboutImage from '@/public/images/about/about.png'
 const Info = () => {
   return (
 	<div className='rounded-[30px] bg-violet100 py-[30px] px-[20px] mx-[16px] relative  mdl:py-[50px] mdl:px-[40px] 3xl:rounded-[100px] 3xl:py-[80px] 3xl:px-[70px] mt-[20px] mdl:mt-[25px] 3xl:mt-[30px] overflow-hidden'>
-		<div className='relative z-50 3xl:w-[50%]'>
+		<div className='relative z-50 3xl:w-[55%]'>
 		<div>
 			<div className='w-[80%] 3xl:w-[95%]'>
 				<h1 className='text-[28px] font-bold text-white100 mdl:text-[60px]'>RESULT AGENCY
@@ -22,7 +22,7 @@ const Info = () => {
 		<div className='w-full h-[1px] bg-[#A49DF2] mt-[30px] mb-[30px] mdl:mb-[40px] mdl:mt-[40px] 3xl:mt-[50px] 3xl:mb-[50px]'/>
 		<div className='flex flex-col gap-[30px] 3xl:flex-row'>
 			<div className='flex flex-col gap-[7px]'>
-				<p className='text-[28px] text-white100 font-bold mdl:text-[40px]'>6 октября</p>
+				<p className='text-[28px] text-white100 font-bold mdl:text-[40px]'>6.10.2023</p>
 				<p className='text-[14px] text-[#FFFFFF] mdl:text-[20px] font-robotoFlex'>Дата основания</p>
 			</div>
 			<div className='flex flex-col gap-[7px]'>

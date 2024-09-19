@@ -351,13 +351,13 @@ const CostCard = () => {
               ))}
             </div>
             <div className='h-[1px] w-full bg-[#F0F0F0] mt-[25px]' />
-            <div className='flex flex-col mt-[25px] relative gap-[12px]'>
+            <div className='flex flex-col mt-[25px] relative gap-[11px]'>
               {card.services.map((service, serviceIndex) => (
-                <div key={serviceIndex} className='flex flex-row gap-[12px]'>
+                <div key={serviceIndex} className='flex flex-row gap-[12px] items-center'>
                   <div className='rounded-[6px] flex items-center justify-center bg-violet100 bg-opacity-20 w-[30px] h-[30px]'>
                     <FaCheck className='text-violet100' />
                   </div>
-                  <div className='flex items-center'>
+                  <div className='flex items-center w-[90%]'>
                     <p className='text-[#010101] text-[15px] font-medium font-robotoFlex'>
                       {service}
                     </p>

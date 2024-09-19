@@ -757,15 +757,28 @@ const MainBlogItem = () => {
 
         {/* Render the blog text, ensuring new lines are handled */}
         <div className="text-[15px] mdl:text-[20px] 3xl:text-[22px] 3xl:font-normal text-[#454545] font-medium mt-[20px] mdl:mt-[30px] 3xl:mt-[50px] font-robotoFlex">
-          {blog.text.split('\n').map((paragraph, idx) => (
-            <p key={idx} className="mt-4">
-              {paragraph.trim().startsWith('**') ? (
-                <strong className='3xl:text-[25px] font-semibold text-titleDark'>{paragraph.replace(/\*\*/g, '').trim()}</strong>
-              ) : (
-                paragraph
-              )}
-            </p>
-          ))}
+		{blog.text.split('\n').map((paragraph, idx) => {
+            // Check if the paragraph contains bold markers "**"
+            if (paragraph.includes('**')) {
+              // Split around the "**" markers
+              const parts = paragraph.split('**');
+              return (
+                <p key={idx} className="mt-4">
+                  {/* Render the parts: first part is regular, second part is bold */}
+                  {parts.map((part, index) => 
+                    index % 2 === 1 ? (
+                      <strong key={index} className="font-semibold text-titleDark 3xl:text-[25px]">
+                        {part.trim()}
+                      </strong>
+                    ) : (
+                      <span key={index}>{part}</span>
+                    )
+                  )}
+                </p>
+              );
+            }
+            return <p key={idx} className="mt-4">{paragraph}</p>;
+          })}
         </div>
       </div>
 

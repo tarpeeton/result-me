@@ -13,7 +13,7 @@ const Contact = () => {
 					</h5>
 					<div className='mt-[20px] mdl:mt-[40px] '>
 						<Link
-							href='tel:+998917888041'
+							href='tel:+998905092562'
 							className='w-[50%] p-4 rounded-[100px] bg-[#7B72EB] text-white font-bold text-[14px] hover:bg-opacity-90 transition duration-300 mdl:py-[20px] mdl:px-[30px] mdl:w-[40%]  mdl:text-[18px] 3xl:w-[40%]'
 						>
 							Связаться с нами

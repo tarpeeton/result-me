@@ -135,7 +135,7 @@ const Footer = ({ lng }) => {
 					</div>
 					<div className='mt-[20px] mb-[20px] mdx:flex mdx:items-center mdx:mt-0 mdx:mb-0'>
 						<Link
-							href='plotik'
+							href='https://docs.google.com/document/d/1t0tpWRAT0-I_GExyBIWtVJgqbcs_oPiyCATfHHVcA5k/edit?pli=1'
 							className='text-violet100 text-[14px] font-medium  mdx:text-[16px]'
 						>
 							{t('privacy')}

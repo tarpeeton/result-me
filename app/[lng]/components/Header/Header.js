@@ -165,11 +165,11 @@ const Header = ({ lng }) => {
           src={isMainPage ? footerLogo : logo}
           width={130}
           quality={100}
-          height={40}
+          height={45}
           alt="Logo"
         />
       </Link>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 h-[40px]">
         <div className="hidden 2xl:flex">
           <Link
             href="tel:+998900228073"
@@ -228,7 +228,7 @@ const Header = ({ lng }) => {
         {isModalOpen2 && (
           <ServiceModal isOpen={isModalOpen2} onClose={closeModal2}/>
         )}
-        <div className="flex 2xl:hidden items-center">
+        <div className="flex 2xl:hidden items-center ">
           <button onClick={toggleMenu} className="text-3xl">
             {isMenuOpen ? (
               <AiOutlineClose
