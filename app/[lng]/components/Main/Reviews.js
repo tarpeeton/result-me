@@ -126,15 +126,13 @@ const Reviews = () => {
 				</div>
 				<div className='rounded-[30px] px-[20px] py-[25px] bg-[#161616]  bg-opacity-[50%] 2xl:max-w-[90%] text-white  min-h-[400px] border border-[#5A5A5A]'>
 					<h3 className='text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]'>
-						Матьякуб Назарович
+					Бахтиер Наджиюллаевич
 					</h3>
 					<p className='text-[14px] opacity-75 mb-[20px] text-[#7B7B7B] font-robotoFlex'>
-						Главврач Intermed
+					Сотрудничаю с фирмой "Result" в течении 6 месяцев.
 					</p>
 					<p className='text-[15px] leading-[18px] mdl:text-[20px] mdl:leading-[28px] font-robotoFlex '>
-						Отличная работа! Команда профессионалов создала для нас сайт,
-						который идеально отражает нашу клинику и помогает привлекать новых
-						пациентов.
+					Очень грамотная и обходительная команда сотрудников, принимает во внимание все пожелания и замечания клиента. При необходимости предлагает свои варианты работы. Никаких нареканий, одна благодарность! Спасибо за помощь!
 					</p>
 				</div>
 				{/* Add more review slides here */}
