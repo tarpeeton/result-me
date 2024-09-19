@@ -17,7 +17,7 @@ const AboutUs = () => {
 				</span>
 			</div>
 			<div className=' rotate-[15%] overflow-hidden relative h-[160px] mt-[-70px]  mdl:absolute mdl:bottom-[-50px] mdl:right-0 mdl:w-[350px] mdl:h-[300px] 2xl:h-[500px] 2xl:w-[500px] '>
-				<Image className='absolute h-[150px] w-[150px] mdl:h-[260px] mdl:w-[300px] right-[-40px] mdl:object-contain 2xl:w-[500px] 2xl:h-[500px]' width={511} height={511} src={aboutUS} quality={100}/>
+				<Image className='absolute h-[150px] w-[150px] mdl:h-[260px] mdl:w-[300px] right-[-40px] mdl:object-contain 2xl:w-[500px] 2xl:h-[500px]' width={511} height={511} src={aboutUS} quality={100} alt='about us image'/>
 			</div>
 			<div className='w-[80%] mx-auto bg-white rounded-[100px]  py-[20px] px-[30px] text-center  mdl:w-[50%] mdl:mx-0 mdl:mt-[80px] 2xl:w-[20%]'>
 			<p  className='  text-violet100 font-bold text-[14px] mdl:text-[18px] text-center bg-white100'>

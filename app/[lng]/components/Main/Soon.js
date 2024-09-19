@@ -73,6 +73,7 @@ const Soon = () => {
 				<Image
                 src={d.img}
                 width={300}
+                alt='soon Image'
                 height={300}
                 quality={100}
                 className={`'object-contain rounded-[25px] w-full h-full' ${d.isSoon ? '' : 'bg-black  blur-[5px] '}`}
