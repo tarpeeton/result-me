@@ -4,28 +4,52 @@ import { useParams } from 'next/navigation';
 import { useCustomTranslation } from '../../../i18n/client';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from 'react-slick/lib/slider';
+import Slider from 'react-slick';
 
 import Image from 'next/image';
-import caseimg from '@/public/images/caseimg.jpg';
-import caseDesckription from '@/public/images/Vector.png';
 import Link from 'next/link';
+import caseDesckription from '@/public/images/Vector.png';
+
+
 
 const caseData = [
   {
-    image: caseimg,
-    title: 'Intermed Innovation',
-    description: 'Сайт SEO',
-    slug: 'case1',
-    id: 1,
+    id: 2,
+    banner: {
+      title: "MRJ Trade",
+      shortDescription: "Сайт SEO",
+      photo: "https://ucarecdn.com/581a982e-f1c1-44c1-8dd4-1862300a3e0c/-/preview/720x450/",
+      slug: 'mrj-trade'
+    },
   },
   {
-    image: caseimg,
-    title: 'Another Case',
-    description: 'Development Marketing',
-    slug: 'case2',
-    id: 2,
+    id: 3,
+    banner: {
+      title: "Prime medical center",
+      shortDescription: "SMM Реклама",
+      photo: 'https://ucarecdn.com/3d44d91c-b27b-41a0-9eb5-a02d51e18ad0/-/preview/720x450/',
+      slug: 'prime-medical-center'
+    },
   },
+  {
+    id: 4,
+    banner: {
+      title: "Dr Odil Alisherovich",
+      shortDescription: "SMM Маркетинг",
+      photo: 'https://ucarecdn.com/3821b6ff-68bf-49a0-95a1-3a97a2b24367/-/preview/720x450/',
+      slug: 'dr-odil-alisherovich'
+    },
+  },
+  {
+    id: 5,
+    banner: {
+      title: "Mastona Med",
+      shortDescription: "",
+      photo: 'https://ucarecdn.com/9838f328-be53-4820-beb0-50de671b5042/-/preview/720x450/',
+      slug: 'mostona-med'
+    },
+  },
+  
 ];
 
 const Cases = () => {
@@ -86,37 +110,37 @@ const Cases = () => {
         </p>
       </div>
       {/* Slider Section */}
-      <div className='2xl:mt-[60px] mdl:max-h-[500px] 4xl:max-h-[900px] '>
+      <div className='2xl:mt-[60px] mdl:max-h-[500px] 4xl:max-h-[900px]'>
         <Slider {...settings} className='w-full cursor-pointer'>
           {/* Slides */}
           {caseData.map((item) => (
             <div key={item.id} className="w-full mt-[20px] slg:max-w-[99%] 6xl:max-w-[99%]">
-              <Link href={`/cases/${item.slug}`} passHref>
+              <Link href={`/cases/${item.banner.slug}`} passHref>
                 <div>
                   <Image
-                    src={item.image}
-                    width={500}
-                    height={500}
+                    src={item.banner.photo}
+                    width={740}
+                    height={450}
                     quality={100}
-                    alt="banner image"
-                    className="object-cover w-full h-full"
+                    alt={`${item.banner.title} banner`}
+                    className="object-contain w-full h-full"
                   />
                   <div className="mt-[20px] 3xl:mt-[25px] flex flex-col gap-[4px]">
                     <p className="text-[20px] font-semibold  mdx:text-[28px] 4xl:text-[35px]">
-                      {item.title}
+                      {item.banner.title}
                     </p>
                     <p className="text-[14px] text-violet100 mdx:text-[18px] font-semibold flex items-center flex-wrap">
                       {/* Replace spaces in description with an image */}
-                      {item.description.split(' ').map((word, index) => (
+                      {item.banner.shortDescription.split(' ').map((word, index) => (
                         <React.Fragment key={index}>
                           {index > 0 && (
                             <Image
                               src={caseDesckription}
                               width={40}
-							  quality={100}
+                              quality={100}
                               height={40}
                               alt="separator"
-                              className="mx-[6px] w-[14px] h-[14px] mdl:w-[20px] mdl:h-[20px] "
+                              className="mx-[6px] w-[14px] h-[14px] mdl:w-[20px] mdl:h-[20px]"
                             />
                           )}
                           <span>{word}</span>
