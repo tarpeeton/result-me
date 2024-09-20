@@ -206,7 +206,7 @@ const CostCardData = {
         'Определение целевой аудитории',
         'Ежемесячный отчет по кампаниям',
       ],
-      price: '200$',
+      price: '300$',
       link: 'slug/ads-launch-google',
     },
     {
@@ -220,7 +220,7 @@ const CostCardData = {
         'Определение целевой аудитории',
         'Ежемесячный отчет по кампаниям',
       ],
-      price: '200$',
+      price: '300$',
       link: 'slug/ads-launch-facebook',
     },
   ],

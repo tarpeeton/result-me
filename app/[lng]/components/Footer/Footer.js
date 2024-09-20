@@ -76,7 +76,7 @@ const Footer = ({ lng }) => {
 							</Link>
 							<Link
 							aria-label='Youtube'
-								href='instagram'
+								href='https://www.youtube.com/channel/UC7NUprxgJnTasokxaUFfbug'
 								className='bg-[#383838] w-[40px] h-[40px]  rounded-[100%] flex items-center justify-center mdx:w-[40px] mdx:h-[40px]'
 							>
 								<BsYoutube className='text-white100 text-[20px]' />

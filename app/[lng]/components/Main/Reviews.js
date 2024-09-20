@@ -7,8 +7,6 @@ import 'slick-carousel/slick/slick-theme.css'
 import { GrLinkPrevious } from 'react-icons/gr'
 import { GrLinkNext } from 'react-icons/gr'
 
-import revTop from '@/public/images/reviews/revTop.png'
-import revBottom from '@/public/images/reviews/revBottom.png'
 import revBG from '@/public/images/reviews/revBG.png'
 import { useRef, useState } from 'react'
 
@@ -98,7 +96,7 @@ const Reviews = () => {
 				<Image
 					width={400}
 					height={400}
-					src={revTop}
+					src='https://ucarecdn.com/74cec222-166d-4b2a-a08d-a2dffb1a8d80/-/preview/867x810/'
 					alt='revTop'
 					className='rounded-[30px]  opacity-40 '
 				/>
@@ -143,7 +141,7 @@ const Reviews = () => {
 				<Image
 					width={400}
 					height={400}
-					src={revBottom}
+					src='https://ucarecdn.com/fe33ea4c-9361-44a1-8702-ef9372cf4c7f/-/preview/1000x731/'
 					alt='revBottom'
 					className='rounded-[30px] opacity-40 '
 				/>
