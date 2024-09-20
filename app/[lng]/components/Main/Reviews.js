@@ -112,10 +112,10 @@ const Reviews = () => {
 			{/* Reviews Carousel */}
 			<Slider {...settings} ref={sliderRef} className='z-[999] overflow-hidden'>
 				<div className='rounded-[30px] px-[20px] py-[25px] bg-[#161616] bg-opacity-[50%]  text-white  z-[99999] min-h-[400px] border border-[#5A5A5A] 2xl:max-w-[90%]'>
-					<h3 className='text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]'>
+					<h2 className='text-[18px] font-semibold  mdl:text-[28px] 3xl:text-[30px]'>
 						Матьякуб Назарович
-					</h3>
-					<p className='text-[14px] opacity-75 mb-[20px] text-[#7B7B7B] font-robotoFlex'>
+					</h2>
+					<p className='text-[14px] mt-[4px] opacity-75 mb-[20px] text-[#7B7B7B] font-robotoFlex'>
 						Главврач Intermed
 					</p>
 					<p className='text-[15px] leading-[18px] mdl:text-[20px] mdl:leading-[28px] font-robotoFlex'>
