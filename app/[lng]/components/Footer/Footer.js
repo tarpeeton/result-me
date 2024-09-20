@@ -55,27 +55,27 @@ const Footer = ({ lng }) => {
 						<div className='flex flex-row items-center gap-[8px] mt-[10px] mdx:mt-[40px]'>
 							<Link
 								href='https://www.instagram.com/result_med?igsh=MXQ3NnVncW4xbjBwMg=='
-								className='bg-[#383838] w-[30px] h-[30px]  rounded-[100%] flex items-center justify-center mdx:w-[40px] mdx:h-[40px]'
+								className='bg-[#383838] w-[40px] h-[40px]  rounded-[100%] flex items-center justify-center mdx:w-[40px] mdx:h-[40px]'
 							>
-								<FaInstagram className='text-white100' />
+								<FaInstagram className='text-white100 text-[20px]' />
 							</Link>
 							<Link
 								href='https://t.me/result_med'
-								className='bg-[#383838] w-[30px] h-[30px]  rounded-[100%] flex items-center justify-center mdx:w-[40px] mdx:h-[40px]'
+								className='bg-[#383838] w-[40px] h-[40px]  rounded-[100%] flex items-center justify-center mdx:w-[40px] mdx:h-[40px]'
 							>
-								<LiaTelegramPlane className='text-white100' />
+								<LiaTelegramPlane className='text-white100 text-[20px]' />
 							</Link>
 							<Link
 								href='https://www.facebook.com/people/Result-%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9-%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3/61551538436032/'
-								className='bg-[#383838] w-[30px] h-[30px]  rounded-[100%] flex items-center justify-center mdx:w-[40px] mdx:h-[40px]'
+								className='bg-[#383838] w-[40px] h-[40px]  rounded-[100%] flex items-center justify-center mdx:w-[40px] mdx:h-[40px]'
 							>
-								<FaFacebookF className='text-white100' />
+								<FaFacebookF className='text-white100 text-[20px]' />
 							</Link>
 							<Link
 								href='instagram'
-								className='bg-[#383838] w-[30px] h-[30px]  rounded-[100%] flex items-center justify-center mdx:w-[40px] mdx:h-[40px]'
+								className='bg-[#383838] w-[40px] h-[40px]  rounded-[100%] flex items-center justify-center mdx:w-[40px] mdx:h-[40px]'
 							>
-								<BsYoutube className='text-white100' />
+								<BsYoutube className='text-white100 text-[20px]' />
 							</Link>
 						</div>
 
