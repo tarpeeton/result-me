@@ -5,7 +5,7 @@ export default function Cases() {
 
   return (
     <div>
-      <Main/>
+      <Main />
     </div>
   );
 }

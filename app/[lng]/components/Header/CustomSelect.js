@@ -28,11 +28,11 @@ const CustomSelect = ({ value, onChange, options , main }) => {
         <span className={`${main ? `text-white100` : `text-[#454545]` } font-bold flex items-center gap-2`}>
           {selectedOption.label}
         </span>
-        {/* <BsChevronDown
-          className={`ml-2 ${main ? `text-white100` : `text-[#454545]`} transition-transform ${
+        <BsChevronDown
+          className={`ml-2 ${main ? `text-white100` : `text-[#454545]`} transition-transform opacity-0 ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
-        /> */}
+        />
       </button>
 
       {/* Dropdown list */}

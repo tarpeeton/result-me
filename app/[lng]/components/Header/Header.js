@@ -22,7 +22,6 @@ const Header = ({ lng }) => {
   const [cookies, setCookie] = useCookies([cookieName]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
 
@@ -230,7 +229,7 @@ const Header = ({ lng }) => {
           <ServiceModal isOpen={isModalOpen2} onClose={closeModal2}/>
         )}
         <div className="flex 2xl:hidden items-center justify-center rounded-full border border-[#F0F0F0] py-[10px] px-[10px] mdl:py-[12px] mdl:px-[12px] mdl:h-[49px]">
-  <button onClick={toggleMenu} disabled className="text-[22px] flex justify-center items-center w-full h-full">
+  <button onClick={toggleMenu}  className="text-[22px] flex justify-center items-center w-full h-full">
     {isMenuOpen ? (
       <AiOutlineClose
         className={`font-montserrat ${isMainPage ? "text-white" : "text-black"}`}
