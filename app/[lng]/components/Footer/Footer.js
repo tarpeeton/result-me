@@ -85,7 +85,7 @@ const Footer = ({ lng }) => {
 								<h4 className='text-white100 text-[18px] font-semibold mdx:text-[20px]'>
 									{t('phone_title')}
 								</h4>
-								<div className='flex flex-col'>
+								<div className='flex flex-col gap-[8px] mdl:gap-[10px] '>
 									<a
 										href='tel:+998905092562'
 										className='text-titleDark20 text-[15px] font-medium mdx:text-[15px] hover:text-violet100'
