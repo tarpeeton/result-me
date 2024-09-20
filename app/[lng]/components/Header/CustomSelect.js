@@ -28,15 +28,15 @@ const CustomSelect = ({ value, onChange, options , main }) => {
         <span className={`${main ? `text-white100` : `text-[#454545]` } font-bold flex items-center gap-2`}>
           {selectedOption.label}
         </span>
-        <BsChevronDown
+        {/* <BsChevronDown
           className={`ml-2 ${main ? `text-white100` : `text-[#454545]`} transition-transform ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
-        />
+        /> */}
       </button>
 
       {/* Dropdown list */}
-      {isOpen && (
+      {/* {isOpen && (
         <ul className="absolute w-[110px] 3xl:w-[130px] mt-1 bg-white border border-gray-200   z-[9999999]">
           {options.map((option) => (
             <li
@@ -50,7 +50,7 @@ const CustomSelect = ({ value, onChange, options , main }) => {
             </li>
           ))}
         </ul>
-      )}
+      )} */}
     </div>
   );
 };
