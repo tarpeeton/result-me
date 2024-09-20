@@ -7,7 +7,7 @@ import Result from './Result';
 import Images from './Images';
 import { useParams } from 'next/navigation';
 import mrjImagePhoto from '@/public/images/bannerCase/MRJ/mrjImage.png';
-import primeMedicalImage from '@/public/images/bannerCase/pmc/primeMedicalImage.png';
+
 import odilAlisherovich from '@/public/images/bannerCase/odilalisherovich/odilAlisherovich.png';
 
 const CaseItemMain = () => {
@@ -45,24 +45,7 @@ const CaseItemMain = () => {
           //   "url": "https://ucarecdn.com/67fd2b7e-e746-47a8-9f1a-91b8e135119e/-/preview/200x100/"
           // }
         },
-        "query": ["string"],
-        "providedService": [
-          {
-            "id": 0,
-            "name": {
-              "uz": "Услуга на узбекском",
-              "ru": "Услуга на русском",
-              "en": "Service in English"
-            },
-            "description": {
-              "uz": "Описание услуги на узбекском",
-              "ru": "Описание услуги на русском",
-              "en": "Service description in English"
-            },
-            "orderNum": 0,
-            "active": true
-          }
-        ]
+       
       }
     },
     {
@@ -95,24 +78,7 @@ const CaseItemMain = () => {
             "url": ''
           }
         },
-        "query": ["lab equipment", "medical"],
-        "providedService": [
-          {
-            "id": 1,
-            "name": {
-              "uz": "Лабораторное оборудование",
-              "ru": "Лабораторное оборудование",
-              "en": "Lab equipment"
-            },
-            "description": {
-              "uz": "Описание лабораторного оборудования на узбекском",
-              "ru": "Описание лабораторного оборудования на русском",
-              "en": "Lab equipment description in English"
-            },
-            "orderNum": 1,
-            "active": true
-          }
-        ]
+       
       }
     },
     {
@@ -145,24 +111,6 @@ const CaseItemMain = () => {
             "url": ''
           }
         },
-        "query": ["lab equipment", "medical"],
-        "providedService": [
-          {
-            "id": 1,
-            "name": {
-              "uz": "Лабораторное оборудование",
-              "ru": "Лабораторное оборудование",
-              "en": "Lab equipment"
-            },
-            "description": {
-              "uz": "Описание лабораторного оборудования на узбекском",
-              "ru": "Описание лабораторного оборудования на русском",
-              "en": "Lab equipment description in English"
-            },
-            "orderNum": 1,
-            "active": true
-          }
-        ]
       }
     },
     // s
@@ -196,24 +144,7 @@ const CaseItemMain = () => {
             "url": ''
           }
         },
-        "query": ["lab equipment", "medical"],
-        "providedService": [
-          {
-            "id": 1,
-            "name": {
-              "uz": "Лабораторное оборудование",
-              "ru": "Лабораторное оборудование",
-              "en": "Lab equipment"
-            },
-            "description": {
-              "uz": "Описание лабораторного оборудования на узбекском",
-              "ru": "Описание лабораторного оборудования на русском",
-              "en": "Lab equipment description in English"
-            },
-            "orderNum": 1,
-            "active": true
-          }
-        ]
+       
       }
     },
     // sdfsdfsdf
@@ -247,24 +178,7 @@ const CaseItemMain = () => {
             "url": ''
           }
         },
-        "query": ["lab equipment", "medical"],
-        "providedService": [
-          {
-            "id": 1,
-            "name": {
-              "uz": "Лабораторное оборудование",
-              "ru": "Лабораторное оборудование",
-              "en": "Lab equipment"
-            },
-            "description": {
-              "uz": "Описание лабораторного оборудования на узбекском",
-              "ru": "Описание лабораторного оборудования на русском",
-              "en": "Lab equipment description in English"
-            },
-            "orderNum": 1,
-            "active": true
-          }
-        ]
+       
       }
     },
     {
@@ -297,24 +211,6 @@ const CaseItemMain = () => {
             "url": ''
           }
         },
-        "query": ["lab equipment", "medical"],
-        "providedService": [
-          {
-            "id": 1,
-            "name": {
-              "uz": "Лабораторное оборудование",
-              "ru": "Лабораторное оборудование",
-              "en": "Lab equipment"
-            },
-            "description": {
-              "uz": "Описание лабораторного оборудования на узбекском",
-              "ru": "Описание лабораторного оборудования на русском",
-              "en": "Lab equipment description in English"
-            },
-            "orderNum": 1,
-            "active": true
-          }
-        ]
       }
     },
     // s
@@ -351,24 +247,6 @@ const CaseItemMain = () => {
             "url": ''
           }
         },
-        "query": ["lab equipment", "medical"],
-        "providedService": [
-          {
-            "id": 1,
-            "name": {
-              "uz": "Лабораторное оборудование",
-              "ru": "Лабораторное оборудование",
-              "en": "Lab equipment"
-            },
-            "description": {
-              "uz": "Описание лабораторного оборудования на узбекском",
-              "ru": "Описание лабораторного оборудования на русском",
-              "en": "Lab equipment description in English"
-            },
-            "orderNum": 1,
-            "active": true
-          }
-        ]
       }
     },
     {

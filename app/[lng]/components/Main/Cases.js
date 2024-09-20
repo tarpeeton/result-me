@@ -17,7 +17,7 @@ const caseData = [
     id: 2,
     banner: {
       title: "MRJ Trade",
-      shortDescription: "Сайт SEO",
+      shortDescription: "Сайт SEO Брендинг Реклама",
       photo: "https://ucarecdn.com/581a982e-f1c1-44c1-8dd4-1862300a3e0c/-/preview/720x450/",
       slug: 'mrj-trade'
     },
@@ -26,7 +26,7 @@ const caseData = [
     id: 3,
     banner: {
       title: "Prime medical center",
-      shortDescription: "SMM Реклама",
+      shortDescription: "SMM Сайт",
       photo: 'https://ucarecdn.com/3d44d91c-b27b-41a0-9eb5-a02d51e18ad0/-/preview/720x450/',
       slug: 'prime-medical-center'
     },
@@ -35,7 +35,7 @@ const caseData = [
     id: 4,
     banner: {
       title: "Dr Odil Alisherovich",
-      shortDescription: "SMM Маркетинг",
+      shortDescription: "Сайт SMM ",
       photo: 'https://ucarecdn.com/3821b6ff-68bf-49a0-95a1-3a97a2b24367/-/preview/720x450/',
       slug: 'dr-odil-alisherovich'
     },
@@ -44,7 +44,7 @@ const caseData = [
     id: 5,
     banner: {
       title: "Mastona Med",
-      shortDescription: "",
+      shortDescription: "SMM",
       photo: 'https://ucarecdn.com/9838f328-be53-4820-beb0-50de671b5042/-/preview/720x450/',
       slug: 'mostona-med'
     },
