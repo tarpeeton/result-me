@@ -24,7 +24,7 @@ const Banner = () => {
 	return (
 		<div className='w-full rounded-b-[30px] 2xl:rounded-b-[100px] bg-violet100  relative  mdl:h-[90vh] 4xl:h-[100vh]'>
 			<div className='w-full pt-[50px]  2xl:w-[80%] 2xl:mx-auto flex flex-col justify-center items-center '>
-				<div className=' 2xl:w-[100%] flex flex-col justify-center items-center text-center  mb-[200px] mdl:mb-[250px] 4xl:mb-[500px]'>
+				<div className=' 2xl:w-[100%] flex flex-col justify-center items-center text-center mb-[200px] mdl:mb-[250px] 4xl:mb-[500px]'>
 					<h1 className=' font-bold text-[35px] w-[60%] md:w-[55%] text-white100 bn:w-[50%] mdx:w-[40%] mdl:w-[35%] slg:w-[50%] slg:text-[70px] 2xl:w-[75%] 4xl:text-[90px] font-montserrat lg:w-[40%] text-center'>
 						{t('title')}
 					</h1>
@@ -42,7 +42,7 @@ const Banner = () => {
 				</div>
 				{/* Pass the modal open/close state to the modal component */}
         <ServiceModal isOpen={isModalOpen} onClose={closeModal} />
-				{/* <div className='w-full mt-[30px] absolute bottom-0'>
+				<div className='w-full mt-[30px] absolute bottom-0'>
 					<Image
 						src={my}
 						width={1400}
@@ -59,7 +59,7 @@ const Banner = () => {
 						alt='blurred background image'
 						className='object-cover absolute bottom-0 w-full   h-[40px] 3xl:h-[100px] rounded-b-[30px] 2xl:rounded-b-[100px] opacity-[70%] '
 					/>
-				</div> */}
+				</div>
 			</div>
 		</div>
 	)

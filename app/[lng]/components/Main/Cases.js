@@ -64,7 +64,7 @@ const Cases = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true, // Enable autoplay
-    autoplaySpeed: 3000, // Adjust the autoplay speed
+    autoplaySpeed: 2000, // Adjust the autoplay speed
     arrows: false,
     responsive: [
       {

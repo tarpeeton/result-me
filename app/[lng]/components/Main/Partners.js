@@ -11,10 +11,12 @@ import One from '@/public/images/partners/1.png'
 import Two from '@/public/images/partners/2.png'
 import Three from '@/public/images/partners/3.png'
 import Four from '@/public/images/partners/4.png'
+
 import Five from '@/public/images/partners/5.png'
 import Sixe from '@/public/images/partners/6.png'
 import Seven from '@/public/images/partners/7.png'
 import Eigth from '@/public/images/partners/8.png'
+
 import Nine from '@/public/images/partners/9.png'
 import Ten from '@/public/images/partners/10.png'
 import Eleven from '@/public/images/partners/11.png'
@@ -69,7 +71,7 @@ const Partners = () => {
 				</div>
 				{/* End of custom navigation */}
 			</div>
-			<div className='mt-[30px] 2xl:hidden'>
+			<div className='mt-[30px] 2xl:hidden h-auto'>
 				<Slider
 					ref={sliderRef}
 					{...settings}
@@ -123,7 +125,14 @@ const Partners = () => {
 									/>
 								</div>
 							</div>
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+							
+						</div>
+					</div>
+
+				{/* CARD 2 */}
+					<div className='flex flex-col mdl:flex-row mdl:flex-wrap px-[10px]'>
+						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between'>
+						<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
 								<div>
 									<Image
 										src={Seven}
@@ -134,12 +143,6 @@ const Partners = () => {
 									/>
 								</div>
 							</div>
-						</div>
-					</div>
-
-				{/* CARD 2 */}
-					<div className='flex flex-col mdl:flex-row mdl:flex-wrap px-[10px]'>
-						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between'>
 						<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] md mdl:flex mdl:items-center mdl:min-h-[200px] '>
 								<div>
 									<Image
@@ -206,6 +209,17 @@ const Partners = () => {
 								<div>
 									<Image
 										src={Eleven}
+										width={400}
+										height={400}
+										quality={100}
+										alt='partners Logo'
+									/>
+								</div>
+							</div>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+								<div>
+									<Image
+										src={Tvelwe}
 										width={400}
 										height={400}
 										quality={100}

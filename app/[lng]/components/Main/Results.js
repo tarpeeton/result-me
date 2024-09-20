@@ -8,7 +8,6 @@ import progress from '@/public/images/progress.png'
 import money from '@/public/images/money.png'
 import React, { useState, useEffect, useRef } from 'react'
 import CountUp from 'react-countup'
-
 const Result = () => {
 	const { lng } = useParams()
 	const { t } = useCustomTranslation(lng, 'result')
@@ -49,7 +48,7 @@ const Result = () => {
 					{t('result_subtitle')}
 				</p>
 			</div>
-
+				
 			{/* RESULT CARDS */}
 			<div className='mt-[20px] mb-[30px] mdl:mb-[30px] 2xl:mb-[60px] flex flex-col gap-[12px] mdl:gap-[20px] mdl:flex-row mdl:flex-wrap 3xl:flex-row 3xl:justify-between'>
 				{/* CARD ONE */}
