@@ -30,7 +30,9 @@ const data = [
       photo: inter,
       slug: 'intermed'
     },
-    statistics: [],
+    statistics: [
+      {label: 'Конверсия с сайта увеличилась на 17%. Запущенная реклама приносит 200+ лидов по цене 2,1$ за лид в течении 1 месяца Эти результаты подтверждают успешное привлечение клиентов и повышение интереса к продуктам компании.'}
+    ],
   },
   {
     id: 2,
@@ -81,7 +83,9 @@ const data = [
       photo: 'https://ucarecdn.com/9838f328-be53-4820-beb0-50de671b5042/-/preview/1000x533/',
       slug: 'mostona-med'
     },
-    statistics: [],
+    statistics: [
+      {label: 'Мы предоставили клинике все необходимые материалы для работы, что позволило их команде эффективно справляться с задачами.'}
+    ],
   },
   {
     id: 6,
@@ -119,7 +123,9 @@ const data = [
       photo: "https://ucarecdn.com/ff5c48de-f62f-43d3-930f-deda157f95d8/-/preview/1000x533/",
       slug: 'nafisa-shuxratovna'
     },
-    statistics: [],
+    statistics: [
+      {label: "Разработанный сайт оказался удобным и информативным, что позволило пациентам быстро находить необходимую информацию о стоматологе и услугах."}
+    ],
   },
   {
     id: 10,
@@ -141,7 +147,9 @@ const data = [
       photo: 'https://ucarecdn.com/49c73bea-744c-4688-9381-749f0a02dddd/-/preview/1000x533/',
       slug: 'ant-group'
     },
-    statistics: [],
+    statistics: [
+      {label: 'Успешно проведены SMM-мероприятия, что способствовало росту взаимодействия с аудиторией и укреплению бренда компании.'}
+    ],
   },
   {
     id: 12,
@@ -299,12 +307,12 @@ const Content = () => {
                 height={900}
                 quality={100}
                 alt="banner image"
-                className="object-cover w-full h-full   2xl:h-[400px]"
+                className="object-cover w-full h-full   2xl:h-[400px] 4xl:h-[500px]"
               />
               {/* Hidden content that appears on hover */}
               <div className="hidden 3xl:absolute bottom-0 w-full h-full bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 3xl:flex justify-center items-center bg-opacity-[70%]">
                 <div className="h-[100px] absolute bottom-[20px]">
-                  <div className="flex flex-row gap-[40px] items-center justify-center">
+                  <div className="flex flex-row gap-[40px] items-center justify-center 3xl:px-[40px]">
                     {item.statistics.map((stat, statIdx) => (
                       <div key={statIdx} className="flex flex-col gap-[5px] text-center">
                         <p className="text-white100 text-[18px] 3xl:text-[30px] 4xl:text-[50px] font-bold">
