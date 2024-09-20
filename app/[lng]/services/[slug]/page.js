@@ -2,7 +2,7 @@ import ServiceItem from "@/app/[lng]/components/Services/Item";
 import ItemInfo from "@/app/[lng]/components/Services/ItemInfo";
 import InfoCard from "@/app/[lng]/components/Services/InfoCard";
 import CostCard from "@/app/[lng]/components/Services/CostCard";
-import Case from "@/app/[lng]/components/Main/Cases";
+import CaseFilter from "@/app/[lng]/components/CaseFilterSlug/CaseFilter";
 import Blog from "@/app/[lng]/components/Main/Blog";
 
 const Service = () => {
@@ -17,7 +17,7 @@ const Service = () => {
 		<InfoCard/>
 		<CostCard/>
 		<div className='px-[24px]'>
-		<Case title={"Наши кейсы"}/>
+		<CaseFilter title={"Наши кейсы"}/>
 		</div>
 		<Blog/>
 		</div>

@@ -66,7 +66,7 @@ const obtainedResult = [
 	},
 	{
 		slug: 'sanjar-akbarovich',
-		link: '',
+		link: 'https://dr-psixoterapevt.uz',
 		result: [
 			{ item: '14,5 тыс', name: 'кликов на сайт' },
 			{ item: '0,07$', name: 'цена за клик' },
@@ -94,7 +94,7 @@ const obtainedResult = [
 	},
 	{
 		slug: 'mostona-med',
-		link: '',
+		link: 'https://www.instagram.com/nargiza_xamidulayevna/',
 		result: [
 			{  name: 'Мы предоставили клинике все необходимые материалы для работы, что позволило их команде эффективно справляться с задачами.' },
 			
@@ -164,7 +164,7 @@ const obtainedResult = [
 	},
 	{
 		slug: 'sanjar-akbarovich',
-		link: '',
+		link: 'https://dr-psixoterapevt.uz',
 		result: [
 			{ item: '1,560', name: 'кликов на сайт' },
 			{ item: '0,76$', name: 'цена за клик' },

@@ -34,7 +34,7 @@ const teamData = [
 	{
 		id: 3,
 		fullName: 'Вероника ',
-		position: 'Контент-менеджером',
+		position: 'Контент-менеджер',
 		photo: img3,
 		active: true,
 		orderNum: 3,

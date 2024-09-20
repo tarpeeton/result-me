@@ -149,14 +149,14 @@ const Header = ({ lng }) => {
             <GrLinkNext className="text-titleDark" />
           </a>
 
-          <button
-            onClick={isModalOpen2Handler}
+          <Link
+            href='tel:+998905092562'   
             className="font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0] z-[999]"
           >
             <p className="font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-violet100">
-            +998 (90) 022-80-73
+            +998 (90) 509-25-62
             </p>
-          </button>
+          </Link>
         </div>
       )}
       <Link href="/" className='h-[45px]  slg:h-[55px]'>
@@ -172,7 +172,7 @@ const Header = ({ lng }) => {
       <div className="flex items-center gap-3 h-[40px]">
         <div className="hidden 2xl:flex">
           <Link
-            href="tel:+998900228073"
+            href="tel:++998905092562"
             className={`font-montserrat w-[50px] h-[50px] border-[1px] border-[white] rounded-[100%] flex items-center justify-center ${
               isMainPage ? "bg-inherit" : "bg-selectBg"
             }`}
