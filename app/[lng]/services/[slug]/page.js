@@ -17,7 +17,7 @@ const Service = () => {
 		<InfoCard/>
 		<CostCard/>
 		<div className='px-[24px]'>
-		<Case/>
+		<Case title={"Наши кейсы"}/>
 		</div>
 		<Blog/>
 		</div>

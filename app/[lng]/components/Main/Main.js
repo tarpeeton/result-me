@@ -19,7 +19,7 @@ const Main = () => {
 				<Result />
 				<Services/>
 				<Puzzle/>
-				<Cases/>
+				<Cases title={'Без лишних слов'}/>
 				<ProsesWork/>
 				<Reviews />
 				<Partners />
