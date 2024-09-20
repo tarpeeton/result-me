@@ -8,7 +8,10 @@ const Cases = () => {
 	<div>
 		<Title/>
 		<Content/>
+		<div className='px-[16px] mdl:px-[20px] 3xl:px-[30px]'>
 		<Blog/>
+
+		</div>
 	</div>
   );
 };
