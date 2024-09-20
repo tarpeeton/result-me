@@ -34,11 +34,11 @@ const CaseItemMain = () => {
           },
           "background": {
             "id": 1,
-            "url": "https://ucarecdn.com/d885d0d5-f440-4e8f-8241-12e6e19f0882/-/preview/999x272/"
+            "url": "https://ucarecdn.com/2e98b647-a0bd-4d53-8d42-b8d49a419983/-/preview/999x272/"
           },
           "photo": {
             "id": 2,
-            "url": "https://ucarecdn.com/50e91c1e-d7c1-4ce8-9087-d2a08922ddee/-/preview/1000x658/"
+            "url": "https://ucarecdn.com/eaa487e0-df1f-4394-bc2e-0f89d4abd28e/-/preview/1000x658/"
           },
           // "logo": {
           //   "id": 3,
@@ -185,11 +185,11 @@ const CaseItemMain = () => {
           },
           "background": {
             "id": 4,
-            "url": 'https://ucarecdn.com/bad1c69a-226e-4c68-9da5-bc69fb343e65/-/preview/999x272/' // Use imported image
+            "url": 'https://ucarecdn.com/f1a7c7ac-cd7d-43cf-bdf0-fa4a1a201926/-/preview/999x272/' // Use imported image
           },
           "photo": {
             "id": 5,
-            "url": primeMedicalImage // Use imported image
+            "url": "https://ucarecdn.com/9920a5c3-e006-49d5-8885-08af42a15fa5/-/preview/1000x658/" // Use imported image
           },
           "logo": {
             "id": 6,
@@ -286,11 +286,11 @@ const CaseItemMain = () => {
           },
           "background": {
             "id": 4,
-            "url": 'https://ucarecdn.com/58ffcb67-d2c8-400b-a9b1-2f5eb8085d2c/-/preview/999x272/' // Use imported image
+            "url": 'https://ucarecdn.com/4e3c6491-5bdd-4aa0-958a-efbe4e6670b7/-/preview/999x272/' // Use imported image
           },
           "photo": {
             "id": 5,
-            "url": "https://ucarecdn.com/61ec4e8a-5102-4acb-928b-a179a4960944/-/preview/1000x658/" // Use imported image
+            "url": "https://ucarecdn.com/d6a231a0-8e2b-453a-a428-9a4b3e64a64e/-/preview/1000x658/" // Use imported image
           },
           "logo": {
             "id": 6,
@@ -332,7 +332,7 @@ const CaseItemMain = () => {
             "ru": "Mastona Med",
             "en": "Mastona Med"
           },
-          "link": "",
+          "link": "https://www.instagram.com/nargiza_xamidulayevna/",
           "shortDescription": {
             "uz": "Клиника интегративной медицины по авторским методикам основателя Наргизы Хамидуллаевны",
             "ru": "Клиника интегративной медицины по авторским методикам основателя Наргизы Хамидуллаевны",
@@ -340,11 +340,11 @@ const CaseItemMain = () => {
           },
           "background": {
             "id": 4,
-            "url": 'https://ucarecdn.com/58ffcb67-d2c8-400b-a9b1-2f5eb8085d2c/-/preview/999x272/' // Use imported image
+            "url": 'https://ucarecdn.com/f0189c4c-6611-467b-a5c5-82c24256470c/-/preview/999x272/' // Use imported image
           },
           "photo": {
             "id": 5,
-            "url": "https://ucarecdn.com/61ec4e8a-5102-4acb-928b-a179a4960944/-/preview/1000x658/" // Use imported image
+            "url": "https://ucarecdn.com/579a51de-1158-4161-b735-30128ac44b83/-/preview/1000x658/" // Use imported image
           },
           "logo": {
             "id": 6,
@@ -390,11 +390,11 @@ const CaseItemMain = () => {
           },
           "background": {
             "id": 4,
-            "url": 'https://ucarecdn.com/58ffcb67-d2c8-400b-a9b1-2f5eb8085d2c/-/preview/999x272/' // Use imported image
+            "url": 'https://ucarecdn.com/640a5fd2-5914-437e-a311-887f0d0f202b/-/preview/999x272/' // Use imported image
           },
           "photo": {
             "id": 5,
-            "url": "https://ucarecdn.com/61ec4e8a-5102-4acb-928b-a179a4960944/-/preview/1000x658/" // Use imported image
+            "url": "https://ucarecdn.com/accac460-a3d7-4e3f-87fe-bab5750e939c/-/preview/1000x658/" // Use imported image
           },
           "logo": {
             "id": 6,
@@ -422,11 +422,11 @@ const CaseItemMain = () => {
           },
           "background": {
             "id": 4,
-            "url": 'https://ucarecdn.com/58ffcb67-d2c8-400b-a9b1-2f5eb8085d2c/-/preview/999x272/' // Use imported image
+            "url": 'https://ucarecdn.com/bba89d59-ac39-4077-92cb-ef69fc9a3f68/-/preview/999x272/' // Use imported image
           },
           "photo": {
             "id": 5,
-            "url": "https://ucarecdn.com/61ec4e8a-5102-4acb-928b-a179a4960944/-/preview/1000x658/" // Use imported image
+            "url": "https://ucarecdn.com/b5993efe-4c85-4728-a139-a970281f744f/-/preview/1000x658/" // Use imported image
           },
           "logo": {
             "id": 6,
@@ -564,41 +564,6 @@ const CaseItemMain = () => {
       }
     },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	// end
   ];
 
   useEffect(() => {

@@ -37,7 +37,7 @@ const CustomSelect = ({ value, onChange, options , main }) => {
 
       {/* Dropdown list */}
       {isOpen && (
-        <ul className="absolute w-[150px] 3xl:w-[130px] mt-1 bg-white border border-gray-200   z-[9999999]">
+        <ul className="absolute w-[110px] 3xl:w-[130px] mt-1 bg-white border border-gray-200   z-[9999999]">
           {options.map((option) => (
             <li
               key={option.value}

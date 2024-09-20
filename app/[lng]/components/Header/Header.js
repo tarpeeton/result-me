@@ -71,7 +71,7 @@ const Header = ({ lng }) => {
 
   return (
     <div
-      className={`w-full flex justify-between px-[20px] z-[999] py-[16px] 
+      className={`w-full slg:flex slg:items-center flex justify-between px-[20px] z-[999] py-[16px] 
                 ${isMainPage ? "bg-violet100" : "bg-white"}`}
     >
       <div className="hidden 2xl:flex items-center gap-[25px] 4xl:gap-[40px] xl:w-[30%] 4xl:w-[25%]">
@@ -160,13 +160,14 @@ const Header = ({ lng }) => {
           </button>
         </div>
       )}
-      <Link href="/">
+      <Link href="/" className='h-[45px]  slg:h-[55px]'>
         <Image
           src={isMainPage ? footerLogo : logo}
           width={130}
           quality={100}
           height={45}
           alt="Logo"
+          className='h-full'
         />
       </Link>
       <div className="flex items-center gap-3 h-[40px]">
@@ -185,14 +186,14 @@ const Header = ({ lng }) => {
 
         <button
           onClick={openModal}
-          className="bg-violet100 hidden mdx:block w-[230px] h-[50px] border rounded-[30px]"
+          className="bg-violet100 hidden mdx:block w-[230px] h-[50px] border rounded-[30px] mdl:h-[49px]"
         >
           <p className="font-robotoFlex font-bold text-white100 text-[16px]">
             {t("getInfo")}
           </p>
         </button>
         <ServiceModal isOpen={isModalOpen} onClose={closeModal} />
-        <div className="font-robotoFlex flex 3xl:w-[150px]  3xl:h-[50px]">
+        <div className="font-robotoFlex flex mdl:h-[49px]   3xl:h-[50px]">
           <CustomSelect
             value={currentLanguage}
 			main={isMainPage}
@@ -202,7 +203,7 @@ const Header = ({ lng }) => {
                 value: "ru", // English language code
                 label: (
                   <>
-                    <RU width="20" /> Ру
+                   Ру
                   </>
                 ),
               },
@@ -210,7 +211,7 @@ const Header = ({ lng }) => {
                 value: "uz", // English language code
                 label: (
                   <>
-                    <UZ width="20" /> O'z
+                     O'z
                   </>
                 ),
               },
@@ -218,7 +219,7 @@ const Header = ({ lng }) => {
                 value: "en", // English language code
                 label: (
                   <>
-                    <GB width="20" /> En
+                    En
                   </>
                 ),
               },
@@ -228,22 +229,20 @@ const Header = ({ lng }) => {
         {isModalOpen2 && (
           <ServiceModal isOpen={isModalOpen2} onClose={closeModal2}/>
         )}
-        <div className="flex 2xl:hidden items-center ">
-          <button onClick={toggleMenu} className="text-3xl">
-            {isMenuOpen ? (
-              <AiOutlineClose
-                className={`font-montserrat ${
-                  isMainPage ? "text-white" : "text-black"
-                }`}
-              />
-            ) : (
-              <RxHamburgerMenu
-                className={`${isMainPage ? "text-white" : "text-black"}`}
-              />
-            )}
-            {/* Change icon based on state */}
-          </button>
-        </div>
+        <div className="flex 2xl:hidden items-center justify-center rounded-full border border-[#F0F0F0] py-[10px] px-[10px] mdl:py-[12px] mdl:px-[12px] mdl:h-[49px]">
+  <button onClick={toggleMenu} className="text-[22px] flex justify-center items-center w-full h-full">
+    {isMenuOpen ? (
+      <AiOutlineClose
+        className={`font-montserrat ${isMainPage ? "text-white" : "text-black"}`}
+      />
+    ) : (
+      <RxHamburgerMenu
+        className={`${isMainPage ? "text-white" : "text-[#010101]"}`}
+      />
+    )}
+  </button>
+</div>
+
       </div>
     </div>
   );
