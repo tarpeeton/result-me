@@ -299,7 +299,7 @@ const Content = () => {
                 height={900}
                 quality={100}
                 alt="banner image"
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full   2xl:h-[400px]"
               />
               {/* Hidden content that appears on hover */}
               <div className="hidden 3xl:absolute bottom-0 w-full h-full bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 3xl:flex justify-center items-center bg-opacity-[70%]">
