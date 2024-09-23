@@ -1,13 +1,8 @@
-
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick/lib/slider'
-import { useState } from 'react'
-import ServiceModal from '../Modal/SeriviceModal'
 import Link from 'next/link'
 const ProsesWork = () => {
-	const [isModalOpen, setIsModalOpen] = useState(false)
-
 	// SLIDER
 	const settings = {
 		dots: false,
@@ -60,17 +55,17 @@ const ProsesWork = () => {
 					<div className='w-full mdl:max-w-full  4xl:max-w-[50%] rounded-[30px] bg-violet100 p-[30px] pb-[26px] relative flex flex-col justify-between mdl:pl-[40px] mdl:rounded-[60px] mdl:pt-[50px]  2xl:max-w-[98%] 3xl:min-w-[98%] 2xl:min-h-[450px]  4xl:min-h-[600px]'>
 						<div className='mdl:w-[80%] 4xl:w-[100%]'>
 							<p className='text-[28px] mdl:text-[30px] text-white100 font-bold 4xl:text-[50px]'>
-							Процесс работы максимально понятный и открытый
+								Процесс работы максимально понятный и открытый
 							</p>
 						</div>
 						<div className='relative w-full  mt-[200px] 3xl:absolute 3xl:bottom-[25px] 3xl:right-[25px]'>
 							<div className='py-[20px] absolute  bottom-[20px] right-[20px] px-[30px] rounded-[100px] bg-white text-center  mdl:w-[300px] 4xl:w-[370px]'>
-								<button
-									onClick={openModal}
+								<Link
+									href='steps-working'
 									className='text-[14px] font-bold text-violet100 mdl:text-[18px] 4xl:text-[20px]'
 								>
-									Бесплатная консультация
-								</button>
+									Этапы работы
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -83,7 +78,8 @@ const ProsesWork = () => {
 						</div>
 						<div className='mt-[15px] mdl:text-[18px] w-[85%]  mdl:mt-[40px]'>
 							<p className='text-[14px] mdl:text-[18px] text-[#454545] 4xl:text-[20px]'>
-							Все условия сотрудничества фиксируются в договоре для уверенности в надежности.
+								Все условия сотрудничества фиксируются в договоре для
+								уверенности в надежности.
 							</p>
 						</div>
 					</div>
@@ -96,19 +92,21 @@ const ProsesWork = () => {
 						</div>
 						<div className='mt-[15px] w-[85%] mdl:mt-[40px]'>
 							<p className='text-[14px] mdl:text-[18px] 4xl:text-[20px] text-[#454545]'>
-							Планы выполнения проекта утверждаются с заказчиком со сроками и ресурсами.
+								Планы выполнения проекта утверждаются с заказчиком со сроками и
+								ресурсами.
 							</p>
 						</div>
 					</div>
 					<div className='w-full 2xl:max-w-[98%]  mdl:min-w-full 2xl:min-h-[450px]  rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between xl:min-w-[90%]  2xl:min-w-[98%] 4xl:min-h-[600px]'>
 						<div className='w-[60%]'>
 							<p className='text-[23px] mdl:text-[35px] text-titleDark font-bold 4xl:text-[50px]'>
-							Предоставляем отчеты
+								Предоставляем отчеты
 							</p>
 						</div>
 						<div className='mt-[15px] w-[85%] mdl:mt-[40px]'>
 							<p className='text-[14px] mdl:text-[18px] 4xl:text-[20px] text-[#454545]'>
-							Ежемесячно отправляем отчеты по рекламным кампаниям и выполненным задачам.
+								Ежемесячно отправляем отчеты по рекламным кампаниям и
+								выполненным задачам.
 							</p>
 						</div>
 					</div>
@@ -124,9 +122,12 @@ const ProsesWork = () => {
 						</p>
 					</div>
 					<div className='py-[20px] px-[30px] rounded-[100px] bg-white text-center mt-[51px]'>
-						<button onClick={openModal}  className='text-[14px] font-bold text-violet100'>
-							Бесплатная консультация
-						</button>
+						<Link
+							href='steps-working'
+							className='text-[14px] font-bold text-violet100'
+						>
+							Этапы работы
+						</Link>
 					</div>
 				</div>
 				<div className='w-full rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between mdl:mt-[20px]'>
@@ -137,12 +138,18 @@ const ProsesWork = () => {
 					</div>
 					<div className='mt-[15px] w-[85%]'>
 						<p className='text-[14px] text-[#454545] font-robotoFlex'>
-						Все условия сотрудничества фиксируются в договоре для уверенности в надежности.
+							Все условия сотрудничества фиксируются в договоре для уверенности
+							в надежности.
 						</p>
 						<div className='w-full flex items-center justify-end'>
-<Link href='/f' className="mt-[12px] text-violet100 text-[14px] text-end w-full"> Сылка </Link>
+							<Link
+								href='/f'
+								className='mt-[12px] text-violet100 text-[14px] text-end w-full'
+							>
+								{' '}
+								Сылка{' '}
+							</Link>
 						</div>
-						
 					</div>
 				</div>
 				<div className='w-full rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between'>
@@ -153,33 +160,43 @@ const ProsesWork = () => {
 					</div>
 					<div className='mt-[15px] w-[85%]'>
 						<p className='text-[14px] text-[#454545] font-robotoFlex'>
-						Планы выполнения проекта утверждаются с заказчиком со сроками и ресурсами.
+							Планы выполнения проекта утверждаются с заказчиком со сроками и
+							ресурсами.
 						</p>
 						<div className='w-full flex items-center justify-end'>
-<Link href='f' className="mt-[12px] text-violet100 text-[14px] text-end w-full"> Сылка </Link>
+							<Link
+								href='f'
+								className='mt-[12px] text-violet100 text-[14px] text-end w-full'
+							>
+								{' '}
+								Сылка{' '}
+							</Link>
 						</div>
-						
 					</div>
 				</div>
 				<div className='w-full rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between'>
 					<div className='w-[60%]'>
 						<p className='text-[23px] text-titleDark font-bold'>
-						Предоставляем отчеты
+							Предоставляем отчеты
 						</p>
 					</div>
 					<div className='mt-[15px] w-[85%]'>
 						<p className='text-[14px] text-[#454545] font-robotoFlex'>
-						Ежемесячно отправляем отчеты по рекламным кампаниям и выполненным задачам.
+							Ежемесячно отправляем отчеты по рекламным кампаниям и выполненным
+							задачам.
 						</p>
 						<div className='w-full flex items-center justify-end'>
-<Link href='sdf' className="mt-[12px] text-violet100 text-[14px] text-end w-full"> Сылка </Link>
+							<Link
+								href='sdf'
+								className='mt-[12px] text-violet100 text-[14px] text-end w-full'
+							>
+								{' '}
+								Сылка{' '}
+							</Link>
 						</div>
-						
 					</div>
 				</div>
 			</div>
-			{/* MODAL */}
-			<ServiceModal isOpen={isModalOpen} onClose={closeModal} />
 		</div>
 	)
 }
