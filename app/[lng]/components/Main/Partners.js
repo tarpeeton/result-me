@@ -1,17 +1,12 @@
 'use client'
-
-// LIB
-import { useRef } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-
+import { GrLinkPrevious } from 'react-icons/gr'
+import { GrLinkNext } from 'react-icons/gr'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
+import { useRef } from 'react'
+import Image from 'next/image'
 
-
-
-// IMAGES
 import One from '@/public/images/partners/1.png'
 import Two from '@/public/images/partners/2.png'
 import Three from '@/public/images/partners/3.png'
@@ -26,9 +21,7 @@ import Nine from '@/public/images/partners/9.png'
 import Ten from '@/public/images/partners/10.png'
 import Eleven from '@/public/images/partners/11.png'
 import Tvelwe from '@/public/images/partners/12.png'
-
-import { GrLinkPrevious } from 'react-icons/gr'
-import { GrLinkNext } from 'react-icons/gr'
+import Link from 'next/link'
 
 const SampleNextArrow = ({ onClick }) => (
 	<div className='cursor-pointer text-[20px]' onClick={onClick}>
@@ -140,8 +133,8 @@ const Partners = () => {
 				{/* CARD 2 */}
 					<div className='flex flex-col mdl:flex-row mdl:flex-wrap px-[10px]'>
 						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between'>
-						<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
-								<div>
+						<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+								<Link href='/about'>
 									<Image
 										src={Seven}
 										width={400}
@@ -149,10 +142,10 @@ const Partners = () => {
 										quality={100}
 										alt='partners Logo'
 									/>
-								</div>
-							</Link>
-						<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] md mdl:flex mdl:items-center mdl:min-h-[200px] '>
-								<div>
+								</Link>
+							</div>
+						<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] md mdl:flex mdl:items-center mdl:min-h-[200px] '>
+								<Link href='/about'>
 									<Image
 										src={Two}
 										width={400}
@@ -160,11 +153,11 @@ const Partners = () => {
 										quality={100}
 										alt='partners Logo'
 									/>
-								</div>
-							</Link>
+								</Link>
+							</div>
 
-							<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
-								<div>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
+							<Link href='/about'>
 									<Image
 										src={Sixe}
 										width={400}
@@ -172,11 +165,11 @@ const Partners = () => {
 										quality={100}
 										alt='partners Logo'
 									/>
-								</div>
-							</Link>
+								</Link>
+							</div>
 							
-							<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
-								<div>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+								<Link href='/about'>
 									<Image
 										src={Eigth}
 										width={400}
@@ -184,15 +177,15 @@ const Partners = () => {
 										quality={100}
 										alt='partners Logo'
 									/>
-								</div>
-							</Link>
+								</Link>
+							</div>
 						</div>
 					</div>
 					{/* CARD 3  */}
 					<div className='flex flex-col mdl:flex-row mdl:flex-wrap px-[10px]'>
 						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between'>
-							<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] mdl:min-h-[200px]   mdl:flex mdl:items-center 	'>
-								<div>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] mdl:min-h-[200px]   mdl:flex mdl:items-center 	'>
+								<Link href='/about'>
 									<Image
 										src={Nine}
 										width={400}
@@ -200,10 +193,10 @@ const Partners = () => {
 										quality={100}
 										alt='partners Logo'
 									/>
-								</div>
-							</Link>
-							<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
-								<div>
+								</Link>
+							</div>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
+								<Link href='/about'>
 									<Image
 										src={Ten}
 										width={400}
@@ -211,10 +204,10 @@ const Partners = () => {
 										quality={100}
 										alt='partners Logo'
 									/>
-								</div>
-							</Link>
-							<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
-								<div>
+								</Link>
+							</div>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+								<Link href='/about'>
 									<Image
 										src={Eleven}
 										width={400}
@@ -222,10 +215,10 @@ const Partners = () => {
 										quality={100}
 										alt='partners Logo'
 									/>
-								</div>
-							</Link>
-							<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
-								<div>
+								</Link>
+							</div>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+								<Link href='/about'>
 									<Image
 										src={Tvelwe}
 										width={400}
@@ -233,13 +226,14 @@ const Partners = () => {
 										quality={100}
 										alt='partners Logo'
 									/>
-								</div>
-							</Link>
+								</Link>
+							</div>
 							
 						</div>
 					</div>
 				</Slider>
 			</div>
+
 			{/* DESKTOP */}
 			<div className='hidden mt-[40px] 2xl:flex flex-row flex-wrap justify-evenly'>
 				<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  2xl:w-[24%] 2xl:min-h-[250px] mdl:flex mdl:items-center '>
