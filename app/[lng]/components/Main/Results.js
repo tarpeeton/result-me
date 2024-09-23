@@ -119,7 +119,7 @@ const Result = () => {
           </div>
           <div className='mt-[42px] mdl:mt-[30px] 3xl:mt-[80px] w-full mdx:w-[100%] mdx:h-[90%] lg:h-[70%] lg:w-[100%]'>
             <Image
-              src='https://ucarecdn.com/c35a703a-0268-4498-9032-ae8b0543e2af/-/preview/563x247/'
+              src='https://ucarecdn.com/d0f73bf4-119e-4b96-ac55-c56e6c0b8e39/-/preview/563x247/'
               width={400}
               height={400}
               quality={80}
