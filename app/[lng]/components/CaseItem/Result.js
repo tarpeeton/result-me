@@ -95,9 +95,9 @@ const obtainedResult = [
 		slug: 'mrj-trade',
 		link: 'https://mrj-trade.com',
 		result: [
-			{ item: '1,560', name: 'кликов на сайт' },
-			{ item: '0,32$', name: 'цена за клик' },
-			{ item: '11,22%', name: 'CTR' },
+			{ item: '1,560', name: 'кликов на сайт / мес' },
+			{ item: '0,32$', name: 'цена за клик / мес' },
+			{ item: '11,22%', name: 'CTR  / мес' },
 		],
 	},
 	{

@@ -105,9 +105,7 @@ const Cases = ({title}) => {
         <p className='text-[28px] mdl:text-[50px] 3xl:text-[60px] font-bold'>
         Наши кейсы
         </p>
-        <p className='bg-violet100 text-white100 text-[23px] mdl:text-[40px] 3xl:text-[50px] font-bold p-[10px] w-[243px] mdl:w-[426px] 3xl:w-[535px] rounded-[170px] text-center rotate-[-5deg]'>
-          {t('case_subtitle')}
-        </p>
+      
       </div>
       {/* Slider Section */}
       <div className='2xl:mt-[60px] mdl:max-h-[500px] 4xl:max-h-[900px]'>
