@@ -5,9 +5,7 @@ import { createVakansy } from "../../lib/api/api";
 import { FaCheckCircle } from "react-icons/fa";
 import { Dialog, DialogActions, DialogContent, Button } from "@mui/material"; // Assuming you're using Material-UI
 
-import revTop from "@/public/images/reviews/revTop.png";
-import revBottom from "@/public/images/reviews/revBottom.png";
-import revBG from "@/public/images/reviews/revBG.png";
+
 
 const Job = () => {
   // Define state for each input field
@@ -61,14 +59,14 @@ const Job = () => {
   return (
     <div
       className="relative mx-[16px] mt-[20px] mdl:mt-[30px] rounded-[30px] bg-cover bg-no-repeat px-5 py-8 bg-[#161616] bg-opacity-[90%] 3xl:px-[70px] 3xl:flex 3xl:flex-row 3xl:py-[80px] 3xl:justify-between"
-      style={{ backgroundImage: `url(${revBG.src})` }}
+      style={{ backgroundImage: `url(https://ucarecdn.com/d1dc5f20-760a-44db-a051-fe0050d6c706/-/preview/999x497/)` }}
     >
       {/* Top Decorative Image - Background */}
       <div className="absolute top-0 right-0 rounded-[30px] z-0">
         <Image
           width={400}
           height={400}
-          src={revTop}
+          src='https://ucarecdn.com/74cec222-166d-4b2a-a08d-a2dffb1a8d80/-/preview/867x810/'
           alt="revTop"
           className="rounded-[30px] opacity-[40%]"
         />
@@ -217,7 +215,7 @@ const Job = () => {
         <Image
           width={400}
           height={400}
-          src={revBottom}
+          src='https://ucarecdn.com/fe33ea4c-9361-44a1-8702-ef9372cf4c7f/-/preview/1000x731/'
           alt="revBottom"
           className="rounded-[30px] opacity-[40%]"
         />
