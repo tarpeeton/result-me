@@ -37,14 +37,7 @@ const ProsesWork = () => {
 		],
 	}
 
-	const openModal = () => {
-		setIsModalOpen(true)
-	}
 
-	// Close modal function
-	const closeModal = () => {
-		setIsModalOpen(false)
-	}
 
 	return (
 		<div className='flex flex-col mt-[80px] gap-[10px]'>
@@ -100,7 +93,7 @@ const ProsesWork = () => {
 					<div className='w-full 2xl:max-w-[98%]  mdl:min-w-full 2xl:min-h-[450px]  rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between xl:min-w-[90%]  2xl:min-w-[98%] 4xl:min-h-[600px]'>
 						<div className='w-[60%]'>
 							<p className='text-[23px] mdl:text-[35px] text-titleDark font-bold 4xl:text-[50px]'>
-								Предоставляем отчеты
+							ПРЕДОСТАВЛЯЕМ ОТЧЕТЫ
 							</p>
 						</div>
 						<div className='mt-[15px] w-[85%] mdl:mt-[40px]'>
@@ -177,7 +170,7 @@ const ProsesWork = () => {
 				<div className='w-full rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between'>
 					<div className='w-[60%]'>
 						<p className='text-[23px] text-titleDark font-bold'>
-							Предоставляем отчеты
+						ПРЕДОСТАВЛЯЕМ ОТЧЕТЫ
 						</p>
 					</div>
 					<div className='mt-[15px] w-[85%]'>
