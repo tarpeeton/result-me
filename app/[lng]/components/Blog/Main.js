@@ -10,7 +10,6 @@ const BlogMain = () => {
 		<Blogs/>
 		<div className='pb-[60px] mdl:pb-[100px] 3xl:pb-[120px] px-[16px] mdl:px-[20px] 3xl:px-[30px]'>
 		<Cases/>
-
 		</div>
 	</div>
   );
