@@ -140,7 +140,7 @@ const Partners = () => {
 				{/* CARD 2 */}
 					<div className='flex flex-col mdl:flex-row mdl:flex-wrap px-[10px]'>
 						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between'>
-						<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+						<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
 								<div>
 									<Image
 										src={Seven}
@@ -151,7 +151,7 @@ const Partners = () => {
 									/>
 								</div>
 							</Link>
-						<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] md mdl:flex mdl:items-center mdl:min-h-[200px] '>
+						<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] md mdl:flex mdl:items-center mdl:min-h-[200px] '>
 								<div>
 									<Image
 										src={Two}
@@ -163,7 +163,7 @@ const Partners = () => {
 								</div>
 							</Link>
 
-							<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
+							<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
 								<div>
 									<Image
 										src={Sixe}
@@ -175,7 +175,7 @@ const Partners = () => {
 								</div>
 							</Link>
 							
-							<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+							<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
 								<div>
 									<Image
 										src={Eigth}
@@ -191,7 +191,7 @@ const Partners = () => {
 					{/* CARD 3  */}
 					<div className='flex flex-col mdl:flex-row mdl:flex-wrap px-[10px]'>
 						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between'>
-							<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] mdl:min-h-[200px]   mdl:flex mdl:items-center 	'>
+							<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] mdl:min-h-[200px]   mdl:flex mdl:items-center 	'>
 								<div>
 									<Image
 										src={Nine}
@@ -202,7 +202,7 @@ const Partners = () => {
 									/>
 								</div>
 							</Link>
-							<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
+							<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
 								<div>
 									<Image
 										src={Ten}
@@ -213,7 +213,7 @@ const Partners = () => {
 									/>
 								</div>
 							</Link>
-							<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+							<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
 								<div>
 									<Image
 										src={Eleven}
@@ -224,7 +224,7 @@ const Partners = () => {
 									/>
 								</div>
 							</Link>
-							<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+							<Link href='/about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
 								<div>
 									<Image
 										src={Tvelwe}
