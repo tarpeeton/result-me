@@ -117,7 +117,7 @@ const Question = () => {
             const shouldTruncate = item.description && item.description.length > 50;
 
             return (
-              <div key={index} className="mt-4">
+              <div key={index} className="mt-4 ml-[24px]">
                 {shouldTruncate ? (
                   <>
                     <p className='text-[#454545] text-[15px]'>

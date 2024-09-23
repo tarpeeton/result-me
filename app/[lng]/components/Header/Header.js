@@ -159,7 +159,7 @@ const Header = ({ lng }) => {
           </Link>
         </div>
       )}
-      <Link href="/" className='h-[45px]  slg:h-[55px]'>
+      <a href="/" className='h-[45px]  slg:h-[55px]'>
         <Image
           src={isMainPage ? footerLogo : logo}
           width={130}
@@ -168,7 +168,7 @@ const Header = ({ lng }) => {
           alt="Logo"
           className='h-full'
         />
-      </Link>
+      </a>
       <div className="flex items-center gap-3 h-[40px]">
         <div className="hidden 2xl:flex">
           <Link
