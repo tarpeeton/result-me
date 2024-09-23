@@ -7,7 +7,6 @@ import 'slick-carousel/slick/slick-theme.css'
 import { GrLinkPrevious } from 'react-icons/gr'
 import { GrLinkNext } from 'react-icons/gr'
 
-
 import { useRef, useState } from 'react'
 
 const SampleNextArrow = ({ onClick }) => (
@@ -89,7 +88,9 @@ const Reviews = () => {
 	return (
 		<div
 			className='relative w-full mt-[20px] mdl:mt-[30px] rounded-[30px] bg-cover bg-no-repeat px-5 py-8 bg-[#161616] bg-opacity-[90%] mdl:px-[40px] mdl:py-[50px]'
-			style={{ backgroundImage: `url(https://ucarecdn.com/d1dc5f20-760a-44db-a051-fe0050d6c706/-/preview/999x497/)` }}
+			style={{
+				backgroundImage: `url(https://ucarecdn.com/d1dc5f20-760a-44db-a051-fe0050d6c706/-/preview/999x497/)`,
+			}}
 		>
 			{/* Top Decorative Image */}
 			<div className=' absolute top-0 right-0 rounded-[30px]'>
@@ -124,13 +125,16 @@ const Reviews = () => {
 				</div>
 				<div className='rounded-[30px] px-[20px] py-[25px] bg-[#161616]  bg-opacity-[50%] 2xl:max-w-[90%] text-white  min-h-[400px] border border-[#5A5A5A]'>
 					<h3 className='text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]'>
-					Бахтиер Наджиюллаевич
+						Бахтиер Наджиюллаевич
 					</h3>
 					<p className='text-[14px] opacity-75 mb-[20px] text-[#7B7B7B] font-robotoFlex'>
-					Сотрудничаю с фирмой "Result" в течении 6 месяцев.
+						Сотрудничаю с фирмой "Result" в течении 6 месяцев.
 					</p>
 					<p className='text-[15px] leading-[18px] mdl:text-[20px] mdl:leading-[28px] font-robotoFlex '>
-					Очень грамотная и обходительная команда сотрудников, принимает во внимание все пожелания и замечания клиента. При необходимости предлагает свои варианты работы. Никаких нареканий, одна благодарность! Спасибо за помощь!
+						Очень грамотная и обходительная команда сотрудников, принимает во
+						внимание все пожелания и замечания клиента. При необходимости
+						предлагает свои варианты работы. Никаких нареканий, одна
+						благодарность! Спасибо за помощь!
 					</p>
 				</div>
 				{/* Add more review slides here */}
