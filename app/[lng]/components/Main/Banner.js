@@ -43,11 +43,11 @@ const Banner = () => {
 				<div className='w-full mt-[30px] absolute bottom-0'>
 					<Image
 						src='https://ucarecdn.com/eb83945a-4701-42a1-8a78-ffdfc03c4523/-/preview/1000x357/'
-						width={1400} // or specify different sizes depending on screens
+						width={1400}
 						height={600}
 						quality={100}
 						alt='Main banner image'
-						sizes='(max-width: 600px) 100vw, (max-width: 1400px) 50vw, 1400px' // adjust based on your screen sizes
+						sizes='(max-width: 600px) 100vw, (max-width: 1400px) 50vw, 1400px'
 						className='w-[70%] mdl:w-[100%] xl:w-[60%] 4xl:w-[100%] mx-auto'
 					/>
 					<Image
@@ -56,7 +56,7 @@ const Banner = () => {
 						height={400}
 						quality={100}
 						alt='blurred background image'
-						className='object-cover absolute bottom-0 w-full   h-[40px] 3xl:h-[100px] rounded-b-[30px] 2xl:rounded-b-[100px] opacity-[70%] '
+						className='object-cover absolute bottom-0 w-full h-[40px] 3xl:h-[100px] rounded-b-[30px] 2xl:rounded-b-[100px] opacity-[70%]'
 					/>
 				</div>
 			</div>

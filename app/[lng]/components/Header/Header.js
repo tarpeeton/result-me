@@ -10,8 +10,6 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import logo from "@/public/svg/logoSVG.svg";
 import footerLogo from "@/public/svg/footerLogo.svg";
 import Link from "next/link";
-import { languages, cookieName } from "../../../i18n/settings";
-import { useCookies } from "react-cookie";
 import CustomSelect from "./CustomSelect";
 import { usePathname } from "next/navigation";
 import ServiceModal from "../Modal/SeriviceModal";
@@ -19,11 +17,9 @@ import { GB, RU, UZ } from "country-flag-icons/react/3x2";
 
 const Header = ({ lng }) => {
   const { t } = useCustomTranslation(lng, "header");
-  const [cookies, setCookie] = useCookies([cookieName]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const [isModalOpen, setIsModalOpen] = useState(false);
-
 
   const [isModalOpen2, setIsModalOpen2] = useState(false);
   const isModalOpen2Handler = () =>  setIsModalOpen2(true)
@@ -45,7 +41,6 @@ const Header = ({ lng }) => {
 
   const handleLanguageChange = (newLng) => {
     // Set the cookie with the new language code
-    setCookie(cookieName, newLng, { path: "/" });
 
     const pathArray = window.location.pathname.split("/");
 
