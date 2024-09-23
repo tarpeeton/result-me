@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import ServiceModal from '../Modal/SeriviceModal'
 import Image from 'next/image'
-import my from '@/public/images/Object.png'
-import blur from '@/public/images/Blur.png'
 import { useCustomTranslation } from '../../../i18n/client'
 import { useParams } from 'next/navigation'
 
@@ -44,7 +42,7 @@ const Banner = () => {
 				<ServiceModal isOpen={isModalOpen} onClose={closeModal} />
 				<div className='w-full mt-[30px] absolute bottom-0'>
 					<Image
-						src={my}
+						src='https://ucarecdn.com/eb83945a-4701-42a1-8a78-ffdfc03c4523/-/preview/1000x357/'
 						width={1400} // or specify different sizes depending on screens
 						height={600}
 						quality={100}
@@ -53,7 +51,7 @@ const Banner = () => {
 						className='w-[70%] mdl:w-[100%] xl:w-[60%] 4xl:w-[100%] mx-auto'
 					/>
 					<Image
-						src={blur}
+						src='https://ucarecdn.com/ebb06761-5765-4c2c-8e8f-e6c2777cea6d/-/preview/360x247/'
 						width={1200}
 						height={400}
 						quality={100}
