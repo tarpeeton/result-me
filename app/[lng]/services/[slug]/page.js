@@ -11,7 +11,6 @@ const Service = () => {
 
   return (
 	<div className='bg-[#F8F8F8] relative'>
-		<div className='pt-[20px] mdl:pt-[30px]'>
 		<Navigation/>
 		<ServiceItem/>
 		<ItemInfo/>
@@ -21,7 +20,6 @@ const Service = () => {
 		<CaseFilter title={"Наши кейсы"}/>
 		</div>
 		<Blog/>
-		</div>
 	</div>
   );
 };
