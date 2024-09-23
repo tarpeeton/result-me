@@ -1,12 +1,17 @@
 'use client'
-import { GrLinkPrevious } from 'react-icons/gr'
-import { GrLinkNext } from 'react-icons/gr'
+
+// LIB
+import { useRef } from 'react'
+import Image from 'next/image'
+import {Link} from 'next/link'
+
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
-import { useRef } from 'react'
-import Image from 'next/image'
 
+
+
+// IMAGES
 import One from '@/public/images/partners/1.png'
 import Two from '@/public/images/partners/2.png'
 import Three from '@/public/images/partners/3.png'
@@ -21,6 +26,9 @@ import Nine from '@/public/images/partners/9.png'
 import Ten from '@/public/images/partners/10.png'
 import Eleven from '@/public/images/partners/11.png'
 import Tvelwe from '@/public/images/partners/12.png'
+
+import { GrLinkPrevious } from 'react-icons/gr'
+import { GrLinkNext } from 'react-icons/gr'
 
 const SampleNextArrow = ({ onClick }) => (
 	<div className='cursor-pointer text-[20px]' onClick={onClick}>
@@ -132,7 +140,7 @@ const Partners = () => {
 				{/* CARD 2 */}
 					<div className='flex flex-col mdl:flex-row mdl:flex-wrap px-[10px]'>
 						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between'>
-						<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+						<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
 								<div>
 									<Image
 										src={Seven}
@@ -142,8 +150,8 @@ const Partners = () => {
 										alt='partners Logo'
 									/>
 								</div>
-							</div>
-						<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] md mdl:flex mdl:items-center mdl:min-h-[200px] '>
+							</Link>
+						<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] md mdl:flex mdl:items-center mdl:min-h-[200px] '>
 								<div>
 									<Image
 										src={Two}
@@ -153,9 +161,9 @@ const Partners = () => {
 										alt='partners Logo'
 									/>
 								</div>
-							</div>
+							</Link>
 
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
+							<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
 								<div>
 									<Image
 										src={Sixe}
@@ -165,9 +173,9 @@ const Partners = () => {
 										alt='partners Logo'
 									/>
 								</div>
-							</div>
+							</Link>
 							
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+							<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
 								<div>
 									<Image
 										src={Eigth}
@@ -177,13 +185,13 @@ const Partners = () => {
 										alt='partners Logo'
 									/>
 								</div>
-							</div>
+							</Link>
 						</div>
 					</div>
 					{/* CARD 3  */}
 					<div className='flex flex-col mdl:flex-row mdl:flex-wrap px-[10px]'>
 						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between'>
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] mdl:min-h-[200px]   mdl:flex mdl:items-center 	'>
+							<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] mdl:min-h-[200px]   mdl:flex mdl:items-center 	'>
 								<div>
 									<Image
 										src={Nine}
@@ -193,8 +201,8 @@ const Partners = () => {
 										alt='partners Logo'
 									/>
 								</div>
-							</div>
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
+							</Link>
+							<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
 								<div>
 									<Image
 										src={Ten}
@@ -204,8 +212,8 @@ const Partners = () => {
 										alt='partners Logo'
 									/>
 								</div>
-							</div>
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+							</Link>
+							<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
 								<div>
 									<Image
 										src={Eleven}
@@ -215,8 +223,8 @@ const Partners = () => {
 										alt='partners Logo'
 									/>
 								</div>
-							</div>
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+							</Link>
+							<Link href='about' className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
 								<div>
 									<Image
 										src={Tvelwe}
@@ -226,19 +234,12 @@ const Partners = () => {
 										alt='partners Logo'
 									/>
 								</div>
-							</div>
+							</Link>
 							
 						</div>
 					</div>
 				</Slider>
 			</div>
-
-			{/* Eigth
-Nine
-Ten
-Eleven
-Tvelwe */}
-
 			{/* DESKTOP */}
 			<div className='hidden mt-[40px] 2xl:flex flex-row flex-wrap justify-evenly'>
 				<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  2xl:w-[24%] 2xl:min-h-[250px] mdl:flex mdl:items-center '>
