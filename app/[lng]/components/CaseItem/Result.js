@@ -3,23 +3,14 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation'; // For getting the slug from the URL
 
 
-
-
-
-
-
-
-
-
-
 const obtainedResult = [
 	{
 		slug: 'prime-medical-center',
 		link: 'https://pmcenter.uz/',
 		result: [
-			{ item: '+41%', name: 'число обращений в клинику' },
+			{ item: '+41%', name: 'число обращений в клинику / мес' },
 			{ item: '+23%', name: 'посещаемость' },
-			{ item: '+18,200%', name: 'посещений сайта / год' },
+			{ item: '+18,200', name: 'посещений сайта / год' },
 		],
 	},
 	{

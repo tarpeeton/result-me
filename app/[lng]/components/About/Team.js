@@ -1,4 +1,6 @@
-import Image from 'next/image'
+"use client"
+import { useState } from 'react';
+import Image from 'next/image';
 
 import img1 from '@/public/images/members/1.png';
 import img3 from '@/public/images/members/3.png';
@@ -13,151 +15,161 @@ import img12 from '@/public/images/members/12.png';
 import img13 from '@/public/images/members/13.png';
 import img16 from '@/public/images/members/16.png';
 
-
 const teamData = [
-	{
-		id: 1,
-		fullName: 'Абдулбосит',
-		position: 'Project Manager',
-		photo: img1,
-		active: true,
-		orderNum: 1,
-	},
-	{
-		id: 2,
-		fullName: 'Рустам',
-		position: 'Frontend-developer',
-		photo: img11,
-		active: true,
-		orderNum: 2,
-	},
-	{
-		id: 3,
-		fullName: 'Вероника ',
-		position: 'Контент-менеджер',
-		photo: img3,
-		active: true,
-		orderNum: 3,
-	},
-	{
-		id: 4,
-		fullName: 'Фарангиз ',
-		position: 'Переводчик',
-		photo: img4,
-		active: true,
-		orderNum: 4,
-	},
-	{
-		id: 5,
-		fullName: 'Далер',
-		position: 'Дизайнер',
-		photo: img5,
-		active: true,
-		orderNum: 4,
-	},
-	{
-		id: 6,
-		fullName: 'Хуснора',
-		position: 'Мобилограф',
-		photo: img6,
-		active: true,
-		orderNum: 4,
-	},
-	
-	{
-		id: 8,
-		fullName: 'Абдухаким ',
-		position: 'Fullstack Developer',
-		photo: img8,
-		active: true,
-		orderNum: 4,
-	},
-	{
-		id: 9,
-		fullName: 'Давлатбек',
-		position: 'Backend Developer',
-		photo: img9,
-		active: true,
-		orderNum: 4,
-	},
-	{
-		id: 10,
-		fullName: 'Андрей',
-		position: 'Frontend Developer',
-		photo: img16,
-		active: true,
-		orderNum: 4,
-	},
-	{
-		id: 11,
-		fullName: 'Нодир',
-		position: 'Backend Developer',
-		photo: img10,
-		active: true,
-		orderNum: 4,
-	},
-	{
-		id: 12,
-		fullName: 'Сабина',
-		position: 'Backend Developer',
-		photo: img12,
-		active: true,
-		orderNum: 4,
-	},
-	{
-		id: 13,
-		fullName: 'Баходыр',
-		position: 'UX / UI дизайнер',
-		photo: img13,
-		active: true,
-		orderNum: 4,
-	},
-	
-	
-	
-]
+  {
+    id: 1,
+    fullName: 'Абдулбосит',
+    position: 'Project Manager',
+    photo: img1,
+    active: true,
+    orderNum: 1,
+  },
+  {
+    id: 2,
+    fullName: 'Рустам',
+    position: 'Frontend-developer',
+    photo: img11,
+    active: true,
+    orderNum: 2,
+  },
+  {
+    id: 3,
+    fullName: 'Вероника ',
+    position: 'Контент-менеджер',
+    photo: img3,
+    active: true,
+    orderNum: 3,
+  },
+  {
+    id: 4,
+    fullName: 'Фарангиз ',
+    position: 'Переводчик',
+    photo: img4,
+    active: true,
+    orderNum: 4,
+  },
+  {
+    id: 5,
+    fullName: 'Далер',
+    position: 'Дизайнер',
+    photo: img5,
+    active: true,
+    orderNum: 4,
+  },
+  {
+    id: 6,
+    fullName: 'Хуснора',
+    position: 'Мобилограф',
+    photo: img6,
+    active: true,
+    orderNum: 4,
+  },
+  {
+    id: 8,
+    fullName: 'Абдухаким ',
+    position: 'Fullstack Developer',
+    photo: img8,
+    active: true,
+    orderNum: 4,
+  },
+  {
+    id: 9,
+    fullName: 'Давлатбек',
+    position: 'Backend Developer',
+    photo: img9,
+    active: true,
+    orderNum: 4,
+  },
+  {
+    id: 10,
+    fullName: 'Андрей',
+    position: 'Frontend Developer',
+    photo: img16,
+    active: true,
+    orderNum: 4,
+  },
+  {
+    id: 11,
+    fullName: 'Нодир',
+    position: 'Backend Developer',
+    photo: img10,
+    active: true,
+    orderNum: 4,
+  },
+  {
+    id: 12,
+    fullName: 'Сабина',
+    position: 'Backend Developer',
+    photo: img12,
+    active: true,
+    orderNum: 4,
+  },
+  {
+    id: 13,
+    fullName: 'Баходыр',
+    position: 'UX / UI дизайнер',
+    photo: img13,
+    active: true,
+    orderNum: 4,
+  },
+];
 
 const Team = () => {
-	return (
-		<div className=' rounded-[30px] bg-white mdl:rounded-[40px] 3xl:rounded-[100px] mdl:mx-[20px] 3xl:mx-[30px] flex flex-col py-[30px] px-[16px] mdl:py-[50px] mdl:px-[40px] 3xl:p-[70px] mt-[20px] mdl:mt-[25px] 3xl:mt-[30px]'>
-			<div className='w-[90%]'>
-				<h3 className='text-[28px] text-titleDark font-bold mdl:text-[50px] 3xl:text-[50px]'>
-					Наша команда
-				</h3>
-				<p className='text-[15px] text-[#7B7B7B] font-bold mdl:text-[20px] mt-[8px] w-[80%] mdl:w-[90%] 3xl:w-[45%] font-robotoFlex'>
-					Наша команда состоит из опытных специалистов, знающих свое дело
-				</p>
-			</div>
+  const [showAll, setShowAll] = useState(false);
 
-			<div className='flex flex-row flex-wrap justify-between mt-[30px] mdl:mt-[50px]'>
-				{teamData.map(member => (
-					<div
-						key={member.id}
-						className='flex flex-col min-h-[239px] w-[45%] mb-[20px] mdl:mb-[40px] 3xl:w-[24%] '
-					>
-						<div className='rounded-[10px] bg-[#FAFAFA] flex items-center justify-center py-[6px] px-[1px] mdl:py-[30px] mdl:px-[30px] 2xl:p-[40px]'>
-							<Image
-								src={member.photo}
-								width={340}
-								quality={100}
-								height={340}
-								alt={`${member.fullName} Photo`}
-								className='object-cover'
-							/>
-						</div>
-						<div className='mt-[12px] mdl:mt-[25px] flex flex-col'>
-							<h4 className='text-[15px] text-titleDark mdl:text-[25px] font-semibold'>
-								{member.fullName}
-							</h4>
-							<p className='text-[14px] text-[#A6A6A6] mdl:text-[18px] font-robotoFlex'>
-								{member.position}
-							</p>
-						</div>
-					</div>
-				))}
-			</div>
-		</div>
-	)
-}
+  // Show only first 4 members initially, and all when 'showAll' is true
+  const visibleTeam = showAll ? teamData : teamData.slice(0, 4);
 
-export default Team
+  return (
+    <div className='rounded-[30px] bg-white mdl:rounded-[40px] 3xl:rounded-[100px] mdl:mx-[20px] 3xl:mx-[30px] flex flex-col py-[30px] px-[16px] mdl:py-[50px] mdl:px-[40px] 3xl:p-[70px] mt-[20px] mdl:mt-[25px] 3xl:mt-[30px]'>
+      <div className='w-[90%]'>
+        <h3 className='text-[28px] text-titleDark font-bold mdl:text-[50px] 3xl:text-[50px]'>
+          Наша команда
+        </h3>
+        <p className='text-[15px] text-[#7B7B7B] font-bold mdl:text-[20px] mt-[8px] w-[80%] mdl:w-[90%] 3xl:w-[45%] font-robotoFlex'>
+          Наша команда состоит из опытных специалистов, знающих свое дело
+        </p>
+      </div>
+
+      <div className='flex flex-row flex-wrap justify-between mt-[30px] mdl:mt-[50px]'>
+        {visibleTeam.map((member) => (
+          <div
+            key={member.id}
+            className='flex flex-col min-h-[239px] w-[45%] mb-[20px] mdl:mb-[40px] 3xl:w-[24%]'
+          >
+            <div className='rounded-[10px] bg-[#FAFAFA] flex items-center justify-center py-[6px] px-[1px] mdl:py-[30px] mdl:px-[30px] 2xl:p-[40px]'>
+              <Image
+                src={member.photo}
+                width={340}
+                quality={100}
+                height={340}
+                alt={`${member.fullName} Photo`}
+                className='object-cover'
+              />
+            </div>
+            <div className='mt-[12px] mdl:mt-[25px] flex flex-col'>
+              <h4 className='text-[15px] text-titleDark mdl:text-[25px] font-semibold'>
+                {member.fullName}
+              </h4>
+              <p className='text-[14px] text-[#A6A6A6] mdl:text-[18px] font-robotoFlex'>
+                {member.position}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Button to toggle visibility */}
+      <div className='mdl:mt-[20px] text-center'>
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className='bg-violet100 text-white py-2 px-4 rounded-md'
+        >
+          {showAll ? 'Скрыть' : 'Вся команда'}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Team;

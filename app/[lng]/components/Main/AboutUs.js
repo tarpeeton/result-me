@@ -13,7 +13,7 @@ const AboutUs = () => {
 			</div>
 			<div className='mt-[24px] mdl:mt-[20px] 2xl:mt-[40px] mdl:w-[80%]'>
 				<span className='text-[14px] mdl:text-[18px] text-white100 font-medium font-robotoFlex'>
-				Result Agency — это команда профессионалов, которые превращают идеи в результат. Мы специализируемся на комплексных маркетинговых решениях, направленных на рост вашего бизнеса. С Result Agency вы получаете не просто услуги, а партнера, который работает на ваш успех
+				Result Agency предлагает комплексный подход к решению маркетинговых задач. Мы специализируемся на разработке комплексных стратегий, направленных на рост вашего медицинского бизнеса.
 				</span>
 			</div>
 			<div className=' rotate-[15%] overflow-hidden relative h-[160px] mt-[-70px]  mdl:absolute mdl:bottom-[-50px] mdl:right-0 mdl:w-[350px] mdl:h-[300px] 2xl:h-[500px] 2xl:w-[500px] '>

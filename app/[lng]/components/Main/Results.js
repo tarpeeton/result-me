@@ -57,11 +57,11 @@ const Result = () => {
 						<div ref={sectionRef} className='flex justify-center'>
 							{inView ? (
 								<p className='text-[28px] mdl:text-[40px] 4xl:text-[50px] text-center text-black font-bold'>
-									<CountUp start={0} end={2890} duration={2.5} suffix='+' />
+									<CountUp start={0} end={5700} duration={2.5} suffix='+' />
 								</p>
 							) : (
 								<p className='text-[28px] mdl:text-[40px] 4xl:text-[50px] text-center text-black font-bold'>
-									2890+
+									5700+
 								</p>
 							)}
 						</div>
@@ -98,11 +98,11 @@ const Result = () => {
 
 							{inView ? (
 								<div className='w-[99px] border-[4px] border-white100 h-[99px] bg-violet100 rounded-[50px] absolute left-[150px] text-white100 flex items-center justify-center text-[24px] font-semibold 4xl:w-[126px] 4xl:h-[126px] 4xl:rounded-[100px]'>
-									<CountUp start={0} end={2890} duration={2.5} suffix='+' />
+									<CountUp start={0} end={5700} duration={2.5} suffix='+' />
 								</div>
 							) : (
 								<div className='w-[99px] border-[4px] border-white100 h-[99px] bg-violet100 rounded-[50px] absolute left-[150px] text-white100 flex items-center justify-center text-[24px] font-semibold 4xl:w-[126px] 4xl:h-[126px] 4xl:rounded-[100px]'>
-									2890+
+									5700+
 								</div>
 							)}
 						</div>
@@ -114,11 +114,11 @@ const Result = () => {
 					<div>
 						{inView ? (
 							<p className='text-[28px] mdl:text-[40px]  text-center text-black font-bold 4xl:text-[50px]'>
-								<CountUp start={0} end={58700} duration={2.4} suffix='+' />
+								<CountUp start={0} end={140000} duration={2.4} suffix='+' />
 							</p>
 						) : (
 							<p className='text-[28px] mdl:text-[40px]  text-center text-black font-bold 4xl:text-[50px]'>
-								58 700+
+								140,000+
 							</p>
 						)}
 
