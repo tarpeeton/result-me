@@ -210,7 +210,7 @@ const Result = () => {
 					href={filteredResult.link} // Use the link from filtered result
 					className="block text-center text-white bg-[#7B72EB] py-[20px] px-[30px] w-[90%] rounded-[30px] font-bold mt-4 absolute bottom-[20px] mdl:w-[50%] 3xl:w-[50%] 3xl:relative 3xl:mt-[30px]"
 				>
-					Просмотреть результат
+					Перейти
 				</a> : null}
 				
 			</div>
