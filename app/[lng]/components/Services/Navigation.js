@@ -4,9 +4,11 @@ import { gsap } from "gsap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Link from 'next/link';
+import { useParams } from 'next/navigation'
 
 const Navigation = () => {
-  const [activeNav, setActiveNav] = useState("web-development");  // Change to use slugs for activeNav
+  const {slug} = useParams()
+  const [activeNav, setActiveNav] = useState(slug);  // Change to use slugs for activeNav
   const navRefs = useRef([]);  // Array to store refs for `a` elements
   const spanRefs = useRef([]); // Array to store refs for `span` elements
 

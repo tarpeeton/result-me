@@ -4,7 +4,7 @@ import InfoCard from "@/app/[lng]/components/Services/InfoCard";
 import CostCard from "@/app/[lng]/components/Services/CostCard";
 import CaseFilter from "@/app/[lng]/components/CaseFilterSlug/CaseFilter";
 import Blog from "@/app/[lng]/components/Main/Blog";
-
+import Navigation from '../../components/Services/Navigation';
 const Service = () => {
 		
 
@@ -12,6 +12,7 @@ const Service = () => {
   return (
 	<div className='bg-[#F8F8F8] relative'>
 		<div className='pt-[20px] mdl:pt-[30px]'>
+		<Navigation/>
 		<ServiceItem/>
 		<ItemInfo/>
 		<InfoCard/>
