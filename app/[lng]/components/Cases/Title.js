@@ -19,13 +19,13 @@ const CaseTitle = () => {
 			<div className='flex flex-col 3xl:w-[75%]'>
 				<div>
 					<h1 className='text-[28px] text-titleDark font-bold mdl:text-[40px] 3xl:text-[50px]'>
-						Примеры наших успешных проектов
+						Примеры наших  проектов
 					</h1>
 				</div>
 				<div className='mt-[15px]'>
 					<p className='text-[#454545] text-[14px] mdl:text-[18px] 3xl:text-[20px]'>
 						Узнайте, как мы помогаем нашим клиентам достигать целей с помощью
-						качественных решений. Эти кейсы демонстрируют наши возможности и
+						качественных решений.Кейсы демонстрируют наши возможности и
 						опыт в различных областях
 					</p>
 				</div>

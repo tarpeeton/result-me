@@ -8,10 +8,12 @@ const Soon = () => {
     {
       img: 'https://ucarecdn.com/01959c30-254f-4c22-921e-9bf13b9f45d7/-/preview/1000x981/',
       isSoon: false,
+      description: 'Поиск врачей через единую платформу'
     },
     {
       img: 'https://ucarecdn.com/e133f08c-8257-4164-9243-c226521c4f6e/-/preview/1000x981/',
       isSoon: false,
+      description: 'Агрегатор медицинского оборудования'
     }
   ];
 
@@ -55,10 +57,10 @@ const Soon = () => {
     <div className='mt-[80px] flex flex-col gap-[20px]'>
       <div className='flex flex-col p-[24px] w-full h-full'>
         <p className='text-[28px] mdl:text-[50px] 3xl:text-[60px] font-bold'>
-          Творчество без границ
+        Наш продукт
         </p>
         <p className='bg-violet100 text-white100 text-[23px] mdl:text-[40px] 3xl:text-[50px] font-bold p-[10px] w-[243px] mdl:w-[426px] 3xl:w-[535px] rounded-[170px] text-center rotate-[-5deg]'>
-          наши проекты
+        собственные проекты
         </p>
       </div>
       <Slider {...settings}>
@@ -76,7 +78,7 @@ const Soon = () => {
                 alt='soon Image'
                 height={300}
                 quality={100}
-                className={`'object-contain rounded-[25px] w-full h-full' ${d.isSoon ? '' : 'bg-black  blur-[5px] '}`}
+                className={`'object-contain rounded-[25px] w-full h-full' ${d.isSoon ? '' : 'bg-black  blur-[2px] '}`}
               />
 				</div>
               
@@ -85,6 +87,10 @@ const Soon = () => {
                   <button className="bg-white p-[10px] border-t border-[#F0F0F0] rounded-[100px] text-[18px] shadow-lg shadow-[#000] w-full">Скоро</button>
                 </div>
               )}
+
+              <div className='3xl:mt-[20px] mt-[20px] text-center'>
+                <p className='text-violet100 3xl:text-[21px] font-bold'>{d.description}</p>
+              </div>
             </div>
           </div>
         ))}
