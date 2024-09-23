@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import { GrLinkPrevious } from 'react-icons/gr'
 import { GrLinkNext } from 'react-icons/gr'
 
-import revBG from '@/public/images/reviews/revBG.png'
+
 import { useRef, useState } from 'react'
 
 const SampleNextArrow = ({ onClick }) => (
@@ -89,7 +89,7 @@ const Reviews = () => {
 	return (
 		<div
 			className='relative w-full mt-[20px] mdl:mt-[30px] rounded-[30px] bg-cover bg-no-repeat px-5 py-8 bg-[#161616] bg-opacity-[90%] mdl:px-[40px] mdl:py-[50px]'
-			style={{ backgroundImage: `url(${revBG.src})` }}
+			style={{ backgroundImage: `url(https://ucarecdn.com/d1dc5f20-760a-44db-a051-fe0050d6c706/-/preview/999x497/)` }}
 		>
 			{/* Top Decorative Image */}
 			<div className=' absolute top-0 right-0 rounded-[30px]'>
