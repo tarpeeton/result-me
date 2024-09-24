@@ -34,7 +34,7 @@ const Header = ({ lng }) => {
   };
 
   // Check if it's the main page by checking if the pathname is exactly `/${lng}`
-  const isMainPage = pathname === `/${lng}`;
+  const isMainPage = pathname === `/${lng}` || pathname === `/${lng}/steps-working`;
 
   // Current language code
   const currentLanguage = lng;
