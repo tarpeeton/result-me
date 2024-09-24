@@ -12,7 +12,7 @@ import Soon from './Soon'
 
 const Main = () => {
 	return (
-		<div>
+		<div className='relative'>
 			<Banner />
 
 			<div className='flex flex-col w-full px-[16px] mdl:px-[20px] 2xl:px-[30px]'>

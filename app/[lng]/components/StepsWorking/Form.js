@@ -2,7 +2,7 @@
 
 const Form = () => {
   return (
-	<div>
+	<div className='relative'>
 		Form
 	</div>
   );

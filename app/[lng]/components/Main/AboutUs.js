@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const AboutUs = () => {
 	return (
-		<Link href='/about' className='rounded-[30px] bg-violet100 mdl:rounded-[60px] 2xl:rounded-[100px] px-[20px] py-[30px] w-full mt-[20px] mdl:mt-[25px] 2xl:mt-[30px] mdl:px-[40px] 2xl:px-[70px] mdl:py-[50px] 2xl:py-[80px]  relative mdl:overflow-hidden'>
+		<Link href='/about' className='rounded-[30px] bg-violet100 mdl:rounded-[60px] 2xl:rounded-[100px] px-[20px] py-[30px] w-full mt-[20px] mdl:mt-[25px] 2xl:mt-[30px] mdl:px-[40px] 2xl:px-[70px] mdl:py-[50px] 2xl:py-[80px]  relative mdl:overflow-hidden '>
 
 			<div className='mdl:w-[70%]'>
 				<p className='text-[28px] text-white100 font-bold mdl:text-[50px]'>Result Agency — ваш путь к успеху</p>
