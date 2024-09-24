@@ -10,7 +10,7 @@ const Main = () => {
 			<div className='bg-white100 relative z-[99]'>
 				<Steps />
 				<Form />
-				<div className='pb-[100px] mdl:pb-[120px] 2xl:pb-[160px] px-[16px] mdl:px-[20px] 2xl:px-[30px]'>
+				<div className='pb-[100px] mdl:pb-[120px] 2xl:pb-[160px] px-[16px] mdl:px-[20px] 2xl:px-[30px] mt-[100px] mdl:mt-[150px]'>
 					<Cases />
 				</div>
 			</div>

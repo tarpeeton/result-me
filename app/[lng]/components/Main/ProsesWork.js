@@ -116,7 +116,7 @@ const ProsesWork = () => {
 					</div>
 					<div className='py-[20px] px-[30px] rounded-[100px] bg-white text-center mt-[51px]'>
 						<Link
-							href='steps-working'
+							href='/steps-working'
 							className='text-[14px] font-bold text-violet100'
 						>
 							Этапы работы
@@ -136,11 +136,11 @@ const ProsesWork = () => {
 						</p>
 						<div className='w-full flex items-center justify-end'>
 							<Link
-								href='/f'
+								href='/steps-working'
 								className='mt-[12px] text-violet100 text-[14px] text-end w-full'
 							>
 								{' '}
-								Сылка{' '}
+								Подробнее{' '}
 							</Link>
 						</div>
 					</div>
@@ -158,11 +158,11 @@ const ProsesWork = () => {
 						</p>
 						<div className='w-full flex items-center justify-end'>
 							<Link
-								href='f'
+								href='/steps-working'
 								className='mt-[12px] text-violet100 text-[14px] text-end w-full'
 							>
 								{' '}
-								Сылка{' '}
+								Подробнее{' '}
 							</Link>
 						</div>
 					</div>
@@ -180,11 +180,11 @@ const ProsesWork = () => {
 						</p>
 						<div className='w-full flex items-center justify-end'>
 							<Link
-								href='sdf'
+								href='/steps-working'
 								className='mt-[12px] text-violet100 text-[14px] text-end w-full'
 							>
 								{' '}
-								Сылка{' '}
+								Подробнее{' '}
 							</Link>
 						</div>
 					</div>
