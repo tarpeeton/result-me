@@ -166,7 +166,7 @@ const Steps = () => {
 								{step.subtitle}
 							</p>
 						</div>
-						<div className='mt-[20px] rounded-[20px] bg-violet100 bg-opacity-10 py-[25px] px-[20px] flex flex-col gap-[10px]'>
+						<div className={`mt-[20px] rounded-[20px] py-[25px] px-[20px] flex flex-col gap-[10px] ${step.id === 7 ?`bg-white bg-opacity-15` : 'bg-violet100 bg-opacity-10 '}`}>
 							<p
 								className={`text-[20px] font-semibold  font-montserrat ${
 									step.id === 7 ? 'text-white' : 'text-violet100'
