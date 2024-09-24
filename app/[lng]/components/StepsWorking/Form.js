@@ -45,12 +45,12 @@ const Form = () => {
 
 	return (
 		<div
-			className='relative mx-[16px] mt-[20px] mdl:mt-[30px] rounded-[30px] bg-cover bg-no-repeat px-5 py-8 bg-[#161616] bg-opacity-[90%] 3xl:px-[70px] 3xl:flex 3xl:flex-row 3xl:py-[80px] 3xl:justify-between'
+			className='relative mx-[16px] mt-[20px] mdl:mt-[30px] rounded-[30px] bg-cover bg-no-repeat px-5 py-8 bg-[#161616] bg-opacity-[90%] 3xl:px-[70px] 3xl:flex 3xl:flex-row 3xl:py-[80px] 3xl:justify-between 2xl:rounded-[100px] overflow-hidden'
 			style={{
 				backgroundImage: `url(https://ucarecdn.com/d1dc5f20-760a-44db-a051-fe0050d6c706/-/preview/999x497/)`,
 			}}
 		>
-			<div className='absolute top-0 right-0 rounded-[30px] z-0'>
+			<div className='absolute top-0 right-0 rounded-[30px] 2xl:rounded-[100px] z-0'>
 				<Image
 					width={400}
 					height={400}
@@ -59,7 +59,7 @@ const Form = () => {
 					className='rounded-[30px] opacity-[40%]'
 				/>
 			</div>
-			
+
 			<p className='text-[28px] text-white font-bold relative z-[99999] mb-6 mdl:text-[50px] mdl:mb-[40px] 3xl:w-[40%]'>
 				Готовы начать? Оставьте заявку
 			</p>

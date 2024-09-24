@@ -155,7 +155,7 @@ const Cases = ({title}) => {
 
       <Link
         href='/cases'
-        className='mt-[40px] mdx:mt-[60px] w-[175px] h-[50px] px-[30px] py-[20px] mx-auto rounded-[100px] bg-violet100 flex items-center justify-center xl:mt-[60px] 3xl:mt-[100px] 4xl:w-[300px] 4xl:h-[62px] 4xl:mt-[60px]'
+        className='mt-[40px] mdx:mt-[60px] w-[175px] h-[50px] px-[30px] py-[20px] mx-auto rounded-[100px] bg-violet100 flex items-center justify-center xl:mt-[60px] 3xl:mt-[100px] 4xl:w-[300px] 4xl:h-[62px] 4xl:mt-[60px] 2xl:w-[250px]'
       >
         <p className='text-white100 font-bold text-[14px] 4xl:text-[18px]'>
           Все кейсы

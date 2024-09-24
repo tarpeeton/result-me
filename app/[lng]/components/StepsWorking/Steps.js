@@ -5,7 +5,7 @@ const data = [
 		id: 1,
 		number: '01',
 		title: 'Консультация',
-		img: 'https://ucarecdn.com/68d3b9df-ca7d-4fa7-bcc7-280b2ba43579/-/preview/12x14/',
+		img: 'https://ucarecdn.com/6c4de8b4-706c-4c1d-a7bd-bc4b38fb4605/-/preview/20x20/',
 		imgtitle: 'С участием заказчика',
 		subtitle:
 			'Консультация позволяет лучше понять задачи и подобрать оптимальные услуги',
@@ -16,7 +16,7 @@ const data = [
 		id: 2,
 		number: '02',
 		title: 'Заключение договора',
-		img: 'https://ucarecdn.com/68d3b9df-ca7d-4fa7-bcc7-280b2ba43579/-/preview/12x14/',
+		img: 'https://ucarecdn.com/6c4de8b4-706c-4c1d-a7bd-bc4b38fb4605/-/preview/20x20/',
 		imgtitle: 'С участием заказчика',
 		subtitle:
 			'Фиксируются условия работы, сроки выполнения, объем услуг и стоимость. Это гарантирует прозрачность и защиту интересов обеих сторон',
@@ -27,7 +27,7 @@ const data = [
 		id: 3,
 		number: '03',
 		title: 'Сбор информации',
-		img: 'https://ucarecdn.com/68d3b9df-ca7d-4fa7-bcc7-280b2ba43579/-/preview/12x14/',
+		img: 'https://ucarecdn.com/6c4de8b4-706c-4c1d-a7bd-bc4b38fb4605/-/preview/20x20/',
 		imgtitle: 'С участием заказчика',
 		subtitle:
 			'Собирается вся необходимая информация: данные о бизнесе, целевой аудитории, текущие инструменты продвижения, показатели эффективности, конкуренты',
@@ -56,7 +56,7 @@ const data = [
 		id: 6,
 		number: '06',
 		title: 'Согласование',
-		img: 'https://ucarecdn.com/68d3b9df-ca7d-4fa7-bcc7-280b2ba43579/-/preview/12x14/',
+		img: 'https://ucarecdn.com/6c4de8b4-706c-4c1d-a7bd-bc4b38fb4605/-/preview/20x20/',
 		imgtitle: 'С участием заказчика',
 		subtitle:
 			'Подготовленная стратегия обсуждается с заказчиком, при необходимости вносятся коррективы, после чего утверждается план работы',
@@ -133,7 +133,7 @@ const Steps = () => {
 							</p>
 						</div>
 						<div className='flex flex-col mt-[25px] mdl:mt-[40px]'>
-							<div className='flex flex-row gap-[8px]'>
+							<div className='flex flex-row gap-[8px] mdl:gap-[12px]'>
 								{step.img && (
 									<Image
 										src={step.img}
