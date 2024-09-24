@@ -45,25 +45,30 @@ const ProsesWork = () => {
 			<div className='hidden slg:block w-full cursor-pointer'>
 				<Slider {...settings} className='w-full'>
 					{/* CARD 1 */}
-					<div className='w-full mdl:max-w-full  4xl:max-w-[50%] rounded-[30px] bg-violet100 p-[30px] pb-[26px] relative flex flex-col justify-between mdl:pl-[40px] mdl:rounded-[60px] mdl:pt-[50px]  2xl:max-w-[98%] 3xl:min-w-[98%] 2xl:min-h-[450px]  4xl:min-h-[600px]'>
+					<Link href='/steps-working' className='w-full mdl:max-w-full  4xl:max-w-[50%] rounded-[30px] bg-violet100 p-[30px] pb-[26px] relative flex flex-col justify-between mdl:pl-[40px] mdl:rounded-[60px] mdl:pt-[50px]  2xl:max-w-[98%] 3xl:min-w-[98%] 2xl:min-h-[450px]  4xl:min-h-[600px]'>
+						<div >
 						<div className='mdl:w-[80%] 4xl:w-[100%]'>
 							<p className='text-[28px] mdl:text-[30px] text-white100 font-bold 4xl:text-[50px]'>
 								Процесс работы максимально понятный и открытый
 							</p>
 						</div>
 						<div className='relative w-full  mt-[200px] 3xl:absolute 3xl:bottom-[25px] 3xl:right-[25px]'>
-							<div className='py-[20px] absolute  bottom-[20px] right-[20px] px-[30px] rounded-[100px] bg-white text-center  mdl:w-[300px] 4xl:w-[370px]'>
-								<Link
-									href='steps-working'
+							<div  className='py-[20px] absolute  bottom-[20px] right-[20px] px-[30px] rounded-[100px] bg-white text-center  mdl:w-[300px] 4xl:w-[370px]'>
+								<p
+									
 									className='text-[14px] font-bold text-violet100 mdl:text-[18px] 4xl:text-[20px]'
 								>
 									Этапы работы
-								</Link>
+								</p>
 							</div>
 						</div>
-					</div>
+						</div>
+						
+						
+					</Link>
 					{/* CARD 2 */}
-					<div className='w-full mdl:min-w-full  4xl:max-w-[50%] rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between  xl:min-w-[90%]  2xl:max-w-[98%] 3xl:min-w-[98%] 2xl:min-h-[450px] 4xl:min-h-[600px]'>
+					<Link href='/steps-working' className='w-full mdl:min-w-full  4xl:max-w-[50%] rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between  xl:min-w-[90%]  2xl:max-w-[98%] 3xl:min-w-[98%] 2xl:min-h-[450px] 4xl:min-h-[600px]'>
+						<div  className='w-full h-full'>
 						<div className='w-[60%] mdl:w-[70%]'>
 							<p className='text-[23px] mdl:text-[35px] text-titleDark font-bold 4xl:text-[50px]'>
 								РАБОТАЕМ ПО ДОГОВОРУ
@@ -75,9 +80,11 @@ const ProsesWork = () => {
 								уверенности в надежности.
 							</p>
 						</div>
-					</div>
+						</div>
+						
+					</Link>
 					{/* CARD 3 */}
-					<div className='w-full 2xl:max-w-[98%]  mdl:min-w-full 2xl:min-h-[450px]  rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between xl:min-w-[90%]  2xl:min-w-[98%] 4xl:min-h-[600px]'>
+					<Link href='/steps-working' className='w-full 2xl:max-w-[98%]  mdl:min-w-full 2xl:min-h-[450px]  rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between xl:min-w-[90%]  2xl:min-w-[98%] 4xl:min-h-[600px]'>
 						<div className='w-[60%]'>
 							<p className='text-[23px] mdl:text-[35px] text-titleDark font-bold 4xl:text-[50px]'>
 								УТВЕРЖДАЕМ ПЛАНЫ
@@ -89,8 +96,8 @@ const ProsesWork = () => {
 								ресурсами.
 							</p>
 						</div>
-					</div>
-					<div className='w-full 2xl:max-w-[98%]  mdl:min-w-full 2xl:min-h-[450px]  rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between xl:min-w-[90%]  2xl:min-w-[98%] 4xl:min-h-[600px]'>
+					</Link>
+					<Link href='/steps-working' className='w-full 2xl:max-w-[98%]  mdl:min-w-full 2xl:min-h-[450px]  rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between xl:min-w-[90%]  2xl:min-w-[98%] 4xl:min-h-[600px]'>
 						<div className='w-[60%]'>
 							<p className='text-[23px] mdl:text-[35px] text-titleDark font-bold 4xl:text-[50px]'>
 							ПРЕДОСТАВЛЯЕМ ОТЧЕТЫ
@@ -102,28 +109,27 @@ const ProsesWork = () => {
 								выполненным задачам.
 							</p>
 						</div>
-					</div>
+					</Link>
 				</Slider>
 			</div>
 			{/* ============================================================================= */}
 			{/* Column layout for screens smaller than 750px */}
 			<div className='sm:flex sm:flex-col sm:gap-[20px] slg:hidden '>
-				<div className='w-full rounded-[30px] bg-violet100 p-[30px] pb-[26px] flex flex-col justify-between '>
+				<Link href='/steps-working' className='w-full rounded-[30px] bg-violet100 p-[30px] pb-[26px] flex flex-col justify-between '>
 					<div>
 						<p className='text-[28px] text-white100 font-bold'>
 							Процесс работы максимально чистый и прозрачный
 						</p>
 					</div>
 					<div className='py-[20px] px-[30px] rounded-[100px] bg-white text-center mt-[51px]'>
-						<Link
-							href='/steps-working'
+						<p
 							className='text-[14px] font-bold text-violet100'
 						>
 							Этапы работы
-						</Link>
+						</p>
 					</div>
-				</div>
-				<div className='w-full rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between mdl:mt-[20px]'>
+				</Link>
+				<Link href='/steps-working' className='w-full rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between mdl:mt-[20px]'>
 					<div className='w-[60%]'>
 						<p className='text-[23px] text-titleDark font-bold'>
 							РАБОТАЕМ ПО ДОГОВОРУ
@@ -135,17 +141,17 @@ const ProsesWork = () => {
 							в надежности.
 						</p>
 						<div className='w-full flex items-center justify-end'>
-							<Link
-								href='/steps-working'
+							<div
+								
 								className='mt-[12px] text-violet100 text-[14px] text-end w-full'
 							>
 								{' '}
 								Подробнее{' '}
-							</Link>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className='w-full rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between'>
+				</Link>
+				<Link href='/steps-working' className='w-full rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between'>
 					<div className='w-[60%]'>
 						<p className='text-[23px] text-titleDark font-bold'>
 							УТВЕРЖДАЕМ ПЛАНЫ
@@ -157,17 +163,17 @@ const ProsesWork = () => {
 							ресурсами.
 						</p>
 						<div className='w-full flex items-center justify-end'>
-							<Link
-								href='/steps-working'
+							<div
+								
 								className='mt-[12px] text-violet100 text-[14px] text-end w-full'
 							>
 								{' '}
 								Подробнее{' '}
-							</Link>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className='w-full rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between'>
+				</Link>
+				<Link href='/steps-working' className='w-full rounded-[30px] bg-[#F4F3FF] p-[30px] pb-[26px] flex flex-col justify-between'>
 					<div className='w-[60%]'>
 						<p className='text-[23px] text-titleDark font-bold'>
 						ПРЕДОСТАВЛЯЕМ ОТЧЕТЫ
@@ -179,16 +185,16 @@ const ProsesWork = () => {
 							задачам.
 						</p>
 						<div className='w-full flex items-center justify-end'>
-							<Link
-								href='/steps-working'
+							<div
+							
 								className='mt-[12px] text-violet100 text-[14px] text-end w-full'
 							>
 								{' '}
 								Подробнее{' '}
-							</Link>
+							</div>
 						</div>
 					</div>
-				</div>
+				</Link>
 			</div>
 		</div>
 	)
