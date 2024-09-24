@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation'; // For getting the slug from the URL
-
+import CaseResultModalSocials from '../Modal/CaseResultModal';
 
 const obtainedResult = [
 	{
@@ -178,6 +178,9 @@ const obtainedResult = [
 const Result = () => {
 	const { slug } = useParams(); // Get slug from the URL
 	const [filteredResult, setFilteredResult] = useState({ result: [], link: '' });
+	const [modalLinks , setModalLinks] = useState(false)
+
+	const caseResultModalOpen = () => setModalLinks(!modalLinks)
 
 	useEffect(() => {
 		// Find the result based on the slug
@@ -197,15 +200,18 @@ const Result = () => {
 				</p>
 
 				{/* Кнопка */}
-				{filteredResult.link ? <a
-					href={filteredResult.link} // Use the link from filtered result
+				{filteredResult.link ? <button
+				onClick={caseResultModalOpen}
+					 // Use the link from filtered result
 					className="block text-center text-white bg-[#7B72EB] py-[20px] px-[30px] w-[90%] rounded-[30px] font-bold mt-4 absolute bottom-[20px] mdl:w-[50%] 3xl:w-[50%] 3xl:relative 3xl:mt-[30px]"
 				>
 					Перейти
-				</a> : null}
+				</button> : null}
 				
 			</div>
 
+<CaseResultModalSocials isOpen={modalLinks}
+onClose={caseResultModalOpen}/>
 			{/* Правая часть: результаты */}
 			<div className="flex flex-col 3xl:flex 3xl:w-[50%] 3xl:justify-between mb-[80px] mdl:flex-row mdl:justify-between mdl:flex-wrap mdl:gap-[20px]">
 				{filteredResult?.result.map((item, index) => (
