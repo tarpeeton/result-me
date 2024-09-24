@@ -97,7 +97,8 @@ const data = [
 		subtitle:
 			'Предоставляется отчет о проделанной работе, затраченных средств на рекламные кампании, достигнутых результатов и планах на следующий месяц. Отчет включает рекомендации для дальнейшего улучшения и развития проекта',
 		sel: 'Цель',
-		selTitle: 'Отчитаться о потраченных средствах на рекламу и выполненных задачах',
+		selTitle:
+			'Отчитаться о потраченных средствах на рекламу и выполненных задачах',
 	},
 	{
 		id: 11,
@@ -115,28 +116,73 @@ const Steps = () => {
 		<div className='relative'>
 			<div className='flex flex-col'>
 				{/* CRAD */}
-				{data.map((step) => (
-					<div className={`flex flex-col  border-b border-[#F0F0F0]  py-[40px] px-[16px] ${step.id === 7 ? 'bg-violet100' : 'bg-white100'}`} key={step.id}>
-					<div className='flex items-center rounded-[10px] border border-[#F0F0F0] p-[10px] text-center w-[50px] justify-center'>
-						<p className={` text-[23px] font-medium ${step.id === 7 ? 'text-white' : 'text-violet100'}`}>{step.number}</p>
-					</div>
-					<div className='flex flex-col mt-[25px]'>
-						<div className='flex flex-row gap-[8px]'>
-							{step.img && <Image src={step.img} width={16} height={16} quality={100}  alt={step.imgtitle} className='object-contain' />}
-							
+				{data.map(step => (
+					<div
+					className={`flex flex-col py-[40px] px-[16px] ${
+						step.id === 7 ? 'bg-violet100' : 'bg-white100'
+					} ${step.id <= 10 ? 'border-b border-[#F0F0F0]' : ''}`} // Apply border-b conditionally
+					key={step.id}
+				>
+						<div className='flex items-center rounded-[10px] border border-[#F0F0F0] p-[10px] text-center w-[50px] justify-center'>
+							<p
+								className={` text-[23px] font-medium ${
+									step.id === 7 ? 'text-white' : 'text-violet100'
+								}`}
+							>
+								{step.number}
+							</p>
+						</div>
+						<div className='flex flex-col mt-[25px]'>
+							<div className='flex flex-row gap-[8px]'>
+								{step.img && (
+									<Image
+										src={step.img}
+										width={16}
+										height={16}
+										quality={100}
+										alt={step.imgtitle}
+										className='object-contain'
+									/>
+								)}
 
-							<p className='text-violet100 text-[15px] font-semibold font-montserrat'>{step.imgtitle}</p>
+								<p className='text-violet100 text-[15px] font-semibold font-montserrat'>
+									{step.imgtitle}
+								</p>
+							</div>
+						</div>
+						<div className='mt-[10px] flex flex-col gap-[10px]'>
+							<p
+								className={` font-bold text-[23px] ${
+									step.id === 7 ? 'text-white100' : 'text-titleDark'
+								}`}
+							>
+								{step.title}
+							</p>
+							<p
+								className={` ${
+									step.id === 7 ? 'text-white100' : 'text-titleDark'
+								} tex-[15px] font-medium`}
+							>
+								{step.subtitle}
+							</p>
+						</div>
+						<div className='mt-[20px] rounded-[20px] bg-violet100 bg-opacity-10 py-[25px] px-[20px] flex flex-col gap-[10px]'>
+							<p
+								className={`text-[20px] font-semibold  font-montserrat ${
+									step.id === 7 ? 'text-white' : 'text-violet100'
+								}`}
+							>
+								{step.sel}
+							</p>
+							<p
+								className={`text-[15px]  font-medium font-montserrat leading-[19px] ${
+									step.id === 7 ? 'text-white' : 'text-violet100'
+								}`}
+							>
+								{step.selTitle}
+							</p>
 						</div>
 					</div>
-					<div className='mt-[10px] flex flex-col gap-[10px]'>
-						<p className={` font-bold text-[23px] ${step.id === 7 ? 'text-white100' : 'text-titleDark'}`}>{step.title}</p>
-						<p className={` ${step.id=== 7 ? 'text-white100' : 'text-titleDark'} tex-[15px] font-medium`}>{step.subtitle}</p>
-					</div>
-					<div className='mt-[20px] rounded-[20px] bg-violet100 bg-opacity-10 py-[25px] px-[20px] flex flex-col gap-[10px]'>
-						<p className={`text-[20px] font-semibold  font-montserrat ${step.id === 7 ? 'text-white' : 'text-violet100'}`}>{step.sel}</p>
-						<p className={`text-[15px]  font-medium font-montserrat leading-[19px] ${step.id===7 ? 'text-white' : 'text-violet100'}`}>{step.selTitle}</p>
-					</div>
-				</div>
 				))}
 			</div>
 		</div>
