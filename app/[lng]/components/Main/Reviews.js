@@ -123,7 +123,7 @@ const Reviews = () => {
 						пациентов.
 					</p>
 				</div>
-				<div className='rounded-[30px] px-[20px] py-[25px] bg-[#161616]  bg-opacity-[50%] 2xl:max-w-[90%] text-white  min-h-[400px] border border-[#5A5A5A]'>
+				{/* <div className='rounded-[30px] px-[20px] py-[25px] bg-[#161616]  bg-opacity-[50%] 2xl:max-w-[90%] text-white  min-h-[400px] border border-[#5A5A5A]'>
 					<h3 className='text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]'>
 						Бахтиер Наджиюллаевич
 					</h3>
@@ -135,6 +135,50 @@ const Reviews = () => {
 						внимание все пожелания и замечания клиента. При необходимости
 						предлагает свои варианты работы. Никаких нареканий, одна
 						благодарность! Спасибо за помощь!
+					</p>
+				</div> */}
+				<div className='rounded-[30px] px-[20px] py-[25px] bg-[#161616]  bg-opacity-[50%] 2xl:max-w-[90%] text-white  min-h-[400px] border border-[#5A5A5A]'>
+					<h3 className='text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]'>
+					Нигора Абдумуталовна
+					</h3>
+					<p className='text-[14px] opacity-75 mb-[20px] text-[#7B7B7B] font-robotoFlex'>
+					Исполнительный директор Prime Medical Center
+					</p>
+					<p className='text-[15px] leading-[18px] mdl:text-[20px] mdl:leading-[28px] font-robotoFlex '>
+					Работа с агентством превзошла все ожидания. Наши социальные сети стали намного активнее, и реклама начала приносить реальные результаты.
+					</p>
+				</div>
+				<div className='rounded-[30px] px-[20px] py-[25px] bg-[#161616]  bg-opacity-[50%] 2xl:max-w-[90%] text-white  min-h-[400px] border border-[#5A5A5A]'>
+					<h3 className='text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]'>
+					Алишер Бахромович
+					</h3>
+					<p className='text-[14px] opacity-75 mb-[20px] text-[#7B7B7B] font-robotoFlex'>
+					ЛОР-хирург
+					</p>
+					<p className='text-[15px] leading-[18px] mdl:text-[20px] mdl:leading-[28px] font-robotoFlex '>
+					Благодарю за качественный SEO-сервис. Сайт стал заметно лучше виден в поисковиках, и количество пациентов выросло.
+					</p>
+				</div>
+				<div className='rounded-[30px] px-[20px] py-[25px] bg-[#161616]  bg-opacity-[50%] 2xl:max-w-[90%] text-white  min-h-[400px] border border-[#5A5A5A]'>
+					<h3 className='text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]'>
+					Зокир Атхамович
+					</h3>
+					<p className='text-[14px] opacity-75 mb-[20px] text-[#7B7B7B] font-robotoFlex'>
+					Владелец стоматологии Smile Design
+					</p>
+					<p className='text-[15px] leading-[18px] mdl:text-[20px] mdl:leading-[28px] font-robotoFlex '>
+					Профессиональный подход к созданию бренда и сайта. Клиенты теперь легко находят нас онлайн, и им нравится наш новый имидж.
+					</p>
+				</div>
+				<div className='rounded-[30px] px-[20px] py-[25px] bg-[#161616]  bg-opacity-[50%] 2xl:max-w-[90%] text-white  min-h-[400px] border border-[#5A5A5A]'>
+					<h3 className='text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]'>
+					Санджар Акбарович
+					</h3>
+					<p className='text-[14px] opacity-75 mb-[20px] text-[#7B7B7B] font-robotoFlex'>
+					Врач-психотерапевт
+					</p>
+					<p className='text-[15px] leading-[18px] mdl:text-[20px] mdl:leading-[28px] font-robotoFlex '>
+					Telegram-боты, разработанные для нас, значительно упростили взаимодействие с клиентами. Теперь всё работает быстро и удобно.
 					</p>
 				</div>
 				{/* Add more review slides here */}
