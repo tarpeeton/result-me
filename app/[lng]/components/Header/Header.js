@@ -14,7 +14,8 @@ import CustomSelect from "./CustomSelect";
 import { usePathname } from "next/navigation";
 import ServiceModal from "../Modal/SeriviceModal";
 import { GB, RU, UZ } from "country-flag-icons/react/3x2";
-
+import { BsFillTelephoneOutboundFill } from "react-icons/bs";
+import { FaTelegram } from "react-icons/fa6";
 const Header = ({ lng }) => {
   const { t } = useCustomTranslation(lng, "header");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -144,14 +145,16 @@ const Header = ({ lng }) => {
             <GrLinkNext className="text-titleDark" />
           </a>
 
-          <Link
-            href='tel:+998905092562'   
+          <div
             className="font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0] z-[999]"
           >
-            <p className="font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-violet100">
-            +998 (90) 509-25-62
-            </p>
-          </Link>
+            <Link href='tel:+998905092562' className="font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-violet100 flex flex-row">
+            Позвонить <BsFillTelephoneOutboundFill className='ml-[10px]'/>
+            </Link>
+            <Link href='https://t.me/Result_man' className="font-semibold text-[20px] leading-[23px] mdl:text-[25px]  flex flex-row text-[#24A1DE] items-center">
+            Написать <FaTelegram  className='ml-[10px]'/>
+            </Link>
+          </div>
         </div>
       )}
       <a href="/" className='h-[45px]  slg:h-[55px]'>
