@@ -148,10 +148,10 @@ const Header = ({ lng }) => {
           <div
             className="font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0] z-[999]"
           >
-            <Link href='tel:+998905092562' className="font-semibold text-[14px] leading-[23px] mdl:text-[25px] text-white100 bg-violet100 flex flex-row rounded-full py-[15px] px-[20px] items-center justify-center">
+            <Link href='tel:+998905092562' className="font-semibold text-[14px] leading-[23px] mdl:text-[25px] text-white100 bg-violet100 flex flex-row rounded-full py-[15px] px-[20px] items-center justify-center w-[45%]">
             Позвонить <BsFillTelephoneOutboundFill className='ml-[10px]'/>
             </Link>
-            <Link href='https://t.me/Result_man' className="font-semibold text-[14px] leading-[23px] mdl:text-[25px] text-white100 bg-violet100 flex flex-row rounded-full py-[15px] px-[20px] items-center justify-center">
+            <Link href='https://t.me/Result_man' className="font-semibold text-[14px] leading-[23px] mdl:text-[25px] text-white100 bg-violet100 flex flex-row rounded-full py-[15px] px-[20px] items-center justify-center w-[45%]">
             Написать <FaTelegramPlane  className='ml-[10px]'/>
             </Link>
           
