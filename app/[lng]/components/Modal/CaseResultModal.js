@@ -7,7 +7,7 @@ import { IoClose } from 'react-icons/io5'
 import { Dialog, DialogTitle, DialogContent } from '@mui/material'
 import { FiGlobe } from 'react-icons/fi'
 
-const CaseResultModalSocials = ({ isOpen, onClose }) => {
+const CaseResultModalSocials = ({ isOpen, onClose, link }) => {
 	return (
 		<>
 			{/* Main Form Modal */}
@@ -50,24 +50,33 @@ const CaseResultModalSocials = ({ isOpen, onClose }) => {
 					className='z-[9999] p-[24px] pb-[25px] mdl:p-[25px]'
 				>
 					<div className='flex flex-col gap-[12px] mdl:gap-[15px]'>
-						<div className='flex flex-row p-[20px] items-center border border-[#F0F0F0] rounded-[15px] gap-[12px] text-violet100 mdl:rounded-[20px]'>
-							<FiGlobe className='text-[20px] mdl:text-[25px]' />
-							<Link href='/instagram' className='text-[18px] mdl:text-[20px]'>
-								Сайт
+						{link.web && (
+							<Link
+								href={link.web}
+								className='flex flex-row p-[20px] items-center border border-[#F0F0F0] rounded-[15px] gap-[12px] text-violet100 mdl:rounded-[20px]'
+							>
+								<FiGlobe className='text-[20px] mdl:text-[25px]' />
+								<p className='text-[18px] mdl:text-[20px]'>Сайт</p>
 							</Link>
-						</div>
-						<div className='flex flex-row p-[20px] items-center border border-[#F0F0F0] rounded-[15px] gap-[12px] text-[#F863A1] mdl:rounded-[20px]'>
-							<FaInstagram className='text-[20px] mdl:text-[25px]' />
-							<Link href='/instagram' className='text-[18px] mdl:text-[20px]'>
-								Instagram
+						)}
+						{link.instagram && (
+							<Link
+								href={link.instagram}
+								className='flex flex-row p-[20px] items-center border border-[#F0F0F0] rounded-[15px] gap-[12px] text-[#F863A1] mdl:rounded-[20px]'
+							>
+								<FaInstagram className='text-[20px] mdl:text-[25px]' />
+								<p className='text-[18px] mdl:text-[20px]'>Instagram</p>
 							</Link>
-						</div>
-						<div className='flex flex-row p-[20px] items-center border border-[#F0F0F0] rounded-[15px] gap-[12px] text-[#2B99FF] mdl:rounded-[20px]'>
-							<FaTelegramPlane className='text-[20px] mdl:text-[25px]' />
-							<Link href='/instagram' className='text-[18px] mdl:text-[20px]'>
-								Telegram
+						)}
+						{link.telegram && (
+							<Link
+								href={link.telegram}
+								className='flex flex-row p-[20px] items-center border border-[#F0F0F0] rounded-[15px] gap-[12px] text-[#2B99FF] mdl:rounded-[20px]'
+							>
+								<FaTelegramPlane className='text-[20px] mdl:text-[25px]' />
+								<p className='text-[18px] mdl:text-[20px]'>Telegram</p>
 							</Link>
-						</div>
+						)}
 					</div>
 				</DialogContent>
 			</Dialog>

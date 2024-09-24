@@ -5,175 +5,244 @@ import CaseResultModalSocials from '../Modal/CaseResultModal';
 
 const obtainedResult = [
 	{
-		slug: 'prime-medical-center',
-		link: 'https://pmcenter.uz/',
-		result: [
-			{ item: '+41%', name: 'число обращений в клинику / мес' },
-			{ item: '+23%', name: 'посещаемость' },
-			{ item: '+18,200', name: 'посещений сайта / год' },
-		],
+	  slug: 'prime-medical-center',
+	  link: {
+		web: 'https://pmcenter.uz/',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{ item: '+41%', name: 'число обращений в клинику / мес' },
+		{ item: '+23%', name: 'посещаемость' },
+		{ item: '+18,200', name: 'посещений сайта / год' },
+	  ],
 	},
 	{
-		slug: 'xayrullo-rahmatullaevich',
-		link: 'https://dr-khashimov.uz/',
-		result: [
-		
-			{  name: 'Разработанный сайт стал успешным информационным ресурсом, который привлекает внимание потенциальных клиентов и повышает имидж врача. Фирменный стиль был успешно внедрен, что помогло повысить узнаваемость врача на рынке.' },
-		],
+	  slug: 'xayrullo-rahmatullaevich',
+	  link: {
+		web: 'https://dr-khashimov.uz/',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{
+		  name: 'Разработанный сайт стал успешным информационным ресурсом, который привлекает внимание потенциальных клиентов и повышает имидж врача. Фирменный стиль был успешно внедрен, что помогло повысить узнаваемость врача на рынке.',
+		},
+	  ],
 	},
 	{
-		slug: 'aziza-shaxzadeevna',
-		link: 'https://endocrinolog.uz/',
-		result: [
-		
-			{  name: 'Разработанный сайт стал хорошим ресурсом для пациентов, предоставив всю информацию о враче в свободном доступе 24 / 7, что способствовало увеличению видимости в интернете.' },
-		],
+	  slug: 'aziza-shaxzadeevna',
+	  link: {
+		web: 'https://endocrinolog.uz/',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{
+		  name: 'Разработанный сайт стал хорошим ресурсом для пациентов, предоставив всю информацию о враче в свободном доступе 24 / 7, что способствовало увеличению видимости в интернете.',
+		},
+	  ],
 	},
 	{
-		slug: 'alisher-baxromovich',
-		link: 'https://alisher-lor.uz/',
-		result: [
-			{ item: '+2,840', name: 'кликов на сайт' },
-			{ item: '0,11$', name: 'цена за клик' },
-			{ item: '+13,63%', name: 'CTR' },
-		],
+	  slug: 'alisher-baxromovich',
+	  link: {
+		web: 'https://alisher-lor.uz/',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{ item: '+2,840', name: 'кликов на сайт' },
+		{ item: '0,11$', name: 'цена за клик' },
+		{ item: '+13,63%', name: 'CTR' },
+	  ],
 	},
 	{
-		slug: 'nafisa-shuxratovna',
-		link: 'https://www.stom-tashkent.uz/',
-		result: [
-			
-			{  name: 'Разработанный сайт оказался удобным и информативным, что позволило пациентам быстро находить необходимую информацию о стоматологе и услугах.' },
-		],
+	  slug: 'nafisa-shuxratovna',
+	  link: {
+		web: 'https://www.stom-tashkent.uz/',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{
+		  name: 'Разработанный сайт оказался удобным и информативным, что позволило пациентам быстро находить необходимую информацию о стоматологе и услугах.',
+		},
+	  ],
 	},
 	{
-		slug: 'smile-design',
-		link: '',
-		result: [
-			{ item: '2,450', name: 'кликов на сайт' },
-			{ item: '0,05$', name: 'цена за клик' },
-			{ item: '11,64%', name: 'CTR' },
-		],
+	  slug: 'smile-design',
+	  link: {
+		web: '',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{ item: '2,450', name: 'кликов на сайт' },
+		{ item: '0,05$', name: 'цена за клик' },
+		{ item: '11,64%', name: 'CTR' },
+	  ],
 	},
 	{
-		slug: 'sanjar-akbarovich',
-		link: 'https://dr-psixoterapevt.uz',
-		result: [
-			{ item: '14,5 тыс', name: 'кликов на сайт' },
-			{ item: '0,07$', name: 'цена за клик' },
-			{ item: '14,11%', name: 'CTR' },
-		],
+	  slug: 'sanjar-akbarovich',
+	  link: {
+		web: 'https://dr-psixoterapevt.uz',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{ item: '14,5 тыс', name: 'кликов на сайт' },
+		{ item: '0,07$', name: 'цена за клик' },
+		{ item: '14,11%', name: 'CTR' },
+	  ],
 	},
 	{
-		slug: 'baxtiyor-nadjullayevich',
-		link: '',
-		result: [
-			{ item: '4,820', name: 'кликов на сайт' },
-			{ item: '0,10$', name: 'цена за клик' },
-			{ item: '14,22%', name: 'CTR' },
-		],
+	  slug: 'baxtiyor-nadjullayevich',
+	  link: {
+		web: '',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{ item: '4,820', name: 'кликов на сайт' },
+		{ item: '0,10$', name: 'цена за клик' },
+		{ item: '14,22%', name: 'CTR' },
+	  ],
 	},
 	{
-		slug: 'intermed',
-		link: 'https://imed.uz/',
-		result: [
-			{  name: 'Конверсия с сайта увеличилась на 17%.' },
-			{  name: 'Запущенная реклама приносит 200+ лидов по цене 2,1$ за лид в течении 1 месяца' },
-			{  name: 'Эти результаты подтверждают успешное привлечение клиентов и повышение интереса к продуктам компании.' },
-			
-		],
+	  slug: 'intermed',
+	  link: {
+		web: 'https://imed.uz/',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{ name: 'Конверсия с сайта увеличилась на 17%.' },
+		{ name: 'Запущенная реклама приносит 200+ лидов по цене 2,1$ за лид в течении 1 месяца' },
+		{ name: 'Эти результаты подтверждают успешное привлечение клиентов и повышение интереса к продуктам компании.' },
+	  ],
 	},
 	{
-		slug: 'mostona-med',
-		link: 'https://www.instagram.com/nargiza_xamidulayevna/',
-		result: [
-			{  name: 'Мы предоставили клинике все необходимые материалы для работы, что позволило их команде эффективно справляться с задачами.' },
-			
-		],
+	  slug: 'mostona-med',
+	  link: {
+		web: '',
+		telegram: '',
+		instagram: 'https://www.instagram.com/nargiza_xamidulayevna/',
+	  },
+	  result: [
+		{
+		  name: 'Мы предоставили клинике все необходимые материалы для работы, что позволило их команде эффективно справляться с задачами.',
+		},
+	  ],
 	},
 	{
-		slug: 'mrj-trade',
-		link: 'https://mrj-trade.com',
-		result: [
-			{ item: '1,560', name: 'кликов на сайт / мес' },
-			{ item: '0,32$', name: 'цена за клик / мес' },
-			{ item: '11,22%', name: 'CTR  / мес' },
-		],
+	  slug: 'mrj-trade',
+	  link: {
+		web: 'https://mrj-trade.com',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{ item: '1,560', name: 'кликов на сайт / мес' },
+		{ item: '0,32$', name: 'цена за клик / мес' },
+		{ item: '11,22%', name: 'CTR  / мес' },
+	  ],
 	},
 	{
-		slug: 'dr-odil-alisherovich',
-		link: 'https://dr-odil.uz/',
-		result: [
-			{ name: '750 подписчиков в Telegram' },
-			{ name: '1070 подписчиков в Instagram' },
-			{ name: 'Успешно реализованы: фирменный стиль, новый сайт, активное присутствие в SMM и блог в Telegram. Эти элементы помогли укрепить имидж врача и поддерживать связь с пациентами.' },
-		],
+	  slug: 'dr-odil-alisherovich',
+	  link: {
+		web: 'https://dr-odil.uz/',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{ name: '750 подписчиков в Telegram' },
+		{ name: '1070 подписчиков в Instagram' },
+		{
+		  name: 'Успешно реализованы: фирменный стиль, новый сайт, активное присутствие в SMM и блог в Telegram. Эти элементы помогли укрепить имидж врача и поддерживать связь с пациентами.',
+		},
+	  ],
 	},
 	{
-		slug: 'nafisa-shuxratovna',
-		link: '',
-		result: [
-			{ item: '1,560', name: 'кликов на сайт' },
-			{ item: '0,76$', name: 'цена за клик' },
-			{ item: '8,22%', name: 'CTR' },
-		],
+	  slug: 'nafisa-shuxratovna',
+	  link: {
+		web: '',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{ item: '1,560', name: 'кликов на сайт' },
+		{ item: '0,76$', name: 'цена за клик' },
+		{ item: '8,22%', name: 'CTR' },
+	  ],
 	},
 	{
-		slug: 'ant-group',
-		link: 'https://www.instagram.com/antgroup_uz/',
-		result: [
-			{ name: 'Успешно проведены SMM-мероприятия, что способствовало росту взаимодействия с аудиторией и укреплению бренда компании.' },
-			
-		],
+	  slug: 'ant-group',
+	  link: {
+		web: '',
+		telegram: '',
+		instagram: 'https://www.instagram.com/antgroup_uz/',
+	  },
+	  result: [
+		{
+		  name: 'Успешно проведены SMM-мероприятия, что способствовало росту взаимодействия с аудиторией и укреплению бренда компании.',
+		},
+	  ],
 	},
 	{
-		slug: 'xayrullo-rahmatullaevich',
-		link: '',
-		result: [
-			{ item: '1,560', name: 'кликов на сайт' },
-			{ item: '0,76$', name: 'цена за клик' },
-			{ item: '8,22%', name: 'CTR' },
-		],
+	  slug: 'xayrullo-rahmatullaevich',
+	  link: {
+		web: '',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{ item: '1,560', name: 'кликов на сайт' },
+		{ item: '0,76$', name: 'цена за клик' },
+		{ item: '8,22%', name: 'CTR' },
+	  ],
 	},
 	{
-		slug: 'ant-group',
-		link: '',
-		result: [
-			{ item: '1,560', name: 'кликов на сайт' },
-			{ item: '0,76$', name: 'цена за клик' },
-			{ item: '8,22%', name: 'CTR' },
-		],
+	  slug: 'alisher-baxromovich',
+	  link: {
+		web: '',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{ item: '1,560', name: 'кликов на сайт' },
+		{ item: '0,76$', name: 'цена за клик' },
+		{ item: '8,22%', name: 'CTR' },
+	  ],
 	},
 	{
-		slug: 'alisher-baxromovich',
-		link: '',
-		result: [
-			{ item: '1,560', name: 'кликов на сайт' },
-			{ item: '0,76$', name: 'цена за клик' },
-			{ item: '8,22%', name: 'CTR' },
-		],
+	  slug: 'sanjar-akbarovich',
+	  link: {
+		web: 'https://dr-psixoterapevt.uz',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{ item: '1,560', name: 'кликов на сайт' },
+		{ item: '0,76$', name: 'цена за клик' },
+		{ item: '8,22%', name: 'CTR' },
+	  ],
 	},
 	{
-		slug: 'sanjar-akbarovich',
-		link: 'https://dr-psixoterapevt.uz',
-		result: [
-			{ item: '1,560', name: 'кликов на сайт' },
-			{ item: '0,76$', name: 'цена за клик' },
-			{ item: '8,22%', name: 'CTR' },
-		],
+	  slug: 'aziza-shaxzadeevna',
+	  link: {
+		web: '',
+		telegram: '',
+		instagram: '',
+	  },
+	  result: [
+		{ item: '1,560', name: 'кликов на сайт' },
+		{ item: '0,76$', name: 'цена за клик' },
+		{ item: '8,22%', name: 'CTR' },
+	  ],
 	},
-	{
-		slug: 'aziza-shaxzadeevna',
-		link: '',
-		result: [
-			{ item: '1,560', name: 'кликов на сайт' },
-			{ item: '0,76$', name: 'цена за клик' },
-			{ item: '8,22%', name: 'CTR' },
-		],
-	},
-	
 	// Add more results with different slugs if needed
-];
+  ];
+  
 
 const Result = () => {
 	const { slug } = useParams(); // Get slug from the URL
@@ -211,7 +280,7 @@ const Result = () => {
 			</div>
 
 <CaseResultModalSocials isOpen={modalLinks}
-onClose={caseResultModalOpen}/>
+onClose={caseResultModalOpen} link={filteredResult.link}/>
 			{/* Правая часть: результаты */}
 			<div className="flex flex-col 3xl:flex 3xl:w-[50%] 3xl:justify-between mb-[80px] mdl:flex-row mdl:justify-between mdl:flex-wrap mdl:gap-[20px]">
 				{filteredResult?.result.map((item, index) => (
