@@ -1,8 +1,8 @@
 // lb/api.js
 import axios from 'axios';
 
-const VAKANSY_API_CREATE = 'http://13.61.1.182:8190/api/application/vacancy';
-const SERVICE_API_CREATE = 'http://13.61.1.182:8190/api/application/service';
+const VAKANSY_API_CREATE = 'https://result-me.uz/api/application/vacancy';
+const SERVICE_API_CREATE = 'https://result-me.uz/api/application/service';
 
 export const createVakansy = async (formData) => {
   try {
