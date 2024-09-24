@@ -150,7 +150,7 @@ const Steps = () => {
 								</p>
 							</div>
 						</div>
-						<div className='mt-[10px] flex flex-col gap-[10px] 2xl:mb-[150px] '>
+						<div className='mt-[10px] flex flex-col gap-[10px] 2xl:mb-[180px] '>
 							<p
 								className={` font-bold text-[23px] ${
 									step.id === 7 ? 'text-white100' : 'text-titleDark'
