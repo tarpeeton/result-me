@@ -1,4 +1,5 @@
 import ServiceItem from "@/app/[lng]/components/Services/Item";
+import ServiceImage from '@/app/[lng]/components/Services/ServiceImage';
 import ItemInfo from "@/app/[lng]/components/Services/ItemInfo";
 import InfoCard from "@/app/[lng]/components/Services/InfoCard";
 import CostCard from "@/app/[lng]/components/Services/CostCard";
@@ -13,6 +14,7 @@ const Service = () => {
 	<div className='bg-[#F8F8F8] relative'>
 		<Navigation/>
 		<ServiceItem/>
+		<ServiceImage/>
 		<ItemInfo/>
 		<InfoCard/>
 		<CostCard/>

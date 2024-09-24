@@ -60,9 +60,15 @@ const Form = () => {
 				/>
 			</div>
 
-			<p className='text-[28px] text-white font-bold relative z-[99999] mb-6 mdl:text-[50px] mdl:mb-[40px] 3xl:w-[40%]'>
-				Готовы начать? Оставьте заявку
-			</p>
+			<div className='flex flex-col w-full 2xl:w-[50%]'>
+				<p className='text-[28px] text-white font-bold relative z-[99999] mb-6 mdl:text-[50px] mdl:mb-[40px] '>
+					Готовы начать?
+				</p>
+				<p className='text-[18px] text-white font-bold relative z-[99999] mb-6 mdl:text-[25px] w-[100%] mdl:mb-[40px] 3xl:w-[80%]'>
+					Оставьте заявку, и мы разработаем для вас индивидуальную стратегию,
+					которая приведет к успеху
+				</p>
+			</div>
 
 			<form
 				className='z-[99] relative 3xl:w-[50%] 3xl:justify-center 3xl:flex 3xl:flex-col'
