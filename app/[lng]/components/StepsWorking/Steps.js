@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 const data = [
 	{
+		id: 1,
 		number: '01',
 		title: 'Консультация',
 		img: 'https://ucarecdn.com/68d3b9df-ca7d-4fa7-bcc7-280b2ba43579/-/preview/12x14/',
@@ -12,6 +13,7 @@ const data = [
 		selTitle: 'Определить задачи и предложить решения',
 	},
 	{
+		id: 2,
 		number: '02',
 		title: 'Заключение договора',
 		img: 'https://ucarecdn.com/68d3b9df-ca7d-4fa7-bcc7-280b2ba43579/-/preview/12x14/',
@@ -22,6 +24,7 @@ const data = [
 		selTitle: 'Зафиксировать условия и защитить интересы',
 	},
 	{
+		id: 3,
 		number: '03',
 		title: 'Сбор информации',
 		img: 'https://ucarecdn.com/68d3b9df-ca7d-4fa7-bcc7-280b2ba43579/-/preview/12x14/',
@@ -32,6 +35,7 @@ const data = [
 		selTitle: 'Получить данные для анализа',
 	},
 	{
+		id: 4,
 		number: '04',
 		title: 'Анализ и исследование',
 		subtitle:
@@ -40,6 +44,7 @@ const data = [
 		selTitle: 'Определить возможности и точки роста',
 	},
 	{
+		id: 5,
 		number: '05',
 		title: 'Разработка стратегии',
 		subtitle:
@@ -48,6 +53,7 @@ const data = [
 		selTitle: 'Составить план для достижения целей',
 	},
 	{
+		id: 6,
 		number: '06',
 		title: 'Согласование',
 		img: 'https://ucarecdn.com/68d3b9df-ca7d-4fa7-bcc7-280b2ba43579/-/preview/12x14/',
@@ -58,6 +64,7 @@ const data = [
 		selTitle: 'Утвердить план',
 	},
 	{
+		id: 7,
 		number: '07',
 		title: 'Основная работа над проектом',
 		subtitle:
@@ -66,6 +73,7 @@ const data = [
 		selTitle: 'Реализовать все запланированные действия',
 	},
 	{
+		id: 8,
 		number: '08',
 		title: 'Запуск и реализация',
 		subtitle:
@@ -74,6 +82,7 @@ const data = [
 		selTitle: 'Обеспечить успешный запуск',
 	},
 	{
+		id: 9,
 		number: '09',
 		title: 'Мониторинг и корректировка',
 		subtitle:
@@ -82,6 +91,7 @@ const data = [
 		selTitle: 'Оптимизировать процессы для улучшения результатов',
 	},
 	{
+		id: 10,
 		number: '10',
 		title: 'Отчетность и подведение итогов',
 		subtitle:
@@ -90,6 +100,7 @@ const data = [
 		selTitle: 'Отчитаться о потраченных средствах на рекламу и выполненных задачах',
 	},
 	{
+		id: 11,
 		number: '11',
 		title: 'Поддержка и развитие',
 		subtitle:
@@ -104,26 +115,26 @@ const Steps = () => {
 		<div className='relative'>
 			<div className='flex flex-col'>
 				{/* CRAD */}
-				{data.map((step , i) => (
-					<div className='flex flex-col  border-b border-[#F0F0F0]  py-[40px] px-[16px]' key={i}>
+				{data.map((step) => (
+					<div className={`flex flex-col  border-b border-[#F0F0F0]  py-[40px] px-[16px] ${step.id === 7 ? 'bg-violet100' : 'bg-white100'}`} key={step.id}>
 					<div className='flex items-center rounded-[10px] border border-[#F0F0F0] p-[10px] text-center w-[50px] justify-center'>
-						<p className='text-violet100 text-[23px] font-medium'>{step.number}</p>
+						<p className={` text-[23px] font-medium ${step.id === 7 ? 'text-white' : 'text-violet100'}`}>{step.number}</p>
 					</div>
 					<div className='flex flex-col mt-[25px]'>
 						<div className='flex flex-row gap-[8px]'>
-							{step.img && <Image src={step.img} width={16} height={16} quality={100} className='object-contain' />}
+							{step.img && <Image src={step.img} width={16} height={16} quality={100}  alt={step.imgtitle} className='object-contain' />}
 							
 
 							<p className='text-violet100 text-[15px] font-semibold font-montserrat'>{step.imgtitle}</p>
 						</div>
 					</div>
 					<div className='mt-[10px] flex flex-col gap-[10px]'>
-						<p className='text-titleDark font-bold text-[23px]'>{step.title}</p>
-						<p className='text-[#454545] tex-[15px] font-medium'>{step.subtitle}</p>
+						<p className={` font-bold text-[23px] ${step.id === 7 ? 'text-white100' : 'text-titleDark'}`}>{step.title}</p>
+						<p className={` ${step.id=== 7 ? 'text-white100' : 'text-titleDark'} tex-[15px] font-medium`}>{step.subtitle}</p>
 					</div>
 					<div className='mt-[20px] rounded-[20px] bg-violet100 bg-opacity-10 py-[25px] px-[20px] flex flex-col gap-[10px]'>
-						<p className='text-[20px] font-semibold text-violet100  font-montserrat'>{step.sel}</p>
-						<p className='text-[15px]  font-medium font-montserrat leading-[19px]'>{step.selTitle}</p>
+						<p className={`text-[20px] font-semibold  font-montserrat ${step.id === 7 ? 'text-white' : 'text-violet100'}`}>{step.sel}</p>
+						<p className={`text-[15px]  font-medium font-montserrat leading-[19px] ${step.id===7 ? 'text-white' : 'text-violet100'}`}>{step.selTitle}</p>
 					</div>
 				</div>
 				))}
