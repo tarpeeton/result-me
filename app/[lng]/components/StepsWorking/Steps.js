@@ -113,7 +113,7 @@ const data = [
 
 const Steps = () => {
 	return (
-		<div className='relative' id='steps-section'>
+		<div className='relative' >
 			<div className='flex flex-col 2xl:flex-row 2xl:flex-wrap'>
 				{/* CRAD */}
 				{data.map(step => (

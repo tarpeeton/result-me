@@ -106,7 +106,7 @@ const Header = ({ lng }) => {
 			</div>
 			{/* MOBILE NAVIGATION */}
 			{isMenuOpen && (
-				<div className='absolute top-[70px] left-0 w-full h-[100%] bg-white z-[99999999999999999999999999] flex flex-col text-2xl'>
+				<div className='absolute top-[70px] left-0 w-full h-[100vh] bg-white z-[99999999999999999999999999] flex flex-col text-2xl'>
 					<a
 						href='/services'
 						className='flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0]'

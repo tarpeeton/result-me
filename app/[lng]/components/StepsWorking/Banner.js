@@ -11,7 +11,7 @@ const Banner = () => {
 		}
 	  };
 	return (
-	  <div className='bg-violet100 px-[16px] py-[40px] w-full  4xl:py-[80px] 2xl:px-[30px] 2xl:py-[40px] h-screen sticky top-0 scroll-m-10'>
+	  <div className='bg-violet100 px-[16px] py-[40px] w-full  4xl:py-[80px] 2xl:px-[30px] 2xl:py-[40px] h-screen sticky top-0 '>
 		  <div className='flex flex-col'>
 				<h1 className='text-white100 text-[35px] font-bold font-montserrat w-[80%] mdl:text-[50px] 2xl:text-[60px] '>КАК МЫ РАБОТАЕМ</h1>
 				<p className='text-white100 opacity-80 mt-[15px] text-[15px] font-semibold mdl:text-[20px] 2xl:w-[50%] 4xl:w-[40%]'>Каждый проект начинается с продуманной стратегии и четкого плана действий. Мы уделяем внимание каждому этапу, чтобы гарантировать успех и рост вашего бизнеса</p>
