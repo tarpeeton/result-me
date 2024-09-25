@@ -121,8 +121,9 @@ const Images = () => {
   }, [slug]); // Запускаем эффект при изменении slug
 
   return (
-    <div className="mt-[80px] mb-[80px] 3xl:mb-[200px]">
-      <h2 className="text-[28px] mdl:text-[50px] font-bold mb-[20px] mdl:mb-[40px]">Итоги наглядно</h2>
+    <>
+     {filteredImages.length > 0 ? (<div className="mt-[80px] mb-[80px] 3xl:mb-[200px]">
+      <h2 className="text-[28px] mdl:text-[50px] font-bold mb-[20px] mdl:mb-[40px]">Галерея</h2>
 
       {/* Слайдер */}
       {filteredImages.length > 0 ? (
@@ -148,10 +149,11 @@ const Images = () => {
             </div>
           ))}
         </Carousel>
-      ) : (
-        <p>Нет изображений для отображения</p>
-      )}
-    </div>
+      ) : null}
+    </div>) : null}
+    </>
+   
+    
   );
 };
 
