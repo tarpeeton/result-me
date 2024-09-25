@@ -3,9 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import Image from 'next/image';
 import { useParams } from 'next/navigation';
-
+import { Image } from "antd";
 // Данные с изображениями и slug
 const sliderData = [
   {
@@ -88,6 +87,7 @@ const sliderData = [
     slug: 'intermed',
     images: [
       { id: 15, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+      { id: 15, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
     ],
   },
 ];
@@ -139,12 +139,9 @@ const Images = () => {
           {filteredImages.map((image) => (
             <div key={image.id} className="px-2 cursor-pointer">
               <Image
-                width={1600}
-                height={670}
-                quality={100}
                 src={image.url}
                 alt={`Slide ${image.id}`}
-                className="object-cover w-full"
+                className="object-cover w-[150px] mdl:w-[600px]"
               />
             </div>
           ))}

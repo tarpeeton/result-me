@@ -12,3 +12,7 @@
 body {
 	font-family: "Montserrat", sans-serif;
 }
+
+.ant-image-mask-info {
+	display: none !important;
+}
