@@ -67,7 +67,7 @@ const Header = ({ lng }) => {
 
 	return (
 		<div
-			className={`w-full slg:flex slg:items-center flex justify-between px-[20px] z-[999] py-[16px] 
+			className={`w-full slg:flex slg:items-center flex justify-between px-[20px] sticky top-0 z-[99999999999999] py-[16px] 
                 ${isMainPage ? 'bg-violet100' : 'bg-white'}`}
 		>
 			<div className='hidden 2xl:flex items-center gap-[25px] 4xl:gap-[40px] xl:w-[30%] 4xl:w-[25%]'>
@@ -106,7 +106,7 @@ const Header = ({ lng }) => {
 			</div>
 			{/* MOBILE NAVIGATION */}
 			{isMenuOpen && (
-				<div className='absolute top-[70px] left-0 w-full h-[100%] bg-white z-[999999] flex flex-col text-2xl'>
+				<div className='absolute top-[70px] left-0 w-full h-[100%] bg-white z-[99999999999999999999999999] flex flex-col text-2xl'>
 					<a
 						href='/services'
 						className='flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0]'
