@@ -87,7 +87,7 @@ const sliderData = [
     slug: 'intermed',
     images: [
       { id: 15, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
-      { id: 15, url: 'https://ucarecdn.com/47eb0d5d-33fa-4f77-ac71-715685d172d6/-/preview/1000x611/' },
+     
     ],
   },
 ];

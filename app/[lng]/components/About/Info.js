@@ -42,9 +42,9 @@ const Info = () => {
 							</Link>
 						</div>
 
-						<p className='text-[14px] text-[#FFFFFF] mdl:text-[20px] font-robotoFlex'>
+						<Link href='https://document.birdarcha.uz/certificate/legal-entity/2875c7eb-48ec-4ff3-91f6-fd8a394f8439/pdf?download' className='text-[14px] text-[#FFFFFF] mdl:text-[20px] font-robotoFlex'>
 							Скачать 
-						</p>
+						</Link>
 					</div>
 				</div>
 			</div>

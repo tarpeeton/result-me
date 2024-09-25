@@ -14,28 +14,8 @@ import brand from '@/public/images/blog/brand.jpg'
 import tv from '@/public/images/blog/tv.jpg'
 import crm from '@/public/images/blog/crm.jpg'
 import equipment from '@/public/images/blog/equipment.jpg'
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-// Assuming blogData is imported or defined above
-const responsive = {
-	superLargeDesktop: {
-	  // the naming can be any, depends on you.
-	  breakpoint: { max: 4000, min: 3000 },
-	  items: 5
-	},
-	desktop: {
-	  breakpoint: { max: 3000, min: 1024 },
-	  items: 3
-	},
-	tablet: {
-	  breakpoint: { max: 1024, min: 464 },
-	  items: 2
-	},
-	mobile: {
-	  breakpoint: { max: 464, min: 0 },
-	  items: 1
-	}
-  };
+
+
 const blogData = [
 	{
 	  id: 0,
@@ -328,7 +308,7 @@ const Blogs = () => {
   return (
     <div className='flex flex-col mt-[40px] mdl:mt-[60px] gap-[40px] py-[30px] px-[12px] w-full rounded-[30px] mdl:rounded-[60px] 4xl:rounded-[100px] bg-[#F8F8F8] mdl:px-[40px]'>
       {/* Blog Cards */}
-      <div className='hidden mdl:flex mdl:flex-row mdl:flex-wrap gap-[40px] mdl:gap-[50px] slg:flex-row slg:flex-wrap relative'>
+      <div className='flex flex-col mdl:flex mdl:flex-row mdl:flex-wrap gap-[40px] mdl:gap-[50px] slg:flex-row slg:flex-wrap relative'>
         {blogData.slice(0, visibleCount).map((item) => (
           <Link
             href={`/blog/${item.slug}`}
@@ -365,52 +345,7 @@ const Blogs = () => {
           </Link>
         ))}
       </div>
-	  <div className='mdl:hidden'>
-	  <Carousel
-        responsive={responsive}
-        arrows={false}         
-        autoPlay={true}        
-        autoPlaySpeed={3000}    
-        infinite={true}        
-        className='flex flex-row mdl:hidden relative'
-      >
-        {blogData.map((item) => (
-          <Link
-            href={`/blog/${item.slug}`}
-            key={item.id}
-            className='card__blog slg:w-[45%] cursor-pointer 2xl:w-[30%] relative'
-          >
-            {/* Only display the image if the URL is not empty */}
-            {item.photo && item.photo.url ? (
-              <div className='slg:h-[230px] '>
-                <Image
-                  width={600}
-                  height={600}
-                  quality={100}
-                  alt='blog image'
-                  src={item.photo.url}
-                  className='object-cover w-full h-full'
-                />
-              </div>
-            ) : null}
-            <div className='mt-[14px] flex flex-col gap-[8px] mb-[40px]'>
-              <p className='w-full text-[20px] text-titleDark font-semibold mdl:text-[25px] mdl:leading-[30.48px]'>
-                {item.title.ru} {/* Adjust language as needed */}
-              </p>
-              <p className='text-[14px] text-[#7B7B7B] leading-[24.38px] mdl:text-[18px] mdl:leading-[23px]'>
-                {item.description.ru} {/* Adjust language as needed */}
-              </p>
-            </div>
-            <div>
-              <span className='text-violet100 text-[14px] font-bold flex items-center mdl:text-[18px]'>
-                Подробнее
-                <GrLinkNext className='text-violet100 ml-[8px]' />
-              </span>
-            </div>
-          </Link>
-        ))}
-	</Carousel>
-	  </div>
+	
 
 	 
      

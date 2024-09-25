@@ -145,6 +145,15 @@ const Header = ({ lng }) => {
 						</p>
 						<GrLinkNext className='text-titleDark' />
 					</a>
+					<a
+						href='/steps-working'
+						className='font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0]'
+					>
+						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
+							{t('steps')}
+						</p>
+						<GrLinkNext className='text-titleDark' />
+					</a>
 
 					<div className='font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0] z-[999]'>
 						<Link

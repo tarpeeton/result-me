@@ -79,50 +79,50 @@ const Partners = () => {
 					className='flex mdl:flex mdl:flex-row'
 				>
 					{/* CARD 1 */}
-					<div className='flex flex-col'>
+					<div className='flex flex-col '>
 						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between px-[10px]'>
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%]  mdl:flex mdl:items-center  mdl:min-h-[200px]'>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%]  mdl:flex mdl:items-center  h-[165px] flex items-center justify-center '>
 								<div>
 									<Image
 										src={One}
 										width={400}
 										height={400}
 										quality={100}
-										alt='partners Logo'
+										alt='partners Logo  h-[100px]'
 									/>
 								</div>
 							</div>
 							
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%]  mdl:flex mdl:items-center mdl:min-h-[200px]'>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%]  mdl:flex mdl:items-center h-[165px] flex items-center justify-center '>
 								<div>
 									<Image
 										src={Three}
 										width={400}
 										height={400}
 										quality={100}
-										alt='partners Logo'
+										alt='partners Logo h-[100px]'
 									/>
 								</div>
 							</div>
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%]  mdl:flex mdl:items-center mdl:min-h-[200px]'>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%]  mdl:flex mdl:items-center h-[165px] flex items-center justify-center '>
 								<div>
 									<Image
 										src={Four}
 										width={200}
 										height={100}
 										quality={100}
-										alt='partners Logo'
+										alt='partners Logo h-[100px]'
 									/>
 								</div>
 							</div>
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] mdl:min-h-[200px]   mdl:flex mdl:items-center 	'>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] h-[165px] flex items-center justify-center    mdl:flex mdl:items-center 	'>
 								<div>
 									<Image
 										src={Five}
 										width={400}
 										height={400}
 										quality={100}
-										alt='partners Logo'
+										alt='partners Logo h-[100px]'
 									/>
 								</div>
 							</div>
@@ -133,49 +133,49 @@ const Partners = () => {
 				{/* CARD 2 */}
 					<div className='flex flex-col mdl:flex-row mdl:flex-wrap px-[10px]'>
 						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between'>
-						<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+						<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] h-[165px] flex items-center justify-center   mdl:flex mdl:items-center '>
 								<Link href='/about'>
 									<Image
 										src={Seven}
 										width={400}
 										height={400}
 										quality={100}
-										alt='partners Logo'
+										alt='partners Logo h-[100px]'
 									/>
 								</Link>
 							</div>
-						<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] md mdl:flex mdl:items-center mdl:min-h-[200px] '>
+						<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] md mdl:flex mdl:items-center h-[165px] flex items-center justify-center  '>
 								<Link href='/about'>
 									<Image
 										src={Two}
 										width={400}
 										height={400}
 										quality={100}
-										alt='partners Logo'
+										alt='partners Logo h-[100px]'
 									/>
 								</Link>
 							</div>
 
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] h-[165px] flex items-center justify-center  mdl:flex mdl:items-center '>
 							<Link href='/about'>
 									<Image
 										src={Sixe}
 										width={400}
 										height={400}
 										quality={100}
-										alt='partners Logo'
+										alt='partners Logo h-[100px]'
 									/>
 								</Link>
 							</div>
 							
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] h-[165px] flex items-center justify-center   mdl:flex mdl:items-center '>
 								<Link href='/about'>
 									<Image
 										src={Eigth}
 										width={400}
 										height={400}
 										quality={100}
-										alt='partners Logo'
+										alt='partners Logo h-[100px]'
 									/>
 								</Link>
 							</div>
@@ -184,47 +184,47 @@ const Partners = () => {
 					{/* CARD 3  */}
 					<div className='flex flex-col mdl:flex-row mdl:flex-wrap px-[10px]'>
 						<div className='mdl:flex mdl:flex-row mdl:flex-wrap mdl:justify-between'>
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] mdl:min-h-[200px]   mdl:flex mdl:items-center 	'>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px] mdl:w-[49%] h-[165px] flex items-center justify-center    mdl:flex mdl:items-center 	'>
 								<Link href='/about'>
 									<Image
 										src={Nine}
 										width={400}
 										height={400}
 										quality={100}
-										alt='partners Logo'
+										alt='partners Logo h-[100px]'
 									/>
 								</Link>
 							</div>
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px] mdl:flex mdl:items-center '>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] h-[165px] flex items-center justify-center  mdl:flex mdl:items-center '>
 								<Link href='/about'>
 									<Image
 										src={Ten}
 										width={400}
 										height={400}
 										quality={100}
-										alt='partners Logo'
+										alt='partners Logo h-[100px]'
 									/>
 								</Link>
 							</div>
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] h-[165px] flex items-center justify-center   mdl:flex mdl:items-center '>
 								<Link href='/about'>
 									<Image
 										src={Eleven}
 										width={400}
 										height={400}
 										quality={100}
-										alt='partners Logo'
+										alt='partners Logo h-[100px]'
 									/>
 								</Link>
 							</div>
-							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] mdl:min-h-[200px]  mdl:flex mdl:items-center '>
+							<div className='cursor-pointer rounded-[20px] bg-white100 py-[36px] px-[66px] mb-[20px]  mdl:w-[49%] h-[165px] flex items-center justify-center   mdl:flex mdl:items-center '>
 								<Link href='/about'>
 									<Image
 										src={Tvelwe}
 										width={400}
 										height={400}
 										quality={100}
-										alt='partners Logo'
+										alt='partners Logo h-[100px]'
 									/>
 								</Link>
 							</div>
