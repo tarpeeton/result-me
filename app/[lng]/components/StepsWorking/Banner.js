@@ -20,7 +20,7 @@ const Banner = () => {
 			<button onClick={scrollToSteps} className='flex w-[80px] h-[80px] items-center justify-center rounded-full border border-white'>
 			<Image src={down} width={40} quality={100} height={40} className='object-contain w-[24px] h-[24px]'/>
 			</button>
-			<div className='flex justify-end items-center mt-[120px] pr-[-20px]'>
+			<div className='flex justify-end items-center mld:mt-[120px] pr-[-20px]'>
 			<Image src={step} width={400} quality={100} height={400} className='object-cover w-[250px] 2xl:w-[300px]'/>
 			</div>
 		  </div>
