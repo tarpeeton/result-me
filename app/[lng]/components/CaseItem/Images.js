@@ -165,9 +165,9 @@ const Images = () => {
               <Image
   src={image.url}
   alt={`Slide ${image.id}`}
-  className="object-cover w-[150px] mdl:w-[600px]"
-  // Rasmni kattalashtirish uchun preview imkoniyatini qo'shish
-   // Maksimal sifatni ta'minlash uchun sifatni belgilang
+  className="object-cover bg-center w-[150px] mdl:w-[600px]"
+  quality={100}
+  
 />
 
             </div>
