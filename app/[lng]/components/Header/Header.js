@@ -103,6 +103,14 @@ const Header = ({ lng }) => {
 				>
 					{t('about')}
 				</Link>
+				<Link
+					href='/steps-working'
+					className={`font-montserrat font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
+					}`}
+				>
+					Этапи
+				</Link>
 			</div>
 			{/* MOBILE NAVIGATION */}
 			{isMenuOpen && (
