@@ -109,7 +109,7 @@ const Header = ({ lng }) => {
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
-					Этапи
+					{t('steps')}
 				</Link>
 			</div>
 			{/* MOBILE NAVIGATION */}
