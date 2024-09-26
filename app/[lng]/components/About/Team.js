@@ -135,7 +135,6 @@ const Team = () => {
 					Наша команда состоит из опытных специалистов, знающих свое дело
 				</p>
 			</div>
-
 			<div className='flex flex-row flex-wrap justify-between mt-[30px] mdl:mt-[50px]'>
 				{visibleTeam.map(member =>
 					member.github ? (
