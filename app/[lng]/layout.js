@@ -5,6 +5,7 @@ import { LanguageProvider } from '../i18n/locales/LanguageContext';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Head from 'next/head';
+import Script from 'next/script';
 
 export async function generateStaticParams() {
     if (!languages || !Array.isArray(languages)) {
@@ -26,6 +27,7 @@ export const metadata = {
     },
     manifest: '/site.webmanifest'
 };
+
 export default function RootLayout({
     children,
     params: { lng }
@@ -33,20 +35,7 @@ export default function RootLayout({
     return (
         <html lang={lng} dir={dir(lng)}>
             <Head>
-                {/* Google Analytics */
-                }
                 <link rel="icon" href="/favicon.ico" sizes="any" />
-                <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11414753579"></script>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                          window.dataLayer = window.dataLayer || [];
-                          function gtag(){dataLayer.push(arguments);}
-                          gtag('js', new Date());
-                          gtag('config', 'AW-11414753579');
-                        `,
-                    }}
-                />
             </Head>
             <body>
                 {/* Google Tag Manager */}
@@ -58,6 +47,61 @@ export default function RootLayout({
                         style={{ display: 'none', visibility: 'hidden' }}
                     ></iframe>
                 </noscript>
+
+                {/* Google Analytics */}
+                <Script
+                    strategy="afterInteractive"
+                    src="https://www.googletagmanager.com/gtag/js?id=AW-11414753579"
+                ></Script>
+                <Script
+                    id="google-analytics"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                          window.dataLayer = window.dataLayer || [];
+                          function gtag(){dataLayer.push(arguments);}
+                          gtag('js', new Date());
+                          gtag('config', 'AW-11414753579');
+                        `,
+                    }}
+                ></Script>
+
+                {/* Yandex Metrika */}
+                <Script
+                    id="yandex-metrika"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                          (function(m,e,t,r,i,k,a){
+                            m[i]=m[i]||function(){
+                              (m[i].a=m[i].a||[]).push(arguments)
+                            };
+                            m[i].l=1*new Date();
+                            for (var j = 0; j < document.scripts.length; j++) {
+                              if (document.scripts[j].src === r) { return; }
+                            }
+                            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+                          })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+                          ym(98508546, "init", {
+                            clickmap:true,
+                            trackLinks:true,
+                            accurateTrackBounce:true,
+                            webvisor:true
+                          });
+                        `,
+                    }}
+                ></Script>
+                <noscript>
+                    <div>
+                        <img
+                            src="https://mc.yandex.ru/watch/98508546"
+                            style={{ position: "absolute", left: "-9999px" }}
+                            alt=""
+                        />
+                    </div>
+                </noscript>
+
                 <LanguageProvider lng={lng}>
                     <Header lng={lng} />
                     <main className="w-full bg-white relative">{children}</main>
