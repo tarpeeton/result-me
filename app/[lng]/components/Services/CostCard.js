@@ -1,7 +1,7 @@
 'use client';
 import { FaCheck } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
-import ServiceModal from '../Modal/SeriviceModal';
+import ServicePriceModal from '../Modal/SericePrice';
 import { useParams } from 'next/navigation';
 
 const CostCardData = {
@@ -312,13 +312,19 @@ const CostCard = () => {
   }, [slug]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPrice, setSelectedPrice] = useState(null);
+  const [selectedTitle, setSelectedTitle] = useState(null); // New state variable
 
-  const openModal = () => {
+  const openModal = (price, title) => {
+    setSelectedPrice(price); // Set the selected price
+    setSelectedTitle(title); // Set the selected title
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
+    setSelectedPrice(null); // Reset the selected price
+    setSelectedTitle(null); // Reset the selected title
   };
 
   return (
@@ -366,21 +372,21 @@ const CostCard = () => {
               ))}
             </div>
             <div className='h-[1px] w-full bg-[#F0F0F0] mt-[25px] mb-[40px]' />
-            <div className='absolute bottom-[120px]'>
-              <p className='text-violet100 font-bold text-[28px]'>
-                {card.price}
-              </p>
-            </div>
             <button
-              onClick={openModal}
+              onClick={() => openModal(card.price, card.title)} // Passing title as well
               className='text-white text-center text-[18px] font-bold w-[90%] mx-auto py-[30px] 3xl:py-[24px] px-[20px] bg-violet100 rounded-[100px] mt-[7px] absolute left-0 right-0 bottom-[20px]'
             >
-              Оставить заявку
+              Узнать цену
             </button>
           </div>
         ))}
       </div>
-      <ServiceModal isOpen={isModalOpen} onClose={closeModal} />
+      <ServicePriceModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        price={selectedPrice}
+        serviceName={selectedTitle}
+      />
     </div>
   );
 };

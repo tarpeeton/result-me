@@ -70,7 +70,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
         open={isOpen}
         onClose={onClose}
         fullWidth
-        className='z-[9999]'
+        className='z-[99999999]'
         PaperProps={{
           sx: {
             maxWidth: '460px',
