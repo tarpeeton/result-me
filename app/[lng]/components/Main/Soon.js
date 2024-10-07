@@ -1,9 +1,13 @@
+"use client"
 import Image from 'next/image';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import { useParams } from 'next/navigation';
+import { useCustomTranslation } from '@/app/i18n/client'
 const Soon = () => {
+  const {lng} = useParams()
+  const {t} = useCustomTranslation(lng , 'product')
   const Data = [
     {
       img: 'https://ucarecdn.com/01959c30-254f-4c22-921e-9bf13b9f45d7/-/preview/1000x981/',
@@ -52,15 +56,14 @@ const Soon = () => {
       }
     ]
   };
-
   return (
     <div className='mt-[80px] flex flex-col gap-[20px]'>
       <div className='flex flex-col p-[24px] w-full h-full'>
         <p className='text-[28px] mdl:text-[50px] 3xl:text-[60px] font-bold'>
-        Наш продукт
+        {t('title')}
         </p>
         <p className='bg-violet100 text-white100 text-[23px] mdl:text-[40px] 3xl:text-[50px] font-bold p-[10px] w-[243px] mdl:w-[426px] 3xl:w-[535px] rounded-[170px] text-center rotate-[-5deg]'>
-        собственные проекты
+        {t('subtitle')}
         </p>
       </div>
       <Slider {...settings}>
@@ -84,7 +87,7 @@ const Soon = () => {
               
               {!d.isSoon && (
                 <div className="absolute inset-0 flex items-center justify-center w-[183px] mx-auto">
-                  <button className="bg-white p-[10px] border-t border-[#F0F0F0] rounded-[100px] text-[18px] shadow-lg shadow-[#000] w-full">Скоро</button>
+                  <button className="bg-white p-[10px] border-t border-[#F0F0F0] rounded-[100px] text-[18px] shadow-lg shadow-[#000] w-full">{t('soon')}</button>
                 </div>
               )}
 

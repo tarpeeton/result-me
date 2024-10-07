@@ -1,5 +1,6 @@
 "use client"
 import Link from 'next/link'
+import { useParams } from 'next/navigation'
 import Image from 'next/image'
 import medicalMarketin from '@/public/images/blog/medicalMarketin.jpg'
 import blogImage from '@/public/images/blog/meditsiniskiySe0.jpg'
@@ -7,6 +8,7 @@ import klinikcastniy from '@/public/images/blog/klinikcastniy.jpg'
 import { GrLinkNext } from 'react-icons/gr'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useCustomTranslation } from '@/app/i18n/client'
 const blogData = [
   {
     title: 'Эффективный маркетинг для частных медицинских клиник: ключевые особенности',
@@ -29,6 +31,8 @@ const blogData = [
 ];
 
 const Blog = () => {
+  const {lng} = useParams()
+  const {t} = useCustomTranslation(lng , 'blog')
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -53,7 +57,7 @@ const Blog = () => {
 
       <div className='ml-[12px] mdl:ml-[28px]'>
         <p className='text-[28px] mdl:text-[50px] font-bold text-titleDark'>
-          Блог
+          {t('title')}
         </p>
       </div>
 
@@ -95,7 +99,7 @@ const Blog = () => {
             </div>
             <div>
               <span className='text-violet100 text-[14px] font-bold flex items-center mdl:text-[18px]'>
-                Подробнее
+                {t('more')}
                 <GrLinkNext className='text-violet100 ml-[8px]' />
               </span>
             </div>
@@ -140,7 +144,7 @@ const Blog = () => {
       </div>
 
 	  <Link href='/blog' className='py-[20px] px-[30px] bg-violet100 text-center text-white100 rounded-full w-[90%] mdl:w-[20%] mx-auto'>
-	  Все новости
+    {t('button')}
 	  </Link>
     </div>
   );

@@ -52,9 +52,9 @@ const caseData = [
   
 ];
 
-const Cases = ({title}) => {
+const Cases = () => {
   const { lng } = useParams();
-  const { t } = useCustomTranslation(lng, 'result');
+  const { t } = useCustomTranslation(lng, 'case');
 
   // Slider settings
   const settings = {
@@ -103,9 +103,8 @@ const Cases = ({title}) => {
       {/* Case Title */}
       <div className='flex flex-col p-[24px] w-full h-full'>
         <p className='text-[28px] mdl:text-[50px] 3xl:text-[60px] font-bold'>
-        Наши кейсы
+        {t('case_title')}
         </p>
-      
       </div>
       {/* Slider Section */}
       <div className='2xl:mt-[60px] mdl:max-h-[500px] 4xl:max-h-[900px]'>
@@ -157,8 +156,8 @@ const Cases = ({title}) => {
         href='/cases'
         className='mt-[40px] mdx:mt-[60px] w-[175px] h-[50px] px-[30px] py-[20px] mx-auto rounded-[100px] bg-violet100 flex items-center justify-center xl:mt-[60px] 3xl:mt-[100px] 4xl:w-[300px] 4xl:h-[62px] 4xl:mt-[60px] 2xl:w-[250px]'
       >
-        <p className='text-white100 font-bold text-[14px] 4xl:text-[18px]'>
-          Все кейсы
+        <p className='text-white font-semibold text-[14px] 4xl:text-[18px]'>
+          {t('case_all')}
         </p>
       </Link>
     </div>

@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import { useRef } from 'react'
 import Image from 'next/image'
-
+import { useParams } from 'next/navigation'
 import One from '@/public/images/partners/1.png'
 import Two from '@/public/images/partners/2.png'
 import Three from '@/public/images/partners/3.png'
@@ -22,6 +22,7 @@ import Ten from '@/public/images/partners/10.png'
 import Eleven from '@/public/images/partners/11.png'
 import Tvelwe from '@/public/images/partners/12.png'
 import Link from 'next/link'
+import { useCustomTranslation } from '@/app/i18n/client'
 
 const SampleNextArrow = ({ onClick }) => (
 	<div className='cursor-pointer text-[20px]' onClick={onClick}>
@@ -37,7 +38,8 @@ const SamplePrevArrow = ({ onClick }) => (
 
 const Partners = () => {
 	const sliderRef = useRef(null)
-
+	const {lng} = useParams()
+	const {t} = useCustomTranslation(lng , 'partner')
 	const settings = {
 		dots: false,
 		infinite: true,
@@ -63,7 +65,9 @@ const Partners = () => {
 		<div className='flex flex-col rounded-[30px] bg-[#F8F8F8] mt-[20px] py-[30px] px-[20px] 4xl:py-[80px] 4xl:px-[70px]'>
 			<div className='flex flex-row items-center justify-between'>
 				<div>
-					<p className='text-[28px] font-bold 4xl:text-[50px] '>Партнеры</p>
+					<p className='text-[28px] font-bold 4xl:text-[50px] '>
+						{t('title')}
+						</p>
 				</div>
 				{/* Custom navigation buttons */}
 				<div className='flex flex-row gap-[8px] 2xl:hidden'>

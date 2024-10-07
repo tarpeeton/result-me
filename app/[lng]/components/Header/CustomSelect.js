@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
-import { BsChevronDown } from "react-icons/bs";
-
+import { FaChevronDown } from 'react-icons/fa';
 const CustomSelect = ({ value, onChange, options , main }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,16 +27,16 @@ const CustomSelect = ({ value, onChange, options , main }) => {
         <span className={`${main ? `text-white100` : `text-[#454545]` } font-bold flex items-center gap-2`}>
           {selectedOption.label}
         </span>
-        <BsChevronDown
-          className={`ml-2 ${main ? `text-white100` : `text-[#454545]`} transition-transform opacity-0 ${
+        <FaChevronDown
+          className={`ml-2 ${main ? `text-white100` : `text-[#454545]`} transition-transform  ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
         />
       </button>
 
       {/* Dropdown list */}
-      {/* {isOpen && (
-        <ul className="absolute w-[110px] 3xl:w-[130px] mt-1 bg-white border border-gray-200   z-[9999999]">
+      {isOpen && (
+        <ul className="absolute w-[100px] 3xl:w-[100px] mt-1 bg-white border border-gray-200   z-[99999]">
           {options.map((option) => (
             <li
               key={option.value}
@@ -50,7 +49,7 @@ const CustomSelect = ({ value, onChange, options , main }) => {
             </li>
           ))}
         </ul>
-      )} */}
+      )}
     </div>
   );
 };

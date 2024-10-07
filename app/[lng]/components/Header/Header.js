@@ -13,7 +13,6 @@ import Link from 'next/link'
 import CustomSelect from './CustomSelect'
 import { usePathname } from 'next/navigation'
 import ServiceModal from '../Modal/SeriviceModal'
-import { GB, RU, UZ } from 'country-flag-icons/react/3x2'
 import { BsFillTelephoneOutboundFill } from 'react-icons/bs'
 import { FaTelegramPlane } from 'react-icons/fa'
 const Header = ({ lng }) => {

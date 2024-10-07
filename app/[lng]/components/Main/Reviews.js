@@ -6,8 +6,9 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { GrLinkPrevious } from 'react-icons/gr'
 import { GrLinkNext } from 'react-icons/gr'
-
+import { useParams } from 'next/navigation'
 import { useRef, useState } from 'react'
+import { useCustomTranslation } from '@/app/i18n/client'
 
 const SampleNextArrow = ({ onClick }) => (
 	<div
@@ -28,6 +29,9 @@ const SamplePrevArrow = ({ onClick }) => (
 )
 
 const Reviews = () => {
+	const {lng} = useParams()
+	const {t} = useCustomTranslation(lng , 'reviews')
+
 	const sliderRef = useRef(null)
 	var settings = {
 		dots: false,
@@ -105,12 +109,12 @@ const Reviews = () => {
 
 			{/* Reviews Title */}
 			<p className='text-[28px] text-white font-bold relative z-50 mb-6 mdl:text-[50px] mdl:mb-[40px]'>
-				Отзывы клиентов
+				{t('title')}
 			</p>
 
 			{/* Reviews Carousel */}
 			<Slider {...settings} ref={sliderRef} className='z-[999] overflow-hidden'>
-				<div className='rounded-[30px] px-[20px] py-[25px] bg-[#161616] bg-opacity-[50%]  text-white  z-[99999] min-h-[400px] border border-[#5A5A5A] 2xl:max-w-[90%]'>
+				<div className='rounded-[30px] px-[20px] py-[25px] bg-[#161616] bg-opacity-[50%]  text-white  z-[99999] min-h-[400px] border border-[#5A5A5A] 2xl:max-w-[90%] cursor-pointer'>
 					<h2 className='text-[18px] font-semibold  mdl:text-[28px] 3xl:text-[30px]'>
 						Матьякуб Назарович
 					</h2>
@@ -123,20 +127,7 @@ const Reviews = () => {
 						пациентов.
 					</p>
 				</div>
-				{/* <div className='rounded-[30px] px-[20px] py-[25px] bg-[#161616]  bg-opacity-[50%] 2xl:max-w-[90%] text-white  min-h-[400px] border border-[#5A5A5A]'>
-					<h3 className='text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]'>
-						Бахтиер Наджиюллаевич
-					</h3>
-					<p className='text-[14px] opacity-75 mb-[20px] text-[#7B7B7B] font-robotoFlex'>
-						Сотрудничаю с фирмой "Result" в течении 6 месяцев.
-					</p>
-					<p className='text-[15px] leading-[18px] mdl:text-[20px] mdl:leading-[28px] font-robotoFlex '>
-						Очень грамотная и обходительная команда сотрудников, принимает во
-						внимание все пожелания и замечания клиента. При необходимости
-						предлагает свои варианты работы. Никаких нареканий, одна
-						благодарность! Спасибо за помощь!
-					</p>
-				</div> */}
+				
 				<div className='rounded-[30px] px-[20px] py-[25px] bg-[#161616]  bg-opacity-[50%] 2xl:max-w-[90%] text-white  min-h-[400px] border border-[#5A5A5A]'>
 					<h3 className='text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]'>
 					Нигора Абдумуталовна
@@ -201,7 +192,7 @@ const Reviews = () => {
 					onClick={openModal}
 					className='w-[80%] 2xl:w-[20%] 2xl:mx-0 mx-auto py-[20px] px-[30px] bg-white text-violet100 font-bold text-[14px]  rounded-full hover:bg-gray-200 transition z-[999]'
 				>
-					Стать нашим клиентом
+					{t('button')}
 				</button>
 				<div className='sm:hidden flex flex-row gap-[8px] 2xl:flex z-[9999]'>
 					<SamplePrevArrow onClick={handlePrev} />

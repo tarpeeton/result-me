@@ -1,8 +1,8 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useTransition } from 'react'
 import { gsap } from 'gsap'
 import Image from 'next/image'
-
+import { useParams } from 'next/navigation'
 // Import images directly
 import One from '@/public/images/puzzle/Part1.png'
 import Two from '@/public/images/puzzle/Part2.png'
@@ -14,6 +14,7 @@ import Winner from '@/public/images/puzzle/winner.png'
 import arrowWinner from '@/public/images/puzzle/arrowWinner.png'
 import winnerGifTImage from '@/public/images/puzzle/winnerGif.gif'
 import ServiceModal from '../Modal/SeriviceModal'
+import { useCustomTranslation } from '@/app/i18n/client'
 
 const PuzzlePiece = ({ id, imagePart, onClick, rotation }) => {
 	useEffect(() => {
@@ -48,6 +49,8 @@ const WinnerInfo = ({ winnerGif }) => {
 	const [modal, setModal] = useState(false)
 	const openModal = () => setModal(true)
 	const closeModal = () => setModal(false)
+	const {lng} = useParams()
+	const {t} = useCustomTranslation(lng , 'puzzle')
 
 	useEffect(() => {
 		// GSAP animation for WinnerInfo appearance
@@ -95,12 +98,12 @@ const WinnerInfo = ({ winnerGif }) => {
 					<div className='flex flex-col gap-[8px] mdl:gap-[10px] 4xl:gap-[30px] w-[80%] mx-auto 4xl:w-[70%]'>
 						<div className='text-center'>
 							<p className='winner-text text-[12px] leading-[19px] text-white100 mdl:text-[18px] mdl:leading-[28px] 4xl:text-[25px] 4xl:leading-[30.48px] xl:text-[30px] 3xl:text-[25px] '>
-								Поздравляем! Вы получили подарок
+								{t('puzzle_winnerTITLE')}
 							</p>
 						</div>
 						<div className='text-center 3xl:w-[60%] 4xl:w-[90%] mx-auto'>
 							<h2 className='winner-text text-[28px] font-bold text-white100 leading-[34.13px] mdl:text-[40px] mdl:leading-[48.76px] 4xl:text-[90px] xl:text-[45px] xl:mt-[30px] 3xl:leading-[80.71px] 3xl:text-[60px] 4xl:leading-[109.71px]'>
-								БЕСПЛАТНЫЙ РАЗБОР ВАШЕГО ПРОЕКТА
+								{t('puzzle_winnerSUBTITLE')}
 							</h2>
 						</div>
 					</div>
@@ -125,7 +128,7 @@ const WinnerInfo = ({ winnerGif }) => {
 								href='zayafka'
 								className=' text-violet100 text-[14px] font-bold mdl:text-[18px]'
 							>
-								Связаться с нами
+								{t('getINFO')}
 							</p>
 						</button>
 					</div>
@@ -150,6 +153,8 @@ const Puzzle = () => {
 	const [rotations, setRotations] = useState({})
 	const [win, setWin] = useState(false)
 	const [winnerGift, setWinnerGift] = useState(false)
+	const {lng} = useParams()
+	const {t} = useCustomTranslation(lng , 'puzzle')
 
 	const correctRotations = {
 		1: 180,
@@ -212,7 +217,7 @@ const Puzzle = () => {
 			) : (
 				<div className='flex px-[12px] py-[30px] flex-col items-center justify-center bg-violet100 rounded-[30px] mdl:rounded-[60px] 4xl:rounded-[100px] mt-[20px] mdl:mt-[25px] 4xl:mt-[30px] 4xl:py-[80px]'>
 					<h1 className='text-white text-[28px] mx-auto w-[90%] mdl:w-[60%] 2xl:w-[30%] mdl:text-[40px] 4xl:text-[50px] mb-4 font-bold text-center '>
-						Соберите пазл и получите подарок!
+						{t('puzzle_title')}
 					</h1>
 					<div className='grid grid-cols-3 grid-rows-2 gap-0 w-full max-w-[600px] mdl:max-w-[800px] 4xl:max-w-[1200px]'>
 						<PuzzlePiece
@@ -253,7 +258,7 @@ const Puzzle = () => {
 						/>
 					</div>
 					<p className='text-white font-semibold mt-[30px] 4xl:mt-[80px] text-[14px] mdl:text-[20px] 4xl:text-[25px]'>
-						Не пролистывайте просто так :)
+						{t('puzzle_subtitle')}
 					</p>
 				</div>
 			)}

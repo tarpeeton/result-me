@@ -1,10 +1,10 @@
 {
-	"result_title":  "Biz qaytaramiz",
-	"result_subtitle": "fikrlarni natijalarga aylantiradi",
+	"result_title":  "G’oyalarni",
+	"result_subtitle": "natijaga aylantiramiz",
 	"card": "muvaffaqiyatli loyihalar",
-	"card_two": "havola qilingan yetakchilar",
-	"card_three": "successful projects",
-	"card_four": "successful projects",
+	"card_two": "mavjud lidlar",
+	"card_three": " mavjud tashriflar",
+	"card_four": "Har bir lid uchun o'rtacha narx",
 	"case_title" : "Ortiqcha gap So'zsiz",
 	"case_subtitle" : "Natijalar Gapirsin"
 }
