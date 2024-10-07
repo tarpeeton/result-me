@@ -15,12 +15,52 @@ export async function generateStaticParams() {
 }
 
 export const metadata = {
-  title: 'Result Agency',
-  description: 'Мы специализируемся на разработке комплексных стратегий, направленных на рост вашего медицинского бизнеса.',
-  icons: {
-    icon: '/favicon.ico'
+  title: {
+    template: '%s',
+    default:
+      'Result Agency - Разработка комплексных стратегий для медицинского бизнеса'
   },
-  manifest: '/webmanifest'
+  description:
+    'Мы специализируемся на разработке комплексных стратегий, направленных на рост вашего медицинского бизнеса.',
+  openGraph: {
+    type: 'website',
+    locale: 'ru_RU',
+    url: 'https://result-me.uz',
+    title:
+      'Result Agency - Разработка комплексных стратегий для медицинского бизнеса',
+    description:
+      'Мы специализируемся на разработке комплексных стратегий, направленных на рост вашего медицинского бизнеса.',
+    images: [
+      {
+        url: 'https://result-me.uz/grap.png',
+        width: 1200,
+        height: 630,
+        alt: 'Result Agency - Логотип'
+      }
+    ],
+    site_name: 'Result Agency'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title:
+      'Result Agency - Разработка комплексных стратегий для медицинского бизнеса',
+    description:
+      'Мы специализируемся на разработке комплексных стратегий, направленных на рост вашего медицинского бизнеса.',
+    images: ['https://result-me.uz/grap.png']
+  },
+  alternates: {
+    canonical: 'https://result-me.uz'
+  },
+  robots: {
+    index: true,
+    follow: true
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
+    shortcut: '/favicon.ico'
+  },
+  manifest: '/site.webmanifest'
 }
 
 export default function RootLayout({ children, params: { lng } }) {
