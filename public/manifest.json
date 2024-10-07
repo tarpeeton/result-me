@@ -1,0 +1,10 @@
+{
+  "name": "Result Agency",
+  "short_name": "result-me.uz",
+  "description": "Мы специализируемся на разработке комплексных стратегий, направленных на рост вашего медицинского бизнеса.",
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "display": "standalone",
+  "orientation": "portrait"
+}

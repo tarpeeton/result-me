@@ -1,77 +1,73 @@
-import "@/app/_styles/globals.css";
-import { dir } from 'i18next';
-import { languages } from '../i18n/settings';
-import { LanguageProvider } from '../i18n/locales/LanguageContext';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Head from 'next/head';
-import Script from 'next/script';
+import '@/app/_styles/globals.css'
+import { dir } from 'i18next'
+import { languages } from '../i18n/settings'
+import { LanguageProvider } from '../i18n/locales/LanguageContext'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import Head from 'next/head'
+import Script from 'next/script'
 
 export async function generateStaticParams() {
-    if (!languages || !Array.isArray(languages)) {
-        throw new Error("Languages array is not defined or is not an array.");
-    }
-    return languages.map((lng) => ({ lng }));
+  if (!languages || !Array.isArray(languages)) {
+    throw new Error('Languages array is not defined or is not an array.')
+  }
+  return languages.map(lng => ({ lng }))
 }
 
 export const metadata = {
-    title: {
-        template: "%s",
-        default: "Result Agency"
-    },
-    description: "Result Agency in Uzbekistan",
-    icons: {
-        icon: [
-            '/favicon.ico'
-        ]
-    },
-    manifest: '/site.webmanifest'
-};
+  title: 'Result Agency',
+  description: 'Мы специализируемся на разработке комплексных стратегий, направленных на рост вашего медицинского бизнеса.',
+  icons: {
+    icon: '/favicon.ico'
+  },
+  manifest: '/webmanifest'
+}
 
-export default function RootLayout({
-    children,
-    params: { lng }
-}) {
-    return (
-        <html lang={lng} dir={dir(lng)}>
-            <Head>
-                <link rel="icon" href="/favicon.ico" sizes="any" />
-            </Head>
-            <body>
-                {/* Google Tag Manager */}
-                <noscript>
-                    <iframe
-                        src="https://www.googletagmanager.com/ns.html?id=GTM-MDWVM3M"
-                        height="0"
-                        width="0"
-                        style={{ display: 'none', visibility: 'hidden' }}
-                    ></iframe>
-                </noscript>
+export default function RootLayout({ children, params: { lng } }) {
+  return (
+    <html lang={lng} dir={dir(lng)}>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name='description' content={metadata.description} />
+        <link rel='icon' href={metadata.icons.icon} />
+        <link rel='manifest' href={metadata.manifest} />
+      </Head>
 
-                {/* Google Analytics */}
-                <Script
-                    strategy="afterInteractive"
-                    src="https://www.googletagmanager.com/gtag/js?id=AW-11414753579"
-                ></Script>
-                <Script
-                    id="google-analytics"
-                    strategy="afterInteractive"
-                    dangerouslySetInnerHTML={{
-                        __html: `
+      <body>
+        {/* Google Tag Manager */}
+        <noscript>
+          <iframe
+            src='https://www.googletagmanager.com/ns.html?id=GTM-MDWVM3M'
+            height='0'
+            width='0'
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+
+        {/* Google Analytics */}
+        <Script
+          strategy='afterInteractive'
+          src='https://www.googletagmanager.com/gtag/js?id=AW-11414753579'
+        ></Script>
+        <Script
+          id='google-analytics'
+          strategy='afterInteractive'
+          dangerouslySetInnerHTML={{
+            __html: `
                           window.dataLayer = window.dataLayer || [];
                           function gtag(){dataLayer.push(arguments);}
                           gtag('js', new Date());
                           gtag('config', 'AW-11414753579');
-                        `,
-                    }}
-                ></Script>
+                        `
+          }}
+        ></Script>
 
-                {/* Yandex Metrika */}
-                <Script
-                    id="yandex-metrika"
-                    strategy="afterInteractive"
-                    dangerouslySetInnerHTML={{
-                        __html: `
+        {/* Yandex Metrika */}
+        <Script
+          id='yandex-metrika'
+          strategy='afterInteractive'
+          dangerouslySetInnerHTML={{
+            __html: `
                           (function(m,e,t,r,i,k,a){
                             m[i]=m[i]||function(){
                               (m[i].a=m[i].a||[]).push(arguments)
@@ -89,25 +85,25 @@ export default function RootLayout({
                             accurateTrackBounce:true,
                             webvisor:true
                           });
-                        `,
-                    }}
-                ></Script>
-                <noscript>
-                    <div>
-                        <img
-                            src="https://mc.yandex.ru/watch/98508546"
-                            style={{ position: "absolute", left: "-9999px" }}
-                            alt=""
-                        />
-                    </div>
-                </noscript>
+                        `
+          }}
+        ></Script>
+        <noscript>
+          <div>
+            <img
+              src='https://mc.yandex.ru/watch/98508546'
+              style={{ position: 'absolute', left: '-9999px' }}
+              alt=''
+            />
+          </div>
+        </noscript>
 
-                <LanguageProvider lng={lng}>
-                    <Header lng={lng} />
-                    <main className="w-full bg-white relative">{children}</main>
-                    <Footer lng={lng} />
-                </LanguageProvider>
-            </body>
-        </html>
-    );
+        <LanguageProvider lng={lng}>
+          <Header lng={lng} />
+          <main className='w-full bg-white relative'>{children}</main>
+          <Footer lng={lng} />
+        </LanguageProvider>
+      </body>
+    </html>
+  )
 }
