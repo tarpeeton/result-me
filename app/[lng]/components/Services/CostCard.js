@@ -504,12 +504,12 @@ const CostCardData = {
       title: {
         ru: 'Запуск контекстной рекламы',
         uz: 'Kontekstli reklamani ishga tushirish',
-        en: 'Contextual ads launch'
+        en: 'Launching Contextual Ads'
       },
       description: {
         ru: 'Настройка и запуск рекламных кампаний в рекламных сетях Google и Yandex',
         uz: "Google va Yandex reklama tarmoqlarida reklama kampaniyalarini o'rnatish va ishga tushirish",
-        en: 'Setting up and launching ad campaigns in Google and Yandex ad networks'
+        en: 'Setup and launch of ad campaigns on Google and Yandex ad networks'
       },
       services: {
         ru: [
@@ -534,14 +534,14 @@ const CostCardData = {
 
         ],
         en: [
-          'Opening a personal account',
-          'Setting up to 5 campaigns',
-          'Keyword research',
-          'Building semantic core',
-          'Collecting marker queries',
-          'Creating ad announcements',
-          'Defining target audience',
-          'Monthly campaign report'
+         " Opening a personal account on one of the networks ", 
+            "Setting up to 5 campaigns ", 
+            "Keyword research ", 
+            "Compiling a semantic core",  
+            "Collecting marker queries",  
+            "Creating ad copies",  
+            "Defining the target audience",  
+            "Monthly campaign report", 
         ]
       },
       price: {
