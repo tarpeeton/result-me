@@ -46,7 +46,7 @@ export const metadata = {
       'Result Agency - Разработка комплексных стратегий для медицинского бизнеса',
     description:
       'Мы специализируемся на разработке комплексных стратегий, направленных на рост вашего медицинского бизнеса.',
-    images: ['https://result-me.uz/grap.png']
+    images: ['https://result-me.uz/favicon-32x32.png']
   },
   alternates: {
     canonical: 'https://result-me.uz'
@@ -57,8 +57,8 @@ export const metadata = {
   },
   icons: {
     icon: '/favicon.ico',
-    apple: '/favicon.ico',
-    shortcut: '/favicon.ico'
+    apple: '/apple-touch-icon.png',
+    shortcut: '/apple-touch-icon.png'
   },
   manifest: '/site.webmanifest'
 }
