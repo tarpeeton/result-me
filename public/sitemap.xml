@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<!-- Root Page -->
+<url>
+  <loc>https://result-me.uz/ru</loc>
+  <lastmod>2024-10-07T05:59:47+00:00</lastmod>
+  <priority>1.00</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://result-me.uz/ru"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://result-me.uz/en"/>
+  <xhtml:link rel="alternate" hreflang="uz" href="https://result-me.uz/uz"/>
+</url>
+
+<!-- Services Page -->
+<url>
+  <loc>https://result-me.uz/en/services</loc>
+  <lastmod>2024-10-07T05:59:47+00:00</lastmod>
+  <priority>0.80</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://result-me.uz/ru/services"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://result-me.uz/en/services"/>
+  <xhtml:link rel="alternate" hreflang="uz" href="https://result-me.uz/uz/services"/>
+</url>
+
+<!-- Cases Page -->
+<url>
+  <loc>https://result-me.uz/en/cases</loc>
+  <lastmod>2024-10-07T05:59:47+00:00</lastmod>
+  <priority>0.80</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://result-me.uz/ru/cases"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://result-me.uz/en/cases"/>
+  <xhtml:link rel="alternate" hreflang="uz" href="https://result-me.uz/uz/cases"/>
+</url>
+
+<!-- Blog Page -->
+<url>
+  <loc>https://result-me.uz/en/blog</loc>
+  <lastmod>2024-10-07T05:59:47+00:00</lastmod>
+  <priority>0.80</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://result-me.uz/ru/blog"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://result-me.uz/en/blog"/>
+  <xhtml:link rel="alternate" hreflang="uz" href="https://result-me.uz/uz/blog"/>
+</url>
+
+<!-- About Page -->
+<url>
+  <loc>https://result-me.uz/en/about</loc>
+  <lastmod>2024-10-07T05:59:47+00:00</lastmod>
+  <priority>0.80</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://result-me.uz/ru/about"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://result-me.uz/en/about"/>
+  <xhtml:link rel="alternate" hreflang="uz" href="https://result-me.uz/uz/about"/>
+</url>
+
+<!-- Steps Working Page -->
+<url>
+  <loc>https://result-me.uz/en/steps-working</loc>
+  <lastmod>2024-10-07T05:59:47+00:00</lastmod>
+  <priority>0.80</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://result-me.uz/ru/steps-working"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://result-me.uz/en/steps-working"/>
+  <xhtml:link rel="alternate" hreflang="uz" href="https://result-me.uz/uz/steps-working"/>
+</url>
+
+<!-- Root Page for English -->
+<url>
+  <loc>https://result-me.uz/en</loc>
+  <lastmod>2024-10-07T05:59:47+00:00</lastmod>
+  <priority>0.80</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://result-me.uz/ru"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://result-me.uz/en"/>
+  <xhtml:link rel="alternate" hreflang="uz" href="https://result-me.uz/uz"/>
+</url>
+
+<!-- Web Development Service Page -->
+<url>
+  <loc>https://result-me.uz/en/services/web-development</loc>
+  <lastmod>2024-10-07T05:59:47+00:00</lastmod>
+  <priority>0.80</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://result-me.uz/ru/services/web-development"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://result-me.uz/en/services/web-development"/>
+  <xhtml:link rel="alternate" hreflang="uz" href="https://result-me.uz/uz/services/web-development"/>
+</url>
+
+<!-- Telegram Bot Development Service Page -->
+<url>
+  <loc>https://result-me.uz/en/services/telegram-bot-development</loc>
+  <lastmod>2024-10-07T05:59:47+00:00</lastmod>
+  <priority>0.80</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://result-me.uz/ru/services/telegram-bot-development"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://result-me.uz/en/services/telegram-bot-development"/>
+  <xhtml:link rel="alternate" hreflang="uz" href="https://result-me.uz/uz/services/telegram-bot-development"/>
+</url>
+
+<!-- SMM Service Page -->
+<url>
+  <loc>https://result-me.uz/en/services/smm</loc>
+  <lastmod>2024-10-07T05:59:47+00:00</lastmod>
+  <priority>0.80</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://result-me.uz/ru/services/smm"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://result-me.uz/en/services/smm"/>
+  <xhtml:link rel="alternate" hreflang="uz" href="https://result-me.uz/uz/services/smm"/>
+</url>
+
+<!-- Ads Launch Service Page -->
+<url>
+  <loc>https://result-me.uz/en/services/ads-launch</loc>
+  <lastmod>2024-10-07T05:59:47+00:00</lastmod>
+  <priority>0.80</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://result-me.uz/ru/services/ads-launch"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://result-me.uz/en/services/ads-launch"/>
+  <xhtml:link rel="alternate" hreflang="uz" href="https://result-me.uz/uz/services/ads-launch"/>
+</url>
+
+<!-- SEO Service Page -->
+<url>
+  <loc>https://result-me.uz/en/services/seo</loc>
+  <lastmod>2024-10-07T05:59:47+00:00</lastmod>
+  <priority>0.80</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://result-me.uz/ru/services/seo"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://result-me.uz/en/services/seo"/>
+  <xhtml:link rel="alternate" hreflang="uz" href="https://result-me.uz/uz/services/seo"/>
+</url>
+
+<!-- Branding Service Page -->
+<url>
+  <loc>https://result-me.uz/en/services/branding</loc>
+  <lastmod>2024-10-07T05:59:47+00:00</lastmod>
+  <priority>0.80</priority>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://result-me.uz/ru/services/branding"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://result-me.uz/en/services/branding"/>
+  <xhtml:link rel="alternate" hreflang="uz" href="https://result-me.uz/uz/services/branding"/>
+</url>
+
+<!-- Add more URLs similarly for blogs, cases, etc. -->
+
+</urlset>
