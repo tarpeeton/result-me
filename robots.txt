@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /private/
 Disallow: /admin/
 
-Sitemap: https://result-me.uz/ru/sitemap.xml
+Sitemap: https://result-me.uz/sitemap.xml
