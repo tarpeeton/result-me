@@ -602,13 +602,13 @@ const CostCardData = {
     {
       title: {
         ru: 'Базовая настройка',
-        uz: 'Asosiy sozlama',
-        en: 'Basic setup'
+        uz: 'Asosiy sozlash',
+        en: 'Basic Setup'
       },
       description: {
         ru: 'Поднятие в поисковых выдачах Google и Yandex',
-        uz: 'Google va Yandex qidiruv natijalarida ko‘tarish',
-        en: 'Boosting in Google and Yandex search results'
+        uz: "Google va Yandex qidiruv natijalarida ko'tarilish",
+        en: 'Boost in Google and Yandex search rankings'
       },
       services: {
         ru: [
@@ -623,26 +623,25 @@ const CostCardData = {
           'Определение целевой аудитории'
         ],
         uz: [
-          'Saytning texnik auditi',
-          'Saytni Google va Yandex’da indeksatsiya qilish',
-          'Rasmlar hajmini kamaytirish',
-          '10 sahifa uchun maqsadli “Title”, “Description” va “Text” yozish',
-          'Kalit so‘zlarni qidirish',
-          'Semantik yadro tuzish',
-          'Markirovka so‘zlarni yig‘ish',
-          'Reklama e’lonlarini yaratish',
-          'Maqsadli auditoriyani aniqlash'
+          "Saytning texnik auditi",
+          "Google va Yandex da saytni indekslash",
+          "Rasmlar hajmini kamaytirish",
+          "10 sahifa uchun maqsadli 'Title', 'Description' va 'Text' yozish",
+          "Kalit so'zlarni qidirish",
+          "Semantik yadroni tuzish",
+          "Marker so'rovlarini yig'ish",
+          "Reklamalar yaratish",
+          "Maqsadli auditoriyani aniqlash",
         ],
         en: [
-          'Technical site audit',
-          'Google and Yandex indexing',
-          'Image size reduction',
-          'Writing target “Title”, “Description” and “Text” for 10 pages',
-          'Keyword research',
-          'Building semantic core',
-          'Collecting marker queries',
-          'Creating ad announcements',
-          'Defining target audience'
+          "Site indexing in Google and Yandex",  
+          "Image size reduction",  
+          "Creation of targeted “Title,” “Description,” and “Text” for 10 pages",  
+          "Keyword research",  
+          "Compilation of a semantic core",  
+          "Collection of marker queries",  
+          "Creation of ad copies",  
+          "Defining the target audience",  
         ]
       },
       price: {
@@ -724,8 +723,8 @@ const CostCardData = {
       },
       description: {
         ru: 'Разработка брендбука',
-        uz: 'Brendbuk ishlab chiqish',
-        en: 'Brandbook development'
+        uz: 'Brendbukni yaratish',
+        en: 'Development of a brand book'
       },
       services: {
         ru: [
@@ -737,20 +736,24 @@ const CostCardData = {
           'Руководство по использованию фирменного стиля'
         ],
         uz: [
-          'Ikki xil logotip dizayni',
-          'Vizitka dizayni',
-          'Tipografiya (shrift tanlash)',
-          'Formani dizayni',
-          'Bloknot dizayni',
-          'Brend uslubini qo‘llash bo‘yicha qo‘llanma'
+          "Logotip dizayni ikkita shakilda",
+          "Vizitka dizayni",
+          "Tipografika (shrift tanlash)",
+          "Uniforma dizayni",
+          "Bloknot dizayni",
+          "Korporativ uslubidan foydalanish bo'yicha ko'rsatmalar",
+
         ],
         en: [
-          'Logo design in two versions',
-          'Business card design',
-          'Typography (font selection)',
-          'Uniform design',
-          'Notebook design',
-          'Brand style usage guide'
+          "Logo design in two variations",  
+          "Business card design",  
+          "Typography (font selection)",  
+          "Uniform design",  
+          "Notebook design",  
+          "Corporate package design",  
+          "Letterhead design",  
+          "Development of a corporate slogan",  
+          "Guidelines for using the corporate style",
         ]
       },
       price: {
@@ -768,7 +771,7 @@ const CostCardData = {
       },
       description: {
         ru: 'Разработка брендбука',
-        uz: 'Brendbuk ishlab chiqish',
+        uz: 'Brendbuk yaratish',
         en: 'Brandbook development'
       },
       services: {
@@ -784,26 +787,27 @@ const CostCardData = {
           'Руководство по использованию фирменного стиля'
         ],
         uz: [
-          'Ikki xil logotip dizayni',
-          'Vizitka dizayni',
-          'Tipografiya (shrift tanlash)',
-          'Formani dizayni',
-          'Bloknot dizayni',
-          'Korporativ paket dizayni',
-          'Firmaviy blank dizayni',
-          'Brend shiorini ishlab chiqish',
-          'Brend uslubini qo‘llash bo‘yicha qo‘llanma'
+          "Logotip dizayni ikkita shakilda",
+          "Vizitka dizayni",
+          "Tipografika (shrift tanlash)",
+          "Uniforma dizayni",
+          "Bloknot dizayni",
+          "Korporativ paket dizayni",
+          "Korporativ blank dizayni",
+          "Korporativ shiorni ishlab chiqish",
+          "Korporativ uslubidan foydalanish bo'yicha ko'rsatmalar",
+          
         ],
         en: [
-          'Logo design in two versions',
-          'Business card design',
-          'Typography (font selection)',
-          'Uniform design',
-          'Notebook design',
-          'Corporate package design',
-          'Branded letterhead design',
-          'Brand slogan development',
-          'Brand style usage guide'
+        "Logo design in two variations",  
+        "Business card design",  
+        "Typography (font selection)",  
+        "Uniform design",  
+        "Notebook design",  
+        "Corporate package design",  
+        "Letterhead design",  
+        "Development of a corporate slogan",  
+        "Guidelines for using the corporate style",
         ]
       },
       price: {
