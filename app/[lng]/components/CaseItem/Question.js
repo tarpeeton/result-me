@@ -359,7 +359,7 @@ const Question = () => {
                 key={index}
                 className='text-[15px] list-disc font-medium text-titleDark mdl:text-[20px] 3xl:text-[25px] font-robotoFlex'
               >
-                {item.title}
+                {item.title[lng]}
               </li>
             ))}
         </ul>
@@ -370,7 +370,7 @@ const Question = () => {
           .map((item, index) => {
             const isExpanded = expandedItems.includes(index)
             const shouldTruncate =
-              item.description && item.description.length > 50
+              item.description[lng] && item.description[lng].length > 50
 
             return (
               <div key={index} className='mt-4 ml-[24px]'>
@@ -378,8 +378,8 @@ const Question = () => {
                   <>
                     <p className='text-[#454545] text-[15px]'>
                       {isExpanded
-                        ? item.description
-                        : item.description.substring(0, 50) + '...'}
+                        ? item.description[lng]
+                        : item.description[lng].substring(0, 50) + '...'}
                       <button
                         className='ml-2 text-blue-500 underline cursor-pointer'
                         onClick={() => toggleShowMore(index)}
@@ -389,7 +389,7 @@ const Question = () => {
                     </p>
                   </>
                 ) : (
-                  <p>{item.description}</p>
+                  <p>{item.description[lng]}</p>
                 )}
               </div>
             )
