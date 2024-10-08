@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'next/navigation' // For getting the slug from the URL
 import CaseResultModalSocials from '../Modal/CaseResultModal'
+import { useCustomTranslation } from '@/app/i18n/client'
 
 const obtainedResult = [
 	{
@@ -284,11 +285,11 @@ const obtainedResult = [
 
 
 const Result = () => {
-  const { slug } = useParams() // Get slug from the URL
   const [filteredResult, setFilteredResult] = useState({ result: [], link: '' })
   const [modalLinks, setModalLinks] = useState(false)
   const [expandedItems, setExpandedItems] = useState([])
-
+  const { slug , lng } = useParams(); // Get slug from the URL
+  const {t} = useCustomTranslation(lng , 'caseslug')
   const caseResultModalOpen = () => setModalLinks(!modalLinks)
 
   useEffect(() => {
@@ -311,16 +312,15 @@ const Result = () => {
       <div className='3xl:w-[45%] mb-[30px] 3xl:mb-0 3xl:flex 3xl:flex-col'>
         {/* Заголовок */}
         <p className='text-[#7B72EB] font-bold text-[28px] mb-4 3xl:text-[50px] w-[50%] 3xl:mb-[30px]'>
-          Полученный результат
+         {t('result')}
         </p>
-
         {/* Кнопка */}
         {filteredResult.link ? (
           <button
             onClick={caseResultModalOpen}
             className='block text-center text-white bg-[#7B72EB] py-[20px] px-[30px] w-[90%] rounded-[30px] font-bold mt-4 absolute bottom-[20px] mdl:w-[50%] 3xl:w-[50%] 3xl:relative 3xl:mt-[30px]'
           >
-            Перейти
+            {t('button')}
           </button>
         ) : null}
       </div>

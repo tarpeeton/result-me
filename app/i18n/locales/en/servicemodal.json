@@ -1,0 +1,19 @@
+{
+    "submit_request": "Submit Request",
+    "name": "Name",
+    "phone_number": "Phone Number",
+    "select_service": "Select Service",
+    "web_development": "Web Development",
+    "telegram_bot": "Telegram Bot",
+    "smm": "SMM",
+    "seo": "SEO",
+    "advertising": "Advertising",
+    "branding": "Branding",
+    "corporate_identity": "Corporate Identity",
+    "comment": "Comment",
+    "submit": "Submit",
+    "request_submitted": "Request Submitted!",
+    "request_success": "Your request has been successfully submitted. We will contact you soon.",
+    "ok": "Ok"
+  }
+  

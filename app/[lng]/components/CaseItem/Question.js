@@ -1,11 +1,13 @@
 "use client";
+import { useCustomTranslation } from '@/app/i18n/client'
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 const Question = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [expandedItems, setExpandedItems] = useState([]); // Track expanded items
-  const { slug } = useParams(); // Get slug from the URL
+  const { slug , lng } = useParams(); // Get slug from the URL
+  const {t} = useCustomTranslation(lng , 'caseslug')
 
   const data = [
     { slug: 'prime-medical-center', data: [
@@ -98,7 +100,9 @@ const Question = () => {
   return (
     <div className="rounded-[30px] bg-white100 mt-[20px] flex flex-col py-[30px] px-[24px] mdl:rounded-[40px] 3xl:rounded-[50px] mdl:py-[50px] mdl:px-[40px] 3xl:py-[80px] 3xl:px-[70px] 3xl:flex 3xl:flex-row">
       <div className='3xl:w-[40%]'>
-        <p className="text-titleDark text-[28px] mdl:text-[40px] 3xl:text-[50px] font-bold">Запросы</p>
+        <p className="text-titleDark text-[28px] mdl:text-[40px] 3xl:text-[50px] font-bold">
+          {t('question')}
+          </p>
       </div>
 
       <div className='3xl:w-[60%]'>

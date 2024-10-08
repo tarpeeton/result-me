@@ -1,0 +1,18 @@
+{
+  "submit_request": "Оставить заявку",
+  "name": "Имя",
+  "phone_number": "Номер телефона",
+  "select_service": "Выберите услугу",
+  "web_development": "Разработка сайтов",
+  "telegram_bot": "Разработка Telegram-ботов",
+  "smm": "SMM",
+  "seo": "SEO",
+  "advertising": "Запуск рекламы",
+  "branding": "Брендинг",
+  "corporate_identity": "Фирменный стиль",
+  "comment": "Комментарий",
+  "submit": "Отправить",
+  "request_submitted": "Заявка отправлена!",
+  "request_success": "Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.",
+  "ok": "Ок"
+}

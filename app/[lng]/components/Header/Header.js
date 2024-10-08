@@ -22,7 +22,6 @@ const Header = ({ lng }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 
 	const [isModalOpen2, setIsModalOpen2] = useState(false)
-	const isModalOpen2Handler = () => setIsModalOpen2(true)
 	const closeModal2 = () => setIsModalOpen2(false)
 	const openModal = () => {
 		setIsModalOpen(true)
@@ -69,10 +68,10 @@ const Header = ({ lng }) => {
 			className={`w-full slg:flex slg:items-center flex justify-between px-[20px] sticky top-0 z-[99999] py-[16px] 
                 ${isMainPage ? 'bg-violet100' : 'bg-white'}`}
 		>
-			<div className='hidden 2xl:flex items-center gap-[25px] 4xl:gap-[40px] xl:w-[30%] 4xl:w-[25%]'>
+			<div className='hidden 2xl:flex items-center gap-[25px] 4xl:gap-[40px] xl:w-[40%] 4xl:w-[25%]'>
 				<Link
 					href='/services'
-					className={`font-montserrat font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+					className={`font-robotoFlex font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
@@ -80,7 +79,7 @@ const Header = ({ lng }) => {
 				</Link>
 				<Link
 					href='/cases'
-					className={`font-montserrat font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+					className={`font-robotoFlex font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
@@ -88,7 +87,7 @@ const Header = ({ lng }) => {
 				</Link>
 				<Link
 					href='/blog'
-					className={`font-montserrat font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+					className={`font-robotoFlex font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
@@ -96,7 +95,7 @@ const Header = ({ lng }) => {
 				</Link>
 				<Link
 					href='/about'
-					className={`font-montserrat font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+					className={`font-robotoFlex font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
@@ -104,7 +103,7 @@ const Header = ({ lng }) => {
 				</Link>
 				<Link
 					href='/steps-working'
-					className={`font-montserrat font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
+					className={`font-robotoFlex font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
@@ -167,13 +166,13 @@ const Header = ({ lng }) => {
 							href='tel:+998905092562'
 							className='font-semibold text-[14px] leading-[23px] mdl:text-[25px] text-white100 bg-violet100 flex flex-row rounded-full py-[15px] px-[20px] items-center justify-center w-[45%]'
 						>
-							Позвонить <BsFillTelephoneOutboundFill className='ml-[10px]' />
+							{t('call')} <BsFillTelephoneOutboundFill className='ml-[10px]' />
 						</Link>
 						<Link
 							href='https://t.me/Result_man'
 							className='font-semibold text-[14px] leading-[23px] mdl:text-[25px] text-white100 bg-violet100 flex flex-row rounded-full py-[15px] px-[20px] items-center justify-center w-[45%]'
 						>
-							Написать <FaTelegramPlane className='ml-[10px]' />
+							{t('message')} <FaTelegramPlane className='ml-[10px]' />
 						</Link>
 					</div>
 				</div>
@@ -188,7 +187,7 @@ const Header = ({ lng }) => {
 					className='h-full'
 				/>
 			</a>
-			<div className='flex items-center gap-3 h-[40px]'>
+			<div className='flex items-center gap-3 h-[40px] 3xl:w-[38%] 3xl:justify-end'>
 				<div className='hidden 2xl:flex'>
 					<Link
 						href='tel:++998905092562'

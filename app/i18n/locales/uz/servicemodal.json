@@ -1,0 +1,18 @@
+{
+  "submit_request": "Ariza yuborish",
+  "name": "Ism",
+  "phone_number": "Telefon raqami",
+  "select_service": "Xizmatni tanlang",
+  "web_development": "Veb-sayt yaratish",
+  "telegram_bot": "Telegram bot yaratish",
+  "smm": "SMM",
+  "seo": "SEO",
+  "advertising": "Reklamani ishga tushirish",
+  "branding": "Brending",
+  "corporate_identity": "Korxona uslubi",
+  "comment": "Izoh",
+  "submit": "Yuborish",
+  "request_submitted": "Ariza yuborildi!",
+  "request_success": "Sizning arizangiz muvaffaqiyatli yuborildi. Tez orada siz bilan bog'lanamiz.",
+  "ok": "Ok"
+}

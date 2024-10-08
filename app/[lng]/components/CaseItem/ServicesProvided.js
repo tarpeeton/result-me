@@ -293,8 +293,9 @@ const data = [
 ]
 
 const ServicesProvided = () => {
-	const { slug } = useParams()
+	const { slug , lng } = useParams()
 	const [providedService, setProvidedService] = useState([])
+	const {t} = useCustomTranslation(lng , 'caseslug')
 
 	useEffect(() => {
 		// Filter the providedService based on the slug
@@ -309,7 +310,7 @@ const ServicesProvided = () => {
 			{/* Заголовок */}
 			<div className='w-[50%] mb-6 mdl:mb-[50px] 3xl:w-[40%]'>
 				<p className='text-titleDark font-bold text-[28px] mdl:text-[40px] 3xl:text-[50px] 3xl:w-[10%]'>
-					Оказанные услуги
+					{t('optained')}
 				</p>
 			</div>
 

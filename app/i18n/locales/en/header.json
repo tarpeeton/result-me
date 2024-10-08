@@ -4,5 +4,7 @@
     "blog": "Blog",
     "about": "About Us",
     "getInfo": "Get a Quote",
-    "steps": "Stages of Work"
+    "steps": "Stages of Work",
+    "call" :"Call",
+    "message" :"Send Message"
 }

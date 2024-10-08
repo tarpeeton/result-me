@@ -1,19 +1,16 @@
-"use client";
-import axios from 'axios';
+'use client';
 import { IoClose } from "react-icons/io5";
 import React, { useState, useCallback, useEffect } from 'react';
 import { createService } from '../../lib/api/api';
 import InputMask from 'react-input-mask';
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Button,
-} from '@mui/material';
+import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material';
 import { FaCheckCircle } from "react-icons/fa";
+import { useCustomTranslation } from '@/app/i18n/client'
+import { useParams } from 'next/navigation'
 
 const ServiceModal = ({ isOpen, onClose }) => {
+  const {lng} = useParams()
+  const { t } = useCustomTranslation(lng , 'servicemodal') 
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -89,7 +86,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             zIndex: 9999, // Set z-index for DialogTitle
           }}
         >
-          Оставить заявку
+          {t('submit_request')} {/* Translated "Оставить заявку" */}
           <div onClick={onClose} style={{ cursor: 'pointer' }}>
             <IoClose />
           </div>
@@ -112,7 +109,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
                   border: '1px solid #F0F0F0',
                   borderRadius: '10px',
                 }}
-                placeholder="Имя"
+                placeholder={t('name')} 
               />
             </div>
 
@@ -135,7 +132,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
                       border: '1px solid #F0F0F0',
                       borderRadius: '10px',
                     }}
-                    placeholder="Номер телефона"
+                    placeholder={t('phone_number')} 
                   />
                 )}
               </InputMask>
@@ -157,15 +154,15 @@ const ServiceModal = ({ isOpen, onClose }) => {
                 }}
               >
                 <option value="" disabled>
-                  Выберите услугу
+                  {t('select_service')} 
                 </option>
-                <option value="Web Development">Разработка сайтов</option>
-                <option value="Telegram Bot">Разработка Telegram-ботов</option>
-                <option value="SMM">SMM</option>
-                <option value="SEO">SEO</option>
-                <option value="reklama">Запуск рекламы</option>
-                <option value="brending">Брендинг</option>
-                <option value="firmeniy stil">Фирменный стиль</option>
+                <option value="Web Development">{t('web_development')}</option>
+                <option value="Telegram Bot">{t('telegram_bot')}</option>
+                <option value="SMM">{t('smm')}</option>
+                <option value="SEO">{t('seo')}</option>
+                <option value="reklama">{t('advertising')}</option>
+                <option value="brending">{t('branding')}</option>
+                <option value="firmeniy stil">{t('corporate_identity')}</option>
               </select>
             </div>
 
@@ -183,7 +180,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
                   border: '1px solid #F0F0F0',
                   borderRadius: '10px',
                 }}
-                placeholder="Комментарий"
+                placeholder={t('comment')} 
               />
             </div>
 
@@ -204,7 +201,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
                   color: 'white',
                 }}
               >
-                Отправить
+                {t('submit')} 
               </Button>
             </DialogActions>
           </form>
@@ -244,10 +241,10 @@ const ServiceModal = ({ isOpen, onClose }) => {
               marginBottom: '8px',
             }}
           >
-            Заявка отправлена!
+            {t('request_submitted')} {/* Translated "Заявка отправлена!" */}
           </h2>
           <p style={{ fontSize: '16px', color: 'gray', marginTop: '8px' }}>
-            Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.
+            {t('request_success')} 
           </p>
         </DialogContent>
         <DialogActions sx={{ width: '100%', zIndex: 9999 }}>
@@ -265,7 +262,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
               color: 'white',
             }}
           >
-            Ок
+            {t('ok')} 
           </Button>
         </DialogActions>
       </Dialog>

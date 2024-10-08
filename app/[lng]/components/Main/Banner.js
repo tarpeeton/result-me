@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react'
 import ServiceModal from '../Modal/SeriviceModal'
 import Image from 'next/image'
@@ -10,23 +11,16 @@ const Banner = () => {
 	const { t } = useCustomTranslation(lng, 'banner')
 
 	// Open modal function
-	const openModal = () => {
-		setIsModalOpen(true)
-	}
+	const openModal = () => setIsModalOpen(!isModalOpen)
 
-	// Close modal function
-	const closeModal = () => {
-		setIsModalOpen(false)
-	}
+	
 
 	return (
 		<div className='w-full rounded-b-[30px] 2xl:rounded-b-[100px] bg-violet100  relative  mdl:h-[90vh] 4xl:h-[100vh]'>
 			<div className='w-full pt-[50px]  2xl:w-[80%] 2xl:mx-auto flex flex-col justify-center items-center '>
 				<div className=' 2xl:w-[100%] flex flex-col justify-center items-center text-center mb-[200px] mdl:mb-[250px] 4xl:mb-[500px]'>
 					<h1 className='font-bold text-[35px] w-[80%]  text-white100  slg:text-[65px] 4xl:text-[85px] slg:w-[90%] font-montserrat  text-center mdl:w-[100%]'>
-						{t('title')
-							.split('\n')
-							.map((line, index) => (
+						{t('title').split('\n').map((line, index) => (
 								<span key={index}>
 									{line}
 									<br />
@@ -47,7 +41,7 @@ const Banner = () => {
 					</button>
 				</div>
 				{/* Pass the modal open/close state to the modal component */}
-				<ServiceModal isOpen={isModalOpen} onClose={closeModal} />
+				<ServiceModal isOpen={isModalOpen} onClose={openModal } />
 				<div className='w-full mt-[30px] absolute bottom-0'>
 					<Image
 						src='https://ucarecdn.com/eb83945a-4701-42a1-8a78-ffdfc03c4523/-/preview/1000x357/'
