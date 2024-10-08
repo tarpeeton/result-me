@@ -3,8 +3,10 @@ import { IoClose } from 'react-icons/io5'
 import { useState } from 'react'
 import { Dialog, DialogTitle, DialogContent } from '@mui/material'
 import ServiceModal from './SeriviceModal'
+import { useParams } from 'next/navigation'
 
 const ServicePriceModal = ({ isOpen, onClose, price, serviceName }) => {
+	const {lng} = useParams()
 	const [service, setService] = useState(false)
 	const setServiceModal = () => {
 		setService(true)
@@ -37,7 +39,7 @@ const ServicePriceModal = ({ isOpen, onClose, price, serviceName }) => {
 						zIndex: 9999999, // Set z-index for DialogTitle
 					}}
 				>
-					{serviceName}
+					{serviceName && serviceName[lng]}
 					<div onClick={onClose} style={{ cursor: 'pointer' }}>
 						<IoClose />
 					</div>
@@ -49,7 +51,7 @@ const ServicePriceModal = ({ isOpen, onClose, price, serviceName }) => {
 					{/* Display the price */}
 					<div className='flex flex-col pt-[20px] mdl:pt-[25px]  border-t border-[#F0F0F0]'>
 						<span className='text-titleDark font-semibold text-[28px] mdl:text-[35px]'>
-							{price}
+							{price && price[lng]}
 						</span>
 						<p className='text-violet100 font-medium text-[15px] font-robotoFlex mt-[5px] mdl:text-[18px]'>
 							форма оплаты любая

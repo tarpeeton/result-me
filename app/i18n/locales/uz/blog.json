@@ -1,5 +1,7 @@
 {
-    "title": "Blog",
-    "button": "Barcha yangiliklar",
-    "more": "Batafsil"
+  "title": "Blog",
+  "button": "Barcha yangiliklar",
+  "more": "Batafsil",
+  "blog_title": "Tibbiyot biznesini olg’a surish haqida",
+  "blog_description": "Tibbiy xizmatlarni samarali targ'ib qilishni va zamonaviy IT-yechimlardan qanday foydalanishni bilib oling. Blogimizda foydali maslahatlar va amaliy tavsiyalar mavjud."
 }

@@ -29,28 +29,26 @@ const CostCardData = {
           'Экспорт кода (при желании заказчика)'
         ],
         uz: [
-          "Sayt yaratish",
+          'Sayt yaratish',
           "2 tilda tarkib bilan to'ldirish",
-          "CMS paneli bilan integratsiyalash",
-          "Google da indekslash",
+          'CMS paneli bilan integratsiyalash',
+          'Google da indekslash',
           "Kalit so'zlar uchun SEO optimallashtirish",
-          "3 oyga hosting",
-          "1 yilga domen nomi ",
-          "Kodni yuklab olish (agar mijoz xohlasa)",
-          
+          '3 oyga hosting',
+          '1 yilga domen nomi ',
+          'Kodni yuklab olish (agar mijoz xohlasa)'
         ],
         en: [
-          "Size: 1 page  ",
-          "Timeline: 1 month (with prompt client information delivery)  ",
-          "Website development  ",
-          "Content creation in two languages  ",
-          "CMS panel integration  ",
-          "Google indexing  ",
-          "SEO optimization for keywords  ",
-          "3 months of hosting  ",
-          "Domain name for 1 year  ",
-          "Code export (upon client's request)  ",
-          
+          'Size: 1 page  ',
+          'Timeline: 1 month (with prompt client information delivery)  ',
+          'Website development  ',
+          'Content creation in two languages  ',
+          'CMS panel integration  ',
+          'Google indexing  ',
+          'SEO optimization for keywords  ',
+          '3 months of hosting  ',
+          'Domain name for 1 year  ',
+          "Code export (upon client's request)  "
         ]
       },
       price: {
@@ -84,27 +82,26 @@ const CostCardData = {
           'Экспорт кода (при желании заказчика)'
         ],
         uz: [
-         "Sayt yaratish",
-         "Ma'muriy panelni yaratish",
-         "2 tilda tarkib bilan to'ldirish",
-         "CMS paneli bilan integratsiyalash",
-         "Google da indekslash",
-         "Kalit so'zlar uchun SEO optimallashtirish",
-         "3 oyda hosting",
-         "1 yilga domen nomi ",
-         "Kodni yuklab olish (agar mijoz xohlasa)",
-
+          'Sayt yaratish',
+          "Ma'muriy panelni yaratish",
+          "2 tilda tarkib bilan to'ldirish",
+          'CMS paneli bilan integratsiyalash',
+          'Google da indekslash',
+          "Kalit so'zlar uchun SEO optimallashtirish",
+          '3 oyda hosting',
+          '1 yilga domen nomi ',
+          'Kodni yuklab olish (agar mijoz xohlasa)'
         ],
         en: [
-         "Website development",  
-         "Administrative panel development  ",
-         "Content creation in two languages ", 
-         "CMS panel integration ", 
-         "Google indexing ", 
-         "SEO optimization for keywords ", 
-         "3 months of hosting ", 
-         "Domain name for 1 year ", 
-         "Code export (upon client's request)",
+          'Website development',
+          'Administrative panel development  ',
+          'Content creation in two languages ',
+          'CMS panel integration ',
+          'Google indexing ',
+          'SEO optimization for keywords ',
+          '3 months of hosting ',
+          'Domain name for 1 year ',
+          "Code export (upon client's request)"
         ]
       },
       price: {
@@ -150,26 +147,25 @@ const CostCardData = {
           'Экспорт кода'
         ],
         uz: [
-          "Sayt yaratish",
+          'Sayt yaratish',
           "Tarkib bilan to'ldirish",
-          "CMS paneli bilan integratsiyalash",
-          "Google da indekslash",
-          "3 oyda hosting",
-          "1 yilga domen nomi ",
-          "Kodni yuklab olish",
+          'CMS paneli bilan integratsiyalash',
+          'Google da indekslash',
+          '3 oyda hosting',
+          '1 yilga domen nomi ',
+          'Kodni yuklab olish'
         ],
         en: [
-          "Development of any other website based on your technical requirements.  ",
-          "Timeline: From 2 weeks (with prompt client information delivery)  ",
-          "Website development  ",
-          "Content creation  ",
-          "CMS panel integration  ",
-          "Google indexing  ",
-          "3 months of hosting  ",
-          "Domain name for 1 year  ",
-          "Code export  ",
-          "Price: Negotiable  ",
-
+          'Development of any other website based on your technical requirements.  ',
+          'Timeline: From 2 weeks (with prompt client information delivery)  ',
+          'Website development  ',
+          'Content creation  ',
+          'CMS panel integration  ',
+          'Google indexing  ',
+          '3 months of hosting  ',
+          'Domain name for 1 year  ',
+          'Code export  ',
+          'Price: Negotiable  '
         ]
       },
       price: {
@@ -214,24 +210,22 @@ const CostCardData = {
           'Настройка автоответов'
         ],
         uz: [
-          "Asosiy chat-botni yaratish",
+          'Asosiy chat-botni yaratish',
           "So’rovlar to'plash",
           "5 toifagacha qo'llab-quvvatlash",
           "50 tagacha xizmat/mahsulot qo'shish",
-          "Oddiy tugmalar",
+          'Oddiy tugmalar',
           "1 oy qo'llab-quvvatlash",
-          "Avtomatik javoblarni sozlash",
-          
+          'Avtomatik javoblarni sozlash'
         ],
         en: [
-         "Development of a basic chatbot",  
-         "Lead collection",  
-         "Support for up to 5 categories",  
-         "Addition of up to 50 services/products",  
-         "Standard buttons",  
-         "1-month support",  
-         "Auto-reply setup",  
-          
+          'Development of a basic chatbot',
+          'Lead collection',
+          'Support for up to 5 categories',
+          'Addition of up to 50 services/products',
+          'Standard buttons',
+          '1-month support',
+          'Auto-reply setup'
         ]
       },
       price: {
@@ -239,7 +233,7 @@ const CostCardData = {
         uz: '200$',
         en: '200$'
       },
-      link: 'slug/start',
+      link: 'slug/start'
     },
     {
       title: {
@@ -269,26 +263,25 @@ const CostCardData = {
           "'Start' tarifidagi barcha xizmatlar",
           "Ma'lumotlar bazasi bilan integratsiyalash",
           "Foydalanuvchilarning ma'lumotlarini to'plash va saqlash imkoniyati",
-          "Bildirishnomalarni va yangiliklarni yuborish",
-          "Interaktiv menyular va tugmalar",
+          'Bildirishnomalarni va yangiliklarni yuborish',
+          'Interaktiv menyular va tugmalar',
           "10 toifagacha qo'llab-quvvatlash",
-          "Cheksiz miqdordagi xizmatlar/mahsulotlar",
+          'Cheksiz miqdordagi xizmatlar/mahsulotlar',
           "3 oy qo'llab-quvvatlash",
           "O'zaro ta'sir tahlilini o'rnatish",
-          "Kontent va foydalanuvchilarni boshqarish uchun boshqaruv paneli",
-
+          'Kontent va foydalanuvchilarni boshqarish uchun boshqaruv paneli'
         ],
         en: [
-          "All services from the `Start` package ", 
-          "Database integration",  
-          "Ability to collect and store user data",  
-          "Notification and news broadcasts",  
-          "Interactive menus and buttons",  
-          "Support for up to 10 categories",  
-          "Unlimited number of services/products",  
-          "3-month support",  
-          "Interaction analytics setup",  
-          "Admin panel for content and user management",  
+          'All services from the `Start` package ',
+          'Database integration',
+          'Ability to collect and store user data',
+          'Notification and news broadcasts',
+          'Interactive menus and buttons',
+          'Support for up to 10 categories',
+          'Unlimited number of services/products',
+          '3-month support',
+          'Interaction analytics setup',
+          'Admin panel for content and user management'
         ]
       },
       price: {
@@ -296,8 +289,7 @@ const CostCardData = {
         uz: '500$',
         en: '500$'
       },
-      link: 'slug/medium',
-    
+      link: 'slug/medium'
     },
     {
       title: {
@@ -322,24 +314,22 @@ const CostCardData = {
           'Дизайн кастомных кнопок'
         ],
         uz: [
-          "CRM tizimi bilan integratsiyalash",
+          'CRM tizimi bilan integratsiyalash',
           "Bot orqali to'lash imkoniyati",
           "Foydalanuvchilarning o'zaro ta'siri bo'yicha batafsil tahlil va hisobotlar",
           "Ko'p tilli (3 tilgacha)",
           "6 oyda qo'llab-quvvatlash va yangilanishlar",
-          "Kengaytirilgan boshqaruv va hisobot funksiyalariga ega boshqaruv paneli",
-          "Maxsus tugma dizayni",
-
+          'Kengaytirilgan boshqaruv va hisobot funksiyalariga ega boshqaruv paneli',
+          'Maxsus tugma dizayni'
         ],
         en: [
-         "CRM system integration",  
-         "Payment processing through the bot",  
-         "Detailed user interaction analytics and reports",  
-         "Multilingual support (up to 3 languages)",  
-         "6-month support and updates",  
-         "Admin panel with extended management and reporting features",  
-         "Custom button design",  
-
+          'CRM system integration',
+          'Payment processing through the bot',
+          'Detailed user interaction analytics and reports',
+          'Multilingual support (up to 3 languages)',
+          '6-month support and updates',
+          'Admin panel with extended management and reporting features',
+          'Custom button design'
         ]
       },
       price: {
@@ -347,7 +337,7 @@ const CostCardData = {
         uz: '800$',
         en: '800$'
       },
-      link: 'slug/pro',
+      link: 'slug/pro'
     }
   ],
   smm: [
@@ -372,21 +362,20 @@ const CostCardData = {
           'Запуск рекламы: 3'
         ],
         uz: [
-          "Kontent-reja: 1",
-          "Nashrlar: 3 (3 ta rasm, 0 video)",
-          "Hikoyalar: 10 (10 ta rasm, 0 video)",
-          "Ikonchalar: 10 (10 ta rasm)",
-          "Dolzarb tarkibi: 5 (5 ta rasm)",
-          "Reklamani ishga tushirish: 3",
+          'Kontent-reja: 1',
+          'Nashrlar: 3 (3 ta rasm, 0 video)',
+          'Hikoyalar: 10 (10 ta rasm, 0 video)',
+          'Ikonchalar: 10 (10 ta rasm)',
+          'Dolzarb tarkibi: 5 (5 ta rasm)',
+          'Reklamani ishga tushirish: 3'
         ],
         en: [
-        "Content Plan: 1  ",
-        "Posts: 3 (3 images, 0 videos) ", 
-        "Stories: 10 (10 images, 0 videos)  ",
-        "Icons: 10 (10 images) ", 
-        "Highlight Fill: 5 (5 images)  ",
-        "Ad Campaigns: 3 ", 
-
+          'Content Plan: 1  ',
+          'Posts: 3 (3 images, 0 videos) ',
+          'Stories: 10 (10 images, 0 videos)  ',
+          'Icons: 10 (10 images) ',
+          'Highlight Fill: 5 (5 images)  ',
+          'Ad Campaigns: 3 '
         ]
       },
       price: {
@@ -419,25 +408,24 @@ const CostCardData = {
           'Фото-видеосъемка: 2 часа / 1 локация'
         ],
         uz: [
-          "Kontent-reja: 1",
-          "Nashrlar: 8 (6 ta rasm, 2 ta video)",
-          "Hikoyalar: 15 (10 ta rasm, 5 ta video)",
-          "Ikonchalar: 10 (10 ta rasm)",
-          "Dolzarb tarkibi: 10 (10 ta rasm)",
-          "Reklamani ishga tushirish: 8",
-          "Akkauntlar dizayini: 3",
-          "Foto va video suratga olish: 2 soat / 1 joy",
+          'Kontent-reja: 1',
+          'Nashrlar: 8 (6 ta rasm, 2 ta video)',
+          'Hikoyalar: 15 (10 ta rasm, 5 ta video)',
+          'Ikonchalar: 10 (10 ta rasm)',
+          'Dolzarb tarkibi: 10 (10 ta rasm)',
+          'Reklamani ishga tushirish: 8',
+          'Akkauntlar dizayini: 3',
+          'Foto va video suratga olish: 2 soat / 1 joy'
         ],
         en: [
-         "Content Plan: 1",  
-         "Posts: 8 (6 images, 2 videos)",  
-         "Stories: 15 (10 images, 5 videos)",  
-         "Icons: 10 (10 images)",  
-         "Highlight Fill: 10 (10 images)",  
-         "Ad Campaigns: 8 ", 
-         "Account Design: 3 ", 
-         "Photo/Video Shooting: 2 hours / 1 location",
-
+          'Content Plan: 1',
+          'Posts: 8 (6 images, 2 videos)',
+          'Stories: 15 (10 images, 5 videos)',
+          'Icons: 10 (10 images)',
+          'Highlight Fill: 10 (10 images)',
+          'Ad Campaigns: 8 ',
+          'Account Design: 3 ',
+          'Photo/Video Shooting: 2 hours / 1 location'
         ]
       },
       price: {
@@ -470,24 +458,24 @@ const CostCardData = {
           'Фото-видеосъемка: 6 часов / 3 локации'
         ],
         uz: [
-         "Kontent-reja: 1",
-         "Nashrlar: 12 (6 ta rasm, 6 ta video)",
-         "Hikoyalar: 30 (15 ta rasm, 15 ta video)",
-         "Ikonchalar: 15 (15 ta rasm)",
-         "Dolzarb tarkibi: 15 (15 ta rasm)",
-         "Reklamani ishga tushirish: 12",
-         "Akkauntlar dizayini: 5",
-         "Foto va video suratga olish: 6 soat / 3 ta joy",
+          'Kontent-reja: 1',
+          'Nashrlar: 12 (6 ta rasm, 6 ta video)',
+          'Hikoyalar: 30 (15 ta rasm, 15 ta video)',
+          'Ikonchalar: 15 (15 ta rasm)',
+          'Dolzarb tarkibi: 15 (15 ta rasm)',
+          'Reklamani ishga tushirish: 12',
+          'Akkauntlar dizayini: 5',
+          'Foto va video suratga olish: 6 soat / 3 ta joy'
         ],
         en: [
-          "Content Plan: 1",  
-          "Posts: 12 (6 images, 6 videos)",  
-          "Stories: 30 (15 images, 15 videos)",  
-          "Icons: 15 (15 images)",  
-          "Highlight Fill: 15 (15 images)",  
-          "Ad Campaigns: 12",  
-          "Account Design: 5",  
-          "Photo/Video Shooting: 6 hours / 3 locations", 
+          'Content Plan: 1',
+          'Posts: 12 (6 images, 6 videos)',
+          'Stories: 30 (15 images, 15 videos)',
+          'Icons: 15 (15 images)',
+          'Highlight Fill: 15 (15 images)',
+          'Ad Campaigns: 12',
+          'Account Design: 5',
+          'Photo/Video Shooting: 6 hours / 3 locations'
         ]
       },
       price: {
@@ -523,25 +511,24 @@ const CostCardData = {
           'Ежемесячный отчет по кампаниям'
         ],
         uz: [
-          "Tarmoqlarning birida shaxsiy kabinet ochish",
-          "5 tagacha kampaniya o’rnatish",
+          'Tarmoqlarning birida shaxsiy kabinet ochish',
+          '5 tagacha kampaniya o’rnatish',
           "Kalit so'zlarni qidirish",
-          "Semantik yadroni tuzish",
+          'Semantik yadroni tuzish',
           "Marker so'rovlarini yig'ish",
-          "Reklamalar yaratish",
-          "Maqsadli auditoriyani aniqlash",
-          "Kampaniyalar bo’yicha oylik hisobot",
-
+          'Reklamalar yaratish',
+          'Maqsadli auditoriyani aniqlash',
+          'Kampaniyalar bo’yicha oylik hisobot'
         ],
         en: [
-         " Opening a personal account on one of the networks ", 
-            "Setting up to 5 campaigns ", 
-            "Keyword research ", 
-            "Compiling a semantic core",  
-            "Collecting marker queries",  
-            "Creating ad copies",  
-            "Defining the target audience",  
-            "Monthly campaign report", 
+          ' Opening a personal account on one of the networks ',
+          'Setting up to 5 campaigns ',
+          'Keyword research ',
+          'Compiling a semantic core',
+          'Collecting marker queries',
+          'Creating ad copies',
+          'Defining the target audience',
+          'Monthly campaign report'
         ]
       },
       price: {
@@ -572,22 +559,21 @@ const CostCardData = {
           'Ежемесячный отчет по кампаниям'
         ],
         uz: [
-          "Shaxsiy kabinet ochish",
+          'Shaxsiy kabinet ochish',
           "5 tagacha kampaniya o'rnatish",
-          "2 tagacha kreativ ishlab chiqarish",
-          "Reklamalar yaratish",
-          "Maqsadli auditoriyani aniqlash",
-          "Kampaniyalar bo’yicha oylik hisobot",
-
+          '2 tagacha kreativ ishlab chiqarish',
+          'Reklamalar yaratish',
+          'Maqsadli auditoriyani aniqlash',
+          'Kampaniyalar bo’yicha oylik hisobot'
         ],
         en: [
-         "Opening a personal account",  
-         "Setting up to 5 campaigns",  
-         "Developing up to 2 creatives",  
-         "Creating ad copies",  
-         "Defining the target audience",  
-         "Monthly campaign report",
-    ]
+          'Opening a personal account',
+          'Setting up to 5 campaigns',
+          'Developing up to 2 creatives',
+          'Creating ad copies',
+          'Defining the target audience',
+          'Monthly campaign report'
+        ]
       },
       price: {
         ru: '300$',
@@ -623,25 +609,25 @@ const CostCardData = {
           'Определение целевой аудитории'
         ],
         uz: [
-          "Saytning texnik auditi",
-          "Google va Yandex da saytni indekslash",
-          "Rasmlar hajmini kamaytirish",
+          'Saytning texnik auditi',
+          'Google va Yandex da saytni indekslash',
+          'Rasmlar hajmini kamaytirish',
           "10 sahifa uchun maqsadli 'Title', 'Description' va 'Text' yozish",
           "Kalit so'zlarni qidirish",
-          "Semantik yadroni tuzish",
+          'Semantik yadroni tuzish',
           "Marker so'rovlarini yig'ish",
-          "Reklamalar yaratish",
-          "Maqsadli auditoriyani aniqlash",
+          'Reklamalar yaratish',
+          'Maqsadli auditoriyani aniqlash'
         ],
         en: [
-          "Site indexing in Google and Yandex",  
-          "Image size reduction",  
-          "Creation of targeted “Title,” “Description,” and “Text” for 10 pages",  
-          "Keyword research",  
-          "Compilation of a semantic core",  
-          "Collection of marker queries",  
-          "Creation of ad copies",  
-          "Defining the target audience",  
+          'Site indexing in Google and Yandex',
+          'Image size reduction',
+          'Creation of targeted “Title,” “Description,” and “Text” for 10 pages',
+          'Keyword research',
+          'Compilation of a semantic core',
+          'Collection of marker queries',
+          'Creation of ad copies',
+          'Defining the target audience'
         ]
       },
       price: {
@@ -736,24 +722,23 @@ const CostCardData = {
           'Руководство по использованию фирменного стиля'
         ],
         uz: [
-          "Logotip dizayni ikkita shakilda",
-          "Vizitka dizayni",
-          "Tipografika (shrift tanlash)",
-          "Uniforma dizayni",
-          "Bloknot dizayni",
-          "Korporativ uslubidan foydalanish bo'yicha ko'rsatmalar",
-
+          'Logotip dizayni ikkita shakilda',
+          'Vizitka dizayni',
+          'Tipografika (shrift tanlash)',
+          'Uniforma dizayni',
+          'Bloknot dizayni',
+          "Korporativ uslubidan foydalanish bo'yicha ko'rsatmalar"
         ],
         en: [
-          "Logo design in two variations",  
-          "Business card design",  
-          "Typography (font selection)",  
-          "Uniform design",  
-          "Notebook design",  
-          "Corporate package design",  
-          "Letterhead design",  
-          "Development of a corporate slogan",  
-          "Guidelines for using the corporate style",
+          'Logo design in two variations',
+          'Business card design',
+          'Typography (font selection)',
+          'Uniform design',
+          'Notebook design',
+          'Corporate package design',
+          'Letterhead design',
+          'Development of a corporate slogan',
+          'Guidelines for using the corporate style'
         ]
       },
       price: {
@@ -787,27 +772,26 @@ const CostCardData = {
           'Руководство по использованию фирменного стиля'
         ],
         uz: [
-          "Logotip dizayni ikkita shakilda",
-          "Vizitka dizayni",
-          "Tipografika (shrift tanlash)",
-          "Uniforma dizayni",
-          "Bloknot dizayni",
-          "Korporativ paket dizayni",
-          "Korporativ blank dizayni",
-          "Korporativ shiorni ishlab chiqish",
-          "Korporativ uslubidan foydalanish bo'yicha ko'rsatmalar",
-          
+          'Logotip dizayni ikkita shakilda',
+          'Vizitka dizayni',
+          'Tipografika (shrift tanlash)',
+          'Uniforma dizayni',
+          'Bloknot dizayni',
+          'Korporativ paket dizayni',
+          'Korporativ blank dizayni',
+          'Korporativ shiorni ishlab chiqish',
+          "Korporativ uslubidan foydalanish bo'yicha ko'rsatmalar"
         ],
         en: [
-        "Logo design in two variations",  
-        "Business card design",  
-        "Typography (font selection)",  
-        "Uniform design",  
-        "Notebook design",  
-        "Corporate package design",  
-        "Letterhead design",  
-        "Development of a corporate slogan",  
-        "Guidelines for using the corporate style",
+          'Logo design in two variations',
+          'Business card design',
+          'Typography (font selection)',
+          'Uniform design',
+          'Notebook design',
+          'Corporate package design',
+          'Letterhead design',
+          'Development of a corporate slogan',
+          'Guidelines for using the corporate style'
         ]
       },
       price: {
@@ -821,7 +805,7 @@ const CostCardData = {
 }
 
 const CostCard = () => {
-  const { slug } = useParams() // Get slug from URL
+  const { slug, lng } = useParams() // Get slug from URL
   const [filteredData, setFilteredData] = useState([])
 
   useEffect(() => {
@@ -863,11 +847,11 @@ const CostCard = () => {
           >
             <div>
               <p className='text-[20px] font-semibold 2xl:font-bold mdl:text-[30px] text-titleDark'>
-                {card.title}
+                {card.title[lng]}
               </p>
             </div>
             <div className='mt-[20px]'>
-              {card.description.split('\n').map((line, lineIndex) => (
+              {card.description[lng].split('\n').map((line, lineIndex) => (
                 <p
                   key={lineIndex}
                   className='text-[15px] mdl:text-[18px] text-[#454545] font-normal font-robotoFlex'
@@ -876,9 +860,10 @@ const CostCard = () => {
                 </p>
               ))}
             </div>
+
             <div className='h-[1px] w-full bg-[#F0F0F0] mt-[25px]' />
             <div className='flex flex-col mt-[25px] relative gap-[11px]'>
-              {card.services.map((service, serviceIndex) => (
+              {card.services[lng].map((service, serviceIndex) => (
                 <div
                   key={serviceIndex}
                   className='flex flex-row gap-[12px] items-center'
@@ -894,6 +879,7 @@ const CostCard = () => {
                 </div>
               ))}
             </div>
+
             <div className='h-[1px] w-full bg-[#F0F0F0] mt-[25px] mb-[40px]' />
             <button
               onClick={() => openModal(card.price, card.title)} // Passing title as well

@@ -20,14 +20,14 @@ const data = [
 	  id: 0,
 	  slug: 'blog1',
 	  title: {
-		uz: 'Как социальные сети могут улучшить репутацию вашей компании',
+		uz: ' Xususiy tibbiy klinikalar uchun samarali marketing: asosiy xususiyatlar',
 		ru: 'Эффективный маркетинг для частных медицинских клиник: ключевые особенности',
-		en: 'How social media can improve your company’s reputation',
+		en: 'Effective Marketing for Private Medical Clinics: Key Features',
 	  },
 	  description: {
-		uz: 'Lorem ipsum dolor sit amet consectetur. Vel a sit id venenatis vitae...',
+		uz: "Shaxsiy tibbiy amaliyotni qanday targ'ib qilishni, ko'proq bemorlarni jalb qilishni va tasdiqlangan marketing strategiyalari yordamida ishonchni mustahkamlashni bilib oling.",
 		ru: 'Узнайте, как продвигать частную медицинскую клинику, привлекать больше пациентов и усиливать доверие с помощью проверенных маркетинговых стратегий.',
-		en: 'Learn how to promote a private medical clinic, attract more patients, and build trust using proven marketing strategies.',
+		en: 'Discover how to promote a private medical clinic, attract more patients, and build trust through proven marketing strategies.',
 	  },
 	  photo: {
 		id: 0,
@@ -78,14 +78,14 @@ const data = [
 	  id: 1,
 	  slug: 'blog2',
 	  title: {
-		uz: 'SEO uchun tibbiy saytlar: ko\'rinishni yaxshilash bo\'yicha maslahatlar',
+		uz: "Tibbiy saytlar uchun SEO: ko'rinishni yaxshilash bo'yicha maslahatlar",
 		ru: 'SEO для медицинских сайтов: лучшие советы для повышения видимости в интернете',
-		en: 'SEO for Medical Websites: Best Tips for Improving Online Visibility',
+		en: ' SEO for Medical Websites: Tips for Improving Visibility',
 	  },
 	  description: {
-		uz: 'Lorem ipsum dolor sit amet consectetur. Vel a sit id venenatis vitae...',
+		uz: "Tibbiy saytni qidiruv tizimlarida ko'rinishini yaxshilash, ko'proq bemorlarni jalb qilish va klinika reytingini oshirish uchun SEO dan qanday foydalanishni bilib oling.",
 		ru: 'Узнайте, как с помощью SEO улучшить видимость медицинского сайта в поисковых системах, привлечь больше пациентов и повысить рейтинг клиники.',
-		en: 'Learn how SEO can improve your medical website’s visibility in search engines, attract more patients, and improve your clinic’s ranking.',
+		en: ' Discover how to leverage SEO to improve the visibility of your medical website in search engines, attract more patients, and elevate your clinic’s ranking.',
 	  },
 	  photo: {
 		id: 1,
@@ -139,14 +139,14 @@ const data = [
 	  id: 2,
 	  slug: 'blog3',
 	  title: {
-		uz: 'Tibbiy kompaniya uchun samarali kontent-marketing strategiyasi',
-		ru: 'Эффективная стратегия контент-маркетинга для медицинской компании: как привлечь пациентов',
+		uz: ' Tibbiyot kompaniyasi uchun samarali kontent-marketing strategiyasi: bemorlarni qanday jalb qilish mumkin',
+		ru: ' Эффективная стратегия контент-маркетинга для медицинской компании: как привлечь пациентов',
 		en: 'Effective Content Marketing Strategy for a Medical Company: How to Attract Patients',
 	  },
 	  description: {
-		uz: 'Lorem ipsum dolor sit amet consectetur. Vel a sit id venenatis vitae...',
+		uz: "Ko'proq bemorlarni jalb qilish va klinikangizga ishonchni oshirish maqsadida tibbiy kompaniya uchun kontent-marketing strategiyasini qanday ishlab chiqishni bilib oling.",
 		ru: 'Узнайте, как разработать стратегию контент-маркетинга для медицинской компании, чтобы привлечь больше пациентов и повысить доверие к вашей клинике.',
-		en: 'Learn how to develop a content marketing strategy for a medical company to attract more patients and build trust in your clinic.',
+		en: 'Learn how to develop a content marketing strategy for a medical company to attract more patients and enhance trust in your clinic',
 	  },
 	  photo: {
 		id: 2,
@@ -198,14 +198,14 @@ const data = [
 	  id: 3,
 	  slug: 'blog4',
 	  title: {
-		uz: 'Tibbiy sohada video-marketingdan foydalanish: nima samarali?',
+		uz: 'Bemorlarni jalb qilish uchun tibbiyot sanoatida video-marketingdan qanday foydalansa bo’ladi',
 		ru: 'Как использовать видео-маркетинг в медицинской сфере для привлечения пациентов',
 		en: 'How to Use Video Marketing in the Medical Field to Attract Patients',
 	  },
 	  description: {
-		uz: 'Lorem ipsum dolor sit amet consectetur. Vel a sit id venenatis vitae...',
+		uz: "Tibbiy klinikalar uchun video-marketing bo'yicha eng yaxshi amaliyotlarni o'rganing va qaysi videolar haqiqatan ham ishlayotganini bilib oling.",
 		ru: 'Откройте для себя лучшие практики видео-маркетинга для медицинских клиник и узнайте, какие видео действительно работают.',
-		en: 'Discover the best video marketing practices for medical clinics and learn which videos truly work.',
+		en: 'Discover the best practices for video marketing in medical clinics and learn which types of videos are truly effective.',
 	  },
 	  photo: {
 		id: 3,
@@ -256,14 +256,14 @@ const data = [
 	  id: 4,
 	  slug: 'blog5',
 	  title: {
-		uz: 'Tibbiy klinikalar uchun target reklama: hususiyatlar',
+		uz: 'Tibbiy klinikalar uchun target reklamaning xususiyatlari: bemorlarni jalb qilish',
 		ru: 'Особенности таргетированной рекламы для медицинских клиник: привлечение пациентов',
-		en: 'Targeted Advertising for Medical Clinics: Key Features',
+		en: 'Key Features of Targeted Advertising for Medical Clinics: Attracting Patients',
 	  },
 	  description: {
-		uz: 'Lorem ipsum dolor sit amet consectetur. Vel a sit id venenatis vitae...',
+		uz: "Tibbiyot klinikasi uchun target reklamani qanday qilib to'g'ri yo'lga qo'yish va bemorlar oqimini ko'paytirishni bilib oling.",
 		ru: 'Узнайте, как правильно настроить таргетированную рекламу для медицинской клиники и увеличить поток пациентов.',
-		en: 'Learn how to properly set up targeted advertising for a medical clinic and increase patient flow.',
+		en: 'Discover how to effectively set up targeted advertising for a medical clinic and increase patient traffic.',
 	  },
 	  photo: {
 		id: 4,
@@ -314,14 +314,14 @@ const data = [
 	  id: 5,
 	  slug: 'blog6',
 	  title: {
-		uz: 'Klinikalar uchun mijozga yo\'naltirilgan marketing: yangi mijozlarni jalb qilish va xizmatni yaxshilash',
+		uz: 'Klinikalar uchun bemorga qaratilgan marketing: xizmatni qanday yaxshilash va bemorlarni jalb qilish mumkin',
 		ru: 'Пациентоориентированный маркетинг для клиник: как улучшить сервис и привлечь пациентов',
-		en: 'Patient-Oriented Marketing for Clinics: How to Improve Service and Attract Patients',
+		en: ' Patient-Centered Marketing for Clinics: Enhancing Service and Attracting Patients',
 	  },
 	  description: {
-		uz: 'Lorem ipsum dolor sit amet consectetur. Vel a sit id venenatis vitae...',
+		uz: ' Qanday qilib bemorga qaratilgan marketing yondashuvi klinika xizmatini yaxshilashga va yangi mijozlarni jalb qilishga yordam beradi. Muvaffaqiyatga erishish uchun oddiy qadamlar.',
 		ru: 'Как пациентоориентированный подход в маркетинге помогает улучшить сервис клиники и привлечь новых клиентов. Простые шаги для достижения успеха.',
-		en: 'How a patient-oriented approach to marketing helps improve clinic service and attract new customers. Simple steps to success.',
+		en: ' Discover how a patient-centered approach in marketing helps improve clinic service and attract new clients. Simple steps to achieve success.',
 	  },
 	  photo: {
 		id: 5,
@@ -372,14 +372,14 @@ const data = [
 	  id: 6,
 	  slug: 'blog7',
 	  title: {
-		uz: 'Tibbiyot marketingida bemorlarning fikr-mulohazalari: qanday ishlaydi?',
+		uz: "Bemorlarning izohlari klinikani targ'ib qilishga va yangi mijozlarni jalb qilishga qanday yordam beradi",
 		ru: 'Как отзывы пациентов помогают продвигать клинику и привлекать новых клиентов',
-		en: 'How Patient Reviews Help Promote Your Clinic and Attract New Clients',
+		en: ' How Patient Reviews Help Promote Clinics and Attract New Clients',
 	  },
 	  description: {
-		uz: 'Lorem ipsum dolor sit amet consectetur. Vel a sit id venenatis vitae...',
+		uz: "Klinikaning obro'sini oshirish va ko'proq mijozlarni jalb qilish uchun bemorlarning izohlari bilan qanday ishlashni bilib oling.",
 		ru: 'Узнайте, как работать с отзывами пациентов, чтобы улучшить репутацию клиники и привлечь больше клиентов.',
-		en: 'Learn how to work with patient reviews to improve your clinic’s reputation and attract more clients.',
+		en: "Learn how to leverage patient reviews to enhance your clinic's reputation and attract more clients.",
 	  },
 	  photo: {
 		id: 6,
@@ -429,14 +429,14 @@ const data = [
 	  id: 7,
 	  slug: 'blog8',
 	  title: {
-		uz: 'Klinika brendini yaratish: kontseptsiyadan reklama qilishgacha',
+		uz: 'Klinika brendini qanday yaratish mumkin: kontseptsiyadan to muvaffaqiyat ila olg’a qadam bosishgacha',
 		ru: 'Как создать бренд клиники: шаги от концепции до успешного продвижения',
 		en: 'How to Create a Clinic Brand: Steps from Concept to Successful Promotion',
 	  },
 	  description: {
-		uz: 'Lorem ipsum dolor sit amet consectetur. Vel a sit id venenatis vitae...',
+		uz: "Raqobatchilardan ajralib turish va ko'proq bemorlarni jalb qilish uchun tibbiy klinika brendini qanday yaratish va rivojlantirish mumkinligini bilib oling.",
 		ru: 'Узнайте, как создать и развить бренд медицинской клиники, чтобы выделиться среди конкурентов и привлечь больше пациентов.',
-		en: 'Learn how to create and develop a medical clinic brand to stand out from competitors and attract more patients.',
+		en: "Discover how to create and develop a brand for your medical clinic to stand out among competitors and attract more patients.",
 	  },
 	  photo: {
 		id: 7,
@@ -484,74 +484,17 @@ const data = [
 	  `,
 	},
 	{
-	  id: 8,
-	  slug: 'blog9',
-	  title: {
-		uz: '',
-		ru: 'Как отзывы пациентов помогают продвигать клинику и привлекать новых клиентов',
-		en: '',
-	  },
-	  description: {
-		uz: '',
-		ru: 'Узнайте, как работать с отзывами пациентов, чтобы улучшить репутацию клиники и привлечь больше клиентов.',
-		en: '',
-	  },
-	  photo: {
-		id: 8,
-		url: like, // Placeholder URL
-	  },
-	  orderNum: 8,
-	  text: `
-		В современном мире, где большинство решений принимается на основе отзывов в интернете, отзывы пациентов играют ключевую роль в продвижении медицинских клиник. Потенциальные клиенты перед выбором клиники читают отзывы других пациентов, и эти отзывы могут стать решающим фактором в их решении.
-  
-		**Что такое отзывы пациентов** 
-  
-		Отзывы пациентов — это мнения людей, которые уже воспользовались услугами клиники и оставили свою оценку. Эти отзывы могут быть на Google, в социальных сетях, на специализированных медицинских порталах или на сайте клиники.
-  
-		**Как они работают**
-  
-		Отзывы помогают другим потенциальным пациентам понять, чего ожидать от клиники. Положительные отзывы укрепляют доверие к клинике, а отрицательные — дают возможность клинике показать, как она работает с проблемами и улучшает сервис.
-  
-		**Как это помогает привлекать ЦА**
-  
-		Отзывы пациентов — это мощное социальное доказательство, которое влияет на решение новых клиентов. Для клиник это не только способ привлечь новых пациентов, но и возможность улучшить свои услуги на основе обратной связи.
-  
-		**Как это сделать самому**
-  
-		1. **Стимулируйте отзывы.** Просите пациентов оставлять отзывы после визита. Это можно делать через SMS, email или при личной беседе.
-		2. **Отвечайте на отзывы.** Как положительные, так и отрицательные отзывы требуют внимания. Благодарите за положительные отзывы и отвечайте на негативные с предложением решения проблемы.
-		3. **Используйте отзывы в маркетинге.** Публикуйте положительные отзывы на сайте, в социальных сетях и рекламных материалах. Это создаст положительное впечатление у потенциальных пациентов.
-		4. **Создайте раздел отзывов на сайте.** Удобная форма для отправки отзывов на сайте — это отличный способ получить больше обратной связи.
-		5. **Обрабатывайте жалобы.** Если вы получаете отрицательные отзывы, не игнорируйте их. Используйте их как возможность улучшить ваш сервис.
-  
-		**Плюсы отзывов**:
-  
-		- Улучшает доверие к клинике.
-		- Привлекает новых пациентов.
-		- Дает клинике возможность улучшить сервис.
-  
-		**Минусы отзывов**:
-  
-		- Негативные отзывы могут нанести вред репутации, если их игнорировать.
-		- Требует времени для обработки и работы с отзывами.
-  
-		Отзывы пациентов — это важнейший инструмент медицинского маркетинга. Они влияют на решение новых клиентов и помогают клинике стать лучше. Работая с отзывами, вы можете улучшить свою репутацию и привлечь больше пациентов.
-  
-		Хотите больше отзывов и позитивных оценок? Мы поможем вам организовать сбор отзывов и использовать их для роста вашего бизнеса!
-	  `,
-	},
-	{
 	  id: 9,
 	  slug: 'blog10',
 	  title: {
-		uz: '',
+		uz: 'Teletibbiyot qanday ishlaydi: onlayn-konsultatsiyalar afzalliklari va imkoniyatlari',
 		ru: 'Как работает телемедицина: преимущества и возможности онлайн-консультаций',
-		en: '',
+		en: 'How Telemedicine Works: Advantages and Opportunities of Online Consultations',
 	  },
 	  description: {
-		uz: '',
+		uz: 'Teletibbiyotni klinikangizga qanday joriy etishni va onlayn-konsultatsiyalar bemorlar va shifokorlarga qanday imtiyozlar taqdim etishini bilib oling.',
 		ru: 'Узнайте, как внедрить телемедицину в вашу клинику и какие преимущества онлайн-консультации предлагают пациентам и врачам.',
-		en: '',
+		en: ' Learn how to implement telemedicine in your clinic and what benefits online consultations offer to patients and doctors.',
 	  },
 	  photo: {
 		id: 9,
@@ -601,14 +544,14 @@ const data = [
 	  id: 10,
 	  slug: 'blog11',
 	  title: {
-		uz: '',
+		uz: 'Tibbiy klinikada CRM dan qanday foydalansa bo’ladi: bemorlar bilan ishlashni yaxshilash',
 		ru: 'Как использовать CRM в медицинской клинике: улучшение работы с пациентами',
-		en: '',
+		en: 'How to Utilize CRM in a Medical Clinic: Enhancing Patient Management',
 	  },
 	  description: {
-		uz: '',
+		uz: ' CRM tizimi tibbiy klinikalarga bemorlarga g’amxo’rlik qilishni yaxshilash va ichki jarayonlarni tashkil etishga qanday yordam berishini bilib oling.',
 		ru: 'Узнайте, как CRM-система помогает медицинским клиникам улучшить обслуживание пациентов и организовать внутренние процессы.',
-		en: '',
+		en: 'Discover how a CRM system helps medical clinics improve patient service and organize internal processes.',
 	  },
 	  photo: {
 		id: 10,
@@ -660,14 +603,14 @@ const data = [
 	  id: 11,
 	  slug: 'blog12',
 	  title: {
-		uz: '',
+		uz: "B2B-segmentida tibbiy asbob-uskunalar va xizmatlarni qanday targ'ib qilish kerak: asosiy strategiyalar",
 		ru: 'Как продвигать медицинское оборудование и услуги в B2B-сегменте: ключевые стратегии',
-		en: '',
+		en: 'How to Promote Medical Equipment and Services in the B2B Segment: Key Strategies',
 	  },
 	  description: {
-		uz: '',
+		uz: "Zamonaviy marketing vositalaridan foydalangan holda B2B segmentida tibbiy asbob-uskunalar va xizmatlarni qanday samarali targ'ib qilishni aniqlaymiz.",
 		ru: 'Разбираемся, как эффективно продвигать медицинское оборудование и услуги в сегменте B2B с использованием современных маркетинговых инструментов.',
-		en: '',
+		en: 'Exploring effective strategies for promoting medical equipment and services in the B2B segment using modern marketing tools.',
 	  },
 	  photo: {
 		id: 11,
