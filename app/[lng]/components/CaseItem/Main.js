@@ -28,9 +28,9 @@ const CaseItemMain = () => {
           },
           "link": "https://imed.uz/",
           "shortDescription": {
-            "uz": "Intermed Innovation / Крупнейший дилер медицинского оборудования в Узбекистане.",
+            "uz": "Intermed Innovation / O'zbekistondagi eng yirik tibbiy asbob-uskunalar dileri.",
             "ru": "Intermed Innovation / Крупнейший дилер медицинского оборудования в Узбекистане.",
-            "en": "Intermed Innovation / Крупнейший дилер медицинского оборудования в Узбекистане."
+            "en": "Intermed Innovation / The largest dealer of medical equipment in Uzbekistan."
           },
           "background": {
             "id": 1,
@@ -40,10 +40,7 @@ const CaseItemMain = () => {
             "id": 2,
             "url": "https://ucarecdn.com/eaa487e0-df1f-4394-bc2e-0f89d4abd28e/-/preview/1000x658/"
           },
-          // "logo": {
-          //   "id": 3,
-          //   "url": "https://ucarecdn.com/67fd2b7e-e746-47a8-9f1a-91b8e135119e/-/preview/200x100/"
-          // }
+         
         },
        
       }
@@ -61,9 +58,9 @@ const CaseItemMain = () => {
           },
           "link": "https://mrj-trade.com",
           "shortDescription": {
-            "uz": "MRJ TRADE / Поставщик медицинского оборудования в странах Ближнего Востока и Африки.",
+            "uz": "MRJ TRADE / Yaqin Sharq va Afrikada tibbiy asbob-uskunalarni yetkazib beruvchi.",
             "ru": "MRJ TRADE / Поставщик медицинского оборудования в странах Ближнего Востока и Африки.",
-            "en": "MRJ TRADE / Поставщик медицинского оборудования в странах Ближнего Востока и Африки."
+            "en": "MRJ TRADE / Supplier of medical equipment in the Middle East and Africa."
           },
           "background": {
             "id": 4,
@@ -88,15 +85,15 @@ const CaseItemMain = () => {
         "banner": {
           "id": 1,
           "title": {
-            "uz": "Хужакулов Одил Алишерович",
+            "uz": "Odil Alisherovich",
             "ru": "Хужакулов Одил Алишерович",
-            "en": "Хужакулов Одил Алишерович"
+            "en": "Odil Alisherovich"
           },
           "link": "https://dr-odil.uz/",
           "shortDescription": {
-            "uz": "Хужакулов Одил Алишерович / Врач-эксперт в области пренатальной диагностики.",
+            "uz": "Xujaqulov Odil Alisherovich / Prenatal diagnostika sohasidagi shifokor-mutaxassis.",
             "ru": "Хужакулов Одил Алишерович / Врач-эксперт в области пренатальной диагностики.",
-            "en": "Хужакулов Одил Алишерович / Врач-эксперт в области пренатальной диагностики."
+            "en": "Khujaqulov Odil Alisherovich / Expert Doctor in Prenatal Diagnosis."
           },
           "background": {
             "id": 4,
@@ -127,9 +124,9 @@ const CaseItemMain = () => {
           },
           "link": "https://pmcenter.uz/",
           "shortDescription": {
-            "uz": "Prime Medical Center / Гастроэнтерологический центр с многолетним опытом (бывший GunchaMed)",
+            "uz": "Prime Medical Center / Ko'p yillik tajribaga ega gastroenterologiya markazi (sobiq GunchaMed).",
             "ru": "Prime Medical Center / Гастроэнтерологический центр с многолетним опытом (бывший GunchaMed)",
-            "en": "Prime Medical Center / Гастроэнтерологический центр с многолетним опытом (бывший GunchaMed)"
+            "en": "Prime Medical Center / Gastroenterology Center with years of experience (formerly GunchaMed)."
           },
           "background": {
             "id": 4,
@@ -161,9 +158,9 @@ const CaseItemMain = () => {
           },
           "link": "",
           "shortDescription": {
-            "uz": "Smile Design / Стоматология с передовыми технологиями и безупречной репутацией.",
+            "uz": "Smile Design / Stomatologiya ilg'or texnologiyalar va benuqson obro'ga ega.",
             "ru": "Smile Design / Стоматология с передовыми технологиями и безупречной репутацией.",
-            "en": "Smile Design / Стоматология с передовыми технологиями и безупречной репутацией."
+            "en": "Smile Design / Dentistry with cutting-edge technologies and an impeccable reputation."
           },
           "background": {
             "id": 4,
@@ -188,15 +185,15 @@ const CaseItemMain = () => {
         "banner": {
           "id": 1,
           "title": {
-            "uz": "Бахтиёр Наджиюллаевич",
+            "uz": "Baxtiyor Najiyullaevich",
             "ru": "Бахтиёр Наджиюллаевич",
-            "en": "Бахтиёр Наджиюллаевич"
+            "en": "Baxtiyor Najiyullaevich"
           },
           "link": "",
           "shortDescription": {
-            "uz": "Шамирзаев Бахтиёр Наджиюллаевич / Врач-хирург высшей категории, специалист по эндоскопическим операциям.",
+            "uz": "Shamirzaev Baxtiyor Najiyullaevich / Oliy toifali shifokor-jarroh, endoskopik operatsiyalar bo'yicha mutaxassis.",
             "ru": "Шамирзаев Бахтиёр Наджиюллаевич / Врач-хирург высшей категории, специалист по эндоскопическим операциям.",
-            "en": "Шамирзаев Бахтиёр Наджиюллаевич / Врач-хирург высшей категории, специалист по эндоскопическим операциям."
+            "en": "Shamirzaev Bakhtiyor Najiyullaevich / Top-category surgeon specializing in endoscopic surgeries."
           },
           "background": {
             "id": 4,
@@ -213,10 +210,6 @@ const CaseItemMain = () => {
         },
       }
     },
-    // s
-
-
-
     {
       "slug": "mostona-med",
       "data": {
@@ -230,9 +223,9 @@ const CaseItemMain = () => {
           },
           "link": "https://www.instagram.com/nargiza_xamidulayevna/",
           "shortDescription": {
-            "uz": "Mastona Med / Клиника интегративной медицины по авторским методикам основателя Наргизы Хамидуллаевны.",
+            "uz": "Mastona Med / Asoschi Nargiza Xamidullaevnaning mualliflik usullari bo’yicha integrativ tibbiyot klinikasi.",
             "ru": "Mastona Med / Клиника интегративной медицины по авторским методикам основателя Наргизы Хамидуллаевны.",
-            "en": "Mastona Med / Клиника интегративной медицины по авторским методикам основателя Наргизы Хамидуллаевны."
+            "en": "Mastona Med / Clinic of Integrative Medicine based on the founder's proprietary methods, Narghiza Khamidullayevna. "
           },
           "background": {
             "id": 4,
@@ -262,9 +255,9 @@ const CaseItemMain = () => {
           },
           "link": "https://www.instagram.com/antgroup_uz/",
           "shortDescription": {
-            "uz": "ANT-GROUP / Фармацевтическая компания.",
+            "uz": "ANT-GROUP / Farmatsevtika kompaniyasi.",
             "ru": "ANT-GROUP / Фармацевтическая компания.",
-            "en": "ANT-GROUP / Фармацевтическая компания."
+            "en": "ANT-GROUP / Pharmaceutical Company.  "
           },
           "background": {
             "id": 4,
@@ -288,15 +281,15 @@ const CaseItemMain = () => {
         "banner": {
           "id": 1,
           "title": {
-            "uz": "Хусеинова Нафиса Шухратовна",
+            "uz": "Nafisa Shuxratovna",
             "ru": "Хусеинова Нафиса Шухратовна",
-            "en": "Хусеинова Нафиса Шухратовна"
+            "en": "Nafisa Shukhratovna"
           },
           "link": "https://www.stom-tashkent.uz/",
           "shortDescription": {
-            "uz": "Хусеинова Нафиса Шухратовна / Врач стоматолог-имплантолог, ортопед.",
+            "uz": "Xuseinova Nafisa Shuxratovna / Shifokor stomatolog-implantolog, ortoped.",
             "ru": "Хусеинова Нафиса Шухратовна / Врач стоматолог-имплантолог, ортопед.",
-            "en": "Хусеинова Нафиса Шухратовна / Врач стоматолог-имплантолог, ортопед."
+            "en": "Khusainova Nafisa Shukhratovna / Dentist-Implantologist, Orthopedist."
           },
           "background": {
             "id": 4,
@@ -320,15 +313,15 @@ const CaseItemMain = () => {
         "banner": {
           "id": 1,
           "title": {
-            "uz": "Хашимов Хайрилло Рахматуллаевич",
+            "uz": "Xayrillo Rahmatullaevich",
             "ru": "Хашимов Хайрилло Рахматуллаевич",
-            "en": "Хашимов Хайрилло Рахматуллаевич"
+            "en": "Khayrillo Rakhmatullaevich"
           },
           "link": "https://dr-khashimov.uz/",
           "shortDescription": {
-            "uz": "Хашимов Хайрилло Рахматуллаевич / Врач-кардиохирург с 17-летним опытом.",
+            "uz": "Xashimov Xayrillo Rahmatullaevich / 17 yillik tajribaga ega shifokor-kardiojarroh.",
             "ru": "Хашимов Хайрилло Рахматуллаевич / Врач-кардиохирург с 17-летним опытом.",
-            "en": "Хашимов Хайрилло Рахматуллаевич / Врач-кардиохирург с 17-летним опытом."
+            "en": "Khashimov Khayrillo Rakhmatullaevich / Cardiac Surgeon with 17 Years of Experience."
           },
           "background": {
             "id": 4,
@@ -352,15 +345,15 @@ const CaseItemMain = () => {
         "banner": {
           "id": 1,
           "title": {
-            "uz": "Джураева Азиза Шахзадэевна",
+            "uz": "Aziza Shaxzadeevna",
             "ru": "Джураева Азиза Шахзадэевна",
-            "en": "Джураева Азиза Шахзадэевна"
+            "en": "Aziza Shakhzadeevna "
           },
           "link": "https://endocrinolog.uz/",
           "shortDescription": {
-            "uz": "Джураева Азиза Шахзадэевна / Врач-эндокринолог, кандидат медицинских наук.",
+            "uz": "Juraeva Aziza Shaxzadeevna / Shifokor-endokrinolog, tibbiyot fanlari nomzodi.",
             "ru": "Джураева Азиза Шахзадэевна / Врач-эндокринолог, кандидат медицинских наук.",
-            "en": "Джураева Азиза Шахзадэевна / Врач-эндокринолог, кандидат медицинских наук."
+            "en": "Dzhuraeva Aziza Shakhzadeevna / Endocrinologist, Candidate of Medical Sciences."
           },
           "background": {
             "id": 4,
@@ -384,15 +377,15 @@ const CaseItemMain = () => {
         "banner": {
           "id": 1,
           "title": {
-            "uz": "Курбанов Алишер Бахромович",
+            "uz": "Alisher Baxromovich",
             "ru": "Курбанов Алишер Бахромович",
-            "en": "Курбанов Алишер Бахромович"
+            "en": "Alisher Bakhramovich  "
           },
           "link": "https://alisher-lor.uz/",
           "shortDescription": {
-            "uz": "Курбанов Алишер Бахромович / ЛОР-хирург, владелец клиники YUNUSOBOD LOR 24/7.*",
+            "uz": "Qurbonov Alisher Baxromovich / LOR-jarroh, YUNUSOBOD LOR 24/7 klinikasi egasi.",
             "ru": "Курбанов Алишер Бахромович / ЛОР-хирург, владелец клиники YUNUSOBOD LOR 24/7.*",
-            "en": "Курбанов Алишер Бахромович / ЛОР-хирург, владелец клиники YUNUSOBOD LOR 24/7.*"
+            "en": "Kurbanov Alisher Bakhramovich / ENT Surgeon, Owner of YUNUSOBOD LOR 24/7 Clinic. "
           },
           "background": {
             "id": 4,
@@ -416,15 +409,15 @@ const CaseItemMain = () => {
         "banner": {
           "id": 1,
           "title": {
-            "uz": "Ахмедов Санджар Акбарович",
+            "uz": "Sanjаr Akbarovich",
             "ru": "Ахмедов Санджар Акбарович",
-            "en": "Ахмедов Санджар Акбарович"
+            "en": "Sanjаr Akbarovich"
           },
           "link": "https://dr-psixoterapevt.uz/",
           "shortDescription": {
-            "uz": "Ахмедов Санджар Акбарович / Врач-психотерапевт высшей категории, кандидат медицинских наук, доцент.",
+            "uz": "Axmedov Sanjar Akbarovich / Oliy toifali shifokor-psixoterapevt, tibbiyot fanlari nomzodi, dotsent.",
             "ru": "Ахмедов Санджар Акбарович / Врач-психотерапевт высшей категории, кандидат медицинских наук, доцент.",
-            "en": "Ахмедов Санджар Акбарович / Врач-психотерапевт высшей категории, кандидат медицинских наук, доцент."
+            "en": "Ahmedov Sanjar Akbarovich / Top Category Psychotherapist, Medical Science Candidate, Associate Professor. "
           },
           "background": {
             "id": 4,
