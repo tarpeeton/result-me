@@ -5,8 +5,9 @@ import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import { useParams } from 'next/navigation'
 import { Image } from 'antd'
-import b from '@/public/images/gallery/b.png'
-// Данные с изображениями и slug
+import { useCustomTranslation } from '@/app/i18n/client'
+
+
 const sliderData = [
 	{
 		slug: 'prime-medical-center',
@@ -244,9 +245,9 @@ const responsive = {
 }
 
 const Images = () => {
-	const { slug } = useParams() // Получаем slug из URL
+	const { slug  , lng} = useParams() // Получаем slug из URL
 	const [filteredImages, setFilteredImages] = useState([])
-
+	const { t } = useCustomTranslation(lng, 'caseslug')
 	useEffect(() => {
 		// Фильтруем изображения по slug
 		const sliderItem = sliderData.find(item => item.slug === slug)
@@ -260,9 +261,8 @@ const Images = () => {
 			{filteredImages.length > 0 ? (
 				<div className='mt-[80px] mb-[80px] 3xl:mb-[200px]'>
 					<h2 className='text-[28px] mdl:text-[50px] font-bold mb-[20px] mdl:mb-[40px]'>
-						Галерея
+						{t("gallery")}
 					</h2>
-
 					{/* Слайдер */}
 					{filteredImages.length > 0 ? (
 						<Carousel
