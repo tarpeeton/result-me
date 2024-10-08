@@ -118,7 +118,7 @@ const data = [
 
 const Services = () => {
   const { lng } = useParams()
-  const { t } = useCustomTranslation(lng, 'service')
+  const { t } = useCustomTranslation(lng, 'services')
   return (
     <div className='w-full flex flex-col flex-wrap justify-between gap-6 mt-[20px] bg-[#F8F8F8] py-[24px] px-[16px] rounded-[30px] mdl:pl-[24px] mdl:pr-[14px]'>
       {/* Card 1 */}

@@ -6,8 +6,12 @@ import { FaTelegramPlane } from 'react-icons/fa'
 import { IoClose } from 'react-icons/io5'
 import { Dialog, DialogTitle, DialogContent } from '@mui/material'
 import { FiGlobe } from 'react-icons/fi'
+import { useParams } from 'next/navigation'
+import { useCustomTranslation } from '@/app/i18n/client'
 
 const CaseResultModalSocials = ({ isOpen, onClose, link }) => {
+	const {lng} = useParams()
+	const {t} = useCustomTranslation(lng , 'modal')
 	return (
 		<>
 			{/* Main Form Modal */}
@@ -40,7 +44,7 @@ const CaseResultModalSocials = ({ isOpen, onClose, link }) => {
 						zIndex: 9999,
 					}}
 				>
-					Посмотреть результат
+					{t('view_result')} {/* Translated text for "Посмотреть результат" */}
 					<div onClick={onClose} style={{ cursor: 'pointer' }}>
 						<IoClose />
 					</div>
@@ -56,7 +60,7 @@ const CaseResultModalSocials = ({ isOpen, onClose, link }) => {
 								className='flex flex-row p-[20px] items-center border border-[#F0F0F0] rounded-[15px] gap-[12px] text-violet100 mdl:rounded-[20px]'
 							>
 								<FiGlobe className='text-[20px] mdl:text-[25px]' />
-								<p className='text-[18px] mdl:text-[20px]'>Сайт</p>
+								<p className='text-[18px] mdl:text-[20px]'>{t('website')}</p> {/* Translated text for "Сайт" */}
 							</Link>
 						)}
 						{link.instagram && (
@@ -65,7 +69,7 @@ const CaseResultModalSocials = ({ isOpen, onClose, link }) => {
 								className='flex flex-row p-[20px] items-center border border-[#F0F0F0] rounded-[15px] gap-[12px] text-[#F863A1] mdl:rounded-[20px]'
 							>
 								<FaInstagram className='text-[20px] mdl:text-[25px]' />
-								<p className='text-[18px] mdl:text-[20px]'>Instagram</p>
+								<p className='text-[18px] mdl:text-[20px]'>{t('instagram')}</p> {/* Translated text for "Instagram" */}
 							</Link>
 						)}
 						{link.telegram && (
@@ -74,7 +78,7 @@ const CaseResultModalSocials = ({ isOpen, onClose, link }) => {
 								className='flex flex-row p-[20px] items-center border border-[#F0F0F0] rounded-[15px] gap-[12px] text-[#2B99FF] mdl:rounded-[20px]'
 							>
 								<FaTelegramPlane className='text-[20px] mdl:text-[25px]' />
-								<p className='text-[18px] mdl:text-[20px]'>Telegram</p>
+								<p className='text-[18px] mdl:text-[20px]'>{t('telegram')}</p> {/* Translated text for "Telegram" */}
 							</Link>
 						)}
 					</div>
