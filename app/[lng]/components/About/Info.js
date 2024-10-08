@@ -1,24 +1,27 @@
+"use client"
 import Link from 'next/link'
-
+import { useParams } from 'next/navigation'
 import Image from 'next/image'
 
-import AboutBgImage from '@/public/images/about/aboutBG.png'
 import AboutImage from '@/public/images/about/about.png'
+import { useCustomTranslation } from '@/app/i18n/client'
 
 const Info = () => {
+	const {lng} = useParams()
+	const {t} = useCustomTranslation(lng , 'aboutus')
+
 	return (
 		<div className='rounded-[30px] bg-violet100 py-[30px] px-[20px] mx-[16px] relative  mdl:py-[50px] mdl:px-[40px] 3xl:rounded-[100px] 3xl:py-[80px] 3xl:px-[70px] mt-[20px] mdl:mt-[25px] 3xl:mt-[30px] overflow-hidden'>
 			<div className='relative z-50 3xl:w-[55%]'>
 				<div>
 					<div className='w-[80%] 3xl:w-[95%]'>
 						<h1 className='text-[28px] font-bold text-white100 mdl:text-[60px]'>
-							RESULT AGENCY ВАШ ПУТЬ К УСПЕХУ
+							{t("title")}
 						</h1>
 					</div>
 					<div className='mt-[12px] mdl:mt-[30px]'>
 						<p className='text-[14px] mdl:text-[18px] mdl:font-semibold font-medium text-white100 font-robotoFlex'>
-						Мы агентство, которое продвигает медицинские учреждения и специалистов, используя маркетинговые и IT-инструменты.
-						Наша миссия — поддерживать рост бизнеса с помощью передовых решений в области маркетинга & IT
+					{t('description')}
 						</p>
 					</div>
 				</div>
@@ -26,10 +29,10 @@ const Info = () => {
 				<div className='flex flex-col gap-[30px] 3xl:flex-row'>
 					<div className='flex flex-col gap-[7px]'>
 						<p className='text-[28px] text-white100 font-bold mdl:text-[40px]'>
-							6.10.2023
+							{t('date')}
 						</p>
 						<p className='text-[14px] text-[#FFFFFF] mdl:text-[20px] font-robotoFlex'>
-							Дата основания
+							{t('date_info')}
 						</p>
 					</div>
 					<div className='flex flex-col gap-[7px]'>
@@ -38,12 +41,12 @@ const Info = () => {
 								href='https://document.birdarcha.uz/certificate/legal-entity/2875c7eb-48ec-4ff3-91f6-fd8a394f8439/pdf?download'
 								className='text-[28px] text-white100 font-bold mdl:text-[40px]  '
 							>
-								Свидетельство
+								{t('dowload_text')}
 							</Link>
 						</div>
 
 						<Link href='https://document.birdarcha.uz/certificate/legal-entity/2875c7eb-48ec-4ff3-91f6-fd8a394f8439/pdf?download' className='text-[14px] text-[#FFFFFF] mdl:text-[20px] font-robotoFlex'>
-							Скачать 
+							{t('dowload')}
 						</Link>
 					</div>
 				</div>
