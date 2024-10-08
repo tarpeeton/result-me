@@ -82,13 +82,21 @@ const data = [
     id: 1,
     banner: {
       title: 'Intermed Innovation',
-      shortDescription: 'Сайт SEO',
+      shortDescription: {
+        uz: 'Sayt SEO',
+        ru: 'Сайт SEO',
+        en: 'Website SEO'
+      },
       photo: inter,
       slug: 'intermed'
     },
     statistics: [
       {
-        value: '+17%',
+        value: {
+          uz: '+17%',
+          ru: '+17%',
+          en: '+17%'
+        },
         label: {
           uz: 'Sayt koversiyasi 1 oyda',
           ru: 'Конверсия с сайта за 1 месяц',
@@ -96,7 +104,11 @@ const data = [
         }
       },
       {
-        value: '200+ лидов',
+        value: {
+          uz: '200+ yetakchilar',
+          ru: '200+ лидов',
+          en: '200+ leads'
+        },
         label: {
           uz: '1 oy davomida har bir lid uchun 2,1$ narxda',
           ru: 'По цене 2,1$ за лид в течение 1 месяца',
@@ -104,7 +116,11 @@ const data = [
         }
       },
       {
-        value: '+15%',
+        value: {
+          uz: '+15%',
+          ru: '+15%',
+          en: '+15%'
+        },
         label: {
           uz: "Obunachilar sonini ko'paytirish",
           ru: 'Увеличение числа подписчиков',
@@ -117,14 +133,22 @@ const data = [
     id: 2,
     banner: {
       title: 'MRJ Trade',
-      shortDescription: 'Сайт SEO Брендинг Реклама',
+      shortDescription: {
+        uz: 'Sayt SEO Brending Reklama',
+        ru: 'Сайт SEO Брендинг Реклама',
+        en: 'Website SEO Branding Advertising'
+      },
       photo:
         'https://ucarecdn.com/581a982e-f1c1-44c1-8dd4-1862300a3e0c/-/preview/1000x533/',
       slug: 'mrj-trade'
     },
     statistics: [
       {
-        value: '+1,560',
+        value: {
+          uz: '+1,560',
+          ru: '+1,560',
+          en: '+1,560'
+        },
         label: {
           uz: 'Oyiga saytga chertishlar',
           ru: 'кликов на сайт за месяц',
@@ -132,28 +156,43 @@ const data = [
         }
       },
       {
-        value: '+0,32$',
+        value: {
+          uz: '+0,32$',
+          ru: '+0,32$',
+          en: '+0.32$'
+        },
         label: {
           uz: 'Bitta chertish narxi',
           ru: 'цена за клик',
           en: 'Cost per click '
         }
       },
-      { value: '+11,22%', label: { uz: 'CTR', ru: 'CTR', en: 'CTR' } }
+      {
+        value: { uz: '+11,22%', ru: '+11,22%', en: '+11.22%' },
+        label: { uz: 'CTR', ru: 'CTR', en: 'CTR' }
+      }
     ]
   },
   {
     id: 3,
     banner: {
       title: 'Prime medical center',
-      shortDescription: 'SMM Сайт',
+      shortDescription: {
+        uz: 'SMM Sayt',
+        ru: 'SMM Сайт',
+        en: 'SMM Website'
+      },
       photo:
         'https://ucarecdn.com/3d44d91c-b27b-41a0-9eb5-a02d51e18ad0/-/preview/1000x533/',
       slug: 'prime-medical-center'
     },
     statistics: [
       {
-        value: '+41%',
+        value: {
+          uz: '+41%',
+          ru: '+41%',
+          en: '+41%'
+        },
         label: {
           uz: 'Klinikaga tashriflar soni / oy',
           ru: 'число обращений в клинику',
@@ -161,7 +200,11 @@ const data = [
         }
       },
       {
-        value: '+23%',
+        value: {
+          uz: '+23%',
+          ru: '+23%',
+          en: '+23%'
+        },
         label: {
           uz: "Tashrif buyuruvchilar o'sishi",
           ru: 'посещаемость',
@@ -169,7 +212,11 @@ const data = [
         }
       },
       {
-        value: '+18,200%',
+        value: {
+          uz: '+18,200%',
+          ru: '+18,200%',
+          en: '+18,200%'
+        },
         label: {
           uz: 'Saytga tashriflar / yil',
           ru: 'посещений сайта / год',
@@ -182,14 +229,22 @@ const data = [
     id: 4,
     banner: {
       title: 'Dr Odil Alisherovich',
-      shortDescription: 'Сайт SMM',
+      shortDescription: {
+        uz: 'Sayt SMM',
+        ru: 'Сайт SMM',
+        en: 'Website SMM'
+      },
       photo:
         'https://ucarecdn.com/3821b6ff-68bf-49a0-95a1-3a97a2b24367/-/preview/1000x533/',
       slug: 'dr-odil-alisherovich'
     },
     statistics: [
       {
-        value: '750',
+        value: {
+          uz: '750',
+          ru: '750',
+          en: '750'
+        },
         label: {
           uz: 'Telegram obunachilari',
           ru: 'подписчиков в Telegram',
@@ -197,7 +252,11 @@ const data = [
         }
       },
       {
-        value: '1070',
+        value: {
+          uz: '1070',
+          ru: '1070',
+          en: '1070'
+        },
         label: {
           uz: 'Instagram obunachilari',
           ru: 'подписчиков в Instagram',
@@ -205,7 +264,11 @@ const data = [
         }
       },
       {
-        value: 'Имидж врача',
+        value: {
+          uz: 'Shifokorning imidji',
+          ru: 'Имидж врача',
+          en: 'Doctor’s image'
+        },
         label: {
           uz: 'Shifokorning shaxsiy brendini mustahkamlash',
           ru: 'Укрепление личного бренда врача',
@@ -218,7 +281,11 @@ const data = [
     id: 5,
     banner: {
       title: 'Mastona Med',
-      shortDescription: 'SMM',
+      shortDescription: {
+        uz: 'SMM',
+        ru: 'SMM',
+        en: 'SMM'
+      },
       photo:
         'https://ucarecdn.com/9838f328-be53-4820-beb0-50de671b5042/-/preview/1000x533/',
       slug: 'mostona-med'
@@ -237,22 +304,34 @@ const data = [
     id: 6,
     banner: {
       title: 'Бахтиер Наджиюллаевич',
-      shortDescription: 'Реклама',
+      shortDescription: {
+        uz: 'Reklama',
+        ru: 'Реклама',
+        en: 'Advertising'
+      },
       photo:
         'https://ucarecdn.com/59e5684a-271c-41ab-a8d2-1efe4622449e/-/preview/1000x533/',
       slug: 'baxtiyor-nadjullayevich'
     },
     statistics: [
       {
-        value: '+4,820',
+        value: {
+          uz: '+4,820',
+          ru: '+4,820',
+          en: '+4,820'
+        },
         label: {
           uz: 'Saytga chertishlar / 1 oyda',
           ru: 'кликов на сайт / за 1 месяц',
-          en: ' Clicks to the website   / in 1 month'
+          en: 'Clicks to the website   / in 1 month'
         }
       },
       {
-        value: '0,10$',
+        value: {
+          uz: '0,10$',
+          ru: '0,10$',
+          en: '0.10$'
+        },
         label: {
           uz: 'Har bir chertish narxi / 1 oyda',
           ru: 'цена за клик / за 1 месяц',
@@ -260,7 +339,11 @@ const data = [
         }
       },
       {
-        value: '+14,22%',
+        value: {
+          uz: '+14,22%',
+          ru: '+14,22%',
+          en: '+14.22%'
+        },
         label: {
           uz: 'CTR / 1 oyda',
           ru: 'CTR / за 1 месяц',
@@ -273,14 +356,22 @@ const data = [
     id: 7,
     banner: {
       title: 'Smile Design',
-      shortDescription: 'Реклама',
+      shortDescription: {
+        uz: 'Reklama',
+        ru: 'Реклама',
+        en: 'Advertising'
+      },
       photo:
         'https://ucarecdn.com/319af659-eec1-45b4-9cfc-870415179a17/-/preview/1000x533/',
       slug: 'smile-design'
     },
     statistics: [
       {
-        value: '2,450',
+        value: {
+          uz: '2,450',
+          ru: '2,450',
+          en: '2,450'
+        },
         label: {
           uz: 'Saytga chertishlar / 1 oyda',
           ru: 'кликов на сайт / за 1 месяц',
@@ -288,7 +379,11 @@ const data = [
         }
       },
       {
-        value: '0,05$',
+        value: {
+          uz: '0,05$',
+          ru: '0,05$',
+          en: '0.05$'
+        },
         label: {
           uz: 'Har bir chertish narxi / 1 oyda',
           ru: 'цена за клик / за 1 месяц',
@@ -296,7 +391,11 @@ const data = [
         }
       },
       {
-        value: '11,64%',
+        value: {
+          uz: '11,64%',
+          ru: '11,64%',
+          en: '11.64%'
+        },
         label: {
           uz: 'CTR / 1 oyda',
           ru: 'CTR / за 1 месяц',
@@ -309,7 +408,11 @@ const data = [
     id: 8,
     banner: {
       title: 'Нафиса Шухратовна',
-      shortDescription: 'Сайт Брендинг',
+      shortDescription: {
+        uz: 'Sayt Brending',
+        ru: 'Сайт Брендинг',
+        en: 'Website Branding'
+      },
       photo:
         'https://ucarecdn.com/ff5c48de-f62f-43d3-930f-deda157f95d8/-/preview/1000x533/',
       slug: 'nafisa-shuxratovna'
@@ -335,7 +438,11 @@ const data = [
     id: 10,
     banner: {
       title: 'Хайрилло Рахматуллаевич',
-      shortDescription: 'Сайт Брендинг',
+      shortDescription: {
+        uz: 'Sayt Brending',
+        ru: 'Сайт Брендинг',
+        en: 'Website Branding'
+      },
       photo:
         'https://ucarecdn.com/2ba0ba68-c9fe-4385-9455-ab649077f091/-/preview/1000x533/',
       slug: 'xayrullo-rahmatullaevich'
@@ -361,14 +468,22 @@ const data = [
     id: 11,
     banner: {
       title: 'Ant Group',
-      shortDescription: 'SMM',
+      shortDescription: {
+        uz: 'SMM',
+        ru: 'SMM',
+        en: 'SMM'
+      },
       photo:
         'https://ucarecdn.com/49c73bea-744c-4688-9381-749f0a02dddd/-/preview/1000x533/',
       slug: 'ant-group'
     },
     statistics: [
       {
-        value: 'SMM',
+        value: {
+          uz: 'SMM',
+          ru: 'SMM',
+          en: 'SMM'
+        },
         label: {
           uz: 'SMM Instagram / Telegram / YouTube',
           ru: 'SMM Instagram / Telegram / YouTube',
@@ -381,14 +496,22 @@ const data = [
     id: 12,
     banner: {
       title: 'Алишер Бахромович',
-      shortDescription: 'Сайт Реклама SEO Брендинг',
+      shortDescription: {
+        uz: 'Sayt Reklama SEO Brending',
+        ru: 'Сайт Реклама SEO Брендинг',
+        en: 'Website Advertising SEO Branding'
+      },
       photo:
         'https://ucarecdn.com/63e07933-c844-4595-bb71-7f8daeb71e1a/-/preview/1000x533/',
       slug: 'alisher-baxromovich'
     },
     statistics: [
       {
-        value: '2,840',
+        value: {
+          uz: '2,840',
+          ru: '2,840',
+          en: '2,840'
+        },
         label: {
           uz: 'Saytga chertishlar / 1 oyda',
           ru: 'кликов на сайт   / за 1 месяц',
@@ -396,7 +519,11 @@ const data = [
         }
       },
       {
-        value: '0,11$',
+        value: {
+          uz: '0,11$',
+          ru: '0,11$',
+          en: '0.11$'
+        },
         label: {
           uz: 'Chertish narxi / 1 oyda',
           ru: 'цена за клик   / за 1 месяц',
@@ -404,7 +531,11 @@ const data = [
         }
       },
       {
-        value: '13,63%',
+        value: {
+          uz: '13,63%',
+          ru: '13,63%',
+          en: '13.63%'
+        },
         label: {
           uz: 'CTR   / 1 oyda',
           ru: 'CTR   / за 1 месяц',
@@ -417,14 +548,22 @@ const data = [
     id: 13,
     banner: {
       title: 'Ахмедов Санджар Акбарович',
-      shortDescription: 'Сайт Реклама Брендинг',
+      shortDescription: {
+        uz: 'Sayt Reklama Brending',
+        ru: 'Сайт Реклама Брендинг',
+        en: 'Website Advertising Branding'
+      },
       photo:
         'https://ucarecdn.com/15d5c5c4-5760-4093-a6a7-4df1af132578/-/preview/1000x533/',
       slug: 'sanjar-akbarovich'
     },
     statistics: [
       {
-        value: '14,500',
+        value: {
+          uz: '14,500',
+          ru: '14,500',
+          en: '14,500'
+        },
         label: {
           uz: 'Saytga chertishlar',
           ru: 'кликов на сайт',
@@ -432,28 +571,43 @@ const data = [
         }
       },
       {
-        value: '0,07$',
+        value: {
+          uz: '0,07$',
+          ru: '0,07$',
+          en: '0.07$'
+        },
         label: {
           uz: 'Bitta chertish narxi',
           ru: 'цена за клик',
           en: 'Cost per click'
         }
       },
-      { value: '14,11%', label: { uz: 'CTR', ru: 'CTR', en: 'CTR' } }
+      {
+        value: { uz: '14,11%', ru: '14,11%', en: '14.11%' },
+        label: { uz: 'CTR', ru: 'CTR', en: 'CTR' }
+      }
     ]
   },
   {
     id: 14,
     banner: {
       title: 'Азиза Шахзадэевна',
-      shortDescription: 'Реклама Сайт',
+      shortDescription: {
+        uz: 'Reklama Sayt',
+        ru: 'Реклама Сайт',
+        en: 'Advertising Website'
+      },
       photo:
         'https://ucarecdn.com/c1131e2f-5cdb-4c1a-8a37-46bd923ceae2/-/preview/1000x533/',
       slug: 'aziza-shaxzadeevna'
     },
     statistics: [
       {
-        value: '+80%',
+        value: {
+          uz: '+80%',
+          ru: '+80%',
+          en: '+80%'
+        },
         label: {
           uz: "Onlayn-so'rovlarning o'sishi",
           ru: 'Рост онлайн-запросов',
@@ -591,10 +745,14 @@ const Content = () => {
                         className='flex flex-col gap-[5px] text-center'
                       >
                         <p className='text-white100 text-[18px] 3xl:text-[30px] 4xl:text-[50px] font-bold'>
-                          {stat.value}
+                          {stat.value && stat.value[lng]
+                            ? stat.value[lng]
+                            : null}
                         </p>
                         <p className='text-white100 text-[18px] 4xl:text-[20px] font-medium 3xl:text-[18px] font-robotoFlex'>
-                          {stat.label[lng]}
+                          {stat.label && stat.label[lng]
+                            ? stat.label[lng]
+                            : null}
                         </p>
                       </div>
                     ))}
@@ -608,21 +766,23 @@ const Content = () => {
                 {item.banner.title}
               </p>
               <p className='text-[14px] text-violet100 mdx:text-[18px] font-semibold w-full flex flex-row '>
-                {item.banner.shortDescription.split(' ').map((word, index) => (
-                  <React.Fragment key={index}>
-                    {index > 0 && (
-                      <Image
-                        src={caseDesckription}
-                        width={40}
-                        quality={100}
-                        height={40}
-                        alt='separator'
-                        className='mx-[6px] w-[14px] h-[14px] mdl:w-[20px] mdl:h-[20px]'
-                      />
-                    )}
-                    <span>{word}</span>
-                  </React.Fragment>
-                ))}
+                {item.banner.shortDescription[lng]
+                  .split(' ')
+                  .map((word, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && (
+                        <Image
+                          src={caseDesckription}
+                          width={40}
+                          quality={100}
+                          height={40}
+                          alt='separator'
+                          className='mx-[6px] w-[14px] h-[14px] mdl:w-[20px] mdl:h-[20px]'
+                        />
+                      )}
+                      <span>{word}</span>
+                    </React.Fragment>
+                  ))}
               </p>
             </div>
           </Link>
