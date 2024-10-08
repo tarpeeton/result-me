@@ -278,7 +278,8 @@ const Blogs = () => {
             </div>
             <div className='mt-[8px] mdl:mt-[20px] absolute bottom-[0]'>
               <span className='text-violet100 text-[14px] font-bold flex items-center mdl:text-[18px]'>
-                	Подробнее
+                	
+			  {lng === "ru" ? "Подробнее" : lng === 'uz' ? 'Batafsil' : 'Read more'}
                 <GrLinkNext className='text-violet100 ml-[8px]' />
               </span>
             </div>

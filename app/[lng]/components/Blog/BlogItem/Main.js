@@ -2038,7 +2038,6 @@ Ready to enter the B2B market? We can help you develop an effective marketing st
 
 const MainBlogItem = () => {
   const { slug, lng } = useParams()
-  // Find the blog post by matching slug
   const blog = data.find(item => item.slug === slug)
 
   if (!blog) {
@@ -2048,7 +2047,6 @@ const MainBlogItem = () => {
   return (
     <div className='bg-[#F8F8F8] 3xl:flex 3xl:flex-row 3xl:px-[30px]'>
       <div className='bg-white rounded-[30px] py-[24px] px-[16px] mdl:py-[40px] mdl:px-[20px] 3xl:mt-[70px] 3xl:flex 3xl:flex-col 3xl:w-[80%] 3xl:px-[138px] 3xl:py-[70px] mb-[60px] 3xl:mb-[120px]'>
-        {/* Render the title */}
         <p className='text-[23px] font-bold mdl:text-[40px] 3xl:text-[45px] text-titleDark'>
           {blog.title[lng]}
         </p>
@@ -2066,12 +2064,10 @@ const MainBlogItem = () => {
             />
           </div>
         )}
-
         {/* Render the description */}
         <p className='text-[15px] mdl:text-[20px] 3xl:text-[22px] 3xl:font-normal text-[#454545] font-medium mt-[20px] mdl:mt-[30px] 3xl:mt-[50px] font-robotoFlex'>
           {blog.description[lng] || 'Описание на русском отсутствует'}
         </p>
-
         {/* Render the blog text, ensuring new lines are handled */}
         <div className='text-[15px] mdl:text-[20px] 3xl:text-[22px] 3xl:font-normal text-[#454545] font-medium mt-[20px] mdl:mt-[30px] 3xl:mt-[50px] font-robotoFlex'>
           {blog.text[lng].split('\n').map((paragraph, idx) => {
