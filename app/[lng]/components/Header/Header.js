@@ -15,6 +15,7 @@ import { usePathname } from 'next/navigation'
 import ServiceModal from '../Modal/SeriviceModal'
 import { BsFillTelephoneOutboundFill } from 'react-icons/bs'
 import { FaTelegramPlane } from 'react-icons/fa'
+
 const Header = ({ lng }) => {
 	const { t } = useCustomTranslation(lng, 'header')
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -39,25 +40,28 @@ const Header = ({ lng }) => {
 	// Current language code
 	const currentLanguage = lng
 
-	const handleLanguageChange = newLng => {
-		// Set the cookie with the new language code
-
-		const pathArray = window.location.pathname.split('/')
-
+	const handleLanguageChange = (newLng) => {
+		const pathArray = window.location.pathname.split('/');
+	  
 		// List of supported language codes
-		const supportedLanguages = ['ru', 'uz', 'en']
-
+		const supportedLanguages = ['ru', 'uz', 'en'];
+	  
+		// Remove existing language code from the path if exists
 		if (supportedLanguages.includes(pathArray[1])) {
-			// Replace the language code in the URL
-			pathArray[1] = newLng
-		} else {
-			// Insert the new language code at the beginning
-			pathArray.unshift(newLng)
+		  pathArray.splice(1, 1); // Remove the existing language code
 		}
-
-		const newPath = pathArray.join('/')
-		window.location.href = newPath
-	}
+	  
+		// Add new language code at the beginning of the path
+		pathArray.unshift(newLng);
+	  
+		// Build the new path and redirect
+		const newPath = pathArray.filter(Boolean).join('/'); // Ensure there are no empty segments
+	  
+		// Redirect to the new path
+		window.location.href = `/${newPath}`;
+	  };
+	  
+	  
 
 	const toggleMenu = () => {
 		setIsMenuOpen(!isMenuOpen)
@@ -70,7 +74,7 @@ const Header = ({ lng }) => {
 		>
 			<div className='hidden 2xl:flex items-center gap-[25px] 4xl:gap-[40px] xl:w-[40%] 4xl:w-[25%]'>
 				<Link
-					href='/services'
+					href={`/${lng}/services`}
 					className={`font-robotoFlex font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
@@ -78,7 +82,7 @@ const Header = ({ lng }) => {
 					{t('uslugi')}
 				</Link>
 				<Link
-					href='/cases'
+					href={`/${lng}/cases`}
 					className={`font-robotoFlex font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
@@ -86,7 +90,7 @@ const Header = ({ lng }) => {
 					{t('keysi')}
 				</Link>
 				<Link
-					href='/blog'
+					href={`/${lng}/blog`}
 					className={`font-robotoFlex font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
@@ -94,7 +98,7 @@ const Header = ({ lng }) => {
 					{t('blog')}
 				</Link>
 				<Link
-					href='/about'
+					href={`/${lng}/about`}
 					className={`font-robotoFlex font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
@@ -102,7 +106,7 @@ const Header = ({ lng }) => {
 					{t('about')}
 				</Link>
 				<Link
-					href='/steps-working'
+					href={`/${lng}/steps-working`}
 					className={`font-robotoFlex font-semibold text-[16px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
@@ -114,7 +118,7 @@ const Header = ({ lng }) => {
 			{isMenuOpen && (
 				<div className='absolute top-[70px] left-0 w-full h-[100vh] bg-white z-[99999] flex flex-col text-2xl'>
 					<a
-						href='/services'
+						href={`/${lng}/services`}
 						className='flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
@@ -123,7 +127,7 @@ const Header = ({ lng }) => {
 						<GrLinkNext className='text-titleDark' />
 					</a>
 					<a
-						href='/cases'
+						href={`/${lng}/cases`}
 						className='font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
@@ -133,7 +137,7 @@ const Header = ({ lng }) => {
 					</a>
 
 					<a
-						href='/blog'
+						href={`/${lng}/blog`}
 						className='font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
@@ -143,7 +147,7 @@ const Header = ({ lng }) => {
 					</a>
 
 					<a
-						href='/about'
+						href={`/${lng}/about`}
 						className='font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
@@ -152,7 +156,7 @@ const Header = ({ lng }) => {
 						<GrLinkNext className='text-titleDark' />
 					</a>
 					<a
-						href='/steps-working'
+						href={`/${lng}/steps-working`}
 						className='font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>

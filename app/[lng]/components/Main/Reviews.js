@@ -171,7 +171,7 @@ const Reviews = () => {
         {reviewData.map((rev, index) => (
           <div
             key={index}
-            className='rounded-[30px]  px-[20px] py-[25px] bg-[#161616]  bg-opacity-[50%] 2xl:max-w-[90%] text-white  min-h-[400px] border border-[#5A5A5A]'
+            className='rounded-[30px] cursor-pointer  px-[20px] py-[25px] bg-[#161616]  bg-opacity-[50%] 2xl:max-w-[90%] text-white  min-h-[400px] border border-[#5A5A5A]'
           >
             <h3 className='text-[18px] font-semibold mb-[4px] mdl:text-[28px] 3xl:text-[30px]'>
 			{rev.name[lng]}
