@@ -722,7 +722,7 @@ const Content = () => {
       <div className='mx-[16px] flex flex-col gap-[5px] 2xl:flex 2xl:flex-row 2xl:flex-wrap  2xl:justify-between 2xl:mx-[30px]'>
         {filteredData.map((item, idx) => (
           <Link
-            href={`/cases/${item.banner.slug}`} // Dynamic route based on slug
+            href={`/${lng}/cases/${item.banner.slug}`} // Dynamic route based on slug
             key={idx}
             className='w-full mt-[20px] 3xl:w-[49%] 6xl:max-w-[99%] relative group cursor-pointer 2xl:mb-[80px]'
           >

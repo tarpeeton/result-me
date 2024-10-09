@@ -384,7 +384,17 @@ const Question = () => {
                         className='ml-2 text-blue-500 underline cursor-pointer'
                         onClick={() => toggleShowMore(index)}
                       >
-                        {isExpanded ? 'Свернуть' : 'Показать больше'}
+                        {isExpanded
+                          ? lng === 'ru'
+                            ? 'Свернуть'
+                            : lng === 'uz'
+                            ? 'Yopish'
+                            : 'Hide'
+                          : lng === 'ru'
+                          ? 'Показать больше'
+                          : lng === 'uz'
+                          ? 'Ko‘proq ko‘rsatish'
+                          : 'Show more'}
                       </button>
                     </p>
                   </>
