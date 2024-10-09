@@ -14,7 +14,7 @@ const obtainedResult = [
     },
     result: [
       {
-        item: { ru: '+41%', uz: '', en: '' },
+        item: { ru: '+41%', uz: '+41%', en: '+41%' },
         name: {
           ru: 'число обращений в клинику / мес',
           uz: 'Klinikaga tashriflar soni / oy',
@@ -22,7 +22,7 @@ const obtainedResult = [
         }
       },
       {
-        item: { ru: '+23%', uz: '', en: '' },
+        item: { ru: '+23%', uz: '+23%', en: '+23%' },
         name: {
           ru: 'посещаемость',
           uz: 'Tashrif buyuruvchilar o`sishi',
@@ -30,7 +30,7 @@ const obtainedResult = [
         }
       },
       {
-        item: { ru: '+18,200', uz: '', en: '' },
+        item: { ru: '+18,200', uz: '+18,200', en: '+18,200' },
         name: {
           ru: 'посещений сайта / год',
           uz: 'Saytga tashriflar / yil',
@@ -111,7 +111,7 @@ const obtainedResult = [
     },
     result: [
       {
-        item: { ru: '+2,840', uz: '', en: '' },
+        item: { ru: '+2,840', uz: '+2,840', en: '+2,840' },
         name: {
           ru: 'кликов на сайт / за 1 месяц',
           uz: 'Saytga chertishlar',
@@ -119,7 +119,7 @@ const obtainedResult = [
         }
       },
       {
-        item: { ru: '0,11$', uz: '', en: '' },
+        item: { ru: '0,11$', uz: '0,11$', en: '0,11$' },
         name: {
           ru: 'цена за клик / за 1 месяц',
           uz: 'Chertish narxi',
@@ -127,7 +127,7 @@ const obtainedResult = [
         }
       },
       {
-        item: { ru: '+13,63%', uz: '', en: '' },
+        item: { ru: '+13,63%', uz: '+13,63%', en: '+13,63%' },
         name: {
           ru: 'CTR / за 1 месяц',
           uz: 'CTR',
@@ -183,7 +183,7 @@ const obtainedResult = [
     },
     result: [
       {
-        item: { ru: '2,450', uz: '', en: '' },
+        item: { ru: '2,450', uz: '2,450', en: '2,450' },
         name: {
           ru: 'кликов на сайт / за 1 месяц',
           uz: 'Saytga chertishlar',
@@ -191,7 +191,7 @@ const obtainedResult = [
         }
       },
       {
-        item: { ru: '0,05$', uz: '', en: '' },
+        item: { ru: '0,05$', uz: '0,05$', en: '0,05$' },
         name: {
           ru: 'цена за клик / за 1 месяц',
           uz: 'Har bir chertish narxi',
@@ -199,7 +199,7 @@ const obtainedResult = [
         }
       },
       {
-        item: { ru: '11,64%', uz: '', en: '' },
+        item: { ru: '11,64%', uz: '11,64%', en: '11,64%' },
         name: { ru: 'CTR / за 1 месяц', uz: 'CTR', en: 'CTR ' }
       },
       {
@@ -220,7 +220,7 @@ const obtainedResult = [
     },
     result: [
       {
-        item: { ru: '14,500', uz: '', en: '' },
+        item: { ru: '14,500', uz: '14,500', en: '14,500' },
         name: {
           ru: 'кликов на сайт',
           uz: 'Saytga chertishlar',
@@ -228,7 +228,7 @@ const obtainedResult = [
         }
       },
       {
-        item: { ru: '0,07$', uz: '', en: '' },
+        item: { ru: '0,07$', uz: '0,07$', en: '0,07$' },
         name: {
           ru: 'цена за клик',
           uz: 'Chertish narxi',
@@ -236,7 +236,7 @@ const obtainedResult = [
         }
       },
       {
-        item: { ru: '14,11%', uz: '', en: '' },
+        item: { ru: '14,11%', uz: '14,11%', en: '14,11%' },
         name: { ru: 'CTR', uz: '  CTR', en: 'Click-through rate (CTR)  ' }
       },
       {
@@ -257,7 +257,7 @@ const obtainedResult = [
     },
     result: [
       {
-        item: { ru: '4,820', uz: '', en: '' },
+        item: { ru: '4,820', uz: '4,820', en: '4,820' },
         name: {
           ru: 'кликов на сайт / за 1 месяц',
           uz: 'Saytga chertishlar',
@@ -265,7 +265,7 @@ const obtainedResult = [
         }
       },
       {
-        item: { ru: '0,10$', uz: '', en: '' },
+        item: { ru: '0,10$', uz: '0,10$', en: '0,10$' },
         name: {
           ru: 'цена за клик / за 1 месяц',
           uz: 'Har bir chertish narxi',
@@ -273,7 +273,7 @@ const obtainedResult = [
         }
       },
       {
-        item: { ru: '14,22%', uz: '', en: '' },
+        item: { ru: '14,22%', uz: '14,22%', en: '14,22%' },
         name: { ru: 'CTR / за 1 месяц', uz: '', en: 'CTR' }
       },
       {
@@ -293,7 +293,7 @@ const obtainedResult = [
     },
     result: [
       {
-        item: { ru: '+17%', uz: '', en: '' },
+        item: { ru: '+17%', uz: '+17%', en: '+17%' },
         name: { ru: 'Конверсия с сайта / за 1 месяц', uz: '', en: '' }
       },
       {
@@ -305,7 +305,7 @@ const obtainedResult = [
         }
       },
       {
-        item: { ru: '+15%', uz: '', en: '' },
+        item: { ru: '+15%', uz: '+15%', en: '+15%' },
         name: {
           ru: 'Увеличение числа подписчиков / за 1 месяц',
           uz: "Obunachilar sonini ko'paytirish",
@@ -354,7 +354,7 @@ const obtainedResult = [
     },
     result: [
       {
-        item: { ru: '1,560', uz: '', en: '' },
+        item: { ru: '1,560', uz: '1,560', en: '1,560' },
         name: {
           ru: 'Кликов на сайт за месяц',
           uz: 'Oyiga saytga chertishlar',
@@ -362,7 +362,7 @@ const obtainedResult = [
         }
       },
       {
-        item: { ru: '0,32$', uz: '', en: '' },
+        item: { ru: '0,32$', uz: '0,32$', en: '0,32$' },
         name: {
           ru: 'цена за клик ',
           uz: 'Bitta chertish narxi',
@@ -370,7 +370,7 @@ const obtainedResult = [
         }
       },
       {
-        item: { ru: '11,22%', uz: '', en: '' },
+        item: { ru: '11,22%', uz: '11,22%', en: '11,22%' },
         name: { ru: 'CTR', uz: 'CTR', en: 'CTR ' }
       },
       {
@@ -403,7 +403,7 @@ const obtainedResult = [
     },
     result: [
       {
-        item: { ru: '750', uz: '', en: '' },
+        item: { ru: '750', uz: '750', en: '750' },
         name: {
           ru: ' подписчиков в Telegram',
           uz: 'Telegram obunachilari',
@@ -411,7 +411,7 @@ const obtainedResult = [
         }
       },
       {
-        item: { ru: '1079', uz: '', en: '' },
+        item: { ru: '1079', uz: '1079', en: '1079' },
         name: {
           ru: ' подписчиков в Instagram',
           uz: 'Instagram obunachilari',
@@ -479,7 +479,7 @@ const obtainedResult = [
     },
     result: [
       {
-        item: { ru: 'SMM', uz: '', en: '' },
+        item: { ru: 'SMM', uz: 'SMM', en: 'SMM' },
         name: {
           ru: 'Instagram / Telegram / YouTube',
           uz: 'SMM Instagram / Telegram / YouTube',
@@ -550,10 +550,10 @@ const Result = () => {
           <div className='flex flex-col' key={index}>
             <div key={index} className='mb-6 3xl:mb-0'>
               <p className='text-[35px] mdl:text-[40px] font-medium text-[#010101] 3xl:text-[50px]'>
-                {item?.item[lng]}
+                {item?.item?.[lng]?.length ? item.item[lng] : null}
               </p>
               <p className='text-[14px] mdl:text-[20px] text-[#A6A6A6] 3xl:text-[18px] font-robotoFlex'>
-                {item?.name[lng]}
+			  {item?.name?.[lng]?.length ? item.name[lng] : null}
               </p>
             </div>
             {item?.descrip ? (
@@ -570,8 +570,16 @@ const Result = () => {
                     onClick={() => toggleShowMore(index)}
                   >
                     {expandedItems.includes(index)
-                      ? 'Скрыть'
-                      : 'Показать больше'}
+                      ? lng === 'ru'
+                        ? 'Скрыть'
+                        : lng === 'uz'
+                        ? 'Yopish'
+                        : 'Hide'
+                      : lng === 'ru'
+                      ? 'Показать больше'
+                      : lng === 'uz'
+                      ? 'Ko‘proq ko‘rsatish'
+                      : 'Show more'}
                   </button>
                 )}
               </div>
