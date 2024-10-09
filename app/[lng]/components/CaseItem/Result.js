@@ -294,10 +294,10 @@ const obtainedResult = [
     result: [
       {
         item: { ru: '+17%', uz: '+17%', en: '+17%' },
-        name: { ru: 'Конверсия с сайта / за 1 месяц', uz: '', en: '' }
+        name: { ru: 'Конверсия с сайта / за 1 месяц', uz: ' Sayt koversiyasi / 1 oyda', en: 'Conversion rate from the website  / 1 month' }
       },
       {
-        item: { ru: '200+ лидов', uz: '200+ lidlar', en: '' },
+        item: { ru: '200+ лидов', uz: '200+ lidlar', en: '200+ leads ' },
         name: {
           ru: 'По цене 2,1$ за лид в течение 1 месяца',
           uz: ' 1 oy davomida har bir lid uchun 2,1$ narxda',
