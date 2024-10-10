@@ -1,4 +1,23 @@
 {
     "title" : "Отзывы клиентов",
-    "button": "Стать нашим клиентом"
+    "button": "Стать нашим клиентом",
+    "reviews_one_name": "",
+    "reviews_one_occupation": "",
+    "reviews_one_comment": "",
+  
+    "reviews_two_name": "",
+    "reviews_two_occupation": "",
+    "reviews_two_comment": "",
+  
+    "reviews_three_name": "",
+    "reviews_three_occupation": "",
+    "reviews_three_comment": "",
+  
+    "reviews_four_name": "",
+    "reviews_four_occupation": "",
+    "reviews_four_comment": "",
+  
+    "reviews_five_name": "",
+    "reviews_five_occupation": "",
+    "reviews_five_comment": ""
 }
