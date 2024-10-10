@@ -24,7 +24,7 @@ const ServiceItem = () => {
       title: {
         ru: 'Разработка Web-сайтов',
         en: 'Website Development',
-        uz: 'Veb-sayt yaratish'
+        uz: 'Web-sayt yaratish'
       },
       imagePath: web,
       description: {

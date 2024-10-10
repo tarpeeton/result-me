@@ -6,7 +6,7 @@
     "placeholder_name": "Ism",
     "placeholder_phone": "Telefon raqami",
     "select_service": "Xizmatni tanlang",
-    "service_1": "Veb-saytlar yaratish",
+    "service_1": "Web-saytlar yaratish",
     "service_2": "Telegram botlar yaratish",
     "service_3": "SMM",
     "service_4": "SEO",
@@ -17,6 +17,6 @@
     "submit_button": "Yuborish",
     "success_title": "Ariza yuborildi!",
     "success_message": "Biz tez orada siz bilan bog'lanamiz.",
-    "ok_button": "OK"
+    "ok_button": "Yopish"
   }
   
