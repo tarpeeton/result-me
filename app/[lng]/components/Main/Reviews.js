@@ -9,60 +9,8 @@ import { GrLinkNext } from 'react-icons/gr'
 import { useParams } from 'next/navigation'
 import { useRef, useState } from 'react'
 import { useCustomTranslation } from '@/app/i18n/client'
+import { reviewData } from '@/constants/reviews'
 
-const reviewData = [
-  {
-    name: { ru: 'Матьякуб Назарович', uz: '', en: '' },
-    opucuption: { ru: 'Главврач Intermed', uz: '', en: '' },
-    comment: {
-      ru: `Отличная работа! Команда профессионалов создала для нас сайт,
-						который идеально отражает нашу клинику и помогает привлекать новых
-						пациентов.`,
-      uz: '',
-      en: ''
-    }
-  },
-  {
-    name: { ru: 'Нигора Абдумуталовна', uz: '', en: '' },
-    opucuption: {
-      ru: 'Исполнительный директор Prime Medical Center',
-      uz: '',
-      en: ''
-    },
-    comment: {
-      ru: `Работа с агентством превзошла все ожидания. Наши социальные сети стали намного активнее, и реклама начала приносить реальные результаты.`,
-      uz: '',
-      en: ''
-    }
-  },
-  {
-    name: { ru: 'Алишер Бахромович', uz: '', en: '' },
-    opucuption: { ru: 'ЛОР-хирург', uz: '', en: '' },
-    comment: {
-      ru: 'Благодарю за качественный SEO-сервис. Сайт стал заметно лучше виден в поисковиках, и количество пациентов выросло.',
-      uz: '',
-      en: ''
-    }
-  },
-  {
-    name: { ru: 'Зокир Атхамович', uz: '', en: '' },
-    opucuption: { ru: 'Владелец стоматологии Smile Design', uz: '', en: '' },
-    comment: {
-      ru: 'Профессиональный подход к созданию бренда и сайта. Клиенты теперь легко находят нас онлайн, и им нравится наш новый имидж.',
-      uz: '',
-      en: ''
-    }
-  },
-  {
-    name: { ru: 'Санджар Акбарович', uz: '', en: '' },
-    opucuption: { ru: 'Врач-психотерапевт', uz: '', en: '' },
-    comment: {
-      ru: 'Telegram-боты, разработанные для нас, значительно упростили взаимодействие с клиентами. Теперь всё работает быстро и удобно.',
-      uz: '',
-      en: ''
-    }
-  }
-]
 
 const SampleNextArrow = ({ onClick }) => (
   <div

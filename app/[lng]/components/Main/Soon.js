@@ -5,21 +5,11 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useParams } from 'next/navigation';
 import { useCustomTranslation } from '@/app/i18n/client'
+import { SoonData } from '@/constants/soon';
 const Soon = () => {
   const {lng} = useParams()
   const {t} = useCustomTranslation(lng , 'product')
-  const Data = [
-    {
-      img: 'https://ucarecdn.com/01959c30-254f-4c22-921e-9bf13b9f45d7/-/preview/1000x981/',
-      isSoon: false,
-      description: 'Поиск врачей через единую платформу'
-    },
-    {
-      img: 'https://ucarecdn.com/e133f08c-8257-4164-9243-c226521c4f6e/-/preview/1000x981/',
-      isSoon: false,
-      description: 'Агрегатор медицинского оборудования'
-    }
-  ];
+ 
 
   const settings = {
     dots: false,
@@ -67,7 +57,7 @@ const Soon = () => {
         </p>
       </div>
       <Slider {...settings}>
-        {Data.map((d, index) => (
+        {SoonData.map((d, index) => (
           <div key={index} className="relative">
             <div
               className={`2xl:w-[95%] cursor-pointer rounded-[25px] w-full h-full px-[12px] bg-gray-900 pt-[24px]  ${
@@ -92,7 +82,7 @@ const Soon = () => {
               )}
 
               <div className='3xl:mt-[20px] mt-[20px] text-center'>
-                <p className='text-violet100 3xl:text-[21px] font-bold'>{d.description}</p>
+                <p className='text-violet100 3xl:text-[21px] font-bold'>{d.description[lng]}</p>
               </div>
             </div>
           </div>
