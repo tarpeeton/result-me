@@ -1,19 +1,19 @@
 'use client'
-import Image from 'next/image';
-import { useParams } from 'next/navigation';
+import Image from 'next/image'
+import { useParams } from 'next/navigation'
+
 const Banner = ({ data }) => {
-  const { banner } = data;
-  const {lng} = useParams()
+  const { banner } = data
+  const { lng } = useParams()
   return (
     <div
       className='w-full rounded-[30px]  3xl:flex 3xl:flex-row 3xl:justify-center 3xl:items-center mt-[20px] mdl:mt-[30px] mdl:rounded-[40px] 3xl:rounded-[50px] mdl:p-[0] '
       style={{
         backgroundImage: `url(${banner.background.url})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center'
       }}
     >
-		
       <div className='3xl:w-[60%] 3xl:flex 3xl:items-center 3xl:justify-center mb-[50px] py-[30px] px-[20px]'>
         <div className='3xl:w-[80%]'>
           <h1 className='text-white text-[35px] mdl:text-[50px] font-bold mb-[15px]'>
@@ -57,7 +57,7 @@ const Banner = ({ data }) => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Banner;
+export default Banner
