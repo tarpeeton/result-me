@@ -220,18 +220,9 @@ const Header = ({ lng }) => {
 						main={isMainPage}
 						onChange={handleLanguageChange}
 						options={[
-							{
-								value: 'ru', // English language code
-								label: <>Ру</>,
-							},
-							{
-								value: 'uz', // English language code
-								label: <>O'z</>,
-							},
-							{
-								value: 'en', // English language code
-								label: <>En</>,
-							},
+							{ value: 'ru', label: 'Рус', flag: 'fi fi-ru' }, // Russian flag
+							{ value: 'uz', label: 'O\'z', flag: 'fi fi-uz' }, // Uzbek flag
+							{ value: 'en', label: 'Eng', flag: 'fi fi-gb' }, // English flag
 						]}
 					/>
 				</div>

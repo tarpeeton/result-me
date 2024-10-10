@@ -24,6 +24,7 @@ module.exports = {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
         robotoFlex: ['Roboto Flex', 'sans-serif'],
+        robotoFlex: ['Roboto Flex', 'sans-serif'],
         lato: ['Lato', 'sans-serif'],
       },
       colors: {
