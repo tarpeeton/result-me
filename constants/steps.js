@@ -7,7 +7,7 @@ export const stepsData = [
     imgtitle: { ru: 'С участием заказчика', uz: 'Mijoz ishtirokida', en: '' },
     subtitle: {
       ru: 'Консультация позволяет лучше понять задачи и подобрать оптимальные услуги',
-      uz: 'Konsultatsiya',
+      uz: 'Konsultatsiya  vazifalarni yaxshiroq tushunishga  va eng yaxshi xizmatlarni tanlash imkonini beradi',
       en: ''
     },
     sel: { ru: 'Цель', uz: 'Maqsad', en: '' },

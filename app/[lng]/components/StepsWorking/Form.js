@@ -4,8 +4,13 @@ import Image from 'next/image'
 import { createService } from '../../lib/api/api'
 import { FaCheckCircle } from 'react-icons/fa'
 import { Dialog, DialogActions, DialogContent, Button } from '@mui/material'
+import { useParams } from 'next/navigation'
+import { useCustomTranslation } from '@/app/i18n/client'
 
 const Form = () => {
+	const { lng } = useParams()
+	const { t } = useCustomTranslation(lng, 'steps')
+
 	const [formData, setFormData] = useState({
 		name: '',
 		phone: '',
@@ -15,15 +20,15 @@ const Form = () => {
 
 	const [isSubmitted, setIsSubmitted] = useState(false)
 
-	const handleChange = e => {
+	const handleChange = (e) => {
 		const { name, value } = e.target
-		setFormData(prevData => ({
+		setFormData((prevData) => ({
 			...prevData,
 			[name]: value,
 		}))
 	}
 
-	const handleSubmit = async e => {
+	const handleSubmit = async (e) => {
 		e.preventDefault()
 		try {
 			await createService(formData)
@@ -62,11 +67,10 @@ const Form = () => {
 
 			<div className='flex flex-col w-full 2xl:w-[50%]'>
 				<p className='text-[28px] text-white font-bold relative z-[99999] mb-6 mdl:text-[50px] mdl:mb-[40px] '>
-					Готовы начать?
+					{t('application_title')}
 				</p>
 				<p className='text-[18px] text-white font-bold relative z-[99999] mb-6 mdl:text-[25px] w-[100%] mdl:mb-[40px] 3xl:w-[80%]'>
-					Оставьте заявку, и мы разработаем для вас индивидуальную стратегию,
-					которая приведет к успеху
+					{t('application_subtitle')}
 				</p>
 			</div>
 
@@ -77,7 +81,7 @@ const Form = () => {
 				<input
 					type='text'
 					name='name'
-					placeholder='ФИО'
+					placeholder={t('placeholder_name')}
 					value={formData.name}
 					onChange={handleChange}
 					required
@@ -86,7 +90,7 @@ const Form = () => {
 				<input
 					type='text'
 					name='phone'
-					placeholder='Номер телефона'
+					placeholder={t('placeholder_phone')}
 					value={formData.phone}
 					onChange={handleChange}
 					required
@@ -100,22 +104,22 @@ const Form = () => {
 					className='w-full p-4 rounded-[15px] bg-[#16161680] border border-[#5A5A5A] text-[#fff] placeholder-[#7B7B7B] text-[12px] mdl:text-[20px] mb-[12px] mdl:mb-[19px]'
 				>
 					<option value='' disabled>
-						Выберите услугу
+						{t('select_service')}
 					</option>
-					<option value='Разработка сайтов'>Разработка сайтов</option>
+					<option value='Разработка сайтов'>{t('service_1')}</option>
 					<option value='Разработка Telegram-ботов'>
-						Разработка Telegram-ботов
+						{t('service_2')}
 					</option>
-					<option value='SMM'>SMM</option>
-					<option value='SEO'>SEO</option>
-					<option value='Запуск рекламы'>Запуск рекламы</option>
-					<option value='Брендинг'>Брендинг</option>
-					<option value='Фирменный стиль'>Фирменный стиль</option>
+					<option value='SMM'>{t('service_3')}</option>
+					<option value='SEO'>{t('service_4')}</option>
+					<option value='Запуск рекламы'>{t('service_5')}</option>
+					<option value='Брендинг'>{t('service_6')}</option>
+					<option value='Фирменный стиль'>{t('service_7')}</option>
 				</select>
 				<input
 					type='text'
 					name='comment'
-					placeholder='Комментарий'
+					placeholder={t('placeholder_comment')}
 					value={formData.comment}
 					onChange={handleChange}
 					className='w-full p-4 rounded-[15px] bg-[#16161680] border border-[#5A5A5A] text-[#fff] placeholder-[#7B7B7B] text-[12px] mdl:text-[20px] mb-[12px] mdl:mb-[19px]'
@@ -124,7 +128,7 @@ const Form = () => {
 					type='submit'
 					className='w-full p-4 rounded-[100px] bg-[#7B72EB] text-white font-bold text-[14px] hover:bg-opacity-90 transition duration-300 mdl:py-[20px] mdl:px-[30px] mdl:w-[40%] mdl:mt-[40px] mdl:text-[18px] 3xl:w-[60%] mt-[20px]'
 				>
-					Отправить
+					{t('submit_button')}
 				</button>
 			</form>
 
@@ -166,10 +170,10 @@ const Form = () => {
 								marginBottom: '8px',
 							}}
 						>
-							Заявка отправлена!
+							{t('success_title')}
 						</h2>
 						<p style={{ fontSize: '16px', color: 'gray', marginTop: '8px' }}>
-							Ваша заявка отправлена менеджерам на рассмотрение
+							{t('success_message')}
 						</p>
 					</DialogContent>
 					<DialogActions sx={{ width: '100%', zIndex: 99999 }}>
@@ -187,7 +191,7 @@ const Form = () => {
 								color: 'white',
 							}}
 						>
-							Ок
+							{t('ok_button')}
 						</Button>
 					</DialogActions>
 				</Dialog>
