@@ -835,7 +835,11 @@ const CostCard = () => {
     <div className='bg-white100 px-[24px] pt-[30px] rounded-[30px] flex flex-col 3xl:flex-col  3xl:p-[40px] mx-[16px] mt-[20px] 3xl:mx-[30px]'>
       <div>
         <h3 className='text-[28px] mdl:text-[50px] font-bold text-titleDark'>
-          Стоимость услуг
+          {lng === 'ru'
+            ? 'Стоимость услуг'
+            : lng === 'uz'
+            ? 'Xizmat Narxlari'
+            : 'Service Cost'}
         </h3>
       </div>
       <div className='rounded-[30px] mt-[20px] relative flex flex-col 2xl:flex-wrap 2xl:flex-row 2xl:gap-[25px]'>
@@ -885,7 +889,11 @@ const CostCard = () => {
               onClick={() => openModal(card.price, card.title)} // Passing title as well
               className='text-white text-center text-[18px] font-bold w-[90%] mx-auto py-[30px] 3xl:py-[24px] px-[20px] bg-violet100 rounded-[100px] mt-[7px] absolute left-0 right-0 bottom-[20px]'
             >
-              Узнать цену
+              {lng === 'ru'
+                ? ' Узнать цену'
+                : lng === 'uz'
+                ? 'Narxni Korish'
+                : 'Find out the price'}
             </button>
           </div>
         ))}

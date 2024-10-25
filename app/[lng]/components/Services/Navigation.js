@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation'
 
 const Navigation = () => {
-  const {slug} = useParams()
+  const {slug , lng} = useParams()
   const [activeNav, setActiveNav] = useState(slug);  // Change to use slugs for activeNav
   const navRefs = useRef([]);  // Array to store refs for `a` elements
   const spanRefs = useRef([]); // Array to store refs for `span` elements
@@ -24,12 +24,54 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { name: "Сайты", slug: "web-development" },
-    { name: "Telegram-боты", slug: "telegram-bot-development" },
-    { name: "SMM", slug: "smm" },
-    { name: "Реклама", slug: "ads-launch" },
-    { name: "SEO", slug: "seo" },
-    { name: "Брендинг", slug: "branding" },
+    {
+      name: {
+        ru: "Сайты",
+        uz: "Saytlar",
+        en: "Web Development"
+      },
+      slug: "web-development"
+    },
+    {
+      name: {
+        ru: "Telegram-боты",
+        uz: "Telegram-botlar",
+        en: "Telegram Bots"
+      },
+      slug: "telegram-bot-development"
+    },
+    {
+      name: {
+        ru: "SMM",
+        uz: "SMM",
+        en: "SMM"
+      },
+      slug: "smm"
+    },
+    {
+      name: {
+        ru: "Реклама",
+        uz: "Reklama",
+        en: "Ads Launch"
+      },
+      slug: "ads-launch"
+    },
+    {
+      name: {
+        ru: "SEO",
+        uz: "SEO",
+        en: "SEO"
+      },
+      slug: "seo"
+    },
+    {
+      name: {
+        ru: "Брендинг",
+        uz: "Brending",
+        en: "Branding"
+      },
+      slug: "branding"
+    }
   ];
 
   const updateSpanWidths = () => {
@@ -80,7 +122,7 @@ const Navigation = () => {
               onClick={() => handleSelect(item.slug)}
               style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}
             >
-              {item.name}
+              {item.name[lng]}
             </a>
             <span
               ref={(el) => (spanRefs.current[index] = el)} // Ref for span element
