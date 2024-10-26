@@ -150,7 +150,7 @@ const Navigation = () => {
                 }`}
                 onClick={() => handleSelect(item.slug)}
               >
-                {item.name}
+                {item.name[lng]}
               </Link>
               {activeNav === item.slug && (
                 <span
