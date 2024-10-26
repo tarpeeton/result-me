@@ -20,13 +20,13 @@ const ServicePriceModal = ({ isOpen, onClose, price, serviceName }) => {
         open={isOpen}
         onClose={onClose}
         fullWidth
-        className='z-[9999999]'
+        className='z-[9999999999]'
         PaperProps={{
           sx: {
             maxWidth: '460px',
             borderRadius: { xs: '20px', mdl: '30px' },
             padding: { xs: '2px 20px', mdl: '30px 20px' },
-            zIndex: 9999999 // Set z-index for the main modal
+            zIndex: 9999999999 // Set z-index for the main modal
           }
         }}
       >
@@ -36,7 +36,7 @@ const ServicePriceModal = ({ isOpen, onClose, price, serviceName }) => {
             display: 'flex',
             justifyContent: 'space-between',
             fontWeight: 'bold',
-            zIndex: 9999999 // Set z-index for DialogTitle
+            zIndex: 999999999 // Set z-index for DialogTitle
           }}
         >
           {serviceName && serviceName[lng]}
