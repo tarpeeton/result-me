@@ -9,6 +9,9 @@ import { PiStarFourFill } from "react-icons/pi";
 import inter from '@/public/images/cases/inter.png'
 import { useParams } from 'next/navigation'
 
+
+
+
 const items = [
   {
     id: 1,
@@ -662,30 +665,28 @@ const data = [
 
 
 const Content = () => {
-  const [selected, setSelected] = useState(1)
-  const [filteredData, setFilteredData] = useState(data) // State for filtered data
-  const mobileSpansRef = useRef([])
-  const desktopSpansRef = useRef([])
-  const { lng } = useParams()
-
+  const [selected, setSelected] = useState(1);
+  const [filteredData, setFilteredData] = useState(data);
+  const mobileSpansRef = useRef([]);
+  const desktopSpansRef = useRef([]);
+  const { lng } = useParams();
+  const containerRef = useRef(null); // Reference for the container of filtered items
 
   const handleSelect = (id, type) => {
     setSelected(id);
-  
+
     const currentType = type[lng].toLowerCase();
-  
+
     if (currentType === 'all') {
       setFilteredData(data); // Show all if "All" is selected
     } else {
       setFilteredData(
-        data.filter(item => {
-          // Split the shortDescription into words and normalize them
+        data.filter((item) => {
           const descriptionWords = item.banner.shortDescription[lng]
             .toLowerCase()
             .split(/\W+/);
-  
-          // Check if any word in description matches the type (considering singular/plural forms)
-          return descriptionWords.some(word => {
+
+          return descriptionWords.some((word) => {
             return (
               word === currentType ||
               word === currentType.slice(0, -1) || // Handle singular/plural
@@ -696,7 +697,7 @@ const Content = () => {
       );
     }
   };
-  
+
   // GSAP animation effect for menu
   useEffect(() => {
     if (mobileSpansRef.current[selected]) {
@@ -704,27 +705,38 @@ const Content = () => {
         mobileSpansRef.current[selected],
         { width: 0 },
         { width: '100%', duration: 0.5, ease: 'power2.out' }
-      )
+      );
     }
     if (desktopSpansRef.current[selected]) {
       gsap.fromTo(
         desktopSpansRef.current[selected],
         { width: 0 },
         { width: '100%', duration: 0.5, ease: 'power2.out' }
-      )
+      );
     }
-  }, [selected])
+  }, [selected]);
+
+  // GSAP animation effect for filtered items
+  useEffect(() => {
+    if (containerRef.current) {
+      gsap.fromTo(
+        containerRef.current.children,
+        { opacity: 0, y: 40 }, // Starting state
+        { opacity: 1, y: 0, stagger: 0.2, duration: 0.6, ease: 'power2.out' } // Final state
+      );
+    }
+  }, [filteredData]); // Trigger animation on `filteredData` change
 
   const responsive = {
     tablet: {
       breakpoint: { max: 1280, min: 768 },
-      items: 4
+      items: 4,
     },
     mobile: {
       breakpoint: { max: 768, min: 0 },
-      items: 3
-    }
-  }
+      items: 3,
+    },
+  };
 
   return (
     <div className='w-full'>
@@ -779,7 +791,7 @@ const Content = () => {
       </div>
 
       {/* Cards Section (Filtered Data) */}
-      <div className='mx-[16px] flex flex-col gap-[5px] 2xl:flex 2xl:flex-row 2xl:flex-wrap  2xl:justify-between 2xl:mx-[30px]'>
+      <div ref={containerRef} className='mx-[16px] flex flex-col gap-[5px] 2xl:flex 2xl:flex-row 2xl:flex-wrap  2xl:justify-between 2xl:mx-[30px]'>
         {filteredData.map((item, idx) => (
           <Link
             href={`/${lng}/cases/${item.banner.slug}`} // Dynamic route based on slug

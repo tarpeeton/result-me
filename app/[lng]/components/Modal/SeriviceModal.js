@@ -67,13 +67,13 @@ const ServiceModal = ({ isOpen, onClose }) => {
         open={isOpen}
         onClose={onClose}
         fullWidth
-        className='z-[9999999999]'
+        className='z-[99999999999]'
         PaperProps={{
           sx: {
             maxWidth: '460px',
             borderRadius: { xs: '20px', mdl: '30px' },
             padding: { xs: '2px 20px', mdl: '30px 25px' },
-            zIndex: 9999999, // Set z-index for the main modal
+            zIndex: 99999999, // Set z-index for the main modal
           },
         }}
       >
@@ -83,7 +83,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             display: 'flex',
             justifyContent: 'space-between',
             fontWeight: 'bold',
-            zIndex: 9999999, // Set z-index for DialogTitle
+            zIndex: 99999999, // Set z-index for DialogTitle
           }}
         >
           {t('submit_request')} {/* Translated "Оставить заявку" */}
@@ -91,7 +91,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             <IoClose />
           </div>
         </DialogTitle>
-        <DialogContent sx={{ zIndex: 9999999 }} className='z-[9999999]'>
+        <DialogContent sx={{ zIndex: 99999999 }} className='z-[99999999]'>
           {/* Form submission handled here */}
           <form onSubmit={handleSubmit}>
             {/* Name Input */}
@@ -218,7 +218,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             maxWidth: '460px',
             borderRadius: { xs: '20px', mdl: '30px' },
             padding: { xs: '2px 20px', mdl: '30px 25px' },
-            zIndex: 9999, // Set z-index for the success modal
+            zIndex: 999999, // Set z-index for the success modal
           },
         }}
       >
@@ -228,7 +228,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            zIndex: 9999, // Set z-index for DialogContent
+            zIndex: 999999, // Set z-index for DialogContent
           }}
         >
           <FaCheckCircle

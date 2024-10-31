@@ -74,7 +74,7 @@ const Result = () => {
                 </p>
                 {item.descrip[lng]?.length > 200 && (
                   <button
-                    className='text-[#7B72EB] font-bold mt-2'
+                    className=' text-violet100 font-medium  mt-2'
                     onClick={() => toggleShowMore(index)}
                   >
                     {expandedItems.includes(index)

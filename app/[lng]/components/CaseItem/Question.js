@@ -63,7 +63,7 @@ const Question = () => {
                         ? item.description[lng]
                         : item.description[lng].substring(0, 50) + '...'}
                       <button
-                        className='ml-2 text-blue-500 underline cursor-pointer'
+                        className='ml-2 text-violet100 font-medium  cursor-pointer'
                         onClick={() => toggleShowMore(index)}
                       >
                         {isExpanded
