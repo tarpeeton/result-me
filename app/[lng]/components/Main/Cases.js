@@ -60,11 +60,11 @@ const Cases = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 700,
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true, // Enable autoplay
-    autoplaySpeed: 2000, // Adjust the autoplay speed
+    autoplaySpeed: 1500, // Adjust the autoplay speed
     arrows: false,
     responsive: [
       {

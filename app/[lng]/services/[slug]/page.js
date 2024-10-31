@@ -19,7 +19,7 @@ const Service = () => {
 		<InfoCard/>
 		<CostCard/>
 		<div className='px-[24px]'>
-		<CaseFilter title={"Наши кейсы"}/>
+		<CaseFilter title={{ru:"Наши кейсы" , uz:  "Bizning Keyslar" , en: "Our cases"}} />
 		</div>
 		<Blog/>
 	</div>

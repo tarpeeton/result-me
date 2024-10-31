@@ -200,8 +200,12 @@ const casedata = [
 const CaseFilter = ({title}) => {
 	const { lng, slug } = useParams(); // Extract the slug from URL
 	const { t } = useCustomTranslation(lng, 'result');
-	const [filteredCases, setFilteredCases] = useState([]);
+	const [filteredCases, setFilteredCases] = useState(null);
   
+
+	console.log(filteredCases , "FILTERED CAS")
+
+
 	// Filtering the case data based on different slugs
 	useEffect(() => {
 	  if (slug) {
@@ -215,6 +219,12 @@ const CaseFilter = ({title}) => {
 	  }
 	}, [slug]);
   
+
+
+	if (!filteredCases || filteredCases.length === 0) {
+		return null; // Prevent rendering if there is no case data
+	}
+
 	// Slider settings
 	const settings = {
 	  dots: false,
@@ -257,12 +267,16 @@ const CaseFilter = ({title}) => {
 	  ],
 	};
 
+
+
+
+
   return (
     <div className='mt-[80px] mdl:mt-[100px] 2xl:mt-[200px]'>
       {/* Case Title */}
       <div className='flex flex-col p-[24px] w-full h-full'>
         <p className='text-[28px] mdl:text-[50px] 3xl:text-[60px] font-bold'>
-           {title}
+           {title[lng]}
         </p>
         <p className='bg-violet100 text-white100 text-[23px] mdl:text-[40px] 3xl:text-[50px] font-bold p-[10px] w-[243px] mdl:w-[426px] 3xl:w-[535px] rounded-[170px] text-center rotate-[-5deg]'>
           {t('case_subtitle')}
@@ -319,7 +333,7 @@ const CaseFilter = ({title}) => {
         className='mt-[40px] mdx:mt-[60px] w-[175px] h-[50px] px-[30px] py-[20px] mx-auto rounded-[100px] bg-violet100 flex items-center justify-center xl:mt-[60px] 3xl:mt-[100px] 4xl:w-[300px] 4xl:h-[62px] 4xl:mt-[60px]'
       >
         <p className='text-white100 font-bold text-[14px] 4xl:text-[18px]'>
-          Все кейсы
+		{lng === 'ru' ? "Все кейсы" : lng === 'uz' ? "Barcha Keyslar" : "All Cases"}
         </p>
       </Link>
     </div>

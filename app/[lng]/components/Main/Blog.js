@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+
 import { useParams } from 'next/navigation'
 import Image from 'next/image'
 import medicalMarketin from '@/public/images/blog/medicalMarketin.jpg'
@@ -111,7 +112,7 @@ const Blog = () => {
         >
           {blogData.map(item => (
             <Link
-              href={`/blog/${item.slug}`}
+              href={`/${lng}/blog/${item.slug}`}
               key={item.id}
               className='card__blog slg:w-[45%] cursor-pointer 2xl:w-[30%] relative'
             >
