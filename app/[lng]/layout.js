@@ -66,18 +66,9 @@ export const metadata = {
 export default function RootLayout({ children, params: { lng } }) {
   return (
     <html lang={lng} dir={dir(lng)}>
-      {/* <Head>
-        <title>{metadata.title}</title>
-        <meta name='description' content={metadata.description} /> */}
-        {/* <!-- For Android --> */}
-        {/* <link rel='icon'  sizes="48x48" href={metadata.icons.icon} />
-
-      <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png"/>
-      <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png"/> */}
-
-      {/* <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/apple-touch-icon.png"/>
-        <link rel='manifest' href={metadata.manifest} />
-      </Head> */}
+     <head>
+      <meta name="yandex-verification" content="424c2acd41a91a33" />
+     </head>
 
       <body>
         {/* Google Tag Manager */}
