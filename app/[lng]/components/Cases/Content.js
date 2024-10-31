@@ -648,22 +648,6 @@ const data = [
 ]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const Content = () => {
   const [selected, setSelected] = useState(1);
   const [filteredData, setFilteredData] = useState(data);
