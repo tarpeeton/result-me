@@ -9,6 +9,7 @@ import { useCustomTranslation } from '@/app/i18n/client'
 const AboutUs = () => {
   const { lng } = useParams()
   const { t } = useCustomTranslation(lng, 'about')
+  
   return (
     <Link
       href='/about'
