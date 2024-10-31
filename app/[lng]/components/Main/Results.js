@@ -54,11 +54,11 @@ const Result = () => {
             <div ref={sectionRef} className='flex justify-center'>
               {inView ? (
                 <p className='text-[28px] mdl:text-[40px] 4xl:text-[50px] text-center text-black font-bold'>
-                  <CountUp start={0} end={5700} duration={2.5} suffix='+' />
+                  <CountUp start={0} end={35700} duration={2.4} suffix='+' />
                 </p>
               ) : (
                 <p className='text-[28px] mdl:text-[40px] 4xl:text-[50px] text-center text-black font-bold'>
-                  5700+
+                  35,700 +
                 </p>
               )}
             </div>
@@ -111,7 +111,7 @@ const Result = () => {
                 980,000 +
               </p>
             )}
-            <p className='text-[14px] mdl:text-[18px] 4xl:text-[20px] text-titleDark50 font-robotoFlex'>
+            <p className='text-[14px] mdl:text-[18px] 4xl:text-[20px] text-titleDark50 font-robotoFlex text-center'>
               {t('card_three')}
             </p>
           </div>
@@ -133,7 +133,7 @@ const Result = () => {
           <div>
             {inView ? (
               <p className='text-[28px] 2xl:text-[40px] mdl:text-[40px] 4xl:text-[50px] text-center text-black font-bold'>
-                <CountUp start={0} end={1.1} duration={2.4} decimals={1} suffix='$' />
+                <CountUp start={0} end={1.7} duration={2.4} decimals={1} suffix='$' />
               </p>
             ) : (
               <p className='text-[28px] 2xl:text-[40px] mdl:text-[40px] 4xl:text-[50px] text-center text-black font-bold'>
