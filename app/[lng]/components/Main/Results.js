@@ -5,9 +5,7 @@ import Image from 'next/image'
 import CountUp from 'react-countup'
 import { useCustomTranslation } from '../../../i18n/client'
 
-// import user from '@/public/images/user.png'
-// import progress from '@/public/images/progress.png'
-// import money from '@/public/images/money.png'
+
 
 const Result = () => {
   const { lng } = useParams()
@@ -106,11 +104,11 @@ const Result = () => {
           <div>
             {inView ? (
               <p className='text-[28px] mdl:text-[40px] text-center text-black font-bold 4xl:text-[50px]'>
-                <CountUp start={0} end={140000} duration={2.4} suffix='+' />
+                <CountUp start={0} end={980000} duration={2.4} suffix='+' />
               </p>
             ) : (
               <p className='text-[28px] mdl:text-[40px] text-center text-black font-bold 4xl:text-[50px]'>
-                140,000+
+                980,000 +
               </p>
             )}
             <p className='text-[14px] mdl:text-[18px] 4xl:text-[20px] text-titleDark50 font-robotoFlex'>
@@ -119,7 +117,7 @@ const Result = () => {
           </div>
           <div className='mt-[42px] mdl:mt-[30px] 3xl:mt-[80px] w-full mdx:w-[100%] mdx:h-[90%] lg:h-[70%] lg:w-[100%]'>
             <Image
-              src='https://ucarecdn.com/d0f73bf4-119e-4b96-ac55-c56e6c0b8e39/-/preview/563x247/'
+              src='https://ucarecdn.com/ab028392-b68a-4b72-b91a-8f35c060f883/-/preview/563x247/'
               width={400}
               height={400}
               quality={80}
@@ -139,7 +137,7 @@ const Result = () => {
               </p>
             ) : (
               <p className='text-[28px] 2xl:text-[40px] mdl:text-[40px] 4xl:text-[50px] text-center text-black font-bold'>
-                1.1$
+                1.7$
               </p>
             )}
             <p className='text-[14px] mdl:text-[18px] 4xl:text-[20px] text-titleDark50 font-robotoFlex'>
