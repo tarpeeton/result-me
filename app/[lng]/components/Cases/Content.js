@@ -5,12 +5,10 @@ import 'react-multi-carousel/lib/styles.css'
 import Image from 'next/image'
 import { gsap } from 'gsap'
 import Link from 'next/link'
-
+import { PiStarFourFill } from "react-icons/pi";
 import inter from '@/public/images/cases/inter.png'
-import caseDesckription from '@/public/images/Vector.png'
 import { useParams } from 'next/navigation'
 
-// Items for filtering
 const items = [
   {
     id: 1,
@@ -19,7 +17,11 @@ const items = [
       ru: 'Все',
       en: 'All'
     },
-    type: 'all'
+    type: {
+      uz: 'all',
+      ru: 'all',
+      en: 'all'
+    }
   },
   {
     id: 2,
@@ -28,7 +30,11 @@ const items = [
       ru: 'Сайты',
       en: 'Websites'
     },
-    type: 'Сайт'
+    type: {
+      uz: 'sayt',
+      ru: 'сайт',
+      en: 'website'
+    }
   },
   {
     id: 3,
@@ -37,7 +43,11 @@ const items = [
       ru: 'Telegram-боты',
       en: 'Telegram Bots'
     },
-    type: 'Telegram Bots'
+    type: {
+      uz: 'telegram bot',
+      ru: 'telegram-бот',
+      en: 'telegram bot'
+    }
   },
   {
     id: 4,
@@ -46,7 +56,11 @@ const items = [
       ru: 'SMM',
       en: 'SMM'
     },
-    type: 'SMM'
+    type: {
+      uz: 'smm',
+      ru: 'smm',
+      en: 'smm'
+    }
   },
   {
     id: 5,
@@ -55,7 +69,11 @@ const items = [
       ru: 'Реклама',
       en: 'Advertising'
     },
-    type: 'Реклама'
+    type: {
+      uz: 'reklama',
+      ru: 'реклама',
+      en: 'advertising'
+    }
   },
   {
     id: 6,
@@ -64,7 +82,11 @@ const items = [
       ru: 'SEO',
       en: 'SEO'
     },
-    type: 'SEO'
+    type: {
+      uz: 'seo',
+      ru: 'seo',
+      en: 'seo'
+    }
   },
   {
     id: 7,
@@ -73,9 +95,13 @@ const items = [
       ru: 'Брендинг',
       en: 'Branding'
     },
-    type: 'Брендинг'
+    type: {
+      uz: 'brending',
+      ru: 'брендинг',
+      en: 'branding'
+    }
   }
-]
+];
 
 const data = [
   {
@@ -85,7 +111,7 @@ const data = [
       shortDescription: {
         uz: 'Sayt SEO',
         ru: 'Сайт SEO',
-        en: 'Website SEO'
+        en: 'website SEO'
       },
       photo: inter,
       slug: 'intermed'
@@ -618,25 +644,59 @@ const data = [
   }
 ]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const Content = () => {
   const [selected, setSelected] = useState(1)
   const [filteredData, setFilteredData] = useState(data) // State for filtered data
   const mobileSpansRef = useRef([])
   const desktopSpansRef = useRef([])
   const { lng } = useParams()
-  const handleSelect = (id, type) => {
-    setSelected(id)
 
-    // Filter data based on the selected type
-    if (type === 'all') {
-      setFilteredData(data) // Show all if "Все" is selected
+
+  const handleSelect = (id, type) => {
+    setSelected(id);
+  
+    const currentType = type[lng].toLowerCase();
+  
+    if (currentType === 'all') {
+      setFilteredData(data); // Show all if "All" is selected
     } else {
       setFilteredData(
-        data.filter(item => item.banner.shortDescription.includes(type))
-      )
+        data.filter(item => {
+          // Split the shortDescription into words and normalize them
+          const descriptionWords = item.banner.shortDescription[lng]
+            .toLowerCase()
+            .split(/\W+/);
+  
+          // Check if any word in description matches the type (considering singular/plural forms)
+          return descriptionWords.some(word => {
+            return (
+              word === currentType ||
+              word === currentType.slice(0, -1) || // Handle singular/plural
+              currentType === word.slice(0, -1)
+            );
+          });
+        })
+      );
     }
-  }
-
+  };
+  
   // GSAP animation effect for menu
   useEffect(() => {
     if (mobileSpansRef.current[selected]) {
@@ -765,20 +825,13 @@ const Content = () => {
               <p className='text-[20px] font-semibold mdx:text-[28px] 4xl:text-[35px]'>
                 {item.banner.title}
               </p>
-              <p className='text-[14px] text-violet100 mdx:text-[18px] font-semibold w-full flex flex-row '>
+              <p className='text-[14px] text-violet100 mdx:text-[18px] font-semibold w-full flex flex-row items-center '>
                 {item.banner.shortDescription[lng]
                   .split(' ')
                   .map((word, index) => (
                     <React.Fragment key={index}>
                       {index > 0 && (
-                        <Image
-                          src={caseDesckription}
-                          width={40}
-                          quality={100}
-                          height={40}
-                          alt='separator'
-                          className='mx-[6px] w-[14px] h-[14px] mdl:w-[20px] mdl:h-[20px]'
-                        />
+                        <PiStarFourFill  className='text-violet100 mx-[5px]'/>
                       )}
                       <span>{word}</span>
                     </React.Fragment>
