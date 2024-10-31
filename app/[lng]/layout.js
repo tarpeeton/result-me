@@ -23,6 +23,7 @@ export default function RootLayout({ children, params: { lng } }) {
           name="description"
           content="Мы специализируемся на разработке комплексных стратегий, направленных на рост вашего медицинского бизнеса."
         />
+        <meta name="yandex-verification" content="424c2acd41a91a33" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ru_RU" />
         <meta property="og:url" content="https://result-me.uz" />
@@ -64,7 +65,6 @@ export default function RootLayout({ children, params: { lng } }) {
         <link rel="shortcut icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
 
-        <meta name="yandex-verification" content="424c2acd41a91a33" />
       </head>
 
       <body>
