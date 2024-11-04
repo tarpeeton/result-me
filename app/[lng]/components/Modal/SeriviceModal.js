@@ -115,17 +115,13 @@ const ServiceModal = ({ isOpen, onClose }) => {
 
             {/* Phone Input with Mask */}
             <div style={{ marginBottom: '16px' }}>
-              <InputMask
-                mask="+999 (99) 999-99-99"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-              >
-                {() => (
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
+                   required
+                   value={formData.phone}
+                onChange={handleChange}
                     style={{
                       width: '100%',
                       padding: '12px',
@@ -134,8 +130,6 @@ const ServiceModal = ({ isOpen, onClose }) => {
                     }}
                     placeholder={t('phone_number')} 
                   />
-                )}
-              </InputMask>
             </div>
 
             {/* Service Select */}

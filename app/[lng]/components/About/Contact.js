@@ -17,7 +17,7 @@ const Contact = () => {
           </h5>
           <div className='mt-[20px] mdl:mt-[40px] '>
             <Link
-              href='tel:+998905092562'
+              href='tel:+998509004738'
               className='w-[50%] p-4 rounded-[100px] bg-[#7B72EB] text-white font-bold text-[14px] hover:bg-opacity-90 transition duration-300 mdl:py-[20px] mdl:px-[30px] mdl:w-[40%]  mdl:text-[18px] 3xl:w-[40%]'
             >
               {t('sumbit')}
@@ -30,17 +30,12 @@ const Contact = () => {
               {t('phone')}
             </p>
             <Link
-              href='tel:+998905092562'
+              href='tel:+998509004738'
               className='text-titleDark text-[20px] mdl:text-[28px] 3xl:text-[30px] font-semibold '
             >
-              +998 90 509 25 62
+              +998 (50) 900-47-38
             </Link>
-            <Link
-              href='tel:+998900228073'
-              className='text-titleDark text-[20px] mdl:text-[28px] 3xl:text-[30px] font-semibold '
-            >
-              +998 90 022 80 73
-            </Link>
+           
           </div>
           <div className='mt-[20px] 3xl:mt-[40px]'>
             <p className='text-[#A6A6A6] text-[14px] font-medium mdl:text-[18px] 3xl:text-[19px]'>

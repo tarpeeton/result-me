@@ -23,10 +23,10 @@ const Header = ({ lng }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const ariaLabel =
     lng === 'ru'
-      ? 'Позвонить по номеру +998 90 509 2562'
+      ? 'Позвонить по номеру +99850 900 47 38'
       : lng === 'uz'
-      ? 'Raqam orqali qo\'ng\'iroq qiling: +998 90 509 2562'
-      : 'Call number +998 90 509 2562';
+      ? 'Raqam orqali qo\'ng\'iroq qiling: +99850 900 47 38'
+      : 'Call number +99850 900 47 38';
 	const [isModalOpen2, setIsModalOpen2] = useState(false)
 	const closeModal2 = () => setIsModalOpen2(false)
 	const openModal = () => {
@@ -172,7 +172,7 @@ const Header = ({ lng }) => {
 
 					<div className='font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0] z-[99999]'>
 						<Link
-							href='tel:+998905092562'
+							href='tel:+998509004738'
 							className='font-semibold text-[12px] leading-[23px] mdl:text-[23px] text-white100 bg-violet100 flex flex-row rounded-full py-[15px] px-[12px] items-center justify-center w-[45%]'
 						>
 							{t('call')} <BsFillTelephoneOutboundFill className='ml-[10px]' />
@@ -199,7 +199,7 @@ const Header = ({ lng }) => {
 			<div className='flex items-center gap-3 h-[40px] 3xl:w-[38%] 3xl:justify-end'>
 				<div className='hidden 2xl:flex'>
 					<Link
-						href='tel:+998905092562'
+						href='tel:+998509004738'
 						aria-label={ariaLabel}
 						className={`font-montserrat w-[50px] h-[50px] border-[1px] border-[white] rounded-[100%] flex items-center justify-center ${
 							isMainPage ? 'bg-inherit' : 'bg-selectBg'

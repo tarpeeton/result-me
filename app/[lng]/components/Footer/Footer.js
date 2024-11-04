@@ -91,17 +91,12 @@ const Footer = ({ lng }) => {
 								</h4>
 								<div className='flex flex-col gap-[8px] mdl:gap-[10px] '>
 									<a
-										href='tel:+998905092562'
+										href='tel:+998509004738'
 										className='text-titleDark20 text-[15px] font-medium mdx:text-[15px] hover:text-violet100'
 									>
-										+998 (90) 509-25-62
+										+998 (50) 900-47-38
 									</a>
-									<a
-										href='tel:+998900228073'
-										className='text-titleDark20 text-[15px] font-medium mdx:text-[15px] hover:text-violet100'
-									>
-										+998 (90) 022-80-73
-									</a>
+									
 								</div>
 							</div>
 							{/* ADDRESS INFO */}
