@@ -6,6 +6,7 @@ import { languages } from '../i18n/settings';
 import { LanguageProvider } from '../i18n/locales/LanguageContext';
 import Script from 'next/script';
 import { initI18nextServer } from '../i18n/index';
+import Quiz from './components/Modal/Quiz';
 
 // Динамическая загрузка компонентов для оптимизации
 const Header = dynamic(() => import('./components/Header/Header'));
@@ -140,6 +141,7 @@ export default async function RootLayout({ children, params: { lng } }) {
         {/* Основной контент страницы */}
         <LanguageProvider lng={lng}>
           <Header lng={lng} />
+          <Quiz />
           <main className='w-full bg-white relative'>{children}</main>
           <Footer lng={lng} />
         </LanguageProvider>
