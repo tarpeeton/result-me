@@ -323,8 +323,10 @@ export default function QuizModal({ setQuizModal }) {
   const [steps, setSteps] = useState(0);
 
   return createPortal(
-    <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-white p-4">
-      <div className="bg-[#F8F8F8] w-full h-full rounded-[100px] p-8 relative"></div>
+    <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-white p-4 overflow-y-scroll no-scrollbar">
+      <div className="bg-[#F8F8F8] w-full h-full rounded-[100px] flex items-center justify-center p-16 relative">
+
+      </div>
     </div>,
     document.body
   );
