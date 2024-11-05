@@ -1,6 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
+import gsap from "gsap";
 
 const data = [
   {
@@ -320,14 +321,54 @@ const data = [
 ];
 
 export default function QuizModal({ setQuizModal }) {
-  const [steps, setSteps] = useState(0);
-
-  return createPortal(
-    <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-white p-4 overflow-y-scroll no-scrollbar">
-      <div className="bg-[#F8F8F8] w-full h-full rounded-[100px] flex items-center justify-center p-16 relative">
-
-      </div>
-    </div>,
-    document.body
-  );
-}
+    const [steps, setSteps] = useState(0);
+    const containerRef = useRef(null);
+  
+    // Функция для перехода к следующему шагу
+    const nextStep = () => {
+      gsap.to(containerRef.current, {
+        x: "-100%",
+        opacity: 0,
+        duration: 0.5,
+        onComplete: () => {
+          setSteps((prev) => (prev + 1) % data.length); // Переход на следующий шаг
+          gsap.fromTo(
+            containerRef.current,
+            { x: "100%", opacity: 0 },
+            { x: "0%", opacity: 1, duration: 0.5 }
+          );
+        },
+      });
+    };
+  
+    // Анимация для начального состояния при открытии модалки
+    useEffect(() => {
+      gsap.from(containerRef.current, { opacity: 0, y: 20, duration: 0.5 });
+    }, []);
+  
+    return createPortal(
+      <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-white p-4 overflow-y-scroll no-scrollbar">
+        <div className="bg-[#F8F8F8] w-full h-full rounded-[100px] flex items-center justify-center p-16 relative">
+          <div ref={containerRef} className="w-full text-center">
+            {/* Заголовок и описание шага */}
+            <h2 className="text-2xl font-bold mb-4">{data[steps].title}</h2>
+            <p className="text-lg mb-8">{data[steps].descriptions}</p>
+  
+            {/* Карточки с вариантами ответа */}
+            <div className="grid grid-cols-2 gap-4">
+              {data[steps].data.map((item, index) => (
+                <div
+                  key={index}
+                  onClick={nextStep} // Переход к следующему шагу при клике
+                  className="bg-white p-4 rounded-lg cursor-pointer shadow-md flex items-center justify-center"
+                >
+                  <span className="text-lg font-medium">{item.title}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>,
+      document.body
+    );
+  }
