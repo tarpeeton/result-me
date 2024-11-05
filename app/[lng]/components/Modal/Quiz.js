@@ -1,39 +1,59 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import QuizButton from "./QuizButton";
 import QuizModal from "./QuizModal";
-import { useRouter } from "next/navigation";
 
 export default function Quiz() {
-  const [quizModal, setQuizModal] = useState(false);
-  const router = useRouter();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  useEffect(() => {
-    // Проверяем, есть ли #quiz в URL при загрузке страницы
+  const openModal = useCallback(() => {
+    setIsModalOpen(true);
+    if (window.location.hash !== "#quiz") {
+      window.history.pushState(null, "", "#quiz");
+    }
+  }, []);
+
+  const closeModal = useCallback(() => {
+    setIsModalOpen(false);
     if (window.location.hash === "#quiz") {
-      setQuizModal(true); // Открываем модальное окно, если хеш #quiz найден
+      window.history.pushState(null, "", window.location.pathname);
     }
   }, []);
 
   useEffect(() => {
-    // Блокировка скролла при открытом модальном окне
-    if (quizModal) {
+    if (window.location.hash === "#quiz") {
+      setIsModalOpen(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === "#quiz") {
+        setIsModalOpen(true);
+      } else {
+        setIsModalOpen(false);
+      }
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isModalOpen) {
       document.body.classList.add("overflow-hidden");
-      window.location.hash = "quiz"; // Добавляем #quiz в URL
     } else {
       document.body.classList.remove("overflow-hidden");
-      // Убираем хеш из URL, если модалка закрыта
-      router.replace(window.location.pathname, undefined, { shallow: true });
     }
-
-    // Удаление класса при размонтировании компонента
-    return () => document.body.classList.remove("overflow-hidden");
-  }, [quizModal, router]);
+  }, [isModalOpen]);
 
   return (
     <div>
-      <QuizButton setQuizModal={setQuizModal} />
-      {quizModal && <QuizModal setQuizModal={setQuizModal} />}
+      <QuizButton setQuizModal={openModal} />
+      {isModalOpen && <QuizModal setQuizModal={closeModal} />}
     </div>
   );
 }
