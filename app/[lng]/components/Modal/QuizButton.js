@@ -2,12 +2,13 @@
 import Fab from '@mui/material/Fab';
 import Zoom from '@mui/material/Zoom';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import GiftIcon from '/public/svg/gift-1-svgrepo-com.svg';
 
-export default function Quiz() {
+export default function QuizButton({ setQuizModal }) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    console.log('Quiz component rendered');
     setShow(true); // Показать кнопку с анимацией
   }, []);
 
@@ -15,6 +16,7 @@ export default function Quiz() {
     <div className='fixed bottom-8 right-8 z-[9999]'>
       <Zoom in={show}>
         <Fab
+          onClick={() => setQuizModal(true)} // Обработчик клика на Fab
           sx={{
             height: 60, // Уменьшенный размер
             width: 60,
@@ -23,7 +25,13 @@ export default function Quiz() {
           }}
           color='primary'
         >
-          <span style={{ fontSize: '1.5rem', color: 'white' }}>+</span>
+          <Image
+            src={GiftIcon}
+            width={24}
+            height={24}
+            alt='Gift Icon for Quiz'
+            className='w-6 h-6'
+          />
         </Fab>
       </Zoom>
     </div>

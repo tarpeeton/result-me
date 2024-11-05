@@ -140,8 +140,8 @@ export default async function RootLayout({ children, params: { lng } }) {
 
         {/* Основной контент страницы */}
         <LanguageProvider lng={lng}>
-          <Header lng={lng} />
           <Quiz />
+          <Header lng={lng} />
           <main className='w-full bg-white relative'>{children}</main>
           <Footer lng={lng} />
         </LanguageProvider>
