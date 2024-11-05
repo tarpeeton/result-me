@@ -69,28 +69,42 @@ export default async function RootLayout({ children, params: { lng } }) {
       </head>
 
       <body>
-        {/* Google Tag Manager */}
-        <noscript>
+       {/* Google Tag Manager */}
+       <noscript>
           <iframe
-            src='https://www.googletagmanager.com/ns.html?id=GTM-MDWVM3M'
-            height='0'
-            width='0'
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MDWVM3M"
+            height="0"
+            width="0"
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
 
-        {/* Google Analytics */}
+        {/* Google Analytics - gtag.js */}
         <Script
-          strategy='afterInteractive'
-          src='https://www.googletagmanager.com/gtag/js?id=AW-11414753579'
-        ></Script>
-        <Script
-          strategy='lazyOnload'
-          src='https://www.googletagmanager.com/gtag/js?id=AW-11414753579'
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-FKFEX19E69"
         />
         <Script
-          id='google-analytics'
-          strategy='lazyOnload'
+          id="google-analytics-gtag"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-FKFEX19E69');
+            `,
+          }}
+        />
+
+        {/* Google Analytics другой счетчик */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11414753579"
+        />
+        <Script
+          id="google-analytics"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -103,8 +117,8 @@ export default async function RootLayout({ children, params: { lng } }) {
 
         {/* Yandex Metrika */}
         <Script
-          id='yandex-metrika'
-          strategy='lazyOnload'
+          id="yandex-metrika"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               (function(m,e,t,r,i,k,a){
@@ -130,9 +144,9 @@ export default async function RootLayout({ children, params: { lng } }) {
         <noscript>
           <div>
             <img
-              src='https://mc.yandex.ru/watch/98508546'
+              src="https://mc.yandex.ru/watch/98508546"
               style={{ position: 'absolute', left: '-9999px' }}
-              alt=''
+              alt=""
             />
           </div>
         </noscript>
