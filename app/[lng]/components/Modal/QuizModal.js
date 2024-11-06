@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import { QuizService, quizData } from "./services/quizService";
 import { QuizAnimator } from "./services/quizAnimator";
 import ButtonCard from "./Cards/ButtonCard";
+import InputCard from "./Cards/InputCard";
 
 export default function QuizModal({ setQuizModal }) {
   const quizService = new QuizService(quizData);
@@ -63,8 +64,8 @@ export default function QuizModal({ setQuizModal }) {
 
   return createPortal(
     <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-white">
-      <div className="h-full w-full overflow-y-auto overflow-x-hidden p-4">
-        <div className="bg-[#F8F8F8] w-full h-auto min-h-full rounded-[100px] max-mdl:rounded-3xl max-mdl:p-2 max-mdl:py-8 flex items-center justify-center p-16 relative">
+      <div className="h-full w-full overflow-y-auto overflow-x-hidden max-mdl:p-2 max-mdl:py-4 p-4">
+        <div className="bg-[#F8F8F8] w-full h-auto min-h-full rounded-[100px] max-mdl:rounded-3xl max-mdl:p-4 max-mdl:py-8 flex items-center justify-center p-16 relative">
           <div ref={containerRef} className="w-full">
             <h2 className="text-5xl max-mdl:text-2xl max-mdl:font-bold font-semibold mb-4">{currentData.title}</h2>
             <p className="text-3xl max-mdl:text-xl max-mdl:leading-6 font-semibold mb-8">{currentData.descriptions}</p>
@@ -72,7 +73,7 @@ export default function QuizModal({ setQuizModal }) {
             <div className="grid grid-cols-3 gap-4 max-mdl:grid-cols-1">
               {currentData.data.map((item, index) => 
                 {
-                 return item.type == 'button' ? (<ButtonCard key={index} title={item.title} descriptions={item.descriptions} icon={item.icon} />) : null;
+                 return item.type == 'button' ? (<ButtonCard key={index} title={item.title} descriptions={item.descriptions} icon={item.icon} />) : item.type == 'input' ? (<InputCard key={index} title={item.title} descriptions={item.descriptions} icon={item.icon} />) : null;
                 }
               )}
             </div>
