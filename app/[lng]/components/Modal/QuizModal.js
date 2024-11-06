@@ -5,18 +5,31 @@ import { quizData } from "./services/quizService";
 import { QuizAnimator } from "./services/quizAnimator";
 import ButtonCard from "./Cards/ButtonCard";
 import InputCard from "./Cards/InputCard";
+import RatioCard from "./Cards/RatioCard";
 
 export default function QuizModal({ setQuizModal }) {
   const containerRef = useRef(null);
-  const [currentStep, setCurrentStep] = useState(0); // Управляем текущим шагом напрямую
-  const [currentData, setCurrentData] = useState(quizData[0]);
+  const scrollContainerRef = useRef(null);
+  const [currentStep, setCurrentStep] = useState(0);
+  const [quizSteps, setQuizSteps] = useState([
+    quizData[0],
+    quizData[1],
+    quizData[2],
+    quizData[3],
+  ]);
+  const [currentData, setCurrentData] = useState(quizSteps[0]);
   const [selectedItems, setSelectedItems] = useState([]);
   const [responses, setResponses] = useState({});
+  const [ratioValues, setRatioValues] = useState({});
 
-  console.log(responses)
-  // Обновляем currentData при изменении currentStep
   useEffect(() => {
-    setCurrentData(quizData[currentStep]);
+    setCurrentData(quizSteps[currentStep]);
+  }, [currentStep, quizSteps]);
+
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = 0;
+    }
   }, [currentStep]);
 
   const handleSelection = (item) => {
@@ -34,12 +47,28 @@ export default function QuizModal({ setQuizModal }) {
         ...prevResponses,
         [stepValue]: item.value,
       }));
+
+      if (stepValue === "calculator") {
+        if (item.value === "Контекстная реклама") {
+          setQuizSteps((prevSteps) => [...prevSteps, quizData.find(step => step.value === "context")]);
+        } else if (item.value === "Таргетированная реклама") {
+          setQuizSteps((prevSteps) => [...prevSteps, quizData.find(step => step.value === "target")]);
+        }
+      }
+
       nextStep();
     }
   };
 
+  const handleRatioChange = (title, value) => {
+    setRatioValues((prevValues) => ({
+      ...prevValues,
+      [title]: value,
+    }));
+  };
+
   const nextStep = () => {
-    if (currentData.type === 2) {
+    if (currentData.type === 2 && currentData.value !== "context" && currentData.value !== "target") {
       const stepValue = currentData.value;
       setResponses((prevResponses) => ({
         ...prevResponses,
@@ -47,7 +76,7 @@ export default function QuizModal({ setQuizModal }) {
       }));
     }
 
-    if (currentStep >= quizData.length - 1) {
+    if (currentStep >= quizSteps.length - 1) {
       handleQuizCompletion();
     } else {
       QuizAnimator.fadeOutLeft(containerRef.current, () => {
@@ -59,22 +88,31 @@ export default function QuizModal({ setQuizModal }) {
   };
 
   const prevStep = () => {
-    QuizAnimator.fadeOutRight(containerRef.current, () => {
-      setSelectedItems([]);
-      setCurrentStep((prevStep) => prevStep - 1);
-      QuizAnimator.slideRight(containerRef.current);
-    });
-  }
+    if (currentStep > 0) {
+      QuizAnimator.fadeOutRight(containerRef.current, () => {
+        setSelectedItems([]);
+        setCurrentStep((prevStep) => prevStep - 1);
+        QuizAnimator.slideRight(containerRef.current);
+      });
+    }
+  };
 
-  const handleQuizCompletion = () => {
-    // Здесь выполняем необходимые вычисления и отправляем данные
-    const finalData = {
+  const handleCalculate = () => {
+    // Здесь выполняем необходимые вычисления
+    const finalResults = {
       ...responses,
-      // Добавьте вычисленные поля
+      ...ratioValues,
+      // Ваши дополнительные вычисления
     };
 
-    console.log("Финальные данные для отправки:", finalData);
-    sendDataToAPI(finalData);
+    console.log("Финальные данные для отправки:", finalResults);
+    sendDataToAPI(finalResults);
+  };
+
+  const handleQuizCompletion = () => {
+    // Если есть дополнительные шаги после расчета, можете переместить логику из handleCalculate сюда
+    // Иначе просто закрыть модальное окно или показать результаты
+    setQuizModal(false);
   };
 
   const sendDataToAPI = async (data) => {
@@ -105,7 +143,10 @@ export default function QuizModal({ setQuizModal }) {
 
   return createPortal(
     <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-white">
-      <div className="h-full w-full overflow-y-auto overflow-x-hidden max-mdl:p-2 max-mdl:py-4 p-4">
+      <div
+        ref={scrollContainerRef}
+        className="h-full w-full overflow-y-auto overflow-x-hidden max-mdl:p-2 max-mdl:py-4 p-4"
+      >
         <div className="bg-[#F8F8F8] w-full h-auto min-h-full rounded-[100px] max-mdl:rounded-3xl max-mdl:p-4 max-mdl:py-8 flex items-center justify-center p-16 relative">
           <div ref={containerRef} className="w-full">
             <h2 className="text-5xl max-mdl:text-2xl max-mdl:font-bold font-semibold mb-4">
@@ -115,38 +156,66 @@ export default function QuizModal({ setQuizModal }) {
               {currentData.descriptions}
             </p>
             <div className="flex gap-4 mb-8">
-            {
-              currentStep != 0 ? (
-                <button onClick={prevStep} className="px-24 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white">
+              {currentStep !== 0 && (
+                <button
+                  onClick={prevStep}
+                  className="px-24 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white"
+                >
                   Назад
                 </button>
-              ) : null
-            }
-                        {currentData.type === 2 && (
-              <button onClick={nextStep} className="px-24 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white">
-                Вперёд
-              </button>
-            )}
+              )}
+              {currentData.type === 2 && selectedItems.length !== 0 && (
+                <button
+                  onClick={nextStep}
+                  className="px-24 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white"
+                >
+                  Вперёд
+                </button>
+              )}
             </div>
 
             <div className="grid grid-cols-3 gap-4 max-mdl:grid-cols-1">
               {currentData.data.map((item, index) => {
-                return item.type === "button" ? (
-                  <ButtonCard
-                    handleSelection={handleSelection}
-                    key={index}
-                    item={item}
-                    selectedItems={selectedItems}
-                  />
-                ) : item.type === "input" ? (
-                  <InputCard
-                    key={index}
-                    item={item}
-                    handleSelection={handleSelection}
-                  />
-                ) : null;
+                switch (item.type) {
+                  case "button":
+                    return (
+                      <ButtonCard
+                        handleSelection={handleSelection}
+                        key={index}
+                        item={item}
+                        selectedItems={selectedItems}
+                      />
+                    );
+                  case "input":
+                    return (
+                      <InputCard
+                        key={index}
+                        item={item}
+                        handleSelection={handleSelection}
+                      />
+                    );
+                  case "ratio":
+                    return (
+                      <RatioCard
+                        key={index}
+                        item={item}
+                        handleRatioChange={handleRatioChange}
+                      />
+                    );
+                  default:
+                    return null;
+                }
               })}
             </div>
+
+            {(currentData.value === "context" || currentData.value === "target") && (
+              <button
+                onClick={handleCalculate}
+                className="px-24 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white mt-4"
+              >
+                Рассчитать
+              </button>
+            )}
           </div>
         </div>
       </div>
