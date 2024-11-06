@@ -11,21 +11,21 @@ export default function QuizModal({ setQuizModal }) {
   const containerRef = useRef(null);
   const scrollContainerRef = useRef(null);
   const [currentStep, setCurrentStep] = useState(0);
+  const [currentData, setCurrentData] = useState(quizData[0]);
+  const [selectedItems, setSelectedItems] = useState([]);
+  const [responses, setResponses] = useState({});
   const [quizSteps, setQuizSteps] = useState([
     quizData[0],
     quizData[1],
     quizData[2],
     quizData[3],
   ]);
-  const [currentData, setCurrentData] = useState(quizSteps[0]);
-  const [selectedItems, setSelectedItems] = useState([]);
-  const [responses, setResponses] = useState({});
-  const [ratioValues, setRatioValues] = useState({});
 
   useEffect(() => {
     setCurrentData(quizSteps[currentStep]);
   }, [currentStep, quizSteps]);
 
+  // Reset scroll position when currentStep changes
   useEffect(() => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollTop = 0;
@@ -36,6 +36,7 @@ export default function QuizModal({ setQuizModal }) {
     const stepValue = currentData.value;
 
     if (currentData.type === 2) {
+      // Обработка множественного выбора
       setSelectedItems((prevItems) => {
         const updatedItems = prevItems.includes(item.value)
           ? prevItems.filter((val) => val !== item.value)
@@ -43,32 +44,43 @@ export default function QuizModal({ setQuizModal }) {
         return updatedItems;
       });
     } else {
+      // Сохраняем ответ
       setResponses((prevResponses) => ({
         ...prevResponses,
         [stepValue]: item.value,
       }));
 
       if (stepValue === "calculator") {
-        if (item.value === "Контекстная реклама") {
-          setQuizSteps((prevSteps) => [...prevSteps, quizData.find(step => step.value === "context")]);
-        } else if (item.value === "Таргетированная реклама") {
-          setQuizSteps((prevSteps) => [...prevSteps, quizData.find(step => step.value === "target")]);
-        }
-      }
+        // Удаляем предыдущие шаги после "Калькулятор"
+        const newQuizSteps = quizSteps.slice(0, currentStep + 1);
 
-      nextStep();
+        // Находим следующий шаг в зависимости от выбора
+        const nextStepData = quizData.find((step) => step.value === item.value);
+        if (nextStepData) {
+          // Добавляем анимацию перед переходом
+          QuizAnimator.fadeOutLeft(containerRef.current, () => {
+            // Обновляем quizSteps и currentStep внутри анимации
+            setQuizSteps([...newQuizSteps, nextStepData]);
+            setSelectedItems([]);
+            setCurrentStep((prevStep) => prevStep + 1);
+            QuizAnimator.slideLeft(containerRef.current);
+          });
+        } else {
+          console.error("Не удалось найти следующий шаг для:", item.value);
+        }
+      } else {
+        nextStep();
+      }
     }
   };
 
-  const handleRatioChange = (title, value) => {
-    setRatioValues((prevValues) => ({
-      ...prevValues,
-      [title]: value,
-    }));
-  };
-
   const nextStep = () => {
-    if (currentData.type === 2 && currentData.value !== "context" && currentData.value !== "target") {
+    if (
+      currentData.type === 2 &&
+      !["Контекстная реклама", "Таргетированная реклама"].includes(
+        currentData.value
+      )
+    ) {
       const stepValue = currentData.value;
       setResponses((prevResponses) => ({
         ...prevResponses,
@@ -90,6 +102,16 @@ export default function QuizModal({ setQuizModal }) {
   const prevStep = () => {
     if (currentStep > 0) {
       QuizAnimator.fadeOutRight(containerRef.current, () => {
+        // Если возвращаемся с шагов "Контекстная реклама" или "Таргетированная реклама"
+        if (
+          ["Контекстная реклама", "Таргетированная реклама"].includes(
+            quizSteps[currentStep].value
+          )
+        ) {
+          // Удаляем последний шаг из quizSteps
+          const newQuizSteps = quizSteps.slice(0, currentStep);
+          setQuizSteps(newQuizSteps);
+        }
         setSelectedItems([]);
         setCurrentStep((prevStep) => prevStep - 1);
         QuizAnimator.slideRight(containerRef.current);
@@ -97,22 +119,15 @@ export default function QuizModal({ setQuizModal }) {
     }
   };
 
-  const handleCalculate = () => {
-    // Здесь выполняем необходимые вычисления
-    const finalResults = {
+  const handleQuizCompletion = () => {
+    // Perform necessary calculations and send data
+    const finalData = {
       ...responses,
-      ...ratioValues,
-      // Ваши дополнительные вычисления
+      // Add calculated fields
     };
 
-    console.log("Финальные данные для отправки:", finalResults);
-    sendDataToAPI(finalResults);
-  };
-
-  const handleQuizCompletion = () => {
-    // Если есть дополнительные шаги после расчета, можете переместить логику из handleCalculate сюда
-    // Иначе просто закрыть модальное окно или показать результаты
-    setQuizModal(false);
+    console.log("Final data to send:", finalData);
+    sendDataToAPI(finalData);
   };
 
   const sendDataToAPI = async (data) => {
@@ -126,14 +141,14 @@ export default function QuizModal({ setQuizModal }) {
       });
 
       if (response.ok) {
-        console.log("Данные успешно отправлены");
-        // Закрываем модальное окно после успешной отправки
+        console.log("Data sent successfully");
+        // Close the modal after successful submission
         setQuizModal(false);
       } else {
-        console.error("Ошибка при отправке данных");
+        console.error("Error sending data");
       }
     } catch (error) {
-      console.error("Ошибка сети:", error);
+      console.error("Network error:", error);
     }
   };
 
@@ -149,10 +164,10 @@ export default function QuizModal({ setQuizModal }) {
       >
         <div className="bg-[#F8F8F8] w-full h-auto min-h-full rounded-[100px] max-mdl:rounded-3xl max-mdl:p-4 max-mdl:py-8 flex items-center justify-center p-16 relative">
           <div ref={containerRef} className="w-full">
-            <h2 className="text-5xl max-mdl:text-2xl max-mdl:font-bold font-semibold mb-4">
+            <h2 className="text-5xl max-mdl:text-2xl transition-all duration-300 max-mdl:font-bold font-semibold mb-4">
               {currentData.title}
             </h2>
-            <p className="text-3xl max-mdl:text-xl max-mdl:leading-6 font-semibold mb-8">
+            <p className="text-3xl max-mdl:text-xl transition-all duration-300 max-mdl:leading-6 font-semibold mb-8">
               {currentData.descriptions}
             </p>
             <div className="flex gap-4 mb-8">
@@ -164,58 +179,38 @@ export default function QuizModal({ setQuizModal }) {
                   Назад
                 </button>
               )}
-              {currentData.type === 2 && selectedItems.length !== 0 && (
-                <button
-                  onClick={nextStep}
-                  className="px-24 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white"
-                >
-                  Вперёд
-                </button>
-              )}
+              {currentData.type === 2 &&
+                !["Контекстная реклама", "Таргетированная реклама"].includes(
+                  currentData.value
+                ) &&
+                selectedItems.length !== 0 && (
+                  <button
+                    onClick={nextStep}
+                    className="px-24 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white"
+                  >
+                    Вперёд
+                  </button>
+                )}
             </div>
 
             <div className="grid grid-cols-3 gap-4 max-mdl:grid-cols-1">
               {currentData.data.map((item, index) => {
-                switch (item.type) {
-                  case "button":
-                    return (
-                      <ButtonCard
-                        handleSelection={handleSelection}
-                        key={index}
-                        item={item}
-                        selectedItems={selectedItems}
-                      />
-                    );
-                  case "input":
-                    return (
-                      <InputCard
-                        key={index}
-                        item={item}
-                        handleSelection={handleSelection}
-                      />
-                    );
-                  case "ratio":
-                    return (
-                      <RatioCard
-                        key={index}
-                        item={item}
-                        handleRatioChange={handleRatioChange}
-                      />
-                    );
-                  default:
-                    return null;
-                }
+                return item.type === "button" ? (
+                  <ButtonCard
+                    handleSelection={handleSelection}
+                    key={index}
+                    item={item}
+                    selectedItems={selectedItems}
+                  />
+                ) : item.type === "input" ? (
+                  <InputCard
+                    key={index}
+                    item={item}
+                    handleSelection={handleSelection}
+                  />
+                ) : <RatioCard item={item} />;
               })}
             </div>
-
-            {(currentData.value === "context" || currentData.value === "target") && (
-              <button
-                onClick={handleCalculate}
-                className="px-24 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white mt-4"
-              >
-                Рассчитать
-              </button>
-            )}
           </div>
         </div>
       </div>

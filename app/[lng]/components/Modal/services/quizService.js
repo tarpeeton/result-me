@@ -209,6 +209,7 @@ export const quizData = [
     {
       type: 2,
       title: "Контекстная реклама",
+      value: "Контекстная реклама",
       data: [
         {
           type: "ratio",
@@ -270,6 +271,7 @@ export const quizData = [
     {
       type: 2,
       title: "Таргетированная реклама",
+      value: "Таргетированная реклама",
       data: [
         {
           type: "ratio",

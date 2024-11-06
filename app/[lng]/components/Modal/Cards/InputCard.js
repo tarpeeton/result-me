@@ -70,7 +70,7 @@ export default function InputCard({ item, handleSelection }) {
         />
       </div>
       <div
-        className="w-20 h-20 flex items-center circle-of-card justify-center absolute -right-2 -bottom-2 rounded-full border-[10px] bg-white border-[#F8F8F8] group-hover:rotate-180 group-hover:hover:rotate-[270deg] transition-all duration-300 hover:bg-indigo-100"
+        className="w-20 h-20 cursor-pointer flex items-center circle-of-card justify-center absolute -right-2 -bottom-2 rounded-full border-[10px] bg-white border-[#F8F8F8] group-hover:rotate-180 group-hover:hover:rotate-[270deg] transition-all duration-300 hover:bg-indigo-100"
         onClick={handleSubmit} // Handle click on the button
       >
         <Image
