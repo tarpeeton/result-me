@@ -2,6 +2,7 @@ export const quizData = [
     {
       type: 1,
       title: "Кто вы?",
+      value: "kto_vi",
       descriptions: "Выберите подходящее описание для себя",
       data: [
         {
@@ -345,7 +346,8 @@ export class QuizService {
   // Сохранение выбора для текущего шага
   saveSelection(selection) {
     const stepData = this.getCurrentStepData();
-    this.selectedValues[stepData.title] = selection;
+    this.selectedValues[stepData.value] = selection;
+    console.log("selected value", this.selectedValues);
   }
 
   getSelectedValues() {

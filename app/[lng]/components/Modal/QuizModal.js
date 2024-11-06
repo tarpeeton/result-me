@@ -19,7 +19,7 @@ export default function QuizModal({ setQuizModal }) {
     const stepType = currentData.type;
 
     if (stepType === 1) {
-      quizService.saveSelection([item.value]);
+      quizService.saveSelection(item.value);
       nextStep();
     } else if (stepType === 2) {
       setSelectedItems((prev) =>
@@ -27,6 +27,7 @@ export default function QuizModal({ setQuizModal }) {
           ? prev.filter((val) => val !== item.value)
           : [...prev, item.value]
       );
+      console.log(selectedItems)
     }
   };
 
@@ -73,7 +74,7 @@ export default function QuizModal({ setQuizModal }) {
             <div className="grid grid-cols-3 gap-4 max-mdl:grid-cols-1">
               {currentData.data.map((item, index) => 
                 {
-                 return item.type == 'button' ? (<ButtonCard key={index} title={item.title} descriptions={item.descriptions} icon={item.icon} />) : item.type == 'input' ? (<InputCard key={index} title={item.title} descriptions={item.descriptions} icon={item.icon} />) : null;
+                 return item.type == 'button' ? (<ButtonCard handleSelection={handleSelection} key={index} item={item} />) : item.type == 'input' ? (<InputCard key={index} item={item} handleSelection={handleSelection} />) : null;
                 }
               )}
             </div>

@@ -18,7 +18,7 @@ const HoverTextField = styled(TextField)(({ theme }) => ({
   },
 }));
 
-export default function InputCard({ title, icon }) {
+export default function InputCard({ item }) {
   const [inputValue, setInputValue] = useState("");
 
   return (
@@ -26,7 +26,7 @@ export default function InputCard({ title, icon }) {
       className="bg-white group hover:scale-[1.03] transition-all duration-300 relative rounded-2xl cursor-pointer p-4 space-y-4 flex flex-col justify-between h-auto min-h-[300px]"
     >
       <div className="space-y-3">
-        <h2 className="text-2xl max-mdl:text-xl font-semibold">{title}</h2>
+        <h2 className="text-2xl max-mdl:text-xl font-semibold">{item.title}</h2>
         <HoverTextField
           variant="standard"
           placeholder="Введите текст"
@@ -46,10 +46,10 @@ export default function InputCard({ title, icon }) {
       </div>
       <div>
         <Image
-          src={icon}
+          src={item.icon}
           width={500}
           height={500}
-          alt={`${title} || Icon of Button Card`}
+          alt={`${item.title} || Icon of Button Card`}
           className="h-full max-h-[200px] w-auto"
           quality={100}
         />
