@@ -324,34 +324,12 @@ export class QuizService {
   }
 
   getCurrentStepData() {
-    return this.data[this.currentStep];
+    return this.data[this.currentStep]
   }
 
-  goToNextStep() {
-    if (this.currentStep < this.data.length - 1) {
-      this.currentStep += 1;
-    }
-  }
-
-  goToPrevStep() {
-    if (this.currentStep > 0) {
-      this.currentStep -= 1;
-    }
-  }
-
-  skipStep() {
-    this.goToNextStep();
-  }
-
-  // Сохранение выбора для текущего шага
-  saveSelection(selection) {
-    const stepData = this.getCurrentStepData();
-    this.selectedValues[stepData.value] = selection;
-    console.log("selected value", this.selectedValues);
-  }
-
-  getSelectedValues() {
-    return this.selectedValues;
+  goToTheNextStep(step) {
+    this.currentStep = step;
+    console.log("Current step: " + this.currentStep)
   }
 
   reset() {

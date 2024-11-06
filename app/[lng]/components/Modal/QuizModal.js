@@ -9,54 +9,25 @@ import InputCard from "./Cards/InputCard";
 
 export default function QuizModal({ setQuizModal }) {
   const quizService = new QuizService(quizData);
+  const [step, setStep] = useState(1);
   const containerRef = useRef(null);
   const [currentData, setCurrentData] = useState(
     quizService.getCurrentStepData()
   );
   const [selectedItems, setSelectedItems] = useState([]);
 
+  console.log("Quiz", quizData);
   const handleSelection = (item) => {
-    const stepType = currentData.type;
-
-    if (stepType === 1) {
-      quizService.saveSelection(item.value);
-      nextStep();
-    } else if (stepType === 2) {
-      setSelectedItems((prev) =>
-        prev.includes(item.value)
-          ? prev.filter((val) => val !== item.value)
-          : [...prev, item.value]
-      );
-      console.log(selectedItems)
+    if (currentData.type == 2) {
+      setSelectedItems((prevItem) => [...prevItem, item.value]);
     }
-  };
-
-  const nextStep = () => {
-    if (currentData.type === 2) {
-      quizService.saveSelection(selectedItems);
-    }
+    quizService.goToTheNextStep(step);
+    setStep(step => step + 1);
     QuizAnimator.fadeOutLeft(containerRef.current, () => {
-      quizService.goToNextStep();
       setCurrentData(quizService.getCurrentStepData());
       setSelectedItems([]);
       QuizAnimator.slideLeft(containerRef.current); // Переход влево
     });
-  };
-
-  const prevStep = () => {
-    QuizAnimator.fadeOutRight(containerRef.current, () => {
-      quizService.goToPrevStep();
-      setCurrentData(quizService.getCurrentStepData());
-      setSelectedItems([]);
-      QuizAnimator.slideRight(containerRef.current); // Обратный свайп вправо
-    });
-  };
-
-  const skipStep = () => {
-    quizService.skipStep();
-    setCurrentData(quizService.getCurrentStepData());
-    setSelectedItems([]);
-    QuizAnimator.slideLeft(containerRef.current);
   };
 
   useEffect(() => {
@@ -68,15 +39,29 @@ export default function QuizModal({ setQuizModal }) {
       <div className="h-full w-full overflow-y-auto overflow-x-hidden max-mdl:p-2 max-mdl:py-4 p-4">
         <div className="bg-[#F8F8F8] w-full h-auto min-h-full rounded-[100px] max-mdl:rounded-3xl max-mdl:p-4 max-mdl:py-8 flex items-center justify-center p-16 relative">
           <div ref={containerRef} className="w-full">
-            <h2 className="text-5xl max-mdl:text-2xl max-mdl:font-bold font-semibold mb-4">{currentData.title}</h2>
-            <p className="text-3xl max-mdl:text-xl max-mdl:leading-6 font-semibold mb-8">{currentData.descriptions}</p>
+            <h2 className="text-5xl max-mdl:text-2xl max-mdl:font-bold font-semibold mb-4">
+              {currentData.title}
+            </h2>
+            <p className="text-3xl max-mdl:text-xl max-mdl:leading-6 font-semibold mb-8">
+              {currentData.descriptions}
+            </p>
 
             <div className="grid grid-cols-3 gap-4 max-mdl:grid-cols-1">
-              {currentData.data.map((item, index) => 
-                {
-                 return item.type == 'button' ? (<ButtonCard handleSelection={handleSelection} key={index} item={item} />) : item.type == 'input' ? (<InputCard key={index} item={item} handleSelection={handleSelection} />) : null;
-                }
-              )}
+              {currentData.data.map((item, index) => {
+                return item.type == "button" ? (
+                  <ButtonCard
+                    handleSelection={handleSelection}
+                    key={index}
+                    item={item}
+                  />
+                ) : item.type == "input" ? (
+                  <InputCard
+                    key={index}
+                    item={item}
+                    handleSelection={handleSelection}
+                  />
+                ) : null;
+              })}
             </div>
           </div>
         </div>
@@ -86,9 +71,51 @@ export default function QuizModal({ setQuizModal }) {
   );
 }
 
+// const handleSelection = (item) => {
+//   const stepType = currentData.type;
 
+//   if (stepType === 1) {
+//     quizService.saveSelection(item.value);
+//     nextStep();
+//   } else if (stepType === 2) {
+//     setSelectedItems((prev) =>
+//       prev.includes(item.value)
+//         ? prev.filter((val) => val !== item.value)
+//         : [...prev, item.value]
+//     );
+//     console.log(selectedItems)
+//   }
+// };
+//
+// const nextStep = () => {
+//   if (currentData.type === 2) {
+//     quizService.saveSelection(selectedItems);
+//   }
+//   QuizAnimator.fadeOutLeft(containerRef.current, () => {
+//     setCurrentData(quizService.getCurrentStepData());
+//     setSelectedItems([]);
+//     QuizAnimator.slideLeft(containerRef.current); // Переход влево
+//   });
+// };
 
-            {/* <div className="flex justify-between mt-8">
+// const prevStep = () => {
+//   QuizAnimator.fadeOutRight(containerRef.current, () => {
+//     quizService.goToPrevStep();
+//     setCurrentData(quizService.getCurrentStepData());
+//     setSelectedItems([]);
+//     QuizAnimator.slideRight(containerRef.current); // Обратный свайп вправо
+//   });
+// };
+
+// const skipStep = () => {
+//   quizService.skipStep();
+//   setCurrentData(quizService.getCurrentStepData());
+//   setSelectedItems([]);
+//   QuizAnimator.slideLeft(containerRef.current);
+// };
+
+{
+  /* <div className="flex justify-between mt-8">
               <button
                 onClick={prevStep}
                 className="px-4 py-2 bg-gray-300 rounded-lg"
@@ -109,4 +136,5 @@ export default function QuizModal({ setQuizModal }) {
               >
                 Пропустить
               </button>
-            </div> */}
+            </div> */
+}
