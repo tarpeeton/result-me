@@ -52,6 +52,7 @@ export const quizData = [
     },
     {
       type: 1,
+      value: "jelaimniy_rezultat",
       title: "Желаемый результат",
       descriptions: "Какой результат вы хотите получить?",
       data: [
@@ -111,6 +112,7 @@ export const quizData = [
     },
     {
       type: 2,
+      value: "istochniki_klientov",
       title: "Источники клиентов",
       descriptions:
         "Определите, откуда клиенты чаще всего узнают о вашей компании",
@@ -180,6 +182,7 @@ export const quizData = [
     },
     {
       type: 1,
+      value: "calculator",
       title: "Калькулятор",
       descriptions:
         "Подсчитайте количество приведенных клиентов за рекламную кампанию:",
@@ -315,25 +318,3 @@ export const quizData = [
       ],
     },
   ];
-
-export class QuizService {
-  constructor(data) {
-    this.data = data;
-    this.currentStep = 0;
-    this.selectedValues = {}; // Объект для хранения выбранных значений
-  }
-
-  getCurrentStepData() {
-    return this.data[this.currentStep]
-  }
-
-  goToTheNextStep(step) {
-    this.currentStep = step;
-    console.log("Current step: " + this.currentStep)
-  }
-
-  reset() {
-    this.currentStep = 0;
-    this.selectedValues = {};
-  }
-}

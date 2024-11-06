@@ -1,37 +1,106 @@
-// components/QuizModal.js
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { QuizService, quizData } from "./services/quizService";
+import { quizData } from "./services/quizService";
 import { QuizAnimator } from "./services/quizAnimator";
 import ButtonCard from "./Cards/ButtonCard";
 import InputCard from "./Cards/InputCard";
 
 export default function QuizModal({ setQuizModal }) {
-  const quizService = new QuizService(quizData);
-  const [step, setStep] = useState(1);
   const containerRef = useRef(null);
-  const [currentData, setCurrentData] = useState(
-    quizService.getCurrentStepData()
-  );
+  const [currentStep, setCurrentStep] = useState(0); // Управляем текущим шагом напрямую
+  const [currentData, setCurrentData] = useState(quizData[0]);
   const [selectedItems, setSelectedItems] = useState([]);
+  const [responses, setResponses] = useState({});
 
-  console.log("Quiz", quizData);
+  console.log(responses)
+  // Обновляем currentData при изменении currentStep
+  useEffect(() => {
+    setCurrentData(quizData[currentStep]);
+  }, [currentStep]);
+
   const handleSelection = (item) => {
-    if (currentData.type == 2) {
-      setSelectedItems((prevItem) => [...prevItem, item.value]);
+    const stepValue = currentData.value;
+
+    if (currentData.type === 2) {
+      setSelectedItems((prevItems) => {
+        const updatedItems = prevItems.includes(item.value)
+          ? prevItems.filter((val) => val !== item.value)
+          : [...prevItems, item.value];
+        return updatedItems;
+      });
+    } else {
+      setResponses((prevResponses) => ({
+        ...prevResponses,
+        [stepValue]: item.value,
+      }));
+      nextStep();
     }
-    quizService.goToTheNextStep(step);
-    setStep(step => step + 1);
-    QuizAnimator.fadeOutLeft(containerRef.current, () => {
-      setCurrentData(quizService.getCurrentStepData());
+  };
+
+  const nextStep = () => {
+    if (currentData.type === 2) {
+      const stepValue = currentData.value;
+      setResponses((prevResponses) => ({
+        ...prevResponses,
+        [stepValue]: selectedItems.join(", "),
+      }));
+    }
+
+    if (currentStep >= quizData.length - 1) {
+      handleQuizCompletion();
+    } else {
+      QuizAnimator.fadeOutLeft(containerRef.current, () => {
+        setSelectedItems([]);
+        setCurrentStep((prevStep) => prevStep + 1);
+        QuizAnimator.slideLeft(containerRef.current);
+      });
+    }
+  };
+
+  const prevStep = () => {
+    QuizAnimator.fadeOutRight(containerRef.current, () => {
       setSelectedItems([]);
-      QuizAnimator.slideLeft(containerRef.current); // Переход влево
+      setCurrentStep((prevStep) => prevStep - 1);
+      QuizAnimator.slideRight(containerRef.current);
     });
+  }
+
+  const handleQuizCompletion = () => {
+    // Здесь выполняем необходимые вычисления и отправляем данные
+    const finalData = {
+      ...responses,
+      // Добавьте вычисленные поля
+    };
+
+    console.log("Финальные данные для отправки:", finalData);
+    sendDataToAPI(finalData);
+  };
+
+  const sendDataToAPI = async (data) => {
+    try {
+      const response = await fetch("URL_ВАШЕГО_API", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        console.log("Данные успешно отправлены");
+        // Закрываем модальное окно после успешной отправки
+        setQuizModal(false);
+      } else {
+        console.error("Ошибка при отправке данных");
+      }
+    } catch (error) {
+      console.error("Ошибка сети:", error);
+    }
   };
 
   useEffect(() => {
-    QuizAnimator.slideLeft(containerRef.current); // Инициализация с плавным появлением слева
+    QuizAnimator.slideLeft(containerRef.current);
   }, []);
 
   return createPortal(
@@ -45,16 +114,31 @@ export default function QuizModal({ setQuizModal }) {
             <p className="text-3xl max-mdl:text-xl max-mdl:leading-6 font-semibold mb-8">
               {currentData.descriptions}
             </p>
+            <div className="flex gap-4 mb-8">
+            {
+              currentStep != 0 ? (
+                <button onClick={prevStep} className="px-24 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white">
+                  Назад
+                </button>
+              ) : null
+            }
+                        {currentData.type === 2 && (
+              <button onClick={nextStep} className="px-24 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white">
+                Вперёд
+              </button>
+            )}
+            </div>
 
             <div className="grid grid-cols-3 gap-4 max-mdl:grid-cols-1">
               {currentData.data.map((item, index) => {
-                return item.type == "button" ? (
+                return item.type === "button" ? (
                   <ButtonCard
                     handleSelection={handleSelection}
                     key={index}
                     item={item}
+                    selectedItems={selectedItems}
                   />
-                ) : item.type == "input" ? (
+                ) : item.type === "input" ? (
                   <InputCard
                     key={index}
                     item={item}
@@ -69,72 +153,4 @@ export default function QuizModal({ setQuizModal }) {
     </div>,
     document.body
   );
-}
-
-// const handleSelection = (item) => {
-//   const stepType = currentData.type;
-
-//   if (stepType === 1) {
-//     quizService.saveSelection(item.value);
-//     nextStep();
-//   } else if (stepType === 2) {
-//     setSelectedItems((prev) =>
-//       prev.includes(item.value)
-//         ? prev.filter((val) => val !== item.value)
-//         : [...prev, item.value]
-//     );
-//     console.log(selectedItems)
-//   }
-// };
-//
-// const nextStep = () => {
-//   if (currentData.type === 2) {
-//     quizService.saveSelection(selectedItems);
-//   }
-//   QuizAnimator.fadeOutLeft(containerRef.current, () => {
-//     setCurrentData(quizService.getCurrentStepData());
-//     setSelectedItems([]);
-//     QuizAnimator.slideLeft(containerRef.current); // Переход влево
-//   });
-// };
-
-// const prevStep = () => {
-//   QuizAnimator.fadeOutRight(containerRef.current, () => {
-//     quizService.goToPrevStep();
-//     setCurrentData(quizService.getCurrentStepData());
-//     setSelectedItems([]);
-//     QuizAnimator.slideRight(containerRef.current); // Обратный свайп вправо
-//   });
-// };
-
-// const skipStep = () => {
-//   quizService.skipStep();
-//   setCurrentData(quizService.getCurrentStepData());
-//   setSelectedItems([]);
-//   QuizAnimator.slideLeft(containerRef.current);
-// };
-
-{
-  /* <div className="flex justify-between mt-8">
-              <button
-                onClick={prevStep}
-                className="px-4 py-2 bg-gray-300 rounded-lg"
-              >
-                Назад
-              </button>
-              {currentData.type === 2 && (
-                <button
-                  onClick={nextStep}
-                  className="px-4 py-2 bg-blue-500 text-white rounded-lg"
-                >
-                  Далее
-                </button>
-              )}
-              <button
-                onClick={skipStep}
-                className="px-4 py-2 bg-gray-300 rounded-lg"
-              >
-                Пропустить
-              </button>
-            </div> */
 }
