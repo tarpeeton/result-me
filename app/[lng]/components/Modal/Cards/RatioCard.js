@@ -10,9 +10,12 @@ export default function RatioCard({ item, handleRatioChange }) {
   };
 
   return (
-    <div className="ratio-card bg-white p-6 rounded-[20px] shadow-md relative">
+    <div className="ratio-card bg-white p-6 rounded-[20px] flex flex-col justify-between min-h-[250px] shadow-md relative">
+      <div>
       <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
       <p className="text-gray-600 mb-6">{item.descriptions}</p>
+        
+      </div>
       <div className="relative">
         <input
           type="range"
