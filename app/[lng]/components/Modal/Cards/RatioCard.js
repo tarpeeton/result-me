@@ -34,13 +34,13 @@ export default function RatioCard({ item, handleRatioChange }) {
 
         {/* Флажок с текущим значением */}
         <div
-          className="absolute -top-10 transform -translate-x-1/2 w-16 h-16 bg-[#7B72EB] text-white font-semibold flex items-center justify-center rounded-full"
+          className="absolute -top-[66px] transform -translate-x-1/2 w-16 h-16 bg-[#7B72EB] text-white font-semibold flex items-center justify-center rounded-full"
           style={{
             left: `${((value - item.from) / (item.to - item.from)) * 100}%`,
           }}
         >
           {value} {item.saleSymbol}
-          <div className="absolute bottom-[-8px] w-0 h-0 border-t-[8px] border-t-[#7B72EB] border-x-[8px] border-x-transparent"></div>
+          <div className="absolute bottom-[-6px] w-0 h-0 border-t-[8px] border-t-[#7B72EB] border-x-[8px] border-x-transparent"></div>
         </div>
       </div>
     </div>
