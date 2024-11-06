@@ -4,6 +4,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { QuizService, quizData } from "./services/quizService";
 import { QuizAnimator } from "./services/quizAnimator";
+import ButtonCard from "./Cards/ButtonCard";
 
 export default function QuizModal({ setQuizModal }) {
   const quizService = new QuizService(quizData);
@@ -63,26 +64,29 @@ export default function QuizModal({ setQuizModal }) {
   return createPortal(
     <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-white">
       <div className="h-full w-full overflow-y-auto overflow-x-hidden p-4">
-        <div className="bg-[#F8F8F8] w-full h-auto min-h-full rounded-[100px] flex items-center justify-center p-16 relative">
-          <div ref={containerRef} className="w-full text-center">
-            <h2 className="text-5xl font-bold mb-4">{currentData.title}</h2>
-            <p className="text-lg mb-8">{currentData.descriptions}</p>
+        <div className="bg-[#F8F8F8] w-full h-auto min-h-full rounded-[100px] max-mdl:rounded-3xl max-mdl:p-2 max-mdl:py-8 flex items-center justify-center p-16 relative">
+          <div ref={containerRef} className="w-full">
+            <h2 className="text-5xl max-mdl:text-2xl max-mdl:font-bold font-semibold mb-4">{currentData.title}</h2>
+            <p className="text-3xl max-mdl:text-xl max-mdl:leading-6 font-semibold mb-8">{currentData.descriptions}</p>
 
-            <div className="grid grid-cols-2 gap-4">
-              {currentData.data.map((item, index) => (
-                <div
-                  key={index}
-                  onClick={() => handleSelection(item)}
-                  className={`bg-white p-4 rounded-lg cursor-pointer shadow-md flex items-center justify-center ${
-                    selectedItems.includes(item.value) ? "bg-gray-300" : ""
-                  }`}
-                >
-                  <span className="text-lg font-medium">{item.title}</span>
-                </div>
-              ))}
+            <div className="grid grid-cols-3 gap-4 max-mdl:grid-cols-1">
+              {currentData.data.map((item, index) => 
+                {
+                 return item.type == 'button' ? (<ButtonCard key={index} title={item.title} descriptions={item.descriptions} icon={item.icon} />) : null;
+                }
+              )}
             </div>
+          </div>
+        </div>
+      </div>
+    </div>,
+    document.body
+  );
+}
 
-            <div className="flex justify-between mt-8">
+
+
+            {/* <div className="flex justify-between mt-8">
               <button
                 onClick={prevStep}
                 className="px-4 py-2 bg-gray-300 rounded-lg"
@@ -103,11 +107,4 @@ export default function QuizModal({ setQuizModal }) {
               >
                 Пропустить
               </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>,
-    document.body
-  );
-}
+            </div> */}

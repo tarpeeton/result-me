@@ -10,7 +10,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 
@@ -35,3 +35,27 @@ body, html {
 	scrollbar-width: none;
 	/* Firefox */
 }
+  
+  /* .circle-of-card::before,
+  .circle-of-card::after {
+	content: "";
+	position: relative;
+	background-color: #f8f8f8; 
+	border-radius: 50%;
+	width: 100px; 
+	height: 100px;
+  }
+  
+  .circle-of-card::before {
+	top: -50px;
+	left: 50%; 
+	transform: translateX(-50%);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05); 
+  }
+  
+  .circle-of-card::after {
+	bottom: -50px;
+	right: 50%; 
+	transform: translateX(50%);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05); 
+  } */

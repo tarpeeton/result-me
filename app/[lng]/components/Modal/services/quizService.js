@@ -11,7 +11,7 @@ export const quizData = [
           value: "Владелец бизнеса",
           descriptions:
             "Учредитель, соучредитель или генеральный директор компании",
-          icon: "/public/",
+          icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-1-photo-5.png",
         },
         {
           type: "button",
@@ -20,7 +20,7 @@ export const quizData = [
           value: "Руководитель",
           descriptions:
             "Учредитель, соучредитель или генеральный директор компании",
-          icon: "/public/",
+          icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-1-photo-5.png",
         },
         {
           type: "button",
@@ -29,7 +29,7 @@ export const quizData = [
           value: "Специалист",
           descriptions:
             "Учредитель, соучредитель или генеральный директор компании",
-          icon: "/public/",
+          icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-1-photo-5.png",
         },
         {
           type: "button",
@@ -38,14 +38,14 @@ export const quizData = [
           value: "Маркетолог",
           descriptions:
             "Учредитель, соучредитель или генеральный директор компании",
-          icon: "/public/",
+          icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-1-photo-5.png",
         },
         {
           type: "input",
           title: "Ввести вручную",
           active: false,
           value: "",
-          icon: "/public/",
+          icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-1-photo-5.png",
         },
       ],
     },
