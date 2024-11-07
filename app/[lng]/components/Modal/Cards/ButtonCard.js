@@ -18,7 +18,7 @@ export default function ButtonCard({ item, handleSelection, selectedItems }) {
         <h2 className="text-2xl max-mdl:text-xl font-semibold">
           {item.title}
         </h2>
-        <p className="group-hover:opacity-100 leading-5 text-[#A6A6A6] opacity-0 transition-opacity duration-300">
+        <p className="group-hover:opacity-100 leading-5 text-[#A6A6A6] max-slg:opacity-100 opacity-0 transition-opacity duration-300">
           {item.descriptions}
         </p>
       </div>

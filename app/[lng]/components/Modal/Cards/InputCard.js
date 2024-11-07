@@ -48,7 +48,7 @@ export default function InputCard({ item, handleSelection }) {
           className={`transition-all duration-300 ${
             inputValue.length > 0
               ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0"
+              : "opacity-0 max-slg:opacity-100 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0"
           }`}
           InputProps={{
             endAdornment: (

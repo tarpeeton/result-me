@@ -144,8 +144,8 @@ export default function QuizModal({ setQuizModal }) {
   return createPortal(
     <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-white">
       <div ref={scrollContainerRef} className="h-full w-full overflow-y-auto overflow-x-hidden max-mdl:p-2 max-mdl:py-4 p-4">
-        <div className="bg-[#F8F8F8] w-full h-auto min-h-full rounded-[100px] max-mdl:rounded-3xl max-mdl:p-4 max-mdl:py-8 flex items-center justify-center p-16 relative">
-          <div ref={containerRef} className="w-full">
+        <div className="bg-[#F8F8F8] w-full h-auto min-h-full rounded-[100px] max-slg:rounded-3xl max-slg:p-4 max-slg:py-8 flex items-center justify-center p-16 relative">
+          <div ref={containerRef} className="w-full ">
             {!showResults ? (
               <>
                 <h2 className="text-5xl max-mdl:text-2xl transition-all duration-300 max-mdl:font-bold font-semibold mb-4">
@@ -166,7 +166,7 @@ export default function QuizModal({ setQuizModal }) {
                     </button>
                   )}
                 </div>
-                <div className="grid grid-cols-3 gap-4 max-mdl:grid-cols-1">
+                <div className={`grid max-2xl:grid-cols-2 ${currentStep == 3 ? 'grid-cols-2': 'grid-cols-3'} gap-4 max-slg:grid-cols-1`}>
                   {currentData.data.map((item, index) => {
                     return item.type === "button" ? (
                       <ButtonCard handleSelection={handleSelection} key={index} item={item} selectedItems={selectedItems} />
