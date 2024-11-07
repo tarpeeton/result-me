@@ -20,7 +20,7 @@ export const quizData = [
           active: false,
           value: "Руководитель",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Менеджер или директор, управляющий процессами внутри компании",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-1-photo-2.png",
         },
         {
@@ -29,7 +29,7 @@ export const quizData = [
           active: false,
           value: "Специалист",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Принимающий специалист как лечащий врач, психолог или косметолог.",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-1-photo-3.png",
         },
         {
@@ -38,7 +38,7 @@ export const quizData = [
           active: false,
           value: "Маркетолог",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Специалист в области продвижения, рекламы и аналитики",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-1-photo-4.png",
         },
         {
@@ -62,7 +62,7 @@ export const quizData = [
           active: false,
           value: "Поток клиентов",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Увеличение числа лидов: заявок, звонков и сообщений",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-2-photo-1.png",
         },
         {
@@ -71,7 +71,7 @@ export const quizData = [
           active: false,
           value: "Повышение видимости",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Увеличение количества показов и охвата вашей компании или услуг",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-2-photo-2.png",
         },
         {
@@ -80,7 +80,7 @@ export const quizData = [
           active: false,
           value: "Укрепление бренда",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Создание устойчивого и запоминающегося образа бренда, отражающего ценности компании и повышающего доверие клиентов.",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-2-photo-3.png",
         },
         {
@@ -89,7 +89,7 @@ export const quizData = [
           active: false,
           value: "Увеличение лояльности",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Повышение уровня доверия и удовлетворенности текущих клиентов.",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-2-photo-4.png",
         },
         {
@@ -98,7 +98,7 @@ export const quizData = [
           active: false,
           value: "Увеличение лояльности",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Привлечение внимания к новому предложению для быстрого формирования интереса и спроса.",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-2-photo-5.png",
         },
         {
@@ -123,7 +123,7 @@ export const quizData = [
           active: false,
           value: "Рекомендации других клиентов",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Сарафанное радио и личные рекомендации",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-3-photo-1.png",
         },
         {
@@ -132,7 +132,7 @@ export const quizData = [
           active: false,
           value: "Направления специалистов",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Перенаправление клиентов от партнеров или специалистов",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-3-photo-2.png",
         },
         {
@@ -141,7 +141,7 @@ export const quizData = [
           active: false,
           value: "Социальные сети",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Instagram, Telegram, YouTube, Facebook",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-3-photo-3.png",
         },
         {
@@ -150,7 +150,7 @@ export const quizData = [
           active: false,
           value: "Сайт",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Ваша главная цифровая платформа, на которой клиенты получают полную информацию о вас и услугах, делая первый шаг к взаимодействию",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-3-photo-4.png",
         },
         {
@@ -159,7 +159,7 @@ export const quizData = [
           active: false,
           value: "Сервисы-агрегаторы",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Платформы, объединяющие компании одной ниши (Med 24, Apteka.uz, Clinics.uz)",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-3-photo-5.png",
         },
         {
@@ -168,7 +168,7 @@ export const quizData = [
           active: false,
           value: "Наружная реклама",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Постеры, баннеры или цифровые экраны",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-3-photo-6.png",
         },
         {
@@ -201,7 +201,7 @@ export const quizData = [
           active: false,
           value: "Таргетированная реклама",
           descriptions:
-            "Учредитель, соучредитель или генеральный директор компании",
+            "Реклама вашей странички в Instagram, Facebook",
           icon: "https://shotambrat.github.io/cdndelivery/assets/result-site-quiz-step-4-photo-2.png",
         },
       ],

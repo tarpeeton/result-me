@@ -3,10 +3,9 @@ import React, { useState, useEffect } from "react";
 export default function RatioCard({ item, handleRatioChange }) {
   const [value, setValue] = useState(item.value);
 
-
   useEffect(() => {
-    handleRatioChange(item.calcValue, item.title, value)
-  }, [])
+    handleRatioChange(item.calcValue, item.title, value);
+  }, []);
 
   const handleChange = (e) => {
     const newValue = e.target.value;
@@ -15,11 +14,10 @@ export default function RatioCard({ item, handleRatioChange }) {
   };
 
   return (
-    <div className="ratio-card bg-white p-6 rounded-[20px] flex flex-col justify-between min-h-[250px] relative">
+    <div className="ratio-card bg-white p-6 rounded-[20px] flex flex-col justify-between gap-14 relative">
       <div>
-      <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-      <p className="text-gray-600 mb-6">{item.descriptions}</p>
-        
+        <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+        <p className="text-gray-600 mb-6">{item.descriptions}</p>
       </div>
       <div className="relative">
         <input
@@ -29,9 +27,9 @@ export default function RatioCard({ item, handleRatioChange }) {
           value={value}
           onChange={handleChange}
           step={item.step}
-          className="w-full appearance-none h-2 rounded-full bg-[#7B72EB] relative z-10"
+          className="w-full appearance-none h-4 rounded-full bg-[#7B72EB70] relative z-10 custom-range"
         />
-        <div className="absolute left-0 -top-6 text-[#7B72EB] font-semibold">
+        <div className="absolute left-0 -top-6 text-[#A6A6A6] font-semibold">
           {item.from}
           {item.saleSymbol}
         </div>
@@ -42,7 +40,7 @@ export default function RatioCard({ item, handleRatioChange }) {
 
         {/* Флажок с текущим значением */}
         <div
-          className="absolute -top-[66px] text-sm transform -translate-x-[50%] w-16 h-16 bg-[#7B72EB] text-white font-semibold flex items-center justify-center rounded-full"
+          className="absolute -top-[75px] text-sm transform -translate-x-[50%] w-16 h-16 bg-[#7B72EB] text-white font-semibold flex items-center justify-center rounded-full"
           style={{
             left: `${((value - item.from) / (item.to - item.from)) * 100}%`,
           }}

@@ -1,11 +1,22 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import RightOf from '@/public/images/right-of.png'
-import LeftOf from '@/public/images/left-of.png'
+import RightOf from "@/public/images/right-of.png";
+import LeftOf from "@/public/images/left-of.png";
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
+import CircularProgress from "@mui/material/CircularProgress";
+import Button from "@mui/material/Button";
 
-export default function ResultSection({ results, resultContainerRef }) {
+export default function ResultSection({
+  setQuizModal,
+  responses,
+  results,
+  resultContainerRef,
+  resetQuiz,
+}) {
   const [formData, setFormData] = useState({ fio: "", phoneNumber: "+998" });
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   // Валидация ввода ФИО (только буквы)
   const handleFioChange = (e) => {
@@ -18,83 +29,124 @@ export default function ResultSection({ results, resultContainerRef }) {
     }
   };
 
-  // Валидация номера телефона (начинается с +998 и максимум 14 символов)
+  // Валидация номера телефона (начинается с +998 и только цифры)
   const handlePhoneChange = (e) => {
-    const value = e.target.value;
-    if (value.startsWith("+998") && value.length <= 13) {
+    let value = e.target.value;
+
+    // Разрешаем ввод только цифр после "+998"
+    if (/^\+998\d*$/.test(value) && value.length <= 13) {
       setFormData({ ...formData, phoneNumber: value });
       setErrors({ ...errors, phoneNumber: "" });
     } else {
       setErrors({
         ...errors,
-        phoneNumber:
-          "Номер должен начинаться с +998 и содержать максимум 13 символов",
+        phoneNumber: "Номер должен содержать только цифры, максимум 13 символов",
       });
     }
   };
 
   const handleSubmit = () => {
     if (!formData.fio || !formData.phoneNumber) {
+      if (!formData.phoneNumber) {
+        toast.error("Пожалуйста, введите номер телефона.");
+      }
       setErrors({
         fio: !formData.fio ? "Введите ФИО" : "",
         phoneNumber: !formData.phoneNumber ? "Введите номер телефона" : "",
       });
     } else {
-      console.log("Form Submitted:", formData);
+      setIsLoading(true);
+      function postToApi() {
+        const { calculator, istochniki_klientov, jelaimniy_rezultat, kto_vi, ...data } = responses;
+        const reklama = Object.values(data).map((item) => ({
+          nazivanie: item.nazivanie,
+          znachenie: `${item.znachenie}${item.nazivanie.includes("Конверсия") ? "%" : "$"}`,
+        }));
+
+        const { kolvo_klientov, kolvo_lidov, kolvo_vstrech } = results;
+        axios
+          .post("https://result-me.uz/api/application/kviz", {
+            calculator: calculator,
+            istochniki_klientov: istochniki_klientov,
+            jelaimniy_rezultat: jelaimniy_rezultat,
+            kto_vi: kto_vi,
+            fio: formData.fio,
+            nomer_telefona: formData.phoneNumber,
+            reklama: reklama,
+            kolvo_klientov: kolvo_klientov,
+            kolvo_lidov,
+            kolvo_vstrech,
+          })
+          .then(() => {
+            toast.success("Данные успешно отправлены!");
+            setQuizModal();
+          })
+          .catch(() => {
+            toast.error("Ошибка при отправке данных. Попробуйте снова.");
+          })
+          .finally(() => {
+            setIsLoading(false);
+          });
+      }
+
+      postToApi();
     }
   };
 
   return (
     <div ref={resultContainerRef}>
-      <div className="mt-12">
-        <h2 className="text-5xl font-semibold mb-8">Прогнозируемые данные:</h2>
-        <div className="flex justify-between gap-8">
-          <div className="bg-white p-4 rounded-lg shadow-md text-center w-1/3">
-            <h3 className="text-2xl font-bold mb-2">Кол-во лидов</h3>
-            <p className="text-4xl text-[#7B72EB]">{results.leads}</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-md text-center w-1/3">
-            <h3 className="text-2xl font-bold mb-2">Кол-во клиентов</h3>
-            <p className="text-4xl text-[#7B72EB]">{results.clients}</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-md text-center w-1/3">
-            <h3 className="text-2xl font-bold mb-2">Кол-во встреч</h3>
-            <p className="text-4xl text-[#7B72EB]">{results.meetings}</p>
+      <Toaster position="top-right" />
+      {(results && Object.keys(results).length > 0) && (
+        <div className="mt-12">
+          <h2 className="text-5xl font-semibold mb-8 max-2xl:text-3xl">
+            Прогнозируемые данные:
+          </h2>
+          <div className="flex max-2xl:flex-wrap justify-between gap-8">
+            <div className="bg-white p-4 rounded-lg shadow-md text-center max-2xl:w-full w-1/3">
+              <h3 className="text-2xl font-bold mb-2">Кол-во лидов</h3>
+              <p className="text-4xl text-[#7B72EB]">{results.kolvo_lidov}</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-md text-center max-2xl:w-full w-1/3">
+              <h3 className="text-2xl font-bold mb-2">Кол-во клиентов</h3>
+              <p className="text-4xl text-[#7B72EB]">{results.kolvo_klientov}</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-md text-center max-2xl:w-full w-1/3">
+              <h3 className="text-2xl font-bold mb-2">Кол-во встреч</h3>
+              <p className="text-4xl text-[#7B72EB]">{results.kolvo_vstrech}</p>
+            </div>
           </div>
         </div>
-        <div className="mt-12 flex justify-center items-center px-2 mdl:px-6"></div>
-      </div>
+      )}
       <div
         style={{
           background: "linear-gradient(to right, #7B72EB 50%, #FFFFFF 150%)",
-          borderRadius: "100px",
         }}
-        className="p-12 relative overflow-hidden px-36 flex gap-12 justify-between"
+        className="p-12 relative rounded-[100px] overflow-hidden px-36 mt-12 flex max-2xl:px-4 max-2xl:p-8 max-2xl:rounded-[40px] max-2xl:flex-col max-2xl:gap-2 gap-12 justify-between"
       >
         <Image
-        src={RightOf}
-        width={500}
-        height={500}
-        alt="Left Bg Image Of Application"
-        className="h-full absolute left-0 top-0 w-auto"
+          src={RightOf}
+          width={500}
+          height={500}
+          alt="Right Bg Image Of Application"
+          className="h-full absolute 2xl:top-0  max-2xl:h-1/2 left-0 bottom-0 w-auto"
         />
         <Image
-        src={LeftOf}
-        width={500}
-        height={500}
-        alt="Left Bg Image Of Application"
-        className="h-full absolute right-0 top-0 w-auto"
+          src={LeftOf}
+          width={500}
+          height={500}
+          alt="Left Bg Image Of Application"
+          className="h-full absolute right-0 top-0 w-auto max-2xl:hidden"
         />
-        <div className="flex relative flex-col gap-3">
-          <h2 className="text-4xl font-semibold mb-4 text-white w-full max-w-[500px]">
+        <div className="flex relative flex-col gap-3 max-2xl:gap-0">
+          <h2 className="text-4xl font-semibold mb-4 max-2xl:text-2xl max-2xl:text-center text-white w-full max-2xl:max-w-full max-w-[500px]">
             Получить бесплатную консультацию!
           </h2>
-          <p className="text-2xl mb-6 text-white font-semibold w-full max-w-[650px]">
+          <p className="text-2xl max-2xl:text-lg max-2xl:text-center mb-6 text-white font-semibold w-full max-w-[650px]">
             Мы проанализируем ваши ответы и поделимся профессиональным видением
             на продвижение вашей компании!
           </p>
         </div>
-        <div className="flex relative flex-col gap-4 w-full max-w-[350px]">
+        <div className="flex relative flex-col gap-4 w-full max-w-[350px] max-2xl:max-w-full">
           <input
             type="text"
             placeholder="ФИО"
@@ -115,18 +167,22 @@ export default function ResultSection({ results, resultContainerRef }) {
             <span className="text-red-500">{errors.phoneNumber}</span>
           )}
 
-          <button
+          <Button
             onClick={handleSubmit}
-            className="text-[#7B72EB] bg-white hover:text-white hover:bg-[#7B72EB] transition-all duration-300 font-bold py-3 mdl:px-20 self-start rounded-full mt-4"
+            disabled={isLoading}
+            variant="contained"
+            color="primary"
+            className="text-[#7B72EB] bg-white hover:text-white hover:bg-[#7B72EB] transition-all duration-300 max-2xl:w-full font-bold py-3 mdl:px-20 self-start rounded-full mt-4"
+            startIcon={isLoading && <CircularProgress size={20} color="inherit" />}
           >
-            Отправить
-          </button>
+            {isLoading ? "Отправка..." : "Отправить"}
+          </Button>
         </div>
       </div>
-      <div className="w-full flex justify-end mt-12 px-12">
-          <button className="px-12 py-3 text-lg rounded-full font-semibold text-white bg-[#7B72EB]">
-            Пройти еще раз
-          </button>
+      <div className="w-full flex justify-end mt-12 max-2xl:p-0 px-12">
+        <button onClick={resetQuiz} className="px-12 py-3 max-2xl:text-md max-2xl:px-0 max-2xl:w-full text-lg rounded-full font-semibold text-white bg-[#7B72EB]">
+          Пройти еще раз
+        </button>
       </div>
     </div>
   );

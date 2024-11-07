@@ -123,18 +123,25 @@ export default function QuizModal({ setQuizModal }) {
 
   const calculateContextualResults = () => {
     const { budget, cpc, leadConv, meetingConv, clientConv } = responses;
-    const leads = Math.floor((budget.znachenie / cpc.znachenie) * (leadConv.znachenie / 100));
-    const meetings = Math.floor(leads * (meetingConv.znachenie / 100));
-    const clients = Math.floor(meetings * (clientConv.znachenie / 100));
-    setResults({ leads, meetings, clients });
+    const kolvo_lidov = Math.floor((budget.znachenie / cpc.znachenie) * (leadConv.znachenie / 100));
+    const kolvo_vstrech = Math.floor(kolvo_lidov * (meetingConv.znachenie / 100));
+    const kolvo_klientov = Math.floor(kolvo_vstrech * (clientConv.znachenie / 100));
+    setResults({ kolvo_lidov, kolvo_vstrech, kolvo_klientov });
   };
 
   const calculateTargetedResults = () => {
     const { budget, leadConv, meetingConv, clientConv } = responses;
-    const leads = Math.floor(budget.znachenie / leadConv.znachenie);
-    const meetings = Math.floor(leads * (meetingConv.znachenie / 100));
-    const clients = Math.floor(meetings * (clientConv.znachenie / 100));
-    setResults({ leads, meetings, clients });
+    const kolvo_lidov = Math.floor(budget.znachenie / leadConv.znachenie);
+    const kolvo_vstrech = Math.floor(kolvo_lidov * (meetingConv.znachenie / 100));
+    const kolvo_klientov = Math.floor(kolvo_vstrech * (clientConv.znachenie / 100));
+    setResults({ kolvo_lidov, kolvo_vstrech, kolvo_klientov });
+  };
+
+  const resetQuiz = () => {
+    setCurrentStep(0);
+    setShowResults(false);
+    setResponses({});
+    setQuizSteps([quizData[0], quizData[1], quizData[2], quizData[3]]);
   };
 
   useEffect(() => {
@@ -144,7 +151,10 @@ export default function QuizModal({ setQuizModal }) {
   return createPortal(
     <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-white">
       <div ref={scrollContainerRef} className="h-full w-full overflow-y-auto overflow-x-hidden max-mdl:p-2 max-mdl:py-4 p-4">
-        <div className="bg-[#F8F8F8] w-full h-auto min-h-full rounded-[100px] max-slg:rounded-3xl max-slg:p-4 max-slg:py-8 flex items-center justify-center p-16 relative">
+        <div className="bg-[#F8F8F8]  w-full h-auto min-h-full rounded-[100px] max-slg:rounded-3xl max-slg:p-4 max-slg:py-8 flex items-center justify-center p-16 relative">
+          <button onClick={setQuizModal} className="absolute max-2xl:right-2 max-2xl:px-4 top-2 right-16 hover:bg-[#7B72EB] hover:text-white px-8 text-xs py-2 max-2xl:py-1 rounded-full border border-[#7B72EB] text-[#7B72EB]">
+            Закрыть
+          </button>
           <div ref={containerRef} className="w-full ">
             {!showResults ? (
               <>
@@ -154,15 +164,20 @@ export default function QuizModal({ setQuizModal }) {
                 <p className="text-3xl max-mdl:text-xl transition-all duration-300 max-mdl:leading-6 font-semibold mb-8">
                   {currentData.descriptions}
                 </p>
-                <div className="flex gap-4 mb-8">
+                <div className="flex flex-wrap gap-4 mb-8">
                   {currentStep !== 0 && (
-                    <button onClick={prevStep} className="px-24 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white">
+                    <button onClick={prevStep} className="px-24 max-2xl:w-full max-2xl:px-0 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white">
                       Назад
                     </button>
                   )}
                   {currentData.type === 2 && !["Контекстная реклама", "Таргетированная реклама"].includes(currentData.value) && selectedItems.length !== 0 && (
-                    <button onClick={nextStep} className="px-24 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white">
+                    <button onClick={nextStep} className="px-24  max-2xl:w-full max-2xl:px-0 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white">
                       Вперёд
+                    </button>
+                  )}
+                  {currentStep == 3 && (
+                    <button onClick={nextStep} className="px-24  max-2xl:w-full max-2xl:px-0 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white">
+                      Пропустить
                     </button>
                   )}
                 </div>
@@ -186,7 +201,7 @@ export default function QuizModal({ setQuizModal }) {
                 )}
               </>
             ) : (
-              <ResultSection results={results} resultContainerRef={resultContainerRef} />
+              <ResultSection resetQuiz={resetQuiz} setQuizModal={setQuizModal} responses={responses} results={results} resultContainerRef={resultContainerRef} />
             )}
           </div>
         </div>
