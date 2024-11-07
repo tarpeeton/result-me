@@ -213,6 +213,7 @@ export const quizData = [
       data: [
         {
           type: "ratio",
+          calcValue: 'budget',
           title: "Рекламный бюджет",
           saleSymbol: "$",
           from: 200,
@@ -225,6 +226,7 @@ export const quizData = [
         {
           type: "ratio",
           title: "Цена за клик",
+          calcValue: 'cpc',
           saleSymbol: "$",
           from: 0.05,
           to: 1.0,
@@ -236,6 +238,7 @@ export const quizData = [
         {
           type: "ratio",
           title: "Конверсия в лиды",
+          calcValue: 'leadConv',
           saleSymbol: "%",
           from: 3,
           to: 20,
@@ -246,6 +249,7 @@ export const quizData = [
         },
         {
           type: "ratio",
+          calcValue: 'meetingConv',
           title: "Конверсия в встречи",
           saleSymbol: "%",
           from: 3,
@@ -257,6 +261,7 @@ export const quizData = [
         },
         {
           type: "ratio",
+          calcValue: 'clientConv',
           title: "Конверсия в клиента",
           saleSymbol: "$",
           from: 3,
