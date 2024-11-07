@@ -218,7 +218,8 @@ export const quizData = [
           saleSymbol: "$",
           from: 200,
           to: 2000,
-          value: 200,
+          value: 900,
+          step: 1,
           active: false,
           descriptions:
             "Сумма, выделенная на канал или кампанию за отчетный период",
@@ -230,7 +231,8 @@ export const quizData = [
           saleSymbol: "$",
           from: 0.05,
           to: 1.0,
-          value: 0.05,
+          step: 0.01,
+          value: 0.4,
           active: false,
           descriptions:
             "Количество кликов по рекламе, показатель интереса к рекламному материалу",
@@ -242,7 +244,8 @@ export const quizData = [
           saleSymbol: "%",
           from: 3,
           to: 20,
-          value: 3,
+          step: 1,
+          value: 9,
           active: false,
           descriptions:
             "Доля кликов, которые стали лидами",
@@ -254,7 +257,8 @@ export const quizData = [
           saleSymbol: "%",
           from: 3,
           to: 20,
-          value: 3,
+          step: 1,
+          value: 9,
           active: false,
           descriptions:
             "Ожидаемый процент встреч на основе приведенных лидов",
@@ -266,7 +270,8 @@ export const quizData = [
           saleSymbol: "$",
           from: 3,
           to: 20,
-          value: 3,
+          step: 1,
+          value: 10,
           active: false,
           descriptions:
             "Процент встреч, приводящих к заключению сделки с клиентом",
@@ -280,11 +285,13 @@ export const quizData = [
       data: [
         {
           type: "ratio",
+          calcValue: 'budget',
           title: "Рекламный бюджет",
           saleSymbol: "$",
           from: 200,
           to: 2000,
           value: 500,
+          step: 1,
           active: false,
           descriptions:
             "Сумма, выделенная на канал или кампанию за отчетный период",
@@ -292,10 +299,12 @@ export const quizData = [
         {
           type: "ratio",
           title: "Цена за лид",
+          calcValue: 'leadConv',
           saleSymbol: "$",
           from: 0.8,
           to: 4.0,
           value: 2.0,
+          step: 0.1,
           active: false,
           descriptions:
             "Стоимость приведенного лида",
@@ -303,10 +312,12 @@ export const quizData = [
         {
           type: "ratio",
           title: "Конверсия в встречи",
+          calcValue: 'meetingConv',
           saleSymbol: "%",
           from: 3,
           to: 20,
           value: 10,
+          step: 1,
           active: false,
           descriptions:
             "Ожидаемый процент встреч на основе приведенных лидов",
@@ -314,10 +325,12 @@ export const quizData = [
         {
           type: "ratio",
           title: "Конверсия в клиента",
+          calcValue: 'clientConv',
           saleSymbol: "$",
           from: 3,
           to: 20,
           value: 10,
+          step: 1,
           active: false,
           descriptions:
             "Процент встреч, приводящих к заключению сделки с клиентом",

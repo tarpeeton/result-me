@@ -6,6 +6,7 @@ import { QuizAnimator } from "./services/quizAnimator";
 import ButtonCard from "./Cards/ButtonCard";
 import InputCard from "./Cards/InputCard";
 import RatioCard from "./Cards/RatioCard";
+import ResultSection from "./ResultSection";
 
 export default function QuizModal({ setQuizModal }) {
   const containerRef = useRef(null);
@@ -112,12 +113,28 @@ export default function QuizModal({ setQuizModal }) {
   };
 
   const handleQuizCompletion = () => {
+    if (currentData.value === "Контекстная реклама") {
+      calculateContextualResults();
+    } else if (currentData.value === "Таргетированная реклама") {
+      calculateTargetedResults();
+    }
+    setShowResults(true);
+  };
+
+  const calculateContextualResults = () => {
     const { budget, cpc, leadConv, meetingConv, clientConv } = responses;
     const leads = Math.floor((budget.znachenie / cpc.znachenie) * (leadConv.znachenie / 100));
     const meetings = Math.floor(leads * (meetingConv.znachenie / 100));
     const clients = Math.floor(meetings * (clientConv.znachenie / 100));
     setResults({ leads, meetings, clients });
-    setShowResults(true);
+  };
+
+  const calculateTargetedResults = () => {
+    const { budget, leadConv, meetingConv, clientConv } = responses;
+    const leads = Math.floor(budget.znachenie / leadConv.znachenie);
+    const meetings = Math.floor(leads * (meetingConv.znachenie / 100));
+    const clients = Math.floor(meetings * (clientConv.znachenie / 100));
+    setResults({ leads, meetings, clients });
   };
 
   useEffect(() => {
@@ -176,27 +193,5 @@ export default function QuizModal({ setQuizModal }) {
       </div>
     </div>,
     document.body
-  );
-}
-
-function ResultSection({ results, resultContainerRef }) {
-  return (
-    <div ref={resultContainerRef} className="mt-12">
-      <h2 className="text-5xl font-semibold mb-8">Прогнозируемые данные:</h2>
-      <div className="flex justify-between gap-8">
-        <div className="bg-white p-4 rounded-lg shadow-md text-center w-1/3">
-          <h3 className="text-2xl font-bold mb-2">Кол-во лидов</h3>
-          <p className="text-4xl text-[#7B72EB]">{results.leads}</p>
-        </div>
-        <div className="bg-white p-4 rounded-lg shadow-md text-center w-1/3">
-          <h3 className="text-2xl font-bold mb-2">Кол-во клиентов</h3>
-          <p className="text-4xl text-[#7B72EB]">{results.clients}</p>
-        </div>
-        <div className="bg-white p-4 rounded-lg shadow-md text-center w-1/3">
-          <h3 className="text-2xl font-bold mb-2">Кол-во встреч</h3>
-          <p className="text-4xl text-[#7B72EB]">{results.meetings}</p>
-        </div>
-      </div>
-    </div>
   );
 }

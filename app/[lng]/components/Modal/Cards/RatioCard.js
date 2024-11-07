@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function RatioCard({ item, handleRatioChange }) {
   const [value, setValue] = useState(item.value);
+
+
+  useEffect(() => {
+    handleRatioChange(item.calcValue, item.title, value)
+  }, [])
 
   const handleChange = (e) => {
     const newValue = e.target.value;
@@ -23,7 +28,7 @@ export default function RatioCard({ item, handleRatioChange }) {
           max={item.to}
           value={value}
           onChange={handleChange}
-          step="0.01"
+          step={item.step}
           className="w-full appearance-none h-2 rounded-full bg-[#7B72EB] relative z-10"
         />
         <div className="absolute left-0 -top-6 text-[#7B72EB] font-semibold">
