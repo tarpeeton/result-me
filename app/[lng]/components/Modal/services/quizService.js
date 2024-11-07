@@ -279,7 +279,7 @@ export const quizData = [
           saleSymbol: "$",
           from: 200,
           to: 2000,
-          value: 200,
+          value: 500,
           active: false,
           descriptions:
             "Сумма, выделенная на канал или кампанию за отчетный период",
@@ -290,7 +290,7 @@ export const quizData = [
           saleSymbol: "$",
           from: 0.8,
           to: 4.0,
-          value: 0.8,
+          value: 2.0,
           active: false,
           descriptions:
             "Стоимость приведенного лида",
@@ -301,7 +301,7 @@ export const quizData = [
           saleSymbol: "%",
           from: 3,
           to: 20,
-          value: 3,
+          value: 10,
           active: false,
           descriptions:
             "Ожидаемый процент встреч на основе приведенных лидов",
@@ -312,7 +312,7 @@ export const quizData = [
           saleSymbol: "$",
           from: 3,
           to: 20,
-          value: 3,
+          value: 10,
           active: false,
           descriptions:
             "Процент встреч, приводящих к заключению сделки с клиентом",

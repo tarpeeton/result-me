@@ -120,36 +120,7 @@ export default function QuizModal({ setQuizModal }) {
   };
 
   const handleQuizCompletion = () => {
-    // Perform necessary calculations and send data
-    const finalData = {
-      ...responses,
-      // Add calculated fields
-    };
-
-    console.log("Final data to send:", finalData);
-    sendDataToAPI(finalData);
-  };
-
-  const sendDataToAPI = async (data) => {
-    try {
-      const response = await fetch("URL_ВАШЕГО_API", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        console.log("Data sent successfully");
-        // Close the modal after successful submission
-        setQuizModal(false);
-      } else {
-        console.error("Error sending data");
-      }
-    } catch (error) {
-      console.error("Network error:", error);
-    }
+    
   };
 
   useEffect(() => {
@@ -210,6 +181,11 @@ export default function QuizModal({ setQuizModal }) {
                   />
                 ) : <RatioCard item={item} />;
               })}
+            </div>
+            <div className="flex w-full justify-center items-center mt-12">
+              <button className="px-12 py-3 text-lg rounded-full bg-[#7B72EB] text-white font-semibold">
+                Рассчитать
+              </button>
             </div>
           </div>
         </div>
