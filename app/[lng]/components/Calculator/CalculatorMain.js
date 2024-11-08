@@ -197,13 +197,13 @@ export default function CalculatorMain() {
     <div className="h-full w-full overflow-y-auto overflow-x-hidden max-mdl:p-2 max-mdl:py-4 p-4">
       <div className="bg-[#F8F8F8] w-full h-auto min-h-full rounded-[100px] max-slg:rounded-3xl max-slg:p-4 max-slg:py-8 p-16">
         <div className="space-y-4">
-          <h1 className="text-5xl font-semibold">Калькулятор</h1>
+          <h1 className="text-5xl max-mdl:text-3xl font-semibold">Калькулятор</h1>
           <p className="text-[#7B7B7B] w-full max-w-[900px]">
             Воспользуйтесь калькулятором для точного расчета количества клиентов, привлеченных с помощью вашей рекламной кампании...
           </p>
         </div>
         <div className="space-y-4 mt-12">
-          <h2 className="text-3xl font-semibold">Выберите способ продвижения:</h2>
+          <h2 className="text-3xl max-mdl:text-xl font-semibold">Выберите способ продвижения:</h2>
           <div className="grid grid-cols-1 mdl:grid-cols-2 gap-4">
             {data.map((item, index) => (
               <ButtonCard
@@ -237,7 +237,7 @@ export default function CalculatorMain() {
         {results && (
           <div className="mt-12 w-full flex items-center flex-col justify-center">
             <h2 className="text-3xl font-semibold mb-4">Результаты:</h2>
-            <div className="flex gap-4">
+            <div className="flex gap-4 max-mdl:flex-col">
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
                 <h3 className="text-xl font-bold">Кол-во лидов</h3>
                 <p className="text-2xl text-[#7B72EB]">{results.kolvo_lidov}</p>
