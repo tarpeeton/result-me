@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-export default function RatioCard({ item, handleRatioChange }) {
+export default function RatioCard({ item, handleRatioChange, value: parentValue }) {
   const [value, setValue] = useState(item.value);
+
+  // Обновление значения при изменении родительского значения (при переключении калькулятора)
+  useEffect(() => {
+    setValue(parentValue);
+  }, [parentValue]);
 
   useEffect(() => {
     handleRatioChange(item.calcValue, item.title, value);

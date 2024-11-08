@@ -1,8 +1,7 @@
 "use client";
 import ButtonCard from "../Modal/Cards/ButtonCard";
 import RatioCard from "../Modal/Cards/RatioCard";
-import { QuizAnimator } from "../Modal/services/quizAnimator";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 const data = [
   {
@@ -23,7 +22,7 @@ const data = [
   },
 ];
 
-const calcData = [
+const initialCalcData = [
   {
     type: 2,
     title: "Контекстная реклама",
@@ -39,8 +38,7 @@ const calcData = [
         value: 900,
         step: 1,
         active: false,
-        descriptions:
-          "Сумма, выделенная на канал или кампанию за отчетный период",
+        descriptions: "Сумма, выделенная на канал или кампанию за отчетный период",
       },
       {
         type: "ratio",
@@ -52,8 +50,7 @@ const calcData = [
         step: 0.01,
         value: 0.4,
         active: false,
-        descriptions:
-          "Количество кликов по рекламе, показатель интереса к рекламному материалу",
+        descriptions: "Количество кликов по рекламе, показатель интереса к рекламному материалу",
       },
       {
         type: "ratio",
@@ -89,8 +86,7 @@ const calcData = [
         step: 1,
         value: 10,
         active: false,
-        descriptions:
-          "Процент встреч, приводящих к заключению сделки с клиентом",
+        descriptions: "Процент встреч, приводящих к заключению сделки с клиентом",
       },
     ],
   },
@@ -109,8 +105,7 @@ const calcData = [
         value: 500,
         step: 1,
         active: false,
-        descriptions:
-          "Сумма, выделенная на канал или кампанию за отчетный период",
+        descriptions: "Сумма, выделенная на канал или кампанию за отчетный период",
       },
       {
         type: "ratio",
@@ -146,39 +141,56 @@ const calcData = [
         value: 10,
         step: 1,
         active: false,
-        descriptions:
-          "Процент встреч, приводящих к заключению сделки с клиентом",
+        descriptions: "Процент встреч, приводящих к заключению сделки с клиентом",
       },
     ],
   },
 ];
 
 export default function CalculatorMain() {
-  const ratioContainerRef = useRef(null);
-  const ratioContainerContentRef = useRef(null);
-  const [selectedItems, setSelectedItems] = useState([]);
-  const [showCalculator, setShowCalculator] = useState(null);
+  const [calcData, setCalcData] = useState(initialCalcData);
+  const [selectedCalculator, setSelectedCalculator] = useState(null);
+  const [ratioValues, setRatioValues] = useState({});
+  const [results, setResults] = useState(null);
 
   const handleSelection = (item) => {
     const selectedData = calcData.find((dataItem) => dataItem.value === item.value);
     if (selectedData) {
-      setSelectedItems([item.title]);
-      if (showCalculator) {
-        // Animate the current content out before showing new content
-        QuizAnimator.fadeDown(ratioContainerContentRef.current, () => {
-          setShowCalculator(selectedData);
-          QuizAnimator.slideUp(ratioContainerContentRef.current);
-        });
-      } else {
-        setShowCalculator(selectedData);
-        QuizAnimator.slideDown(ratioContainerContentRef.current);
-      }
+      setSelectedCalculator(selectedData);
+      
+      // Сброс значений при переключении калькулятора
+      const resetValues = selectedData.data.reduce((acc, curr) => {
+        acc[curr.calcValue] = curr.value;
+        return acc;
+      }, {});
+      setRatioValues(resetValues);
+      setResults(null);
     }
   };
 
   const handleRatioChange = (calcValue, title, value) => {
-    console.log(`Value changed for ${title}: ${calcValue} = ${value}`);
-    // Add your logic for handling ratio changes
+    setRatioValues((prevValues) => ({
+      ...prevValues,
+      [calcValue]: parseFloat(value),
+    }));
+  };
+
+  const handleCalculation = () => {
+    if (selectedCalculator) {
+      const { budget, cpc, leadConv, meetingConv, clientConv } = ratioValues;
+
+      if (selectedCalculator.value === "Контекстная реклама") {
+        const kolvo_lidov = Math.floor((budget / cpc) * (leadConv / 100));
+        const kolvo_vstrech = Math.floor(kolvo_lidov * (meetingConv / 100));
+        const kolvo_klientov = Math.floor(kolvo_vstrech * (clientConv / 100));
+        setResults({ kolvo_lidov, kolvo_vstrech, kolvo_klientov });
+      } else if (selectedCalculator.value === "Таргетированная реклама") {
+        const kolvo_lidov = Math.floor(budget / leadConv);
+        const kolvo_vstrech = Math.floor(kolvo_lidov * (meetingConv / 100));
+        const kolvo_klientov = Math.floor(kolvo_vstrech * (clientConv / 100));
+        setResults({ kolvo_lidov, kolvo_vstrech, kolvo_klientov });
+      }
+    }
   };
 
   return (
@@ -187,7 +199,7 @@ export default function CalculatorMain() {
         <div className="space-y-4">
           <h1 className="text-5xl font-semibold">Калькулятор</h1>
           <p className="text-[#7B7B7B] w-full max-w-[900px]">
-            Воспользуйтесь калькулятором для точного расчета количества клиентов, привлеченных с помощью вашей рекламной кампании. Выберите предпочитаемый метод продвижения, чтобы проанализировать его эффективность и получить ценные данные для оптимизации ваших маркетинговых стратегий. Этот инструмент поможет вам повысить рентабельность инвестиций и достичь ваших бизнес-целей.
+            Воспользуйтесь калькулятором для точного расчета количества клиентов, привлеченных с помощью вашей рекламной кампании...
           </p>
         </div>
         <div className="space-y-4 mt-12">
@@ -198,17 +210,46 @@ export default function CalculatorMain() {
                 handleSelection={handleSelection}
                 key={index}
                 item={item}
-                selectedItems={selectedItems}
+                selectedItems={selectedCalculator ? [selectedCalculator.title] : []}
               />
             ))}
           </div>
         </div>
-        {showCalculator && (
-          <div ref={ratioContainerRef} className="mt-24">
-            <div ref={ratioContainerContentRef} className="grid grid-cols-1 mdl:grid-cols-2 2xl:grid-cols-3 gap-4 ">
-              {showCalculator.data.map((ratioItem, index) => (
-                <RatioCard key={index} item={ratioItem} handleRatioChange={handleRatioChange} />
+        {selectedCalculator && (
+          <div className="mt-24">
+            <div className="grid grid-cols-1 mdl:grid-cols-2 2xl:grid-cols-3 gap-4">
+              {selectedCalculator.data.map((ratioItem, index) => (
+                <RatioCard
+                  key={index}
+                  item={ratioItem}
+                  handleRatioChange={handleRatioChange}
+                  value={ratioValues[ratioItem.calcValue]}
+                />
               ))}
+            </div>
+            <div className="w-full flex items-center justify-center">
+              <button onClick={handleCalculation} className="px-12 py-3 mt-8 rounded-full bg-[#7B72EB] text-white font-semibold">
+                Рассчитать
+              </button>
+            </div>
+          </div>
+        )}
+        {results && (
+          <div className="mt-12 w-full flex items-center flex-col justify-center">
+            <h2 className="text-3xl font-semibold mb-4">Результаты:</h2>
+            <div className="flex gap-4">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                <h3 className="text-xl font-bold">Кол-во лидов</h3>
+                <p className="text-2xl text-[#7B72EB]">{results.kolvo_lidov}</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                <h3 className="text-xl font-bold">Кол-во клиентов</h3>
+                <p className="text-2xl text-[#7B72EB]">{results.kolvo_klientov}</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                <h3 className="text-xl font-bold">Кол-во встреч</h3>
+                <p className="text-2xl text-[#7B72EB]">{results.kolvo_vstrech}</p>
+              </div>
             </div>
           </div>
         )}
