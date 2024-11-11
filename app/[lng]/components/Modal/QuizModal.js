@@ -174,11 +174,12 @@ export default function QuizModal({ setQuizModal }) {
                       {lng === 'ru' ? 'Назад' : lng === 'uz' ? 'Orqaga' : 'Back'}
                     </button>
                   )}
-                  {currentData.type === 2 && !["Контекстная реклама", "Таргетированная реклама"].includes(currentData.value) && selectedItems.length !== 0 && (
-                    <button onClick={nextStep} className="px-24  max-2xl:w-full max-2xl:px-0 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white">
+                   {currentData.type === 2 && !["Контекстная реклама", "Таргетированная реклама"].includes(currentData.value) && selectedItems.length !== 0 && (
+                    <button onClick={nextStep} className="px-24 hidden 2xl:block   max-2xl:w-full max-2xl:px-0 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white">
                        {lng === 'ru' ? 'Вперёд' : lng === 'uz' ? 'Oldinga' : 'Next'}
                     </button>
                   )}
+                 
                   {currentStep == 3 && (
                     <button onClick={nextStep} className="px-24  max-2xl:w-full max-2xl:px-0 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white">
                      {lng === 'ru' ? 'Пропустить' : lng === 'uz' ? 'Oʻtkazib yuborish' : 'Skip'}
@@ -196,6 +197,11 @@ export default function QuizModal({ setQuizModal }) {
                     );
                   })}
                 </div>
+                {currentData.type === 2 && !["Контекстная реклама", "Таргетированная реклама"].includes(currentData.value) && selectedItems.length !== 0 && (
+                    <button onClick={nextStep} className="px-24 block 2xl:hidden mt-[20px]  max-2xl:w-full max-2xl:px-0 py-3 text-lg rounded-full text-[#7B72EB] font-bold bg-white">
+                       {lng === 'ru' ? 'Вперёд' : lng === 'uz' ? 'Oldinga' : 'Next'}
+                    </button>
+                  )}
                 {currentStep == 4 && (
                   <div className="flex w-full justify-center items-center mt-12">
                     <button onClick={handleQuizCompletion} className="px-12 py-3 text-lg rounded-full bg-[#7B72EB] text-white font-semibold">
