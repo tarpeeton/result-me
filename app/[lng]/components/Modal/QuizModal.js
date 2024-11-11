@@ -145,6 +145,7 @@ export default function QuizModal({ setQuizModal }) {
   const resetQuiz = () => {
     setCurrentStep(0);
     setShowResults(false);
+    setHeader(false)
     setResponses({});
     setQuizSteps([quizData[0], quizData[1], quizData[2], quizData[3]]);
   };
