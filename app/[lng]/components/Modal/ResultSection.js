@@ -144,7 +144,7 @@ export default function ResultSection({
               </h3>
               <p className='text-4xl text-[#7B72EB]'>{results.kolvo_lidov}</p>
             </div>
-            <div className='bg-white p-4 rounded-lg shadow-md text-center max-2xl:w-full w-1/3'>
+            {/* <div className='bg-white p-4 rounded-lg shadow-md text-center max-2xl:w-full w-1/3'>
               <h3 className='text-2xl font-bold mb-2'>
                 
                 {lng === 'ru'
@@ -157,7 +157,7 @@ export default function ResultSection({
               <p className='text-4xl text-[#7B72EB]'>
                 {results.kolvo_klientov}
               </p>
-            </div>
+            </div> */}
             <div className='bg-white p-4 rounded-lg shadow-md text-center max-2xl:w-full w-1/3'>
               <h3 className='text-2xl font-bold mb-2'>
                    

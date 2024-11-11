@@ -130,16 +130,14 @@ export default function QuizModal({ setQuizModal }) {
     const { budget, cpc, leadConv, meetingConv, clientConv } = responses;
     const kolvo_lidov = Math.floor((budget.znachenie / cpc.znachenie) * (leadConv.znachenie / 100));
     const kolvo_vstrech = Math.floor(kolvo_lidov * (meetingConv.znachenie / 100));
-    const kolvo_klientov = Math.floor(kolvo_vstrech * (clientConv.znachenie / 100));
-    setResults({ kolvo_lidov, kolvo_vstrech, kolvo_klientov });
+    setResults({ kolvo_lidov, kolvo_vstrech });
   };
 
   const calculateTargetedResults = () => {
     const { budget, leadConv, meetingConv, clientConv } = responses;
     const kolvo_lidov = Math.floor(budget.znachenie / leadConv.znachenie);
     const kolvo_vstrech = Math.floor(kolvo_lidov * (meetingConv.znachenie / 100));
-    const kolvo_klientov = Math.floor(kolvo_vstrech * (clientConv.znachenie / 100));
-    setResults({ kolvo_lidov, kolvo_vstrech, kolvo_klientov });
+    setResults({ kolvo_lidov, kolvo_vstrech });
   };
 
   const resetQuiz = () => {

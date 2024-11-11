@@ -257,19 +257,19 @@ export const quizData = [
           descriptions:
             {ru:"Ожидаемый процент встреч на основе приведенных лидов", uz: "Taqdim etilgan lidlar asosida kutilayotgan uchrashuvlar foizi" , en: "The expected percentage of appointments from the acquired "},
         },
-        {
-          type: "ratio",
-          calcValue: 'clientConv',
-          title: {ru:"Конверсия в клиента", uz: "Xaridorga konversiya" , en: "Conversion to Clients"},
-          saleSymbol: "%",
-          from: 3,
-          to: 40,
-          step: 1,
-          value: 10,
-          active: false,
-          descriptions:
-            {ru:"Процент встреч, приводящих к заключению сделки с клиентом", uz:"Mijoz bilan kelishuvga olib keladigan uchrashuvlar foizi " , en: "The percentage of appointments that result in a client deal"}
-        },
+        // {
+        //   type: "ratio",
+        //   calcValue: 'clientConv',
+        //   title: {ru:"Конверсия в клиента", uz: "Xaridorga konversiya" , en: "Conversion to Clients"},
+        //   saleSymbol: "%",
+        //   from: 3,
+        //   to: 40,
+        //   step: 1,
+        //   value: 10,
+        //   active: false,
+        //   descriptions:
+        //     {ru:"Процент встреч, приводящих к заключению сделки с клиентом", uz:"Mijoz bilan kelishuvga olib keladigan uchrashuvlar foizi " , en: "The percentage of appointments that result in a client deal"}
+        // },
       ],
     },
     {
@@ -316,19 +316,19 @@ export const quizData = [
           descriptions:
             {ru:"Ожидаемый процент встреч на основе приведенных лидов", uz: "Taqdim etilgan lidlar asosida kutilayotgan uchrashuvlar foizi " , en: "The expected percentage of appointments from the acquired "},
         },
-        {
-          type: "ratio",
-          title: {ru:"Конверсия в клиента" , uz: "Xaridorga konversiya" , en: "Conversion to Clients"},
-          calcValue: 'clientConv',
-          saleSymbol: "%",
-          from: 3,
-          to: 40,
-          value: 10,
-          step: 1,
-          active: false,
-          descriptions:
-            {ru:"Процент встреч, приводящих к заключению сделки с клиентом" , uz: "Mijoz bilan kelishuvga olib keladigan uchrashuvlar foizi " ,en: "The percentage of appointments that result in a client deal"},
-        },
+        // {
+        //   type: "ratio",
+        //   title: {ru:"Конверсия в клиента" , uz: "Xaridorga konversiya" , en: "Conversion to Clients"},
+        //   calcValue: 'clientConv',
+        //   saleSymbol: "%",
+        //   from: 3,
+        //   to: 40,
+        //   value: 10,
+        //   step: 1,
+        //   active: false,
+        //   descriptions:
+        //     {ru:"Процент встреч, приводящих к заключению сделки с клиентом" , uz: "Mijoz bilan kelishuvga olib keladigan uchrashuvlar foizi " ,en: "The percentage of appointments that result in a client deal"},
+        // },
       ],
     },
   ];

@@ -1,4 +1,5 @@
 "use client";
+import { useParams } from 'next/navigation'
 import ButtonCard from "../Modal/Cards/ButtonCard";
 import RatioCard from "../Modal/Cards/RatioCard";
 import { useState } from "react";
@@ -161,7 +162,7 @@ export default function CalculatorMain() {
   const [selectedCalculator, setSelectedCalculator] = useState(null);
   const [ratioValues, setRatioValues] = useState({});
   const [results, setResults] = useState(null);
-
+  const {lng} = useParams()
   const handleSelection = (item) => {
     const selectedData = calcData.find((dataItem) => dataItem.value === item.value);
     if (selectedData) {
@@ -206,13 +207,21 @@ export default function CalculatorMain() {
     <div className="h-full w-full overflow-y-auto overflow-x-hidden max-mdl:p-2 max-mdl:py-4 p-4">
       <div className="bg-[#F8F8F8] w-full h-auto min-h-full rounded-[100px] max-slg:rounded-3xl max-slg:p-4 max-slg:py-8 p-16">
         <div className="space-y-4">
-          <h1 className="text-5xl max-mdl:text-3xl font-semibold">Калькулятор</h1>
+          <h1 className="text-5xl max-mdl:text-3xl font-semibold">
+            {lng === 'ru' ? 'Калькулятор' : lng === 'uz' ? 'Kalkulyator' : 'Calculator'}
+            </h1>
           <p className="text-[#7B7B7B] w-full max-w-[900px]">
-            Воспользуйтесь калькулятором для точного расчета количества клиентов, привлеченных с помощью вашей рекламной кампании...
+           
+            {lng === 'ru' ? ' Воспользуйтесь калькулятором для точного расчета количества клиентов, привлеченных с помощью вашей рекламной кампании...' : lng === 'uz' ? 'Reklama kampaniyangiz bilan jalb qilingan mijozlar sonini aniq hisoblash uchun kalkulyatordan foydalaning...' : 'Use the calculator to accurately calculate the number of customers attracted through your advertising campaign...'}
+            
           </p>
         </div>
         <div className="space-y-4 mt-12">
-          <h2 className="text-3xl max-mdl:text-xl font-semibold">Выберите способ продвижения:</h2>
+          <h2 className="text-3xl max-mdl:text-xl font-semibold">
+           
+            {lng === 'ru' ? 'Выберите способ продвижения:' : lng === 'uz' ? 'Reklama usulini tanlang:' : 'Choose the promotion method:'}
+            
+            </h2>
           <div className="grid grid-cols-1 mdl:grid-cols-2 gap-4">
             {data.map((item, index) => (
               <ButtonCard
@@ -238,25 +247,47 @@ export default function CalculatorMain() {
             </div>
             <div className="w-full flex items-center justify-center">
               <button onClick={handleCalculation} className="px-12 py-3 mt-8 rounded-full bg-[#7B72EB] text-white font-semibold">
-                Рассчитать
+              {lng === 'ru' ? 'Рассчитать' : lng === 'uz' ? 'Hisoblash' : 'Calculate'}
               </button>
             </div>
           </div>
         )}
         {results && (
           <div className="mt-12 w-full flex items-center flex-col justify-center">
-            <h2 className="text-3xl font-semibold mb-4">Результаты:</h2>
+            <h2 className="text-3xl font-semibold mb-4">
+
+            {lng === 'ru' ? 'Результаты:' : lng === 'uz' ? 'Hisoblash' : 'Calculate'}
+
+            </h2>
             <div className="flex gap-4 max-mdl:flex-col">
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <h3 className="text-xl font-bold">Кол-во лидов</h3>
+                <h3 className="text-xl font-bold">
+                {lng === 'ru'
+              ? 'Кол-во лидов'
+              : lng === 'uz'
+              ? 'lidlar soni'
+              : 'number of leads'}
+                </h3>
                 <p className="text-2xl text-[#7B72EB]">{results.kolvo_lidov}</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <h3 className="text-xl font-bold">Кол-во клиентов</h3>
+                <h3 className="text-xl font-bold">
+                {lng === 'ru'
+              ? 'Кол-во клиентов'
+              : lng === 'uz'
+              ? 'mijozlar soni'
+              : 'number of clients'}
+                </h3>
                 <p className="text-2xl text-[#7B72EB]">{results.kolvo_klientov}</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <h3 className="text-xl font-bold">Кол-во встреч</h3>
+                <h3 className="text-xl font-bold">
+                {lng === 'ru'
+              ? 'Кол-во встреч'
+              : lng === 'uz'
+              ? 'uchrashuvlar soni '
+              : 'number of appointments'}
+                </h3>
                 <p className="text-2xl text-[#7B72EB]">{results.kolvo_vstrech}</p>
               </div>
             </div>

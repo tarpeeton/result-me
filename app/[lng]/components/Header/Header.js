@@ -161,11 +161,11 @@ const Header = ({ lng }) => {
 						<GrLinkNext className='text-titleDark' />
 					</a>
 					<a
-						href={`/${lng}/steps-working`}
+						href={`/${lng}/calculator`}
 						className='font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
-							{t('steps')}
+								{t('calculator')}
 						</p>
 						<GrLinkNext className='text-titleDark' />
 					</a>
