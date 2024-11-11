@@ -61,6 +61,10 @@ export default async function RootLayout({ children, params: { lng } }) {
         />
         <meta name='twitter:image' content='https://result-me.uz/favicon-32x32.png' />
 
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
         <link rel='canonical' href='https://result-me.uz' />
         <meta name='robots' content='index, follow' />
         <link rel='icon' href='/favicon.ico' />

@@ -111,12 +111,12 @@ const Header = ({ lng }) => {
 					{t('about')}
 				</Link>
 				<Link
-					href={`/${lng}/steps-working`}
+					href={`/${lng}/calculator`}
 					className={`font-montserrat font-semibold text-[18px] leading-[23px] 4xl:text-[18px]  ${
 						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
 					}`}
 				>
-					{t('steps')}
+					{t('calculator')}
 				</Link>
 			</div>
 			{/* MOBILE NAVIGATION */}
