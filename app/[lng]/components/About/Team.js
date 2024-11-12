@@ -67,18 +67,18 @@ const teamData = [
     active: true,
     orderNum: 4
   },
-  {
-    id: 5,
-    fullName: {
-      uz: 'Daler',
-      ru: 'Далер',
-      en: 'Daler'
-    },
-    position: 'Дизайнер',
-    photo: img5,
-    active: true,
-    orderNum: 4
-  },
+  // {
+  //   id: 5,
+  //   fullName: {
+  //     uz: 'Daler',
+  //     ru: 'Далер',
+  //     en: 'Daler'
+  //   },
+  //   position: 'Дизайнер',
+  //   photo: img5,
+  //   active: true,
+  //   orderNum: 4
+  // },
   {
     id: 6,
     fullName: {
