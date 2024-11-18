@@ -5,14 +5,5 @@ Allow: /
 # Host
 Host: result-me.uz
 
-# Дополнительные инструкции для Yandex
-User-agent: Yandex
-Allow: /
-Host: https://result-me.uz
-
 # Карты сайта
 Sitemap: https://result-me.uz/sitemap.xml
-Sitemap: https://result-me.uz/yandex_424c2acd41a91a33.html
-Sitemap: https://result-me.uz/uz/sitemap-0.xml
-Sitemap: https://result-me.uz/ru/sitemap-0.xml
-Sitemap: https://result-me.uz/en/sitemap-0.xml

@@ -5,7 +5,6 @@ import dynamic from 'next/dynamic';
 import { languages } from '../i18n/settings';
 import { LanguageProvider } from '../i18n/locales/LanguageContext';
 import Script from 'next/script';
-import { initI18nextServer } from '../i18n/index';
 import Quiz from './components/Modal/Quiz';
 
 // Динамическая загрузка компонентов для оптимизации
@@ -20,7 +19,6 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params: { lng } }) {
-  const i18nInstance = await initI18nextServer(lng, ['common', 'home']); // Инициализация i18n на сервере
 
   return (
     <html lang={lng} dir={dir(lng)}>
