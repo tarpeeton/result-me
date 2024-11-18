@@ -1,15 +1,11 @@
-# *
+# Umumiy barcha botlar uchun
 User-agent: *
 Allow: /
 
-# *
-User-agent: *
-Disallow: /exclude-page
-
 # Host
-Host: https://result-me.uz
+Host: result-me.uz
 
-# Sitemaps
+# Sitemaplar
 Sitemap: https://result-me.uz/sitemap.xml
 Sitemap: https://result-me.uz/uz/sitemap-0.xml
 Sitemap: https://result-me.uz/ru/sitemap-0.xml
