@@ -1,11 +1,16 @@
-# Umumiy barcha botlar uchun
+# Для всех ботов
 User-agent: *
 Allow: /
 
 # Host
 Host: result-me.uz
 
-# Sitemaplar
+# Дополнительные инструкции для Yandex
+User-agent: Yandex
+Allow: /
+Host: https://result-me.uz
+
+# Карты сайта
 Sitemap: https://result-me.uz/sitemap.xml
 Sitemap: https://result-me.uz/uz/sitemap-0.xml
 Sitemap: https://result-me.uz/ru/sitemap-0.xml

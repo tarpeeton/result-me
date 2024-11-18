@@ -34,6 +34,7 @@ export default async function RootLayout({ children, params: { lng } }) {
           content='Мы специализируемся на разработке комплексных стратегий для роста вашего медицинского бизнеса.'
         />
         <meta name="yandex-verification" content="424c2acd41a91a33" />
+        
         <meta property='og:type' content='website' />
         <meta property='og:locale' content='ru_RU' />
         <meta property='og:url' content='https://result-me.uz' />
