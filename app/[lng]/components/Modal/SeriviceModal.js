@@ -169,6 +169,7 @@ const ServiceModal = ({ isOpen, onClose }) => {
                 <option value='reklama'>{t('advertising')}</option>
                 <option value='brending'>{t('branding')}</option>
                 <option value='firmeniy stil'>{t('corporate_identity')}</option>
+                <option value='Доктор Бренд'>{t('doctor-brand')}</option>
               </select>
             </div>
 

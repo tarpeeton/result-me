@@ -4,7 +4,7 @@ import smm from '@/public/images/services/smm.svg'
 import Group from '@/public/images/services/Group.svg'
 import seo from '@/public/images/services/seo.svg'
 import branding from '@/public/images/services/branding.svg'
-import doctor from '@/public/images/services/doctor.png'
+import doctor from '@/public/images/serviceImage/doctorICON.png'
 
 
 
@@ -119,13 +119,13 @@ export const serviceDataMain = [
 	  slug: 'doctor-brand',
 	  name: {
 		ru: 'Доктор Бренд',
-		uz: 'Doktor Brendi',
+		uz: 'Doktor Brend',
 		en: 'Doctor Brand'
 	  },
 	  shortDescription: {
-		ru: 'Доступный тариф для врачей и других специалистов из мира медицины для гарантированного увеличения потока пациентов. В тариф входит создание сайта визитки с ключевой информацией о специалисте, а также запуск рекламы в Google по ключевым запросам.',
+		ru: 'Доступный тариф для врачей и других специалистов из мира медицины для гарантированного увеличения потока пациентов.',
 		uz: "",
-		en: 'An affordable plan for doctors and other medical professionals to ensure an increased patient flow. The plan includes creating a business card website with key information about the specialist and launching Google ads based on targeted keywords.'
+		en: 'An affordable plan for doctors and other medical professionals to ensure an increased patient flow.'
 	  },
 	  icon: doctor,
 	  active: true,

@@ -12,6 +12,8 @@ const Navigation = () => {
   const navRefs = useRef([]);  // Array to store refs for `a` elements
   const spanRefs = useRef([]); // Array to store refs for `span` elements
 
+
+  
   const responsive = {
     tablet: {
       breakpoint: { max: 1280, min: 768 },
@@ -71,6 +73,14 @@ const Navigation = () => {
         en: "Branding"
       },
       slug: "branding"
+    },
+    {
+      name: {
+        ru: "Доктор Бренд",
+        uz: "Doctor Brend",
+        en: "Doctor Brand"
+      },
+      slug: "doctor-brand"
     }
   ];
 
