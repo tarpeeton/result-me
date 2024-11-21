@@ -20,7 +20,7 @@ const ServicePriceModal = ({ isOpen, onClose, price, serviceName }) => {
         open={isOpen}
         onClose={onClose}
         fullWidth
-        className='z-[9999999999]'
+        className='z-[99999999999999999]'
         PaperProps={{
           sx: {
             maxWidth: '460px',
@@ -29,6 +29,7 @@ const ServicePriceModal = ({ isOpen, onClose, price, serviceName }) => {
             zIndex: 9999999999 // Set z-index for the main modal
           }
         }}
+       
       >
         <DialogTitle
           sx={{
@@ -67,7 +68,7 @@ const ServicePriceModal = ({ isOpen, onClose, price, serviceName }) => {
           <div>
             <button
               onClick={setServiceModal}
-              className='text-white w-full text-center text-[18px] font-bold  mx-auto py-[30px] 3xl:py-[24px] px-[20px] bg-violet100 rounded-[100px] mt-[20px] mdl:mt-[40px]'
+              className='text-white w-full text-center text-[15px] font-bold  mx-auto py-[15px] 3xl:py-[24px] px-[20px] bg-violet100 rounded-[100px] mt-[20px] mdl:mt-[40px]'
             >
               {lng === 'ru'
                 ? 'Оставить заявку'

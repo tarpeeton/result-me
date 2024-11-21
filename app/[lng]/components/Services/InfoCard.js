@@ -292,7 +292,58 @@ const InfoCard = () => {
           en: 'We ensure competitive pricing on products without compromising quality.  '
         }
       }
-    ]
+    ],
+
+    'doctor-brand': [
+      {
+        title: { ru: 'Индивидуальный подход', uz: 'Individual yondashuv', en: 'Personalized approach:' },
+        description: {
+          ru: 'сайт отражает вашу личность и профессиональный стиль.',
+          uz: "",
+          en: 'The website reflects your personality and professional style.'
+        }
+      },
+      {
+        title: { ru: 'Полный функционал', uz: 'Zamonaviy dizayn', en: 'Complete functionality' },
+        description: {
+          ru: 'включает контактные данные, карту, расписание приема и перечень услуг',
+          uz: '',
+          en: 'Includes contact details, location map, schedule, and list of services'
+        }
+      },
+      {
+        title: { ru: 'Профессиональный запуск рекламы', uz: '', en: 'Professional ad launch' },
+        description: {
+          ru: 'контекстная реклама привлекает целевую аудиторию.',
+          uz: '',
+          en: 'Contextual advertising that attracts the target audience'
+        }
+      },
+      {
+        title: { ru: 'Анализ и оптимизация', uz: '', en: 'Analysis and optimization' },
+        description: {
+          ru: 'регулярный мониторинг и корректировки кампаний.',
+          uz: '',
+          en: 'Regular campaign monitoring and adjustments'
+        }
+      },
+      {
+        title: { ru: 'Прозрачная отчетность', uz: '', en: 'Transparent reporting' },
+        description: {
+          ru: 'детализированные отчеты и рекомендации.',
+          uz: "",
+          en: 'Detailed reports and recommendations'
+        }
+      },
+      {
+        title: { ru: 'Поддержка на каждом этапе', uz: '', en: 'Support at every stage' },
+        description: {
+          ru: 'консультации и помощь в течение всего процесса.',
+          uz: "",
+          en: 'Consultations and assistance throughout the process.'
+        }
+      },
+    ],
   }
 
   useEffect(() => {

@@ -801,6 +801,45 @@ const CostCardData = {
       },
       link: 'slug/branding-standart'
     }
+  ],
+  'doctor-brand': [
+    {
+      title: {
+        ru: 'В пакет входит',
+        uz: 'The package includes',
+        en: ''
+      },
+      // description: {
+      //   ru: 'Разработка брендбука',
+      //   uz: 'Brendbukni yaratish',
+      //   en: 'Development of a brand book'
+      // },
+      services: {
+        ru: [
+          'Создание и поддержка сайта-визитки на платформе Med Yordam.',
+          'Полное наполнение сайта: данные о специалисте, опыт, фото, специализации, знание языков, клиники с адресами и картами, контакты, услуги с ценами, расписание приема.',
+          'Настройка и запуск контекстной рекламы в Google.',
+          'Подбор ключевых слов и таргетинг на вашу целевую аудиторию.',
+          'Мониторинг и корректировка рекламной кампании.',
+          'Консультации и рекомендации для улучшения результатов.'
+        ],
+        uz: [],
+        en: [
+          'Creation and maintenance of a business card website on the Med Yordam platform.',
+          'Full site content: specialist details, experience, photos, specializations, language proficiency, clinics with addresses and maps, contact information, services with prices, and schedule.',
+          'Setup and launch of Google advertising.',
+          'Selection of keywords and targeting for your audience.',
+          'Monitoring and campaign adjustments.',
+          'Consultations and recommendations for better results.'
+        ]
+      },
+      price: {
+        ru: '100$',
+        uz: '100$',
+        en: '100$'
+      },
+      link: 'slug/doctor-brand'
+    }
   ]
 }
 
@@ -851,23 +890,25 @@ const CostCard = () => {
           >
             <div>
               <p className='text-[20px] font-semibold 2xl:font-bold mdl:text-[30px] text-titleDark'>
-                {card.title[lng]}
+                {card?.title[lng]}
               </p>
             </div>
             <div className='mt-[20px]'>
-              {card.description[lng].split('\n').map((line, lineIndex) => (
-                <p
-                  key={lineIndex}
-                  className='text-[15px] mdl:text-[18px] text-[#454545] font-normal font-robotoFlex'
-                >
-                  {line}
-                </p>
-              ))}
+              {card?.description &&
+                card?.description[lng].length > 0 &&
+                card?.description[lng].split('\n').map((line, lineIndex) => (
+                  <p
+                    key={lineIndex}
+                    className='text-[15px] mdl:text-[18px] text-[#454545] font-normal font-robotoFlex'
+                  >
+                    {line}
+                  </p>
+                ))}
             </div>
 
             <div className='h-[1px] w-full bg-[#F0F0F0] mt-[25px]' />
             <div className='flex flex-col mt-[25px] relative gap-[11px]'>
-              {card.services[lng].map((service, serviceIndex) => (
+              {card?.services[lng].map((service, serviceIndex) => (
                 <div
                   key={serviceIndex}
                   className='flex flex-row gap-[12px] items-center'
@@ -887,7 +928,7 @@ const CostCard = () => {
             <div className='h-[1px] w-full bg-[#F0F0F0] mt-[25px] mb-[40px]' />
             <button
               onClick={() => openModal(card.price, card.title)} // Passing title as well
-              className='text-white text-center text-[18px] font-bold w-[90%] mx-auto py-[30px] 3xl:py-[24px] px-[20px] bg-violet100 rounded-[100px] mt-[7px] absolute left-0 right-0 bottom-[20px]'
+              className='text-white text-center text-[15px] font-bold w-[90%] mx-auto py-[15px] 3xl:py-[24px] px-[20px] bg-violet100 rounded-[100px] mt-[7px] absolute 2xl:text-[18px] left-0 right-0 bottom-[20px]'
             >
               {lng === 'ru'
                 ? ' Узнать цену'

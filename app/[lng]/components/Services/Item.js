@@ -9,6 +9,7 @@ import Branding from '@/public/images/serviceImage/Branding.jpg'
 import seo from '@/public/images/serviceImage/SEO.jpg'
 import tgbot from '@/public/images/serviceImage/tgbot.jpg'
 import smm from '@/public/images/serviceImage/smm.jpg'
+import doctor from '@/public/images/serviceImageInfo/doctor.jpg'
 
 const ServiceItem = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -102,7 +103,21 @@ const ServiceItem = () => {
         en: "Creating a unique and memorable image for your business. Branding encompasses the development of logos, visual elements, and corporate identity that highlight your brand's individuality. The primary focus is on crafting a cohesive and appealing image that stands out among competitors and attracts the target audience.",
         uz: "Biznesingizning noyob va unutilmas imidjini yaratish. Brending logotip, vizual elementlar va korporativ atributlarni yaratishni o'z ichiga oladi, bu brendingiz individualligini ta’kidlaydi. Asosiy e'tibor raqobatchilardan ajralib turadigan va maqsadli auditoriyani jalb qiladigan izchil va jozibali imidjni yaratishga qaratiladi."
       }
-    }
+    },
+    {
+      slug: 'doctor-brand',
+      title: {
+        ru: 'Доктор Бренд',
+        en: 'Doctor Brand',
+        uz: 'Brending'
+      },
+      imagePath: doctor,
+      description: {
+        ru: 'Доступный тариф для врачей и других специалистов из мира медицины для гарантированного увеличения потока пациентов. В тариф входит создание сайта визитки с ключевой информацией о специалисте, а также запуск рекламы в Google по ключевым запросам.Пациенты получают удобный доступ к полной информации о специалисте, что делает процесс выбора врача простым и быстрым.',
+        en: "An affordable plan for doctors and other medical professionals to ensure an increased patient flow. The plan includes creating a business card website with key information about the specialist and launching Google ads based on targeted keywords.Patients gain easy access to comprehensive information about the specialist, making the process of choosing a doctor simple and fast.",
+        uz: ""
+      }
+    },
   ]
 
   // Update the state based on the slug using useEffect

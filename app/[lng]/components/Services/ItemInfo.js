@@ -316,7 +316,42 @@ const itemData = {
         'Effectiveness evaluation and adjustments '
       ]
     }
-  }
+  },
+  'doctor-brand': {
+    title: {
+      ru: 'Этапы работы по созданию сайта и запуску рекламы',
+      en: 'Steps for Creating the Website and Launching Ads',
+      uz: ''
+    },
+    number: ['01', '02', '03', '04', '05', '06', '07', '08', '09'],
+    subtitle: {
+      ru: [
+         'Сбор информации о специалисте',
+         'Наполнение контентом: фото, текст, услуги',
+         'Утверждение',
+         'Запуск сайта на платформе Med Yordam',
+         'Настройка контекстной рекламы в Google',
+         'Подбор ключевых слов и аудитории',
+         'Запуск рекламной кампании',
+         'Мониторинг и корректировка рекламы',
+         'Анализ эффективности и отчетность'
+      ],
+      uz: [
+        
+      ],
+      en: [
+        'Collecting specialist information',
+        'Adding content: photos, text, services',
+        'Approval',
+        'Launching the website on the Med Yordam platform',
+        'Setting up Google ads',
+        'Selecting keywords and target audience',
+        'Launching the ad campaign',
+        'Monitoring and campaign adjustments',
+        'Performance analysis and reporting'
+      ]
+    }
+  },
 }
 
 const ItemInfo = () => {
