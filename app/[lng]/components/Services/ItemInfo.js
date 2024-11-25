@@ -321,7 +321,7 @@ const itemData = {
     title: {
       ru: 'Этапы работы по созданию сайта и запуску рекламы',
       en: 'Steps for Creating the Website and Launching Ads',
-      uz: ''
+      uz: "Sayt yaratish va reklamani ishga tushirish bo'yicha ish bosqichlari"
     },
     number: ['01', '02', '03', '04', '05', '06', '07', '08', '09'],
     subtitle: {
