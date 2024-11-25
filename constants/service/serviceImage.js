@@ -266,12 +266,12 @@ export const serviceImageData = [
         title: {
           ru: 'Для чего нужна эта услуга',
           en: 'Why This Service Is Needed',
-          uz: ''
+          uz: 'Nega bu xizmat kerak'
         },
         subtitle: {
           ru: 'Услуга помогает специалистам находить новых пациентов за счет создания профессионального имиджа и предоставления актуальной информации о вас и ваших услугах.Услуга даст возможность получить звонки и заявки от пациентов, без траты больших денег на дорогостоящие услуги SMM или разработку полномасштабного сайта.',
           en: 'This service helps specialists attract new patients by building a professional image and providing up-to-date information about you and your services.It allows you to receive calls and inquiries from patients without the high costs of SMM services or developing a full-scale website.',
-          uz: ''
+          uz: "Bu xizmat yordamida mutaxassislar professional imidj yaratish va o'zi hamda xizmatlari haqida dolzarb ma'lumotlarni taqdim etish orqali yangi bemorlarni topa olishadi.U orqali qimmat SMM xizmatlariga yoki keng miqyosli saytni ishlab chiqishga  ko'p pul sarflamay, bemorlarning qo'ng'iroqlarini va so'rovlarini qabul qilish mumkin."
         }
       },
       {
@@ -280,12 +280,12 @@ export const serviceImageData = [
         title: {
           ru: 'Как это работает',
           en: 'How It Works',
-          uz: 'U qanday ishlaydi'
+          uz: 'Bu qanday ishlaydi'
         },
         subtitle: {
           ru: 'После покупки тарифа создается ваш сайт-визитка на платформе Med Yordam с информацией о вас и ваших услугах. Запускается контекстная реклама в Google с подбором ключевых слов, которые используют пациенты при поиске врача (например, «врач-косметолог в Ташкенте»). Пациенты видят рекламу, переходят на сайт, изучают информацию и записываются на прием или связываются с вами. Так вы получаете новых клиентов.',
           en: 'A website makes your business available 24/7, allowing users to find you, explore your services, and contact you at any convenient time. ',
-          uz: ""
+          uz: `Tarifni sotib olgach, Med Yordam platformasida siz va xizmatlaringiz haqida tashrifnoma-sayt yaratiladi. Google da kontekstli reklama  ishga tushiriladi va bemorlar shifokorni qidirishda foydalanadigan kalit so'zlar tanlaniladi (masalan, "Toshkentda kosmetolog"). Bemorlar reklamani ko'radi, saytga kiradi, ma'lumotlarni ko'rib chiqadi va qabulga yoziladi yoki siz bilan bog'lanadi. Shunday qilib, sizda yangi mijozlar paydo bo'ladi.`
         }
       },
       {
@@ -294,12 +294,12 @@ export const serviceImageData = [
         title: {
           ru: 'Что я получу',
           en: 'What You Will Get ',
-          uz: 'Men nimaga ega bo’laman'
+          uz: 'Men nima olaman'
         },
         subtitle: {
           ru: 'Настроенную контекстную рекламу с целевым таргетингом, привлекающую пациентов, которые заинтересованы именно в ваших услугах.',
           en: 'A targeted Google advertising campaign that attracts patients interested in your services.',
-          uz: ""
+          uz: "Aynan sizning xizmatlaringiz qiziqtirgan bemorlarni jalb qiladigan maqsadli target bilan kontekstli reklamani taqdim etamiz."
         }
       },
   ];

@@ -12,10 +12,10 @@ const InfoCard = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 400,
     slidesToShow: 3,
     slidesToScroll: 1,
-    speed: 2000,
+    speed: 600,
     arrows: false,
     autoplay: true,
     responsive: [
@@ -296,50 +296,50 @@ const InfoCard = () => {
 
     'doctor-brand': [
       {
-        title: { ru: 'Индивидуальный подход', uz: 'Individual yondashuv', en: 'Personalized approach:' },
+        title: { ru: 'Индивидуальный подход', uz: "Individual yondashuv", en: 'Personalized approach:' },
         description: {
           ru: 'сайт отражает вашу личность и профессиональный стиль.',
-          uz: "",
+          uz: "sayt sizning shaxsiyatingiz va professional uslubiyatingizni aks ettiradi.",
           en: 'The website reflects your personality and professional style.'
         }
       },
       {
-        title: { ru: 'Полный функционал', uz: 'Zamonaviy dizayn', en: 'Complete functionality' },
+        title: { ru: 'Полный функционал', uz: "To'liqfunksional", en: 'Complete functionality' },
         description: {
           ru: 'включает контактные данные, карту, расписание приема и перечень услуг',
-          uz: '',
+          uz: "aloqa ma'lumotlari, xarita, qabul jadvali va xizmatlar ro'yxati kiradi.",
           en: 'Includes contact details, location map, schedule, and list of services'
         }
       },
       {
-        title: { ru: 'Профессиональный запуск рекламы', uz: '', en: 'Professional ad launch' },
+        title: { ru: 'Профессиональный запуск рекламы', uz: 'Reklamani professional darajada ishga tushirish', en: 'Professional ad launch' },
         description: {
           ru: 'контекстная реклама привлекает целевую аудиторию.',
-          uz: '',
+          uz: 'kontekstli reklama maqsadli auditoriyani jalb qiladi.',
           en: 'Contextual advertising that attracts the target audience'
         }
       },
       {
-        title: { ru: 'Анализ и оптимизация', uz: '', en: 'Analysis and optimization' },
+        title: { ru: 'Анализ и оптимизация', uz: 'Tahlil va optimallashtirish', en: 'Analysis and optimization' },
         description: {
           ru: 'регулярный мониторинг и корректировки кампаний.',
-          uz: '',
+          uz: "doimiy monitoring va kampaniyalarga o'zgarish kiritib turish.",
           en: 'Regular campaign monitoring and adjustments'
         }
       },
       {
-        title: { ru: 'Прозрачная отчетность', uz: '', en: 'Transparent reporting' },
+        title: { ru: 'Прозрачная отчетность', uz: 'Shaffof hisobot', en: 'Transparent reporting' },
         description: {
           ru: 'детализированные отчеты и рекомендации.',
-          uz: "",
-          en: 'Detailed reports and recommendations'
+          uz: "batafsil hisobotlar va tavsiyalar.",
+          en: 'Detailed reports and recommendations.'
         }
       },
       {
-        title: { ru: 'Поддержка на каждом этапе', uz: '', en: 'Support at every stage' },
+        title: { ru: 'Поддержка на каждом этапе', uz: 'Har bir bosqichda yordam', en: 'Support at every stage' },
         description: {
           ru: 'консультации и помощь в течение всего процесса.',
-          uz: "",
+          uz: "butun jarayon davomida konsultatsiyalar va qo'llab-quvvatlash.",
           en: 'Consultations and assistance throughout the process.'
         }
       },

@@ -795,7 +795,7 @@ export const CostCardData = {
       title: {
         ru: 'В пакет входит',
         uz: 'The package includes',
-        en: ''
+        en: 'Paketga quyidagilar kiradi'
       },
       // description: {
       //   ru: 'Разработка брендбука',
@@ -811,7 +811,14 @@ export const CostCardData = {
           'Мониторинг и корректировка рекламной кампании.',
           'Консультации и рекомендации для улучшения результатов.'
         ],
-        uz: [],
+        uz: [
+          "Med Yordam platformasida tashrifnoma-sayt yaratish va sozlab turish.",
+          "Saytni to'ldirish: mutaxassis haqida ma'lumot, tajribasi, fotosuratlar, malakasi, tillarni bilishi, manzillar va xaritalar ko'rsatilgan klinikalar, aloqalar, narxlari ko'rsatilgan xizmatlar, qabul jadvali.",
+          "Google da kontekstli reklamani o'rnatish va ishga tushirish.",
+          "Kalit so'zlarni tanlash va maqsadli auditoriyangizga qaratilgan target.",
+          "Monitoring va reklama kampaniyasiga o'zgarishlar kiritib turish.",
+          "Natijalarni yaxshilash bo'yicha konsultatsiyalar va tavsiyalar."
+        ],
         en: [
           'Creation and maintenance of a business card website on the Med Yordam platform.',
           'Full site content: specialist details, experience, photos, specializations, language proficiency, clinics with addresses and maps, contact information, services with prices, and schedule.',

@@ -119,12 +119,12 @@ export const serviceDataMain = [
 	  slug: 'doctor-brand',
 	  name: {
 		ru: 'Доктор Бренд',
-		uz: 'Doktor Brend',
+		uz: 'Doktor brend',
 		en: 'Doctor Brand'
 	  },
 	  shortDescription: {
 		ru: 'Доступный тариф для врачей и других специалистов из мира медицины для гарантированного увеличения потока пациентов.',
-		uz: "",
+		uz: "Bu bemorlar soni ko'payishini kafolatlash uchun shifokorlar va  tibbiyot olamidagi boshqa mutaxassislar uchun qulay tarif.",
 		en: 'An affordable plan for doctors and other medical professionals to ensure an increased patient flow.'
 	  },
 	  icon: doctor,

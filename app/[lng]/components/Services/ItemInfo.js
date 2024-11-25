@@ -337,7 +337,15 @@ const itemData = {
          'Анализ эффективности и отчетность'
       ],
       uz: [
-        
+        "Mutaxassis haqida ma'lumot yig'ish",
+        "Kontent bilan to'ldirish: fotosurat, matn, xizmatlar",
+        "Tasdiqlash",
+        "Med Yordam platformasida saytni ishga tushirish",
+        "Google da kontekstli reklamani o'rnatish",
+        "Kalit so'zlar va auditoriyani tanlash",
+        "Reklama kampaniyasini ishga tushirish",
+        "Monitoring va reklamaga o'zgarishlar kiritib turish",
+        "Samaradorlikni tahlil qilish va hisobot berish"
       ],
       en: [
         'Collecting specialist information',

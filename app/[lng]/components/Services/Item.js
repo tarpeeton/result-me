@@ -115,7 +115,7 @@ const ServiceItem = () => {
       description: {
         ru: 'Доступный тариф для врачей и других специалистов из мира медицины для гарантированного увеличения потока пациентов. В тариф входит создание сайта визитки с ключевой информацией о специалисте, а также запуск рекламы в Google по ключевым запросам.Пациенты получают удобный доступ к полной информации о специалисте, что делает процесс выбора врача простым и быстрым.',
         en: "An affordable plan for doctors and other medical professionals to ensure an increased patient flow. The plan includes creating a business card website with key information about the specialist and launching Google ads based on targeted keywords.Patients gain easy access to comprehensive information about the specialist, making the process of choosing a doctor simple and fast.",
-        uz: ""
+        uz: "Bu bemorlar soni ko'payishini kafolatlash uchun shifokorlar va  tibbiyot olamidagi boshqa mutaxassislar uchun qulay tarif. Tarif mutaxassis haqidagi asosiy ma'lumotlarga ega bo'lgan tashrifnoma-sayt yaratishni va asosiy so'rovlar bo'yicha Google da reklamani ishga tushirishni o'z ichiga oladi.Bemorlar mutaxassis haqida to'liq ma'lumot olishi mumkin, bu tufayli ular shifokorni oson va tezda tanlay olishadi."
       }
     },
   ]
