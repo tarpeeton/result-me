@@ -348,22 +348,28 @@ export const CostCardData = {
       },
       services: {
         ru: [
-          'Контент-план: 1',
+          'Контент-план',
           'Публикации: 8 (4 видео, 2 картинки, 2 карусели)',
           'Наполнение актуального',
-          'Запуск рекламы'
+          'Запуск рекламы',
+          "фото-видеосъемка 2 часа",
+          "ведение аккаунтов: 2"
         ],
         uz: [
           'Kontent-reja: 1',
           'Nashrlar: 8 (4 ta video, 2 ta rasm, 2 ta karusel)',
           'Dolzarb tarkibi',
-          'Reklamani ishga tushirish'
+          'Reklamani ishga tushirish',
+          "Фото-видеосураткашлик 2 соат",
+          "Akkaunt boshqarish: 2"
         ],
         en: [
           'Content Plan: 1  ',
           'Posts: 8 (4 videos, 2 pictures, 2 carousels) ',
           'Highlight Fill',
-          'Ad Campaigns '
+          'Ad Campaigns ',
+          "Photo and video shooting for 2 hours",
+          "Account management:2"
         ]
       },
       price: {
@@ -386,34 +392,31 @@ export const CostCardData = {
       },
       services: {
         ru: [
-          'Контент-план: 1',
-          'Публикации: 8 (6 картинки, 2 видео)',
-          'Истории: 15 (10 картинок, 5 видео)',
-          'Иконки: 10 (10 картинок)',
-          'Наполнение актуального: 10 (10 картинок)',
-          'Запуск рекламы: 8',
-          'Оформление аккаунтов: 3',
-          'Фото-видеосъемка: 2 часа / 1 локация'
+          'Контент-план ',
+          "Публикации: 8 (4 видео, 2 карусели, 2 фото)",
+          'Истории: 15',
+          'Наполнение актуального',
+          'Запуск рекламы',
+          'Фото-видеосъемка: 4 часа',
+          "ведение аккаунтов:3"
         ],
         uz: [
-          'Kontent-reja: 1',
-          'Nashrlar: 8 (6 ta rasm, 2 ta video)',
-          'Hikoyalar: 15 (10 ta rasm, 5 ta video)',
-          'Ikonchalar: 10 (10 ta rasm)',
-          'Dolzarb tarkibi: 10 (10 ta rasm)',
-          'Reklamani ishga tushirish: 8',
-          'Akkauntlar dizayini: 3',
-          'Foto va video suratga olish: 2 soat / 1 joy'
+          'Kontent-reja',
+          "Nashrlar: 8 (4 видео, 2 карусель, 2 фото)",
+          'Hikoyalar: 15 ',
+          'Dolzarb tarkibi',
+          'Reklamani ishga tushirish',
+          'Foto va video suratga olish: 4 soat ',
+          "Akkaunt boshqarish: 3"
         ],
         en: [
-          'Content Plan: 1',
-          'Posts: 8 (6 images, 2 videos)',
-          'Stories: 15 (10 images, 5 videos)',
-          'Icons: 10 (10 images)',
-          'Highlight Fill: 10 (10 images)',
-          'Ad Campaigns: 8 ',
-          'Account Design: 3 ',
-          'Photo/Video Shooting: 2 hours / 1 location'
+          'Content Plan ',
+          "Posts: 8 (4 videos, 2 carousels, 2 photos)",
+          'Stories: 15 ',
+          'Highlight Fill',
+          'Ad Campaigns ',
+          'Photo/Video Shooting: 4 hours ',
+          "Account management: 3"
         ]
       },
       price: {
@@ -436,34 +439,31 @@ export const CostCardData = {
       },
       services: {
         ru: [
-          'Контент-план: 1',
-          'Публикации: 12 (6 картинки, 6 видео)',
-          'Истории: 30 (15 картинок, 15 видео)',
-          'Иконки: 15 (15 картинок)',
-          'Наполнение актуального: 15 (15 картинок)',
-          'Запуск рекламы: 12',
+          'Контент-план',
+          "Публикации: 12 (8 видео, 2 карусели, 2 фото)",
+          'Истории: 40',
+          'Наполнение актуального',
+          'Запуск рекламы',
           'Оформление аккаунтов: 5',
-          'Фото-видеосъемка: 6 часов / 3 локации'
+          'Фото-видеосъемка: 8 часов'
         ],
         uz: [
-          'Kontent-reja: 1',
-          'Nashrlar: 12 (6 ta rasm, 6 ta video)',
-          'Hikoyalar: 30 (15 ta rasm, 15 ta video)',
-          'Ikonchalar: 15 (15 ta rasm)',
-          'Dolzarb tarkibi: 15 (15 ta rasm)',
-          'Reklamani ishga tushirish: 12',
-          'Akkauntlar dizayini: 5',
-          'Foto va video suratga olish: 6 soat / 3 ta joy'
+          'Kontent-reja',
+          'Nashrlar: 12 (8 ta video, 2 ta carusel , 2 ta rasm)',
+          'Hikoyalar: 40',
+          'Dolzarb tarkibi',
+          'Reklamani ishga tushirish',
+          'Akkaunt boshqarish: 5',
+          'Foto va video suratga olish: 8 soat'
         ],
         en: [
-          'Content Plan: 1',
-          'Posts: 12 (6 images, 6 videos)',
-          'Stories: 30 (15 images, 15 videos)',
-          'Icons: 15 (15 images)',
-          'Highlight Fill: 15 (15 images)',
-          'Ad Campaigns: 12',
-          'Account Design: 5',
-          'Photo/Video Shooting: 6 hours / 3 locations'
+          'Content Plan',
+          "Posts: 12 (8 videos, 2 carousels, 2 photos)",
+          'Stories: 40',
+          'Highlight Fill',
+          'Ad Campaigns',
+          'Account management: 5',
+          'Photo/Video Shooting: 8 hours'
         ]
       },
       price: {
