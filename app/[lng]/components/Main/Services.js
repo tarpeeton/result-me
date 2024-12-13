@@ -17,9 +17,9 @@ const Services = () => {
     <div className='w-full flex flex-col flex-wrap justify-between gap-6 mt-[20px] bg-[#F8F8F8] py-[24px] px-[16px] rounded-[30px] mdl:pl-[24px] mdl:pr-[14px]'>
       {/* Card 1 */}
       <div>
-        <p className='text-[28px] mdl:text-[50px] font-semibold text-titleDark'>
+        <h3 className='text-[28px] mdl:text-[50px] font-semibold text-titleDark'>
           {t('service_title')}
-        </p>
+        </h3>
       </div>
 
       {/* =========================== START ===================================== */}

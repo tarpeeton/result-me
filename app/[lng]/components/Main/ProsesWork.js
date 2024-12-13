@@ -101,7 +101,7 @@ const ProsesWork = () => {
     }
 
     return (
-        <div className='flex flex-col mt-[80px] gap-[10px]'>
+        <section className='flex flex-col mt-[80px] gap-[10px]'>
             {/* Slider for screens larger than 750px */}
             <div className='hidden slg:block w-full cursor-pointer'>
                 <Slider {...settings} className='w-full'>
@@ -109,9 +109,9 @@ const ProsesWork = () => {
                     <Link href='/steps-working' className='w-full mdl:max-w-full 4xl:max-w-[50%] rounded-[30px] bg-violet100 p-[30px] pb-[26px] relative flex flex-col justify-between mdl:pl-[40px] mdl:rounded-[60px] mdl:pt-[50px] 2xl:max-w-[98%] 3xl:min-w-[98%] 2xl:min-h-[450px] 4xl:min-h-[600px]'>
                         <div>
                             <div className='mdl:w-[80%] 4xl:w-[100%]'>
-                                <p className='text-[28px] mdl:text-[30px] text-white100 font-bold 4xl:text-[50px]'>
+                                <h5 className='text-[28px] mdl:text-[30px] text-white100 font-bold 4xl:text-[50px]'>
                                     {t('processWork')}
-                                </p>
+                                </h5>
                             </div>
                             <div className='relative w-full mt-[200px] 3xl:absolute 3xl:bottom-[25px] 3xl:right-[25px]'>
                                 <div className='py-[20px] absolute bottom-[20px] right-[20px] px-[30px] rounded-[100px] bg-white text-center mdl:w-[300px] 4xl:w-[370px]'>
@@ -236,7 +236,7 @@ const ProsesWork = () => {
                     </div>
                 </Link>
             </div>
-        </div>
+        </section>
     )
 }
 

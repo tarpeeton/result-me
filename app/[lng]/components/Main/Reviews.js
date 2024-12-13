@@ -92,7 +92,7 @@ const Reviews = () => {
   }
 
   return (
-    <div
+    <section
       className='relative w-full mt-[20px] mdl:mt-[30px] rounded-[30px] bg-cover bg-no-repeat px-5 py-8 bg-[#161616] bg-opacity-[90%] mdl:px-[40px] mdl:py-[50px]'
       style={{
         backgroundImage: `url(https://ucarecdn.com/d1dc5f20-760a-44db-a051-fe0050d6c706/-/preview/999x497/)`
@@ -110,9 +110,9 @@ const Reviews = () => {
       </div>
 
       {/* Reviews Title */}
-      <p className='text-[28px] text-white font-bold relative z-50 mb-6 mdl:text-[50px] mdl:mb-[40px]'>
+      <h6 className='text-[28px] text-white font-bold relative z-50 mb-6 mdl:text-[50px] mdl:mb-[40px]'>
         {t('title')}
-      </p>
+      </h6>
 
       {/* Reviews Carousel */}
       <Slider {...settings} ref={sliderRef} className='z-[999] overflow-hidden'>
@@ -164,7 +164,7 @@ const Reviews = () => {
       </div>
       {/* MODAL */}
       <ServiceModal isOpen={isModalOpen} onClose={closeModal} />
-    </div>
+    </section>
   )
 }
 

@@ -15,9 +15,9 @@ const MainBlogItem = () => {
   return (
     <div className='bg-[#F8F8F8] 3xl:flex 3xl:flex-row 3xl:px-[30px]'>
       <div className='bg-white rounded-[30px] py-[24px] px-[16px] mdl:py-[40px] mdl:px-[20px] 3xl:mt-[70px] 3xl:flex 3xl:flex-col 3xl:w-[80%] 3xl:px-[138px] 3xl:py-[70px] mb-[60px] 3xl:mb-[120px]'>
-        <p className='text-[23px] font-bold mdl:text-[40px] 3xl:text-[45px] text-titleDark'>
+        <h1 className='text-[23px] font-bold mdl:text-[40px] 3xl:text-[45px] text-titleDark'>
           {blog.title[lng]}
-        </p>
+        </h1>
 
         {/* Render the image only if it exists */}
         {blog.photo && blog.photo.url && (

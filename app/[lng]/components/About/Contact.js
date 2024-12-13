@@ -9,7 +9,7 @@ const Contact = () => {
   const { t } = useCustomTranslation(lng, 'aboutus')
 
   return (
-    <div className='rounded-[30px] bg-white100 mx-[16px] py-[30px] px-[20px] mt-[20px] mdl:mt-[25px] 3xl:mt-[30px] mdl:rounded-[40px] 3xl:rounded-[100px] mdl:my-[50px] mdl:px-[40px] 3xl:py-[80px] 3xl:px-[70px] mb-[60px] mdl:mb-[80px] 3xl:mb-[140px]'>
+    <section className='rounded-[30px] bg-white100 mx-[16px] py-[30px] px-[20px] mt-[20px] mdl:mt-[25px] 3xl:mt-[30px] mdl:rounded-[40px] 3xl:rounded-[100px] mdl:my-[50px] mdl:px-[40px] 3xl:py-[80px] 3xl:px-[70px] mb-[60px] mdl:mb-[80px] 3xl:mb-[140px]'>
       <div className='3xl:flex 3xl:flex-row mb-[26px] mdl:mb-[40px] 3xl:mb-[60px]'>
         <div className='3xl:w-[50%]'>
           <h5 className='text-[28px] font-bold text-titleDark mdl:text-[50px]'>
@@ -70,7 +70,7 @@ const Contact = () => {
           ></iframe>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

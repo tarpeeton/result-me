@@ -254,40 +254,40 @@ export default function CalculatorMain() {
         )}
         {results && (
           <div className="mt-12 w-full flex items-center flex-col justify-center">
-            <h2 className="text-3xl font-semibold mb-4">
+            <h3 className="text-3xl font-semibold mb-4">
 
             {lng === 'ru' ? 'Результаты:' : lng === 'uz' ? 'Hisoblash' : 'Calculate'}
 
-            </h2>
+            </h3>
             <div className="flex gap-4 max-mdl:flex-col">
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <h3 className="text-xl font-bold">
+                <h4 className="text-xl font-bold">
                 {lng === 'ru'
               ? 'Кол-во лидов'
               : lng === 'uz'
               ? 'lidlar soni'
               : 'number of leads'}
-                </h3>
+                </h4>
                 <p className="text-2xl text-[#7B72EB]">{results.kolvo_lidov}</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <h3 className="text-xl font-bold">
+                <h4 className="text-xl font-bold">
                 {lng === 'ru'
               ? 'Кол-во клиентов'
               : lng === 'uz'
               ? 'mijozlar soni'
               : 'number of clients'}
-                </h3>
+                </h4>
                 <p className="text-2xl text-[#7B72EB]">{results.kolvo_klientov}</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <h3 className="text-xl font-bold">
+                <h4 className="text-xl font-bold">
                 {lng === 'ru'
               ? 'Кол-во встреч'
               : lng === 'uz'
               ? 'uchrashuvlar soni '
               : 'number of appointments'}
-                </h3>
+                </h4>
                 <p className="text-2xl text-[#7B72EB]">{results.kolvo_vstrech}</p>
               </div>
             </div>

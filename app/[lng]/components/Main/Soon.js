@@ -47,7 +47,7 @@ const Soon = () => {
     ]
   };
   return (
-    <div className='mt-[80px] flex flex-col gap-[20px]'>
+    <section className='mt-[80px] flex flex-col gap-[20px]'>
       <div className='flex flex-col p-[24px] w-full h-full'>
         <p className='text-[28px] mdl:text-[50px] 3xl:text-[60px] font-bold'>
         {t('title')}
@@ -88,7 +88,7 @@ const Soon = () => {
           </div>
         ))}
       </Slider>
-    </div>
+    </section>
   );
 };
 

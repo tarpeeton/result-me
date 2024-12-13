@@ -102,9 +102,9 @@ const WinnerInfo = ({ winnerGif }) => {
 							</p>
 						</div>
 						<div className='text-center 3xl:w-[60%] 4xl:w-[90%] mx-auto'>
-							<h2 className='winner-text text-[28px] font-bold text-white100 leading-[34.13px] mdl:text-[40px] mdl:leading-[48.76px] 4xl:text-[90px] xl:text-[45px] xl:mt-[30px] 3xl:leading-[80.71px] 3xl:text-[60px] 4xl:leading-[109.71px]'>
+							<h4 className='winner-text text-[28px] font-bold text-white100 leading-[34.13px] mdl:text-[40px] mdl:leading-[48.76px] 4xl:text-[90px] xl:text-[45px] xl:mt-[30px] 3xl:leading-[80.71px] 3xl:text-[60px] 4xl:leading-[109.71px]'>
 								{t('puzzle_winnerSUBTITLE')}
-							</h2>
+							</h4>
 						</div>
 					</div>
 					{<ServiceModal isOpen={modal} onClose={closeModal} />}
@@ -216,9 +216,9 @@ const Puzzle = () => {
 				<WinnerInfo winnerGif={winnerGift} />
 			) : (
 				<div className='flex px-[12px] py-[30px] flex-col items-center justify-center bg-violet100 rounded-[30px] mdl:rounded-[60px] 4xl:rounded-[100px] mt-[20px] mdl:mt-[25px] 4xl:mt-[30px] 4xl:py-[80px]'>
-					<h1 className='text-white text-[28px] mx-auto w-[90%] mdl:w-[60%] 2xl:w-[30%] mdl:text-[40px] 4xl:text-[50px] mb-4 font-bold text-center '>
+					<h4 className='text-white text-[28px] mx-auto w-[90%] mdl:w-[60%] 2xl:w-[30%] mdl:text-[40px] 4xl:text-[50px] mb-4 font-bold text-center '>
 						{t('puzzle_title')}
-					</h1>
+					</h4>
 					<div className='grid grid-cols-3 grid-rows-2 gap-0 w-full max-w-[600px] mdl:max-w-[800px] 4xl:max-w-[1200px]'>
 						<PuzzlePiece
 							id={1}

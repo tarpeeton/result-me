@@ -39,9 +39,9 @@ const Result = () => {
   return (
     <div className='rounded-[30px] mdl:rounded-[60px] 2xl:rounded-[100px] bg-bgDark 3xl:px-[70px] mt-[30px] px-[12px]'>
       <div className='flex flex-col p-[24px]'>
-        <p className='text-[28px] mdl:text-[50px] 3xl:text-[60px] font-bold'>
+        <h2 className='text-[28px] mdl:text-[50px] 3xl:text-[60px] font-bold'>
           {t('result_title')}
-        </p>
+        </h2>
         <p className='bg-violet100 text-white100 text-[23px] mdl:text-[40px] 3xl:text-[50px] font-bold p-[10px] w-[243px] mdl:w-[426px] 3xl:w-[535px] rounded-[170px] text-center rotate-[-5deg]'>
           {t('result_subtitle')}
         </p>

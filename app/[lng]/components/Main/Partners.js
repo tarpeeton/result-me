@@ -62,12 +62,12 @@ const Partners = () => {
 	}
 
 	return (
-		<div className='flex flex-col rounded-[30px] bg-[#F8F8F8] mt-[20px] py-[30px] px-[20px] 4xl:py-[80px] 4xl:px-[70px]'>
+		<section className='flex flex-col rounded-[30px] bg-[#F8F8F8] mt-[20px] py-[30px] px-[20px] 4xl:py-[80px] 4xl:px-[70px]'>
 			<div className='flex flex-row items-center justify-between'>
 				<div>
-					<p className='text-[28px] font-bold 4xl:text-[50px] '>
+					<h4 className='text-[28px] font-bold 4xl:text-[50px] '>
 						{t('title')}
-						</p>
+						</h4>
 				</div>
 				{/* Custom navigation buttons */}
 				<div className='flex flex-row gap-[8px] 2xl:hidden'>
@@ -373,7 +373,7 @@ const Partners = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 
