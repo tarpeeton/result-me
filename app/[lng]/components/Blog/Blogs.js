@@ -38,9 +38,9 @@ const Blogs = () => {
               </div>
             ) : null}
             <div className='mt-[14px] flex flex-col gap-[8px] mb-[40px]'>
-              <p className='w-full text-[20px] text-titleDark font-semibold mdl:text-[25px] mdl:leading-[30.48px]'>
+              <h3 className='w-full text-[20px] text-titleDark font-semibold mdl:text-[25px] mdl:leading-[30.48px]'>
                 {item.title[lng]} {/* Adjust language as needed */}
-              </p>
+              </h3>
               <p className='text-[14px] text-[#7B7B7B] leading-[24.38px] mdl:text-[18px] mdl:leading-[23px]'>
                 {item.description[lng]} {/* Adjust language as needed */}
               </p>

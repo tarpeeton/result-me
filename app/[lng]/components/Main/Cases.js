@@ -102,9 +102,9 @@ const Cases = () => {
     <div className=' mdl:mt-[100px] 2xl:mt-[200px]'>
       {/* Case Title */}
       <div className='flex flex-col p-[24px] w-full h-full'>
-        <p className='text-[28px] mdl:text-[50px] 3xl:text-[60px] font-bold'>
+        <h4 className='text-[28px] mdl:text-[50px] 3xl:text-[60px] font-bold'>
         {t('case_title')}
-        </p>
+        </h4>
       </div>
       {/* Slider Section */}
       <div className='2xl:mt-[60px] mdl:max-h-[500px] 4xl:max-h-[900px]'>

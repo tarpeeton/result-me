@@ -39,19 +39,19 @@ const items = [
       en: 'website'
     }
   },
-  {
-    id: 3,
-    name: {
-      uz: 'Telegram botlar',
-      ru: 'Telegram-боты',
-      en: 'Telegram Bots'
-    },
-    type: {
-      uz: 'telegram bot',
-      ru: 'telegram-бот',
-      en: 'telegram bot'
-    }
-  },
+  // {
+  //   id: 3,
+  //   name: {
+  //     uz: 'Telegram botlar',
+  //     ru: 'Telegram-боты',
+  //     en: 'Telegram Bots'
+  //   },
+  //   type: {
+  //     uz: 'telegram bot',
+  //     ru: 'telegram-бот',
+  //     en: 'telegram bot'
+  //   }
+  // },
   {
     id: 4,
     name: {
@@ -658,30 +658,26 @@ const Content = () => {
 
   const handleSelect = (id, type) => {
     setSelected(id);
-
-    const currentType = type[lng].toLowerCase();
-
+  
+    const currentType = type.en.toLowerCase();
+  
     if (currentType === 'all') {
-      setFilteredData(data); // Show all if "All" is selected
+      setFilteredData(data); // Show all cases if "All" is selected
     } else {
       setFilteredData(
         data.filter((item) => {
-          const descriptionWords = item.banner.shortDescription[lng]
+          // Split shortDescription into words
+          const descriptionWords = item.banner.shortDescription.en
             .toLowerCase()
             .split(/\W+/);
-
-          return descriptionWords.some((word) => {
-            return (
-              word === currentType ||
-              word === currentType.slice(0, -1) || // Handle singular/plural
-              currentType === word.slice(0, -1)
-            );
-          });
+  
+          // Check if any word matches the selected type
+          return descriptionWords.some((word) => word === currentType);
         })
       );
     }
   };
-
+  
   // GSAP animation effect for menu
   useEffect(() => {
     if (mobileSpansRef.current[selected]) {
@@ -728,11 +724,14 @@ const Content = () => {
         <Carousel
           responsive={responsive}
           arrows={false}
-          showDots={false}
+          showDots={true}
           infinite={false}
+          // dotListClass='custom-dot-list-style'
+          dotListClass='rustam'
+
         >
           {items.map(item => (
-            <div key={item.id} className='text-center'>
+            <div key={item.id} className='text-center h-[75px]'>
               <button
                 className={`text-[15px] pb-[10px] font-semibold ${
                   selected === item.id ? 'text-violet100' : 'text-titleDark'
@@ -793,7 +792,7 @@ const Content = () => {
               />
               {/* Hidden content that appears on hover */}
               <div className='hidden 3xl:absolute bottom-0 w-full h-full bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 3xl:flex justify-center items-center bg-opacity-[70%]'>
-                <div className='h-[100px] absolute bottom-[20px]'>
+                <div className='h-[100px] absolute bottom-[20px] 4xl:bottom-[140px]'>
                   <div className='flex flex-row gap-[40px] items-center justify-center 3xl:px-[40px]'>
                     {item.statistics.map((stat, statIdx) => (
                       <div

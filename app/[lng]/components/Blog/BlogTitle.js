@@ -14,9 +14,9 @@ const BlogTitle = () => {
         </h1>
       </div>
       <div className='mt-[15px] '>
-        <p className='text-[#454545] text-[14px] mdl:text-[18px] 3xl:text-[20px] font-medium'>
+        <h2 className='text-[#454545] text-[14px] mdl:text-[18px] 3xl:text-[20px] font-medium'>
           {t('blog_description')}
-        </p>
+        </h2>
       </div>
     </div>
   )

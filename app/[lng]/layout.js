@@ -24,13 +24,9 @@ export default async function RootLayout({ children, params: { lng } }) {
     <html lang={lng} dir={dir(lng)}>
       <head>
         <meta charSet='UTF-8' />
-        <title>Result Agency - Разработка стратегий для медицинского бизнеса</title>
 
         {/* SEO и мета-данные */}
-        <meta
-          name='description'
-          content='Мы специализируемся на разработке комплексных стратегий для роста вашего медицинского бизнеса.'
-        />
+        
         <meta name="yandex-verification" content="424c2acd41a91a33" />
         
         <meta property='og:type' content='website' />

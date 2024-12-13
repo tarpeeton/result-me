@@ -1,3 +1,4 @@
+"use client"
 import Banner from './Banner'
 import Result from './Results'
 import Services from './Services'

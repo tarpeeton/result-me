@@ -22,11 +22,11 @@ const Header = ({ lng }) => {
 	const pathname = usePathname()
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const ariaLabel =
-    lng === 'ru'
-      ? 'Позвонить по номеру +99850 900 47 38'
-      : lng === 'uz'
-      ? 'Raqam orqali qo\'ng\'iroq qiling: +99850 900 47 38'
-      : 'Call number +99850 900 47 38';
+		lng === 'ru'
+			? 'Позвонить по номеру +99850 900 47 38'
+			: lng === 'uz'
+				? 'Raqam orqali qo\'ng\'iroq qiling: +99850 900 47 38'
+				: 'Call number +99850 900 47 38';
 	const [isModalOpen2, setIsModalOpen2] = useState(false)
 	const closeModal2 = () => setIsModalOpen2(false)
 	const openModal = () => {
@@ -47,26 +47,26 @@ const Header = ({ lng }) => {
 
 	const handleLanguageChange = (newLng) => {
 		const pathArray = window.location.pathname.split('/');
-	  
+
 		// List of supported language codes
 		const supportedLanguages = ['ru', 'uz', 'en'];
-	  
+
 		// Remove existing language code from the path if exists
 		if (supportedLanguages.includes(pathArray[1])) {
-		  pathArray.splice(1, 1); // Remove the existing language code
+			pathArray.splice(1, 1); // Remove the existing language code
 		}
-	  
+
 		// Add new language code at the beginning of the path
 		pathArray.unshift(newLng);
-	  
+
 		// Build the new path and redirect
 		const newPath = pathArray.filter(Boolean).join('/'); // Ensure there are no empty segments
-	  
+
 		// Redirect to the new path
 		window.location.href = `/${newPath}`;
-	  };
-	  
-	  
+	};
+
+
 
 	const toggleMenu = () => {
 		setIsMenuOpen(!isMenuOpen)
@@ -77,44 +77,39 @@ const Header = ({ lng }) => {
 			className={`w-full slg:flex slg:items-center flex justify-between px-[20px] sticky top-0 z-[99999] py-[16px] 
                 ${isMainPage ? 'bg-violet100' : 'bg-white'}`}
 		>
-			<div className='hidden 2xl:flex items-center gap-[25px] 4xl:gap-[40px] xl:w-[40%] 4xl:w-[25%]'>
+			<div className='hidden 2xl:flex items-center gap-[25px] 4xl:gap-[40px] xl:w-[50%] 3xl:w-[40%] 4xl:w-[40%]'>
 				<Link
 					href={`/${lng}/services`}
-					className={`font-montserrat font-semibold text-[18px] leading-[23px] 4xl:text-[18px]  ${
-						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
-					}`}
+					className={`font-montserrat font-semibold text-[18px] leading-[23px] 4xl:text-[18px]  ${isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
+						}`}
 				>
 					{t('uslugi')}
 				</Link>
 				<Link
 					href={`/${lng}/cases`}
-					className={`font-montserrat font-semibold text-[18px] leading-[23px] 4xl:text-[18px]  ${
-						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
-					}`}
+					className={`font-montserrat font-semibold text-[18px] leading-[23px] 4xl:text-[18px]  ${isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
+						}`}
 				>
 					{t('keysi')}
 				</Link>
 				<Link
 					href={`/${lng}/blog`}
-					className={`font-montserrat font-semibold text-[18px] leading-[23px] 4xl:text-[18px]  ${
-						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
-					}`}
+					className={`font-montserrat font-semibold text-[18px] leading-[23px] 4xl:text-[18px]  ${isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
+						}`}
 				>
 					{t('blog')}
 				</Link>
 				<Link
 					href={`/${lng}/about`}
-					className={`font-montserrat font-semibold text-[18px] leading-[23px] 4xl:text-[18px]  ${
-						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
-					}`}
+					className={`font-montserrat font-semibold text-[18px] leading-[23px] 4xl:text-[18px]  ${isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
+						}`}
 				>
 					{t('about')}
 				</Link>
 				<Link
 					href={`/${lng}/calculator`}
-					className={`font-montserrat font-semibold text-[18px] leading-[23px] 4xl:text-[18px]  ${
-						isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
-					}`}
+					className={`font-montserrat font-semibold text-[18px] leading-[23px] 4xl:text-[18px]  ${isMainPage ? 'text-white hover:text-titleDark' : 'text-titleDark'
+						}`}
 				>
 					{t('calculator')}
 				</Link>
@@ -165,7 +160,7 @@ const Header = ({ lng }) => {
 						className='font-montserrat flex w-full justify-between items-center flex-row px-[20px] py-[28px] border-b-[1px] border-[#F0F0F0]'
 					>
 						<p className='font-semibold text-[20px] leading-[23px] mdl:text-[25px] text-titleDark hover:text-titleDark'>
-								{t('calculator')}
+							{t('calculator')}
 						</p>
 						<GrLinkNext className='text-titleDark' />
 					</a>
@@ -201,9 +196,8 @@ const Header = ({ lng }) => {
 					<Link
 						href='tel:+998509004738'
 						aria-label={ariaLabel}
-						className={`font-montserrat w-[50px] h-[50px] border-[1px] border-[white] rounded-[100%] flex items-center justify-center ${
-							isMainPage ? 'bg-inherit' : 'bg-selectBg'
-						}`}
+						className={`font-montserrat w-[50px] h-[50px] border-[1px] border-[white] rounded-[100%] flex items-center justify-center ${isMainPage ? 'bg-inherit' : 'bg-selectBg'
+							}`}
 					>
 						<BsFillTelephoneFill
 							className={`${isMainPage ? 'text-white' : 'text-violet100'}`}
@@ -242,9 +236,8 @@ const Header = ({ lng }) => {
 					>
 						{isMenuOpen ? (
 							<AiOutlineClose
-								className={`font-montserrat ${
-									isMainPage ? 'text-white' : 'text-black'
-								}`}
+								className={`font-montserrat ${isMainPage ? 'text-white' : 'text-black'
+									}`}
 							/>
 						) : (
 							<RxHamburgerMenu
