@@ -14,7 +14,6 @@ export const CostCardData = {
       services: {
         ru: [
           'Разработка сайта',
-          'Заполнение контентом на 2 языках',
           'Интеграция с CMS панелью',
           'Индексация в Google',
           'SEO оптимизация под ключевые слова',
@@ -24,7 +23,6 @@ export const CostCardData = {
         ],
         uz: [
           'Sayt yaratish',
-          "2 tilda tarkib bilan to'ldirish",
           'CMS paneli bilan integratsiyalash',
           'Google da indekslash',
           "Kalit so'zlar uchun SEO optimallashtirish",
@@ -36,7 +34,6 @@ export const CostCardData = {
           'Size: 1 page  ',
           'Timeline: 1 month (with prompt client information delivery)  ',
           'Website development  ',
-          'Content creation in two languages  ',
           'CMS panel integration  ',
           'Google indexing  ',
           'SEO optimization for keywords  ',
@@ -67,7 +64,6 @@ export const CostCardData = {
         ru: [
           'Разработка сайта',
           'Разработка административной панели',
-          'Заполнение контентом на 2 языках',
           'Интеграция с CMS панелью',
           'Индексация в Google',
           'SEO оптимизация под ключевые слова',
@@ -78,7 +74,6 @@ export const CostCardData = {
         uz: [
           'Sayt yaratish',
           "Ma'muriy panelni yaratish",
-          "2 tilda tarkib bilan to'ldirish",
           'CMS paneli bilan integratsiyalash',
           'Google da indekslash',
           "Kalit so'zlar uchun SEO optimallashtirish",
@@ -89,7 +84,6 @@ export const CostCardData = {
         en: [
           'Website development',
           'Administrative panel development  ',
-          'Content creation in two languages ',
           'CMS panel integration ',
           'Google indexing ',
           'SEO optimization for keywords ',
@@ -133,7 +127,6 @@ export const CostCardData = {
       services: {
         ru: [
           'Разработка сайта',
-          'Заполнение контентом',
           'Интеграция с CMS панелью',
           'Индексация в Google',
           'Хостинг на 3 месяца',
@@ -142,7 +135,6 @@ export const CostCardData = {
         ],
         uz: [
           'Sayt yaratish',
-          "Tarkib bilan to'ldirish",
           'CMS paneli bilan integratsiyalash',
           'Google da indekslash',
           '3 oyda hosting',
@@ -153,7 +145,6 @@ export const CostCardData = {
           'Development of any other website based on your technical requirements.  ',
           'Timeline: From 2 weeks (with prompt client information delivery)  ',
           'Website development  ',
-          'Content creation  ',
           'CMS panel integration  ',
           'Google indexing  ',
           '3 months of hosting  ',

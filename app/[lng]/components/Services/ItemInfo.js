@@ -19,7 +19,6 @@ const itemData = {
         'UX / UI дизайн',
         'Утверждение концепции',
         'Программирование',
-        'Заполнение контентом',
         'Тестирование',
         'Развертывание на сервере',
         'Передача заказчику'
@@ -32,7 +31,6 @@ const itemData = {
         'UX/UI dizayni',
         'Kontseptsiyani tasdiqlash',
         'Dasturlash',
-        "Tarkib bilan to'ldirish",
         'Sinov',
         'Serverda joylashtirish',
         'Xaridorga yetkazish'
@@ -45,7 +43,6 @@ const itemData = {
         'UX/UI Design ',
         'Concept Approval ',
         'Programming ',
-        'Content Creation ',
         'Testing ',
         ' Server Deployment ',
         ' Handover to the Client '

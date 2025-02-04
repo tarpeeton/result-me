@@ -29,7 +29,7 @@ const ServiceItem = () => {
       },
       imagePath: web,
       description: {
-        ru: 'Комплексная разработка сайтов: дизайн, программирование, перевод и заполнение контентом. Обеспечиваем безопасность, скорость и удобство использования для роста бизнеса.',
+        ru: 'Комплексная разработка сайтов: дизайн, программирование. Обеспечиваем безопасность, скорость и удобство использования для роста бизнеса.',
         en: 'Comprehensive website development: design, programming, translation, and content filling. We ensure security, speed, and ease of use to support business growth. ',
         uz: "Saytlarni keng qamrovda rivojlantirish: dizayn, dasturlash, tarjima va tarkib bilan to'ldirish. Biznesni rivojlantirish uchun xavfsizlik, tezlik va foydalanish qulayligini ta'minlaymiz."
       }
