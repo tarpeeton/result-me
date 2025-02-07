@@ -203,7 +203,6 @@ const CaseFilter = ({title}) => {
 	const [filteredCases, setFilteredCases] = useState(null);
   
 
-	console.log(filteredCases , "FILTERED CAS")
 
 
 	// Filtering the case data based on different slugs
