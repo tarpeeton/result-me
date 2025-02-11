@@ -3,17 +3,15 @@ import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Link from 'next/link';
-import { useParams } from 'next/navigation'
+import Link from "next/link";
+import { useParams } from "next/navigation";
 
 const Navigation = () => {
-  const {slug , lng} = useParams()
-  const [activeNav, setActiveNav] = useState(slug);  // Change to use slugs for activeNav
-  const navRefs = useRef([]);  // Array to store refs for `a` elements
+  const { slug, lng } = useParams();
+  const [activeNav, setActiveNav] = useState(slug); // Change to use slugs for activeNav
+  const navRefs = useRef([]); // Array to store refs for `a` elements
   const spanRefs = useRef([]); // Array to store refs for `span` elements
 
-
-  
   const responsive = {
     tablet: {
       breakpoint: { max: 1280, min: 768 },
@@ -30,58 +28,43 @@ const Navigation = () => {
       name: {
         ru: "Сайты",
         uz: "Saytlar",
-        en: "Web Development"
+        en: "Web Development",
       },
-      slug: "web-development"
+      slug: "web-development",
     },
     {
       name: {
         ru: "Telegram-боты",
         uz: "Telegram-botlar",
-        en: "Telegram Bots"
+        en: "Telegram Bots",
       },
-      slug: "telegram-bot-development"
+      slug: "telegram-bot-development",
     },
-    {
-      name: {
-        ru: "SMM",
-        uz: "SMM",
-        en: "SMM"
-      },
-      slug: "smm"
-    },
+
     {
       name: {
         ru: "Реклама",
         uz: "Reklama",
-        en: "Ads Launch"
+        en: "Ads Launch",
       },
-      slug: "ads-launch"
+      slug: "ads-launch",
     },
     {
       name: {
         ru: "SEO",
         uz: "SEO",
-        en: "SEO"
+        en: "SEO",
       },
-      slug: "seo"
+      slug: "seo",
     },
     {
       name: {
         ru: "Брендинг",
         uz: "Brending",
-        en: "Branding"
+        en: "Branding",
       },
-      slug: "branding"
+      slug: "branding",
     },
-    {
-      name: {
-        ru: "Доктор Бренд",
-        uz: "Doctor Brend",
-        en: "Doctor Brand"
-      },
-      slug: "doctor-brand"
-    }
   ];
 
   const updateSpanWidths = () => {
@@ -107,7 +90,13 @@ const Navigation = () => {
       if (ref && spanRef) {
         const aWidth = ref.offsetWidth;
         if (navItems[index].slug === activeNav) {
-          gsap.to(spanRef, { width: aWidth, opacity: 1, marginTop: "10px", duration: 0.3, ease: "power2.out" });
+          gsap.to(spanRef, {
+            width: aWidth,
+            opacity: 1,
+            marginTop: "10px",
+            duration: 0.3,
+            ease: "power2.out",
+          });
         } else {
           gsap.to(spanRef, { width: "0%", opacity: 0, duration: 0.1 });
         }
@@ -124,13 +113,22 @@ const Navigation = () => {
       {/* Desktop Navigation */}
       <nav className="hidden 2xl:flex px-[20px] gap-[50px] border-t border-t-[#F0F0F0] 2xl:items-center">
         {navItems.map((item, index) => (
-          <div key={item.slug} className="flex flex-col items-center relative justify-center text-center pt-[25px]">
+          <div
+            key={item.slug}
+            className="flex flex-col items-center relative justify-center text-center pt-[25px]"
+          >
             <a
               ref={(el) => (navRefs.current[index] = el)} // Ref for a element
               href={`/ru/services/${item.slug}`}
-              className={`text-[20px] font-semibold ${activeNav === item.slug ? 'text-[#7B72EB]' : 'text-black'} hover:text-[#7B72EB] pb-1`}
+              className={`text-[20px] font-semibold ${
+                activeNav === item.slug ? "text-[#7B72EB]" : "text-black"
+              } hover:text-[#7B72EB] pb-1`}
               onClick={() => handleSelect(item.slug)}
-              style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}
+              style={{
+                whiteSpace: "nowrap",
+                textOverflow: "ellipsis",
+                overflow: "hidden",
+              }}
             >
               {item.name[lng]}
             </a>

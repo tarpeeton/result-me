@@ -1,20 +1,15 @@
 import ServiceItem from "@/app/[lng]/components/Services/Item";
-import ServiceImage from '@/app/[lng]/components/Services/ServiceImage';
+import ServiceImage from "@/app/[lng]/components/Services/ServiceImage";
 import ItemInfo from "@/app/[lng]/components/Services/ItemInfo";
 import InfoCard from "@/app/[lng]/components/Services/InfoCard";
 import CostCard from "@/app/[lng]/components/Services/CostCard";
 import CaseFilter from "@/app/[lng]/components/CaseFilterSlug/CaseFilter";
 import Blog from "@/app/[lng]/components/Main/Blog";
-import Navigation from '../../components/Services/Navigation';
-import { metaInfoService } from '@/constants/service/service-metada';
-
+import Navigation from "../../components/Services/Navigation";
+import { metaInfoService } from "@/constants/service/service-metada";
 
 export async function generateStaticParams() {
-  // Dinamik URL-lar uchun kerak bo'lsa, parametrlar ro'yxatini qaytaradi
-  return [
-    { slug: 'rustam' },
-    { slug: 'another-case' },
-  ];
+  return [{ slug: "rustam" }, { slug: "another-case" }];
 }
 
 // Meta ma'lumotlarni dinamik yaratish
@@ -29,7 +24,7 @@ export async function generateMetadata({ params }) {
       title: meta.title,
       description: meta.description,
       url: meta.url,
-      type: 'website',
+      type: "website",
     },
     alternates: {
       canonical: meta.url,
@@ -38,22 +33,21 @@ export async function generateMetadata({ params }) {
 }
 
 const Service = () => {
-		
-
-
   return (
-	<main className='bg-[#F8F8F8] relative'>
-		<Navigation/>
-		<ServiceItem/>
-		<ServiceImage/>
-		<ItemInfo/>
-		<InfoCard/>
-		<CostCard/>
-		<div className='px-[24px]'>
-		<CaseFilter title={{ru:"Наши кейсы" , uz:  "Bizning Keyslar" , en: "Our cases"}} />
-		</div>
-		<Blog/>
-		<a href="https://result-me.uz/" className="links-hidden"></a>
+    <main className="bg-[#F8F8F8] relative">
+      <Navigation />
+      <ServiceItem />
+      <ServiceImage />
+      <ItemInfo />
+      <InfoCard />
+      <CostCard />
+      <div className="px-[24px]">
+        <CaseFilter
+          title={{ ru: "Наши кейсы", uz: "Bizning Keyslar", en: "Our cases" }}
+        />
+      </div>
+      <Blog />
+      <a href="https://result-me.uz/" className="links-hidden"></a>
       <a href="https://result-me.uz/ru/cases" className="links-hidden"></a>
       <a href="https://result-me.uz/ru/services" className="links-hidden"></a>
       <a href="https://med-trip.uz/" className="links-hidden"></a>
@@ -70,9 +64,8 @@ const Service = () => {
       <a href="https://europol.uz/" className="links-hidden"></a>
       <a href="https://europol.uz/about" className="links-hidden"></a>
       <a href="https://europol.uz/projects" className="links-hidden"></a>
-	</main>
+    </main>
   );
 };
 
 export default Service;
-

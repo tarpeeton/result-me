@@ -19,18 +19,6 @@ const FAQ_DATA = [
   },
   {
     question: {
-      ru: 'Что даст SMM?',
-      en: 'What does SMM offer?',
-      uz: 'SMM nima qiladi?'
-    },
-    answer: {
-      ru: 'Социальные сети предоставляют уникальные возможности для активного взаимодействия с вашей аудиторией. SMM помогает наладить прямой контакт с клиентами, отвечать на их вопросы, получать отзывы и создавать сообщества вокруг вашего бренда. Это способствует увеличению вовлеченности пользователей, их лояльности и приверженности вашему продукту или услуге.',
-      en: 'Social networks provide unique opportunities for active engagement with your audience. SMM helps establish direct contact with clients, answer their questions, gather feedback, and build communities around your brand. This leads to increased user engagement, loyalty, and attachment to your product or service.',
-      uz: "Ijtimoiy tarmoqlar auditoriyangiz bilan faol muloqot qilish uchun noyob imkoniyatlarni taqdim etadi. SMM mijozlar bilan to'g'ridan-to'g'ri aloqa o'rnatishga, ularning savollariga javob berishga, fikr-mulohazalarni yig’ishga va brendingiz atrofida hamjamiyatlarni yaratishga yordam beradi. Bu tufayli foydalanuvchilar mahsulotingiz yoki xizmatingizga ko’proq qiziqish ko’rsatadi, sodiq qoladi va tarafdori bo’ladi."
-    }
-  },
-  {
-    question: {
       ru: 'Как вы работаете?',
       en: 'How do you work?',
       uz: 'Qanday ishlaysiz?'
@@ -55,14 +43,26 @@ const FAQ_DATA = [
   },
   {
     question: {
-      ru: 'Каковы преимущества видеомаркетинга?',
-      en: 'What are the benefits of video marketing?',
-      uz: 'Videomarketingning qanday afzalliklari bor?'
+      ru: 'Что такое Telegram-бот и для чего он нужен?',
+      en: 'What is a Telegram bot and why is it needed?',
+      uz: 'Telegram bot nima va u nima uchun kerak?'
     },
     answer: {
-      ru: 'Видеомаркетинг обладает множеством преимуществ. Он привлекает внимание, передает информацию эффективнее текстов и изображений. Видео повышает вовлеченность, так как пользователи склонны делиться контентом в соцсетях. Оно также упрощает понимание сложных концепций и может улучшить SEO, увеличивая время, проведенное на сайте. Видео повышает доверие к бренду и может увеличить конверсии, позволяя клиентам быстрее принять решение о покупке. В результате, видеомаркетинг становится мощным инструментом в вашей стратегии.',
-      en: 'Video Marketing offers many advantages. It captures attention and conveys information more effectively than text or images. Videos increase engagement, as users tend to share content on social media. It also simplifies the understanding of complex concepts and can improve SEO by increasing the time spent on your website. Videos boost brand trust and can increase conversions by helping clients make quicker purchasing decisions. In summary, video marketing is a powerful tool in your strategy.',
-      uz: "Videomarketing ko'p afzalliklarga ega. U diqqatni tortadi va ma'lumotni matn yoki tasvirlardan ko’ra samaraliroq yetkazadi. Video faollikni oshiradi, chunki foydalanuvchilar ijtimoiy tarmoqlarda kontentni baham ko'rishga moyil. Shuningdek, u murakkab tushunchalarni tushunishni soddalashtiradi va saytda sarflangan vaqtni ko'paytirish orqali SEO ni yaxshilashi mumkin. Video brend ishonchini oshiradi va mijozlarga tezroq xarid qilish qarorini chiqarishga yordam berish orqali konversiyalarni oshirishi mumkin. Natijada, videomarketing strategiyangizda kuchli vositaga aylanadi."
+      ru: 'Telegram-бот — это программа, которая работает внутри мессенджера Telegram и выполняет автоматизированные задачи. Он помогает автоматизировать процессы, такие как поддержка клиентов, сбор данных, предоставление информации или выполнение заказов. Боты упрощают взаимодействие с пользователями, экономят время и обеспечивают доступность услуг 24/7.',
+      en: 'A Telegram bot is a program that operates within the Telegram messenger and performs automated tasks. It helps automate processes like customer support, data collection, providing information, or handling orders. Bots simplify user interaction, save time, and ensure 24/7 availability of services.',
+      uz: "Telegram bot — bu Telegram messenjerida ishlaydigan va avtomatlashtirilgan vazifalarni bajaradigan dasturdir. U mijozlarga yordam ko'rsatish, ma'lumot yig'ish, ma'lumot taqdim etish yoki buyurtmalarni bajarish kabi jarayonlarni avtomatlashtirishga yordam beradi. Botlar foydalanuvchilar bilan o'zaro aloqani soddalashtiradi, vaqtni tejaydi va xizmatlarning 24/7 mavjudligini ta'minlaydi."
+    }
+  },
+  {
+    question: {
+      ru: 'Что такое брендинг и почему он важен?',
+      en: 'What is branding and why is it important?',
+      uz: 'Branding nima va u nima uchun muhim?'
+    },
+    answer: {
+      ru: 'Брендинг — это процесс создания уникального образа и идентичности компании или продукта. Он включает в себя разработку логотипа, фирменного стиля, ключевых сообщений и стратегии, которые делают бренд узнаваемым. Успешный брендинг помогает выделиться на рынке, привлекает клиентов, создает доверие и укрепляет долгосрочные отношения с аудиторией.',
+      en: 'Branding is the process of creating a unique image and identity for a company or product. It includes developing a logo, brand style, key messages, and a strategy that makes the brand recognizable. Successful branding helps stand out in the market, attracts customers, builds trust, and strengthens long-term relationships with the audience.',
+      uz: "Branding — bu kompaniya yoki mahsulot uchun noyob qiyofa va identifikatsiyani yaratish jarayonidir. U logotip, brend uslubi, asosiy xabarlar va brendni taniqli qiladigan strategiyani ishlab chiqishni o'z ichiga oladi. Muvaffaqiyatli branding bozorda ajralib turishga, mijozlarni jalb qilishga, ishonchni shakllantirishga va auditoriya bilan uzoq muddatli aloqalarni mustahkamlashga yordam beradi."
     }
   }
 ]

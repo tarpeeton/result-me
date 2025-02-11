@@ -1,10 +1,10 @@
 {
-    "no_pasient": "NO PATIENTS?",
-    "phone_title": "Contact numbers",
-    "address_title": "Address",
-    "some_address": "Uzbekistan, Tashkent, Chinabad Street 2",
-    "show_map" : "Show on map",
-    "copyright": "© 2023 RESULT AGENCY - Medical Marketing & IT",
-    "privacy": "Privacy Policy",
-    "steps": "Stages of Work"
+  "no_pasient": "Order a Project",
+  "phone_title": "Contact numbers",
+  "address_title": "Address",
+  "some_address": "Uzbekistan, Tashkent, Chinabad Street 2",
+  "show_map": "Show on map",
+  "copyright": "© 2023 RESULT AGENCY - IT Solutions",
+  "privacy": "Privacy Policy",
+  "steps": "Stages of Work"
 }

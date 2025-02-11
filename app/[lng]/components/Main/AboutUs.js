@@ -12,7 +12,7 @@ const AboutUs = () => {
   
   return (
     <Link
-      href='/about'
+      href={ ` ${lng}/about`}
       className='rounded-[30px] bg-violet100 mdl:rounded-[60px] 2xl:rounded-[100px]  w-full mt-[20px] mdl:mt-[25px] 2xl:mt-[30px] mdl:px-[40px] 2xl:px-[70px] pb-[20px] mdl:py-[50px] 2xl:py-[80px]  relative mdl:overflow-hidden '
     >
       <div className='mdl:w-[70%]  px-[20px] pt-[20px]'>
