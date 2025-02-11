@@ -1,0 +1,9 @@
+# Для всех ботов
+User-agent: *
+Allow: /
+
+# Host
+Host: result-me.uz
+
+# Карты сайта
+Sitemap: https://result-me.uz/sitemap.xml
