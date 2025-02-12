@@ -26,7 +26,7 @@ const Footer = ({ lng }) => {
   const { t } = useCustomTranslation(lng, "footer");
 
   return (
-    <div className="flex flex-col bg-footerBgDark w-full relative z-[999] ">
+    <footer className="flex flex-col bg-footerBgDark w-full relative z-[999] ">
       <button
         onClick={openModal}
         className="bg-violet100 flex items-center py-[40px] px-[16px] gap-[40px] 2xl:gap-0 2xl:justify-between 2xl:px-[20px] 6xl:px-[20px] mdx:justify-between mdx:gap-0"
@@ -85,26 +85,14 @@ const Footer = ({ lng }) => {
 
             <div className="mdx:flex mdx:flex-row mdx:gap-[60px] mdx:order-[-1] lg:ml-[200px] 3xl:ml-[230px]">
               {/* TELEPHONE INFO */}
-              <div className="flex flex-col mt-[40px] gap-[12px]">
-                <h4 className="text-white100 text-[18px] font-semibold mdx:text-[20px]">
-                  {t("phone_title")}
-                </h4>
-                <div className="flex flex-col gap-[8px] mdl:gap-[10px] ">
-                  <a
-                    href="tel:+998509004738"
-                    className="text-titleDark20 text-[15px] font-medium mdx:text-[15px] hover:text-violet100"
-                  >
-                    +998 (50) 900-47-38
-                  </a>
-                </div>
-              </div>
+
               {/* ADDRESS INFO */}
               <div className="flex flex-col mt-[40px] gap-[12px]">
                 <h5 className="text-white100 font-semibold text-[18px] mdx:text-[20px]">
                   {t("address_title")}
                 </h5>
                 <div>
-                  <p className="text-[15px] font-medium text-titleDark20 mdx:text-[18px]">
+                  <p className="text-[15px] font-medium text-titleDark20 mdx:text-[15px]">
                     {t("some_address")}
                   </p>
                   <Link
@@ -113,7 +101,7 @@ const Footer = ({ lng }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <p className="text-violet100 text-[14px] font-bold mdx:text-[16px]">
+                    <p className="text-violet100 text-[14px] font-bold mdx:text-[15px]">
                       {t("show_map")}
                     </p>
                     <GrLinkNext className="text-violet100 w-[20px] h-[20px] transition-transform duration-400 group-hover:translate-x-[6px]" />
@@ -121,10 +109,25 @@ const Footer = ({ lng }) => {
                 </div>
               </div>
               <div className="flex flex-col mt-[40px] gap-[12px]">
-                <Link href={`/${lng}/steps-working`}
+                <Link
+                  href={`/${lng}/steps-working`}
                   className="text-white100 font-semibold text-[18px]
-                  mdx:text-[20px]">
+                  mdx:text-[20px]"
+                >
                   {t("steps")}
+                </Link>
+              </div>
+              <div className="flex flex-col mt-[40px] gap-[12px]">
+                <Link
+                  href={`/${lng}/services`}
+                  className="text-white100 font-semibold text-[18px]
+                  mdx:text-[20px]"
+                >
+                  {lng === "ru"
+                    ? "Услуги"
+                    : lng === "uz"
+                    ? "Xizmatlar"
+                    : "Services"}
                 </Link>
               </div>
             </div>
@@ -149,7 +152,7 @@ const Footer = ({ lng }) => {
         </div>
       </div>
       <ServiceModal isOpen={isModalOpen} onClose={closeModal} />
-    </div>
+    </footer>
   );
 };
 

@@ -119,7 +119,7 @@ const Navigation = () => {
           >
             <a
               ref={(el) => (navRefs.current[index] = el)} // Ref for a element
-              href={`/ru/services/${item.slug}`}
+              href={`/${lng}/services/${item.slug}`}
               className={`text-[20px] font-semibold ${
                 activeNav === item.slug ? "text-[#7B72EB]" : "text-black"
               } hover:text-[#7B72EB] pb-1`}
@@ -152,7 +152,7 @@ const Navigation = () => {
           {navItems.map((item, index) => (
             <div key={item.slug} className="text-center">
               <Link
-                href={`/ru/services/${item.slug}`}
+                href={`/${lng}/services/${item.slug}`}
                 className={`text-[15px] pb-[10px] font-semibold ${
                   activeNav === item.slug ? "text-violet100" : "text-titleDark"
                 }`}
