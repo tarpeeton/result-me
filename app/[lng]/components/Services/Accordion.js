@@ -69,7 +69,7 @@ const FAQ_DATA = [
 
 const FAQAccordion = () => {
   const [activeIndex, setActiveIndex] = useState(0)
-  const contentRefs = useRef([]) // Store refs to the content divs
+  const contentRefs = useRef([]) 
   const { lng } = useParams()
   const {t} = useCustomTranslation(lng , 'acardion')
   const toggleAccordion = index => {
@@ -134,7 +134,7 @@ const FAQAccordion = () => {
             </svg>
           </button>
 
-          {/* Content Section */}
+
           <div
             ref={el => (contentRefs.current[index] = el)}
             className='p-0 overflow-hidden'

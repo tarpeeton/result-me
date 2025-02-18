@@ -7,46 +7,63 @@ import Branding from '@/public/images/serviceImageInfo/Branding.png'
 export const serviceImageData = [
 	{
 	  slug: 'web-development',
-	  img: 'https://ucarecdn.com/8f42e62c-c8cd-4a22-8c97-0ef4362b740e/-/preview/230x230/',
+	  img: 'https://ucarecdn.com/d6f07050-8e6c-43aa-bd4b-51e35fe2a374/-/preview/1000x1000/',
 	  title: {
-		ru: 'Для чего\nнужен сайт',
-		en: 'Why You Need a Website',
-		uz: 'Nima uchun sayt kerak'
+		ru: 'Цены',
+		en: 'Pricing',
+		uz: 'Narxlar'
 	  },
 	  subtitle: {
-		ru: 'Сайт — это ваше цифровое представительство. Он помогает бизнесу быть доступным онлайн, привлекая новых клиентов и создавая доверие к вашему бренду.',
-		en: 'A website is your digital representation. It helps your business stay accessible online, attracting new customers and building trust in your brand.',
-		uz: 'Sayt - sizning raqamli vakilingiz. Uning yordamida biznes onlayn rejimda bo’ladi, yangi mijozlar jalb etiladi va brendingizga bo’lgan ishonch oshadi'
+		ru: 'Стоимость зависит от сложности и уникальности сайта. Цена на шаблонный сайт-визитку стартует от 2 млн сумов.',
+		en: "The cost depends on the complexity and uniqueness of the website. The price for a template-based business card website starts at 2 million UZS.",
+		uz: 'Narx saytning murakkabligi va o‘ziga xosligiga bog‘liq. Shablon vizitka sayt narxi 2 mln so‘mdan boshlanadi.'
 	  }
 	},
 	{
 	  slug: 'web-development',
-	  img: 'https://ucarecdn.com/327eed30-073c-4729-a985-f3d95e7c68dc/-/preview/230x230/',
+	  img: 'https://ucarecdn.com/4aff55b5-b171-4fe3-9062-3b1f93af3948/-/preview/1000x999/',
 	  title: {
-		ru: 'Как это работает',
-		en: 'How It Works',
-		uz: 'U qanday ishlaydi'
+		ru: 'Сроки',
+		en: 'Timelines',
+		uz: 'Muddati '
 	  },
 	  subtitle: {
-		ru: 'Сайт помогает вашему бизнесу стать доступным 24/7, позволяя пользователям находить вас, изучать услуги и связываться с вами в любое удобное время.',
-		en: 'A website makes your business available 24/7, allowing users to find you, explore your services, and contact you at any convenient time. ',
-		uz: "Sayt biznesingizga 24/7 ochiq bo'lishiga yordam beradi, u foydalanuvchilarga sizni topish, xizmatlaringizni o'rganish va qulay vaqtda siz bilan bog'lanish imkonini beradi"
+		ru: "Время создания простого сайта займет от 3 дней, уникального от 2 недель. Сложные проекты от 1 месяца.",
+		en: "Creating a simple website takes at least 3 days, a unique one from 2 weeks, and complex projects from 1 month.",
+		uz: "Oddiy sayt yaratish 3 kundan boshlab vaqt oladi, o‘ziga xos sayt esa kamida 2 hafta. Murakkab loyihalar esa 1 oydan boshlab tayyor bo‘ladi."
 	  }
 	},
 	{
 	  slug: 'web-development',
-	  img: 'https://ucarecdn.com/650068a2-cc46-4457-9900-3eae3c7a5abf/-/preview/230x230/',
+	  img: 'https://ucarecdn.com/78ce2e5a-4242-4450-99eb-c03ce57f619a/-/preview/1000x999/',
 	  title: {
-		ru: 'Что я получу',
-		en: 'What You Will Get ',
-		uz: 'Men nimaga ega bo’laman'
+		ru: 'Результат',
+		en: 'Result',
+		uz: 'Natija '
 	  },
 	  subtitle: {
-		ru: 'Ваш сайт будет эффективным инструментом для привлечения клиентов, увеличения охвата и роста бизнеса в цифровом пространстве.',
-		en: 'Your website will be an effective tool for attracting clients, expanding your reach, and driving business growth in the digital space.',
-		uz: "Saytingiz mijozlarni jalb qilish, raqamli makonda biznes qamrovini oshirish va uni rivojlantirish uchun samarali vosita bo'ladi."
+		ru: "Клиент получает завершенный сайт с информацией, видимый в поиске, и Telegram-ботом для заявок и отчётов.",
+		en: "The client receives a fully completed website with relevant information, visible in search engines, and a Telegram bot for applications and reports.",
+		uz: "Mijoz tayyor, qidiruvda ko‘rinadigan va arizalar uchun Telegram-bot bilan qulay sayt oladi."
 	  }
 	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	{
 	  slug: 'telegram-bot-development',
 	  img: tg,

@@ -6,6 +6,7 @@ import CostCard from "@/app/[lng]/components/Services/CostCard";
 import CaseFilter from "@/app/[lng]/components/CaseFilterSlug/CaseFilter";
 import Navigation from "../../components/Services/Navigation";
 import { metaInfoService } from "@/constants/service/service-metada";
+import {ServiceFaq} from '../../components/Services/ServiceFaq'
 
 export async function generateStaticParams() {
   return [{ slug: "rustam" }, { slug: "another-case" }];
@@ -44,6 +45,7 @@ const Service = () => {
           title={{ ru: "Наши кейсы", uz: "Bizning Keyslar", en: "Our cases" }}
         />
       </div>
+      <ServiceFaq />
     </main>
   );
 };

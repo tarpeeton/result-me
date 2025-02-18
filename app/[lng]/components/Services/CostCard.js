@@ -33,8 +33,8 @@ const CostCard = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setSelectedPrice(null); // Reset the selected price
-    setSelectedTitle(null); // Reset the selected title
+    setSelectedPrice(null); 
+    setSelectedTitle(null); 
   };
 
   return (
@@ -54,6 +54,7 @@ const CostCard = () => {
       </div>
       <div className="rounded-[30px] mt-[20px] relative">
         <Swiper
+          loop={true}
           modules={[Autoplay , Navigation]}
           autoplay={{
             delay: 4300,
