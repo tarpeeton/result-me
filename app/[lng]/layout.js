@@ -7,7 +7,6 @@ import { LanguageProvider } from "../i18n/locales/LanguageContext";
 import Script from "next/script";
 import Quiz from "./components/Modal/Quiz";
 
-// Динамическая загрузка компонентов для оптимизации
 const Header = dynamic(() => import("./components/Header/Header"));
 const Footer = dynamic(() => import("./components/Footer/Footer"));
 

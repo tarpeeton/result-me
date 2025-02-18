@@ -2,176 +2,376 @@ export const CostCardData = {
   'web-development': [
     {
       title: {
-        ru: 'Одностраничный сайт',
-        uz: 'Bir sahifali sayt',
-        en: 'Single-Page Website  '
+        ru: 'Сайт-визитка',
+        uz: 'Vizitka sayt',
+        en: 'Business Card Website'
       },
       description: {
-        ru: 'Статичный сайт для специалиста или небольшой клиники. размер: 1 страница срок: 1 месяц (при быстром получении запрашиваемой информации от клиента)',
-        uz: "Mutaxassis yoki kichik klinika uchun statik sayt. hajmi: 1 sahifa muddati: 1 oy (so'ralgan ma'lumot mijozdan tezda olinsa)",
-        en: 'A static website for a specialist or small clinic'
+        ru: 'простой сайт с главной информацией о компании, услугах и контактах.',
+        uz: "Kompaniya, xizmatlar va kontaktlar haqida asosiy ma’lumotlar.",
+        en: 'A simple website with essential information about your company, services, and contact details.'
       },
       services: {
         ru: [
-          'Разработка сайта',
-          'Интеграция с CMS панелью',
-          'Индексация в Google',
-          'SEO оптимизация под ключевые слова',
-          'Хостинг на 3 месяца',
-          'Доменное имя на 1 год',
-          'Экспорт кода (при желании заказчика)'
+          'Разработка 1 страничного сайта',
+          'Покупка домена и хостинга на 1 год',
+          'Установка SSL сертификата безопасности',
+          'Мультиязычность и перевод статичного контента на 3 языка',
+          'Разработка чат-бота для отправки заявок в Telegram',
+          'Установка счетчиков посещаемости',
+          'Базовое SEO (семантическое ядро, индексация в Google и Yandex, мета-теги)',
+          "Консультации и поддержка во время и после разработки сайта"
         ],
         uz: [
-          'Sayt yaratish',
-          'CMS paneli bilan integratsiyalash',
-          'Google da indekslash',
-          "Kalit so'zlar uchun SEO optimallashtirish",
-          '3 oyga hosting',
-          '1 yilga domen nomi ',
-          'Kodni yuklab olish (agar mijoz xohlasa)'
+          '1 sahifali sayt ishlab chiqish',
+          'Domen va hosting sotib olish (1 yilga)',
+          'SSL xavfsizlik sertifikatini o‘rnatish',
+          "Ko‘p tillilik va statik kontentni 3 tilga tarjima qilish",
+          'Telegramga arizalarni yuborish uchun chat-bot ishlab chiqish',
+          'Tashriflar hisoblagichlarini o‘rnatish',
+          'Asosiy SEO (semantik yadro, Google va Yandex indeksatsiyasi, meta-teglar)',
+          "Sayt ishlab chiqish davomida va undan keyin maslahat va qo‘llab-quvvatlash"
         ],
         en: [
-          'Size: 1 page  ',
-          'Timeline: 1 month (with prompt client information delivery)  ',
-          'Website development  ',
-          'CMS panel integration  ',
-          'Google indexing  ',
-          'SEO optimization for keywords  ',
-          '3 months of hosting  ',
-          'Domain name for 1 year  ',
-          "Code export (upon client's request)  "
+          'Development of a one-page website',
+          'Domain and hosting purchase for 1 year',
+          'SSL security certificate installation',
+          'Multilingual support and translation of static content into 3 languages',
+          'Chatbot development for submitting requests via Telegram',
+          'Visitor analytics setup',
+          'Basic SEO (semantic core, indexing in Google & Yandex, meta tags)',
+          'Consultation and support during and after development',
         ]
       },
       price: {
-        ru: '300$',
-        uz: '300$',
-        en: '300$'
+        ru: 'от 2.000.000 сумов',
+        uz: '2.000.000 so‘mdan',
+        en: 'from 2,000,000 UZS'
       },
-      link: 'slug/odnostranichny-site'
+      srok: {
+        ru: '3 - 15 дней',
+        uz: '3 - 15 kun',
+        en: ' 3 - 15 days'
+      },
+      link: 'slug/sayt-vizitka'
+    },
+    {
+      title: {
+        ru: 'Лендинг',
+        uz: 'Lending',
+        en: 'Landing Page'
+      },
+      description: {
+        ru: 'одностраничный сайт для рекламы и продаж с акцентом на конверсии.',
+        uz: "Reklama va savdo uchun bitta sahifali sayt, konversiyaga yo‘naltirilgan.",
+        en: 'A one-page website optimized for advertising and sales, focusing on conversion.'
+      },
+      services: {
+        ru: [
+          'Анализ вашей сферы бизнеса',
+          'Разработка 1 страничного сайта',
+          'Добавление дополнительных страниц по запросу (блоги, услуги)',
+          'Интеграция с админ. панелью',
+          'Покупка домена и хостинга на 1 год',
+          'Установка SSL сертификата безопасности',
+          'Мультиязычность и перевод статичного контента на 3 языка',
+          "Разработка чат-бота для отправки заявок в Telegram",
+          "Установка счетчиков посещаемости",
+          "Базовое SEO (семантическое ядро, индексация в Google и Yandex, мета-теги)",
+          "Консультации и поддержка во время и после разработки сайта",
+        ],
+        uz: [
+          "Biznes sohangizni tahlil qilish",
+          "1 sahifali sayt ishlab chiqish",
+          "Talab bo‘yicha qo‘shimcha sahifalar qo‘shish (bloglar, xizmatlar)",
+          "Admin panel bilan integratsiya",
+          "Domen va hosting sotib olish (1 yilga)",
+          "SSL xavfsizlik sertifikatini o‘rnatish",
+          "Ko‘p tillilik va statik kontentni 3 tilga tarjima qilish",
+          "Telegramga arizalarni yuborish uchun chat-bot ishlab chiqish",
+          "Tashriflar hisoblagichlarini o‘rnatish",
+          "Asosiy SEO (semantik yadro, Google va Yandex indeksatsiyasi, meta-teglar)",
+          "Sayt ishlab chiqish davomida va undan keyin maslahat va qo‘llab-quvvatlash",
+        ],
+        en: [
+          "Business niche analysis",
+          "Development of a one-page website",
+          "Additional pages upon request (blog, services)",
+          "Admin panel integration",
+          "Domain and hosting purchase for 1 year",
+          "SSL security certificate installation",
+          "Multilingual support and translation of static content into 3 languages",
+          "Chatbot development for submitting requests via Telegram",
+          "Visitor analytics setup",
+          "Basic SEO (semantic core, indexing in Google & Yandex, meta tags)",
+          "Consultation and support during and after development",
+        ]
+      },
+      price: {
+        ru: 'от 3.000.000 сумов',
+        uz: '3.000.000 so‘mdan',
+        en: 'from 3,000,000 UZS'
+      },
+      srok: {
+        ru: '5 - 20 дней',
+        uz: '5 - 20 kun',
+        en: '5 - 20 days'
+      },
+      link: 'slug/sayt-landing'
     },
     {
       title: {
         ru: 'Многостраничный сайт',
-        uz: "Ko'p sahifali sayt",
+        uz: "Ko‘p sahifali sayt",
         en: 'Multi-Page Website'
       },
       description: {
-        ru: 'Гибкий многостраничный сайт для специалиста или клиники. размер:5 страниц срок: 1 месяц (при быстром получении запрашиваемой информации от клиента)',
-        uz: "Mutaxassis yoki klinika uchun moslashuvchan ko'p sahifali sayt. hajmi: 5 sahifa muddati: 1 oy (so'ralgan ma'lumot mijozdan tezda olinsa)",
-        en: 'A flexible multi-page website for a specialist or clinic. '
+        ru: 'сайт с разделами для подробной информации о бизнесе, услугах и продуктах.',
+        uz: 'Biznes, xizmatlar va mahsulotlar haqida batafsil bo‘limlar.',
+        en: 'A website with structured sections for detailed information about your business, services, and products.'
       },
       services: {
         ru: [
-          'Разработка сайта',
-          'Разработка административной панели',
-          'Интеграция с CMS панелью',
-          'Индексация в Google',
-          'SEO оптимизация под ключевые слова',
-          'Хостинг на 3 месяца',
-          'Доменное имя на 1 год',
-          'Экспорт кода (при желании заказчика)'
+          "Анализ вашей сферы бизнеса",
+          "Разработка основных страниц сайта",
+          "Добавление дополнительных страниц по запросу",
+          "Интеграция с админ. панелью",
+          "Покупка домена и хостинга на 1 год",
+          "Установка SSL сертификата безопасности",
+          "Мультиязычность и перевод статичного контента на 3 языка",
+          "Разработка чат-бота для отправки заявок в Telegram",
+          "Установка счетчиков посещаемости",
+          "Базовое SEO (семантическое ядро, индексация в Google и Yandex, мета-теги)",
+          "Консультации и поддержка во время и после разработки сайта",
         ],
         uz: [
-          'Sayt yaratish',
-          "Ma'muriy panelni yaratish",
-          'CMS paneli bilan integratsiyalash',
-          'Google da indekslash',
-          "Kalit so'zlar uchun SEO optimallashtirish",
-          '3 oyda hosting',
-          '1 yilga domen nomi ',
-          'Kodni yuklab olish (agar mijoz xohlasa)'
+          "Biznes sohangizni tahlil qilish",
+          "Saytning asosiy sahifalarini ishlab chiqish",
+          "Talab bo‘yicha qo‘shimcha sahifalar qo‘shish",
+          "Admin panel bilan integratsiya",
+          "Domen va hosting sotib olish (1 yilga)",
+          "SSL xavfsizlik sertifikatini o‘rnatish",
+          "Ko‘p tillilik va statik kontentni 3 tilga tarjima qilish",
+          "Telegramga arizalarni yuborish uchun chat-bot ishlab chiqish",
+          "Tashriflar hisoblagichlarini o‘rnatish",
+          "Asosiy SEO (semantik yadro, Google va Yandex indeksatsiyasi, meta-teglar)",
+          "Sayt ishlab chiqish davomida va undan keyin maslahat va qo‘llab-quvvatlash",
         ],
         en: [
-          'Website development',
-          'Administrative panel development  ',
-          'CMS panel integration ',
-          'Google indexing ',
-          'SEO optimization for keywords ',
-          '3 months of hosting ',
-          'Domain name for 1 year ',
-          "Code export (upon client's request)"
+          "Business niche analysis",
+          "Development of core website pages",
+          "Additional pages upon request",
+          "Admin panel integration",
+          "Domain and hosting purchase for 1 year",
+          "SSL security certificate installation",
+          "Multilingual support and translation of static content into 3 languages",
+          "Chatbot development for submitting requests via Telegram",
+          "Visitor analytics setup",
+          "Basic SEO (semantic core, indexing in Google & Yandex, meta tags)",
+          "Consultation and support during and after development",
         ]
       },
       price: {
-        ru: '600$',
-        uz: '600$',
-        en: '600$'
+        ru: 'от 4.000.000 сумов',
+        uz: '4.000.000 so‘mdan',
+        en: 'from 4,000,000 UZS'
       },
-      link: 'slug/mnogostranichny-site',
-      specialFeatures: {
-        ru: [
-          'Возможность менять актуальную информацию (о врачах, услугах и ценах)',
-          'Возможность ведения блога'
-        ],
-        uz: [
-          "Shifokorlar, xizmatlar va narxlar haqidagi ma'lumotlarni o'zgartirish imkoniyati",
-          'Blog yuritish imkoniyati'
-        ],
-        en: [
-          'Ability to change relevant information (about doctors, services, and prices)',
-          'Blog management capability'
-        ]
-      }
+      srok: {
+        ru: ' 10 - 40 дней',
+        uz: '10 - 40 kun',
+        en: '10 - 40 days'
+      },
+      link: 'slug/mnogostranichniy-sayt'
     },
     {
       title: {
-        ru: 'Другой сайт',
-        uz: 'Boshqa sayt',
-        en: 'Custom Website'
+        ru: 'Каталог',
+        uz: 'Katalog',
+        en: 'Catalog Website'
       },
       description: {
-        ru: 'Разработка любого другого сайта исходя из вашего ТЗ срок: от 2 недель (при быстром получении запрашиваемой информации от клиента)',
-        uz: "Sizning BT asosida boshqa har qanday saytni yaratish muddati: 2 haftadan (agar so'ralgan ma'lumot mijozdan tezda olinsa)",
-        en: 'Development of any other website based on your technical requirements.- Timeline: From 2 weeks (with prompt client information delivery) '
+        ru: 'сайт с удобным списком товаров или услуг, без онлайн-оплаты.',
+        uz: 'Mahsulot yoki xizmatlarning qulay ro‘yxati, onlayn to‘lovsiz.',
+        en: 'A structured website displaying products or services without online payment options.'
       },
       services: {
         ru: [
-          'Разработка сайта',
-          'Интеграция с CMS панелью',
-          'Индексация в Google',
-          'Хостинг на 3 месяца',
-          'Доменное имя на 1 год',
-          'Экспорт кода'
+          "Анализ вашей сферы бизнеса",
+          "Разработка основных страниц сайта",
+          "Добавление дополнительных страниц по запросу",
+          "Интеграция с админ. панелью",
+          "Настройка фильтров и поиска внутри сайта",
+          "Подключение с CRM-системой",
+          "Заполнение первичных позиций товаров",
+          "Покупка домена и хостинга на 1 год",
+          "Установка SSL сертификата безопасности",
+          "Мультиязычность и перевод статичного контента на 3 языка",
+          "Разработка чат-бота для отправки заявок в Telegram",
+          "Установка счетчиков посещаемости",
+          "Базовое SEO (семантическое ядро, индексация в Google и Yandex, мета-теги)",
+          "Консультации и поддержка во время и после разработки сайта",
         ],
         uz: [
-          'Sayt yaratish',
-          'CMS paneli bilan integratsiyalash',
-          'Google da indekslash',
-          '3 oyda hosting',
-          '1 yilga domen nomi ',
-          'Kodni yuklab olish'
+          "Biznes sohangizni tahlil qilish",
+          "Saytning asosiy sahifalarini ishlab chiqish",
+          "Talab bo‘yicha qo‘shimcha sahifalar qo‘shish",
+          "Admin panel bilan integratsiya",
+          "Sayt ichida filtrlar va qidiruv sozlamalarini o‘rnatish",
+          "CRM tizimi bilan ulash",
+          "Mahsulotlarning boshlang‘ich pozitsiyalarini joylash",
+          "Domen va hosting sotib olish (1 yilga)",
+          "SSL xavfsizlik sertifikatini o‘rnatish",
+          "Ko‘p tillilik va statik kontentni 3 tilga tarjima qilish",
+          "Telegramga arizalarni yuborish uchun chat-bot ishlab chiqish",
+          "Tashriflar hisoblagichlarini o‘rnatish",
+          "Asosiy SEO (semantik yadro, Google va Yandex indeksatsiyasi, meta-teglar)",
+          "Sayt ishlab chiqish davomida va undan keyin maslahat va qo‘llab-quvvatlash",
         ],
         en: [
-          'Development of any other website based on your technical requirements.  ',
-          'Timeline: From 2 weeks (with prompt client information delivery)  ',
-          'Website development  ',
-          'CMS panel integration  ',
-          'Google indexing  ',
-          '3 months of hosting  ',
-          'Domain name for 1 year  ',
-          'Code export  ',
-          'Price: Negotiable  '
+          "Business niche analysis",
+          "Development of core website pages",
+          "Additional pages upon request",
+          "Admin panel integration",
+          "Filter and search functionality setup",
+          "CRM system integration",
+          "Initial product listings",
+          "Domain and hosting purchase for 1 year",
+          "SSL security certificate installation",
+          "Multilingual support and translation of static content into 3 languages",
+          "Chatbot development for submitting requests via Telegram",
+          "Visitor analytics setup",
+          "Basic SEO (semantic core, indexing in Google & Yandex, meta tags)",
+          "Consultation and support during and after development",
         ]
       },
       price: {
-        ru: 'цена договорная',
-        uz: 'narxi kelishiladi',
-        en: 'Negotiable'
+        ru: 'от 5.000.000 сумов',
+        uz: '5.000.000 so‘mdan',
+        en: 'from 5,000,000 UZS'
       },
-      link: 'slug/drugoy-site',
-      specialFeatures: {
+      srok: {
+        ru: '10 - 50 дней',
+        uz: ' 10 - 50 kun',
+        en: '10 - 50 days'
+      },
+      link: 'slug/catalog-sayt'
+    },
+    {
+      title: {
+        ru: 'Интернет-магазин',
+        uz: 'Internet-magazin',
+        en: 'E-commerce Website'
+      },
+      description: {
+        ru: 'сайт для продажи товаров с корзиной, оплатой и управлением заказами',
+        uz: 'Savdo uchun sayt: savat, to‘lov va buyurtma boshqaruvi bilan.',
+        en: 'An online store with a shopping cart, payment processing, and order management.'
+      },
+      services: {
         ru: [
-          'Возможность разработать любой сайт исходя из предпочтений и пожеланий заказчика'
+          "Анализ вашей сферы бизнеса",
+          "Разработка основных страниц сайта",
+          "Добавление дополнительных страниц по запросу",
+          "Интеграция с админ. панелью",
+          "Настройка фильтров и поиска внутри сайта",
+          "Подключение с CRM-системой",
+          "Настройка платежных систем",
+          "Настройка функционала доставки",
+          "Настройка SMS-информирования",
+          "Заполнение первичных позиций товаров",
+          "Покупка домена и хостинга на 1 год",
+          "Установка SSL сертификата безопасности",
+          "Мультиязычность и перевод статичного контента на 3 языка",
+          "Разработка чат-бота для отправки заявок в Telegram",
+          "Установка счетчиков посещаемости",
+          "Базовое SEO (семантическое ядро, индексация в Google и Yandex, мета-теги)",
+          "Консультации и поддержка во время и после разработки сайта",
         ],
         uz: [
-          'Mijozning xohish va talablariga muvofiq sayt ishlab chiqish imkoniyati'
+          "Biznes sohangizni tahlil qilish",
+          "Saytning asosiy sahifalarini ishlab chiqish",
+          "Talab bo‘yicha qo‘shimcha sahifalar qo‘shish",
+          "Admin panel bilan integratsiya",
+          "Sayt ichida filtrlar va qidiruv sozlamalarini o‘rnatish",
+          "CRM tizimi bilan ulash",
+          "To‘lov tizimlarini sozlash",
+          "Yetkazib berish funksiyasini sozlash",
+          "SMS-xabarnoma tizimini yo‘lga qo‘yish",
+          "Mahsulotlarning boshlang‘ich pozitsiyalarini joylash",
+          "Domen va hosting sotib olish (1 yilga)",
+          "SSL xavfsizlik sertifikatini o‘rnatish",
+          "Ko‘p tillilik va statik kontentni 3 tilga tarjima qilish",
+          "Telegramga arizalarni yuborish uchun chat-bot ishlab chiqish",
+          "Tashriflar hisoblagichlarini o‘rnatish",
+          "Asosiy SEO (semantik yadro, Google va Yandex indeksatsiyasi, meta-teglar)",
+          "Sayt ishlab chiqish davomida va undan keyin maslahat va qo‘llab-quvvatlash"
         ],
         en: [
-          'Possibility to develop any website based on customer preferences and wishes'
+          "Business niche analysis",
+          "Development of core website pages",
+          "Additional pages upon request",
+          "Admin panel integration",
+          "Filter and search functionality setup",
+          "CRM system integration",
+          "Payment system integration",
+          "Delivery management setup",
+          "SMS notification setup",
+          "Initial product listings",
+          "Domain and hosting purchase for 1 year",
+          "SSL security certificate installation",
+          "Multilingual support and translation of static content into 3 languages",
+          "Chatbot development for submitting requests via Telegram",
+          "Visitor analytics setup",
+          "Basic SEO (semantic core, indexing in Google & Yandex, meta tags)",
+          "Consultation and support during and after development",
         ]
-      }
+      },
+      price: {
+        ru: 'от 8.000.000 сумов',
+        uz: '8.000.000 so‘mdan',
+        en: 'from 8,000,000 UZS'
+      },
+      srok: {
+        ru: '20 - 60 дней',
+        uz: '20 - 60 kun',
+        en: '20 - 60 days'
+      },
+      link: 'slug/internet-magazin'
     }
+    
+    
   ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   'telegram-bot-development': [
     {
       title: {
