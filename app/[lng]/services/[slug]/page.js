@@ -39,7 +39,7 @@ const Service = () => {
       <ServiceImage />
       <ItemInfo />
       <InfoCard />
-      <CostCard />
+      <CostCard  />
       <div className="px-[24px]">
         <CaseFilter
           title={{ ru: "Наши кейсы", uz: "Bizning Keyslar", en: "Our cases" }}

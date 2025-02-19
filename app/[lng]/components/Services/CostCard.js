@@ -33,12 +33,12 @@ const CostCard = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setSelectedPrice(null); 
-    setSelectedTitle(null); 
+    setSelectedPrice(null);
+    setSelectedTitle(null);
   };
 
   return (
-    <div className="bg-white100  px-[24px] pt-[30px] rounded-[30px] flex flex-col 3xl:flex-col  3xl:p-[40px] mx-[16px] mt-[20px] 3xl:mx-[30px]">
+    <div id="cost-card" className="bg-white100  px-[24px] pt-[30px] rounded-[30px] flex flex-col 3xl:flex-col  3xl:p-[40px] mx-[16px] mt-[20px] 3xl:mx-[30px]">
       <div className="flex flex-row items-center justify-between">
         <h3 className="text-[21px] mdl:text-[50px] font-bold text-titleDark">
           {lng === "ru"

@@ -13,39 +13,38 @@ import doctor from '@/public/images/serviceImageInfo/doctor.jpg'
 
 const ServiceItem = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const { slug, lng } = useParams() // Get the slug from the URL
+  const { slug, lng } = useParams() 
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [imageUrl, setImageUrl] = useState()
 
-  // Data with slugs and information
   const dataAndSlugFilter = [
     {
       slug: 'web-development',
       title: {
-        ru: 'Разработка Web-сайтов',
+        ru: 'Разработка сайтов',
         en: 'Website Development',
-        uz: 'Web-sayt yaratish'
+        uz: 'Web-saytlar ishlab chiqish'
       },
       imagePath: web,
       description: {
-        ru: 'Комплексная разработка сайтов: дизайн, программирование. Обеспечиваем безопасность, скорость и удобство использования для роста бизнеса.',
-        en: 'Comprehensive website development: design, programming, translation, and content filling. We ensure security, speed, and ease of use to support business growth. ',
-        uz: "Saytlarni keng qamrovda rivojlantirish: dizayn, dasturlash, tarjima va tarkib bilan to'ldirish. Biznesni rivojlantirish uchun xavfsizlik, tezlik va foydalanish qulayligini ta'minlaymiz."
+        ru: 'Сайты-визитки, лендинги, каталоги, интернет-магазины и многое другое',
+        en: 'Business card websites, landing pages, catalogs, online stores, and more',
+        uz: "Vizitka saytlar, lendinglar, kataloglar, internet-do‘konlar va yana ko‘plab imkoniyatlar!"
       }
     },
     {
       slug: 'telegram-bot-development',
       title: {
         ru: 'Разработка Telegram-ботов',
-        en: 'Telegram Bot Development ',
-        uz: 'Telegram-botlarini yaratish'
+        en: 'Development of ChatBots',
+        uz: 'Telegram-botlar ishlab chiqish'
       },
       imagePath: tgbot,
       description: {
-        ru: 'Комплексная разработка чат-ботов: от проектирования функционала до программирования и запуска. Обеспечиваем высокую производительность, защиту данных и удобство взаимодействия для пользователей.',
-        en: 'Comprehensive chatbot development: from functionality design to programming and launch. We ensure high performance, data protection, and user-friendly interaction.',
-        uz: "Chat-botlarni keng qamrovda rivojlantirish: funktsional dizayndan dasturlash va ishga tushirishgacha. Biz foydalanuvchilar uchun yuqori unumdorlik, ma'lumotlarni himoya qilish va o'zaro aloqa qilish qulayligini ta'minlaymiz"
+        ru: 'Чат-боты для техподдержки, онлайн-магазинов, доставки еды, AI-ассистентов и приложений Telegram app',
+        en: 'Chatbots for technical support, online stores, food delivery, AI assistants, and Telegram app applications.',
+        uz: "Texnik qo‘llab-quvvatlash, onlayn do‘konlar, oziq-ovqat yetkazib berish, AI-assistentlar va Telegram ilovalari uchun chat-botlar yaratish"
       }
     },
     {
@@ -120,25 +119,20 @@ const ServiceItem = () => {
     },
   ]
 
-  // Update the state based on the slug using useEffect
   useEffect(() => {
-    // Find the matching data by slug
     const matchedService = dataAndSlugFilter.find(item => item.slug === slug)
 
-    // If matched, update the state with the relevant information
     if (matchedService) {
       setTitle(matchedService.title)
       setDescription(matchedService.description)
-      setImageUrl(matchedService.imagePath || slugImage) // Use specific image or fallback to default
+      setImageUrl(matchedService.imagePath || slugImage)
     }
   }, [slug])
 
-  // Open modal function
   const openModal = () => {
     setIsModalOpen(true)
   }
 
-  // Close modal function
   const closeModal = () => {
     setIsModalOpen(false)
   }

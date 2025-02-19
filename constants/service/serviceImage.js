@@ -1,7 +1,5 @@
-import tg from '@/public/images/serviceImageInfo/tg.png'
 import Advertising from '@/public/images/serviceImageInfo/Advertising.png'
 import SEO from '@/public/images/serviceImageInfo/SEO.png'
-import SMM from '@/public/images/serviceImageInfo/SMM.png'
 import Branding from '@/public/images/serviceImageInfo/Branding.png'
 
 export const serviceImageData = [
@@ -50,104 +48,66 @@ export const serviceImageData = [
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	{
 	  slug: 'telegram-bot-development',
-	  img: tg,
+	  img: 'https://ucarecdn.com/d6f07050-8e6c-43aa-bd4b-51e35fe2a374/-/preview/1000x1000/',
 	  title: {
-		ru: 'Для чего нужна\nэта услуга',
-		en: 'Why You Need This Service',
-		uz: 'Bu xizmat nima uchun kerak?'
+		ru: 'Цены',
+		en: 'Pricing',
+		uz: 'Narxlar'
 	  },
 	  subtitle: {
-		ru: 'Разработка Telegram ботов помогает автоматизировать взаимодействие с клиентами, экономить время и улучшить качество обслуживания. Боты могут обрабатывать запросы, принимать заказы и предоставлять информацию 24/7.',
-		en: 'Developing Telegram bots helps automate client interactions, saving time and improving service quality. Bots can handle requests, take orders, and provide information 24/7.',
-		uz: "Telegram-botlarini rivojlantirish mijozlar bilan aloqani avtomatlashtirishga, vaqtni tejashga va xizmat ko‘rsatish sifatini oshirishga yordam beradi. Botlar 24/7 so'rovlarni qayta ishlashi, buyurtmalar olishi va ma'lumot taqdim etishlari mumkin."
+		ru: 'Стоимость зависит от функционала и сложности бота. Стоимость на простого бота стартует от 1 млн сумов',
+		en: "The cost depends on the functionality and complexity of the bot. The price for a basic bot starts from 1 million UZS (100$).",
+		uz: "Narx botning funksionalligi va murakkabligiga bog‘liq. Oddiy bot narxi 1 million so‘mdan boshlanadi"
 	  }
 	},
 	{
 	  slug: 'telegram-bot-development',
-	  img: 'https://ucarecdn.com/327eed30-073c-4729-a985-f3d95e7c68dc/-/preview/230x230/',
+	  img: 'https://ucarecdn.com/4aff55b5-b171-4fe3-9062-3b1f93af3948/-/preview/1000x999/',
 	  title: {
-		ru: 'Как это работает',
-		en: 'How It Works',
-		uz: 'Bu qanday ishlaydi'
+		ru: 'Сроки',
+		en: 'Timelines',
+		uz: 'Muddati '
 	  },
 	  subtitle: {
-		ru: 'Бот работает как виртуальный помощник, моментально реагируя на запросы пользователей. Это увеличивает скорость обслуживания, улучшает клиентский опыт и позволяет быстро решать задачи, от заказа до консультации.',
-		en: 'The bot acts as a virtual assistant, instantly responding to user queries. This increases service speed, improves the customer experience, and allows for quick task resolutions, from orders to consultations. ',
-		uz: "Bot virtual yordamchi sifatida ishlaydi, foydalanuvchi so‘rovlariga darrov javob beradi. Bu xizmat ko'rsatish tezligini oshiradi, mijozlar tajribasini yaxshilaydi va buyurtma berishdan to konsultatsiyagacha vazifalarni tezda hal qilish imkonini beradi."
+		ru: "Разработка базового бота займет от 3 до 10 дней. В среднем разработка длится 1 - 2 недели.",
+		en: "Developing a basic bot takes from 3 to 10 days. On average, development lasts 1 - 2 weeks.",
+		uz: "Asosiy botni ishlab chiqish 3 kundan 10 kungacha vaqt oladi. O‘rtacha ishlab chiqish muddati 1-2 hafta."
 	  }
 	},
 	{
 	  slug: 'telegram-bot-development',
-	  img: 'https://ucarecdn.com/650068a2-cc46-4457-9900-3eae3c7a5abf/-/preview/230x230/',
+	  img: 'https://ucarecdn.com/78ce2e5a-4242-4450-99eb-c03ce57f619a/-/preview/1000x999/',
 	  title: {
-		ru: 'Что я получу',
-		en: 'What You Will Get  ',
-		uz: 'Men nimaga ega bo’laman'
+		ru: 'Результат',
+		en: 'Result',
+		uz: 'Natija '
 	  },
 	  subtitle: {
-		ru: 'Вы получите удобного и умного помощника, который автоматизирует рутинные процессы, сокращает время обработки запросов и повышает удовлетворённость клиентов, улучшая их взаимодействие с вашим бизнесом.',
-		en: 'You will receive a smart and convenient assistant that automates routine processes, reduces query handling time, and enhances customer satisfaction by improving their interaction with your business.  ',
-		uz: "Muntazam jarayonlarni avtomatlashtiradigan, so'rovlarni ko'rib chiqish vaqtini qisqartiradigan va mijozlarning qoniqishini oshiradigan, ularning biznesingiz bilan o'zaro aloqani yaxshilaydigan qulay va aqlli yordamchiga ega bo’lasiz."
+		ru: "Клиент получает завершенного Telegram-бота на сервере, готового к автоматизирующего заявки, продажи и поддержку клиентов",
+		en: "The client receives a fully completed Telegram bot on a server, ready to automate applications, sales, and customer support.",
+		uz: "Mijoz serverda to‘liq tayyor Telegram-botni oladi. U avtomatik ravishda buyurtmalarni qabul qiladi, savdolarni yuritadi va mijozlarni qo‘llab-quvvatlaydi."
 	  }
 	},
-	{
-	  slug: 'smm',
-	  img: SMM,
-	  title: {
-		ru: 'Для чего нужна\nэта услуга',
-		en: 'Why You Need This Service',
-		uz: 'Bu xizmat nima uchun kerak?'
-	  },
-	  subtitle: {
-		ru: 'SMM помогает вашему бизнесу быть заметным в социальных сетях. Это инструмент для привлечения и удержания внимания целевой аудитории, увеличения узнаваемости бренда и взаимодействия с клиентами.',
-		en: 'SMM helps your business stay visible on social media. It’s a tool for attracting and retaining your target audience’s attention, increasing brand awareness, and interacting with clients.  ',
-		uz: "SMM biznesingiz ijtimoiy tarmoqlarda ko'rinib turishga yordam beradi. Bu maqsadli auditoriyani jalb qilishga va e'tiborini ushlab qolishga, brendni ko’proq tanilishga va mijozlar bilan o'zaro aloqani oshirishga qaratilgan vosita."
-	  }
-	},
-	{
-	  slug: 'smm',
-	  img: 'https://ucarecdn.com/327eed30-073c-4729-a985-f3d95e7c68dc/-/preview/230x230/',
-	  title: {
-		ru: 'Как это работает',
-		en: 'How It Works',
-		uz: 'Bu qanday ishlaydi'
-	  },
-	  subtitle: {
-		ru: 'SMM увеличивает вашу видимость в социальных сетях, делая ваш контент доступным для тех, кто заинтересован в ваших услугах или товарах. Это способствует росту аудитории и повышению уровня доверия.',
-		en: 'SMM enhances your presence on social networks, making your content accessible to those interested in your services or products. It helps grow your audience and build trust.',
-		uz: "SMM ijtimoiy tarmoqlardagi ko'rinishingizni oshiradi, shunda xizmatlaringiz yoki mahsulotlaringiz bilan qiziqayotganlar kontentingizni bemalol ko’ra oladi. Bu auditoriya va ishonch darajasi o'sishiga hissa qo’shadi."
-	  }
-	},
-	{
-	  slug: 'smm',
-	  img: 'https://ucarecdn.com/650068a2-cc46-4457-9900-3eae3c7a5abf/-/preview/230x230/',
-	  title: {
-		ru: 'Что я получу',
-		en: 'What You Will Get  ',
-		uz: 'Men nimaga ega bo’laman'
-	  },
-	  subtitle: {
-		ru: 'Вы получите эффективную стратегию продвижения, которая увеличит количество подписчиков, улучшит взаимодействие с клиентами и повысит конверсию ваших предложений, превращая подписчиков в лояльных клиентов.',
-		en: 'You will receive an effective promotion strategy that will increase the number of followers, improve client interactions, and boost the conversion of your offers, turning followers into loyal customers.',
-		uz: "Siz obunachilar sonini ko'paytiradigan, mijozlar bilan o'zaro aloqani yaxshilaydigan va takliflaringizning konversiyasini oshiradigan, obunachilarni sodiq mijozlarga aylantiradigan samarali reklama strategiyasiga ega bo’lasiz."
-	  }
-	},
+
+	
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
 	{
 	  slug: 'ads-launch',
 	  img: Advertising,

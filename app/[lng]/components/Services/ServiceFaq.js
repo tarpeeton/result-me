@@ -94,7 +94,10 @@ const DATA_FOR_FAQ = [
             }
           }
     ]},
-   
+
+
+
+
 ];
 
 export const ServiceFaq = () => {
@@ -108,7 +111,6 @@ export const ServiceFaq = () => {
     setActiveIndex(activeIndex === index ? null : index)
   }
 
-  console.log(slug , 'slug')
 
   useEffect(() => {
     const category = DATA_FOR_FAQ.find(item => item.slug === slug);
