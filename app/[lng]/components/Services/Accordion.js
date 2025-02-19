@@ -98,7 +98,7 @@ const FAQAccordion = () => {
   }, [activeIndex])
 
   return (
-    <div className='w-full max-w-full mx-auto  p-4 mdl:p-[20px] 3xl:p-[30px] '>
+    <section className='w-full max-w-full mx-auto  p-4 mdl:p-[20px] 3xl:p-[30px] '>
       <h2 className='text-[28px] font-bold mb-[30px] mdl:text-[50px]'>
         {t('title')}
       </h2>
@@ -151,7 +151,7 @@ const FAQAccordion = () => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   )
 }
 

@@ -109,8 +109,7 @@ const Navigation = () => {
   };
 
   return (
-    <>
-      {/* Desktop Navigation */}
+    <header>
       <nav className="hidden 2xl:flex px-[20px] gap-[50px] border-t border-t-[#F0F0F0] 2xl:items-center">
         {navItems.map((item, index) => (
           <div
@@ -135,13 +134,12 @@ const Navigation = () => {
             <span
               ref={(el) => (spanRefs.current[index] = el)} // Ref for span element
               className="absolute bottom-[-15px] left-0 h-[5px] bg-[#7B72EB] rounded-tl-[5px] rounded-tr-[5px]"
-              style={{ width: 0 }} // Start with width 0 for animation
+              style={{ width: 0 }} 
             ></span>
           </div>
         ))}
       </nav>
 
-      {/* Mobile Carousel Navigation */}
       <div className="2xl:hidden w-full  pt-[20px] border-t border-t-[#F0F0F0] ">
         <Carousel
           responsive={responsive}
@@ -170,7 +168,7 @@ const Navigation = () => {
           ))}
         </Carousel>
       </div>
-    </>
+    </header>
   );
 };
 

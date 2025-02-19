@@ -360,7 +360,7 @@ const itemData = {
 };
 
 const ItemInfo = () => {
-  const { slug, lng } = useParams(); // Get the current slug and language from the URL
+  const { slug, lng } = useParams(); 
   const [content, setContent] = useState({
     title: { ru: "", uz: "", en: "" },
     subtitle: { ru: [], uz: [], en: [] },
@@ -369,13 +369,12 @@ const ItemInfo = () => {
 
   useEffect(() => {
     if (slug && itemData[slug]) {
-      // Set the content based on the slug and language
       const selectedContent = {
         title: itemData[slug].title || {
           ru: "Услуга",
           uz: "Xizmat",
           en: "Service",
-        }, // Fallback if the language doesn't exist
+        },
         subtitle: itemData[slug].subtitle[lng] || [
           "Описание услуги будет здесь.",
         ],
@@ -383,7 +382,6 @@ const ItemInfo = () => {
       };
       setContent(selectedContent);
     } else {
-      // Default content if the slug is invalid or not found
       setContent({
         title: { ru: "Услуга", uz: "Xizmat", en: "Service" },
         subtitle: ["Описание услуги будет здесь."],
@@ -393,7 +391,7 @@ const ItemInfo = () => {
   }, [slug, lng]);
 
   return (
-    <div className="mt-[20px] mdl:mt-[20px] 3xl:mt-[25px] rounded-[30px] mdl:rounded-[40px] flex flex-col 3xl:flex-row py-[30px] px-[24px] mdl:py-[50px] mdl:px-[40px] 3xl:py-[80px] 3xl:px-[70px] bg-white mx-[16px] mdl:mx-[20px] 3xl:mx-[30px]">
+    <section className="mt-[20px] mdl:mt-[20px] 3xl:mt-[25px] rounded-[30px] mdl:rounded-[40px] flex flex-col 3xl:flex-row py-[30px] px-[24px] mdl:py-[50px] mdl:px-[40px] 3xl:py-[80px] 3xl:px-[70px] bg-white mx-[16px] mdl:mx-[20px] 3xl:mx-[30px]">
       <div className="2xl:w-[50%]">
         <h2 className="text-[28px] 2xl:w-[80%] 4xl:w-[60%] mdl:text-[40px] 3xl:text-[50px] font-bold">
           {content.title[lng]}
@@ -414,7 +412,7 @@ const ItemInfo = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

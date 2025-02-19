@@ -356,7 +356,7 @@ const InfoCard = () => {
 
   const { lng } = useParams()
   return (
-    <div className='flex flex-col mt-[80px] gap-[10px] 3xl:mx-[30px]'>
+    <section className='flex flex-col mt-[80px] gap-[10px] 3xl:mx-[30px]'>
       {/* Slider for screens larger than 750px */}
       {filteredData.length > 0 && (
         <div className='hidden slg:block w-full cursor-pointer'>
@@ -422,7 +422,7 @@ const InfoCard = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -217,8 +217,13 @@ export const ServiceFaq = () => {
     });
   }, [activeIndex]);
 
+  if (faqDataWithSlug.length === 0) {
+    return null;
+  }
+  
+
   return (
-    <div className="w-full max-w-full mx-auto mt-11  p-4 mdl:p-[20px] 3xl:p-[30px] 2xl:mt-[100px] ">
+    <section className="w-full max-w-full mx-auto mt-11  p-4 mdl:p-[20px] 3xl:p-[30px] 2xl:mt-[100px] ">
       <h2 className="text-[28px] font-bold mb-[30px] mdl:text-[45px]">
         {t("title")}
       </h2>
@@ -270,6 +275,6 @@ export const ServiceFaq = () => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };

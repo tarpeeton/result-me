@@ -40,11 +40,11 @@ const Service = () => {
       <ItemInfo />
       <InfoCard />
       <CostCard  />
-      <div className="px-[24px]">
+      <section className="px-[24px] pb-14 2xl:pb-24">
         <CaseFilter
           title={{ ru: "Наши кейсы", uz: "Bizning Keyslar", en: "Our cases" }}
         />
-      </div>
+      </section>
       <ServiceFaq />
     </main>
   );

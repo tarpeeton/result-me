@@ -138,17 +138,18 @@ const ServiceItem = () => {
   }
 
   return (
-    <div className='mx-[16px] 3xl:mx-[30px] mt-[20px] mdl:mt-[30px] '>
+    <section className='mx-[16px] 3xl:mx-[30px] mt-[20px] mdl:mt-[30px] '>
       <div className='bg-white100 px-[16px] pt-[16px] rounded-[30px] flex flex-col 3xl:flex-row 3xl:justify-center 3xl:items-center 3xl:p-[40px]'>
-        {/* IMAGE */}
         <div className='rounded-[30px] w-full 3xl:mx-[12px] 3xl:w-[50%] 3xl:order-2'>
           <Image
             className='rounded-[30px] object-cover'
             src={imageUrl}
+            
             width={1000}
             height={900}
             quality={100}
-            alt={title}
+            alt={title[lng]}
+            priority
           />
         </div>
         {/* TEXT INFO */}
@@ -176,7 +177,7 @@ const ServiceItem = () => {
         </div>
       </div>
       <ServiceModal isOpen={isModalOpen} onClose={closeModal} />
-    </div>
+    </section>
   )
 }
 
