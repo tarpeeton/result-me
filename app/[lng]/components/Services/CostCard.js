@@ -83,7 +83,7 @@ const CostCard = () => {
         >
           {filteredData.map((card, index) => (
             <SwiperSlide key={index} className="w-full relative">
-              <div className="relative cursor-pointer max-h-[1120px] min-h-[1120px]  border px-[24px] py-[30px] border-[#F0F0F0] rounded-[30px] mt-[20px]  pb-[150px]">
+              <div className="relative cursor-pointer max-h-[1480px] min-h-[1480px]  border px-[24px] py-[30px] border-[#F0F0F0] rounded-[30px] mt-[20px]  pb-[150px]">
                 <div>
                   <p className="text-[20px] font-semibold 2xl:font-bold mdl:text-[30px] text-titleDark">
                     {card?.title[lng]}
