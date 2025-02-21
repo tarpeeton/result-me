@@ -83,7 +83,8 @@ const CostCard = () => {
         >
           {filteredData.map((card, index) => (
             <SwiperSlide key={index} className="w-full relative">
-              <div className="relative cursor-pointer max-h-[1480px] min-h-[1480px]  border px-[24px] py-[30px] border-[#F0F0F0] rounded-[30px] mt-[20px]  pb-[150px]">
+              <div className="relative 2xl:min-h-[1100px] 2xl:h-[1150px] cursor-pointer   border px-[24px] py-[30px] border-[#F0F0F0] rounded-[30px] mt-[20px]  pb-[150px]">
+                
                 <div>
                   <p className="text-[20px] font-semibold 2xl:font-bold mdl:text-[30px] text-titleDark">
                     {card?.title[lng]}
@@ -123,9 +124,11 @@ const CostCard = () => {
                   ))}
                 </div>
 
+
+
                 <div className="h-[1px] w-full bg-[#F0F0F0] mt-[25px] mb-[40px]" />
                 <button
-                  onClick={() => openModal(card.price, card.title)} // Passing title as well
+                  onClick={() => openModal(card.price, card.title)} 
                   className="text-white text-center text-[15px] font-bold w-[90%] mx-auto py-[15px] 3xl:py-[24px] px-[20px] bg-violet100 rounded-[100px] mt-[7px] absolute 2xl:text-[18px] left-0 right-0 bottom-[20px]"
                 >
                   {lng === "ru"
