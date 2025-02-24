@@ -1,47 +1,18 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { useParams } from 'next/navigation'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation'
+import { Autoplay } from 'swiper/modules';
+
+
 
 const InfoCard = () => {
   const { slug } = useParams() // Getting the slug from the URL
   const [filteredData, setFilteredData] = useState([]) // State to store filtered data
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 400,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    speed: 600,
-    arrows: false,
-    autoplay: true,
-    responsive: [
-      {
-        breakpoint: 1300,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          rows: 1,
-          infinite: true
-        }
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true
-        }
-      },
-      {
-        breakpoint: 750, // Disable slider for screens smaller than 750px
-        settings: 'unslick'
-      }
-    ]
-  }
+  const [activeIndex, setActiveIndex] = useState(0);
+  
 
   const data = {
     'web-development': [
@@ -173,48 +144,43 @@ const InfoCard = () => {
       }
     ],
 
-    'ads-launch': [
+    'context-launch': [
       {
-        title: { ru: 'Персонализированная реклама', uz: 'Shaxsiylashtirilgan reklama', en: 'Personalized Advertising' },
+        title: { ru: 'Целенаправленность', uz: 'Aniqlik', en: 'Targeted Approach' },
         description: {
-          ru: 'Настраиваем кампании, которые обращаются напрямую к вашей целевой аудитории, максимально повышая вероятность конверсии.',
-          uz: "Maqsadli auditoriyangizga to'g'ridan-to'g'ri murojaat qiladigan, konversiya ehtimolini maksimal darajaga oshirgan holda kampaniyalarni sozlashtiramiz.",
-          en: 'We set up campaigns that speak directly to your target audience, maximizing the chances of conversion. '
+          ru: 'Реклама показывается только вашей целевой аудитории по нужным запросам, что увеличивает конверсию и снижает ненужные расходы.',
+          uz: "Reklama faqat kerakli auditoriyaga ko‘rsatiladi, bu esa konversiyani oshiradi va keraksiz xarajatlarni kamaytiradi.",
+          en: 'Ads are displayed only to your target audience based on relevant search queries, increasing conversion rates and reducing unnecessary expenses.'
         }
       },
       {
-        title: { ru: 'Гибкий бюджет', uz: 'Moslashuvchan byudjet', en: 'Flexible Budget ' },
+        title: { ru: 'Скорость', uz: 'Tezkor natijalar', en: 'Speed' },
         description: {
-          ru: 'Мы эффективно управляем вашим рекламным бюджетом, обеспечивая максимальную отдачу с минимальными затратами.',
-          uz: "Minimal xarajatlar bilan maksimal darajada qaytarishni ta'minlab, reklama byudjetingizni samarali boshqaramiz.",
-          en: 'We efficiently manage your ad budget, ensuring maximum return with minimal costs.'
+          ru: 'Реклама начинает привлекать клиентов уже в день запуска. Быстрая настройка и моментальный отклик обеспечивают поток заявок без ожидания.',
+          uz: "Reklama ishga tushirilgan kuni mijozlarni jalb qila boshlaydi. Tez sozlash va zudlik bilan javob olish – ortiqcha kutishsiz arizalar oqimi.",
+          en: 'Ads start attracting clients on the very first day. Fast setup and instant feedback ensure a steady flow of leads without delays.'
         }
       },
       {
-        title: { ru: 'Точный таргетинг', uz: 'Aniq targeting', en: 'Precise Targeting' },
+        title: { ru: 'Стоимость', uz: 'Budjet nazorati', en: 'Cost Efficiency' },
         description: {
-          ru: 'Реклама показывается только тем, кто заинтересован в ваших услугах или продуктах, что повышает результативность кампании.',
-          uz: "Reklama faqat sizning xizmatlaringiz yoki mahsulotlaringiz bilan qiziqayotgan odamlarga ko'rsatiladi, bu esa kampaniya samaradorligini oshiradi",
-          en: 'Ads are shown only to those interested in your services or products, increasing campaign effectiveness.'
+          ru: 'Платите только за реальные клики, без переплат. Гибкие настройки бюджета позволяют эффективно распределять средства и снижать затраты.',
+          uz: "Siz faqat haqiqiy bosishlar uchun to‘laysiz, ortiqcha xarajatlarsiz. Budjetni moslashtirish orqali mablag‘laringizni samarali taqsimlash mumkin.",
+          en: 'You pay only for actual clicks, avoiding overpayments. Flexible budget settings allow for efficient fund allocation and cost reduction.'
         }
       },
       {
-        title: { ru: 'Постоянный мониторинг и оптимизация', uz: 'Doimiy monitoring va optimallashtirish', en: 'Continuous Monitoring and Optimization' },
+        title: { ru: 'Отчетность', uz: 'Shaffof hisobotlar', en: 'Transparency' },
         description: {
-          ru: 'Мы следим за ходом кампании в режиме реального времени и вносим изменения для достижения наилучших результатов.',
-          uz: " Biz real vaqt rejimida kampaniyaning ish yuritishini kuzatib boramiz va eng yaxshi natijalarga erishish uchun o'zgarishlar kiritamiz.",
-          en: 'We track the campaign’s performance in real-time and make adjustments to achieve the best results.'
+          ru: 'Прозрачная статистика: отчёты по регионам, полу, возрасту помогут вам лучше изучить аудиторию и улучшать эффективность рекламы.',
+          uz: "Hudud, yosh va jins bo‘yicha batafsil statistika orqali auditoriyangizni yaxshiroq tushunasiz va reklama samaradorligini oshirasiz.",
+          en: 'Clear statistics: reports by region, gender, and age help you better understand your audience and improve advertising performance.'
         }
       },
-      {
-        title: { ru: 'Подробная отчетность', uz: 'Batafsil hisobot', en: 'Detailed Reporting' },
-        description: {
-          ru: 'Предоставляем регулярные отчеты, чтобы вы видели четкие результаты и понимали, как работает ваша реклама.',
-          uz: "Muntazam hisobotlarni taqdim etamiz, shunda aniq natijalarni ko'rasiz va reklamangiz qanday ishlashini tushunasiz.",
-          en: 'We provide regular reports so you can clearly see the results and understand how your ads are performing.  '
-        }
-      }
     ],
+
+
+
 
     seo: [
       {
@@ -357,21 +323,33 @@ const InfoCard = () => {
   const { lng } = useParams()
   return (
     <section className='flex flex-col mt-[80px] gap-[10px] 3xl:mx-[30px]'>
-      {/* Slider for screens larger than 750px */}
       {filteredData.length > 0 && (
         <div className='hidden slg:block w-full cursor-pointer'>
-          <Slider {...settings} className='w-full'>
+          <Swiper 
+           modules={[Autoplay]}
+           spaceBetween={12}
+           loop={true}
+           speed={700}
+           autoplay={{ delay: 3000, disableOnInteraction: false }}
+           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+           breakpoints={{
+             320: { slidesPerView: 1 },
+             640: { slidesPerView: 2 },
+             1024: { slidesPerView: 3 }
+           }}
+          className='w-full'>
             {filteredData.map((item, index) => (
-              <div
+              <SwiperSlide key={index}>
+ <div
                 key={index}
-                className={`w-full mdl:min-w-full 4xl:max-w-[50%] rounded-[30px] p-[30px] pb-[26px] flex flex-col justify-between 2xl:max-w-[98%] 2xl:min-h-[450px] 4xl:min-h-[600px] 3xl:py-[40px] 3xl:px-[40px] ${
-                  index === 0 ? 'bg-violet100' : 'bg-[#F4F3FF]'
+                className={`w-full  rounded-[30px] 2xl:rounded-[60px] 2xl:h-[350px] p-[30px] pb-[26px] flex flex-col justify-between   3xl:py-[40px] 3xl:px-[40px] ${
+                   activeIndex === index  ? 'bg-violet100 ' : 'bg-[#ededf6]'
                 }`}
               >
                 <div className='w-[60%] 3xl:w-[100%]'>
                   <p
                     className={`text-[23px] mdl:text-[35px] ${
-                      index === 0 ? 'text-white100' : 'text-titleDark'
+                      activeIndex === index  ?  'text-white100' : 'text-titleDark'
                     } font-bold 4xl:text-[50px]`}
                   >
                     {item.title[lng]}
@@ -380,15 +358,17 @@ const InfoCard = () => {
                 <div className='mt-[15px] mdl:text-[18px] w-[85%] mdl:mt-[40px]'>
                   <p
                     className={`text-[14px] mdl:text-[18px] ${
-                      index === 0 ? 'text-white100' : 'text-[#454545]'
+                      activeIndex === index  ? 'text-white100' : 'text-[#454545]'
                     } 4xl:text-[20px] font-robotoFlex 3xl:w-[100%]`}
                   >
                     {item.description[lng]}
                   </p>
                 </div>
               </div>
+              </SwiperSlide>
+             
             ))}
-          </Slider>
+          </Swiper>
         </div>
       )}
 

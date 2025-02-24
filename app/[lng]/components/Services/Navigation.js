@@ -42,13 +42,14 @@ const Navigation = () => {
     },
 
     {
-      name: {
-        ru: "Реклама",
-        uz: "Reklama",
-        en: "Ads Launch",
+      "name": {
+        "ru": "Контекстная реклама",
+        "uz": "Kontekstli reklama",
+        "en": "Contextual Advertising"
       },
-      slug: "ads-launch",
+      "slug": "context-launch"
     },
+    
     {
       name: {
         ru: "SEO",

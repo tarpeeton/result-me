@@ -45,9 +45,6 @@ export const serviceImageData = [
 		uz: "Mijoz tayyor, qidiruvda ko‘rinadigan va arizalar uchun Telegram-bot bilan qulay sayt oladi."
 	  }
 	},
-
-
-
 	{
 	  slug: 'telegram-bot-development',
 	  img: 'https://ucarecdn.com/d6f07050-8e6c-43aa-bd4b-51e35fe2a374/-/preview/1000x1000/',
@@ -94,6 +91,50 @@ export const serviceImageData = [
 	
 
 
+	{
+		slug: 'context-launch',
+		img: 'https://ucarecdn.com/d6f07050-8e6c-43aa-bd4b-51e35fe2a374/-/preview/1000x1000/',
+		title: {
+		  ru: 'Цены',
+		  en: 'Pricing',
+		  uz: 'Narxlar'
+		},
+		subtitle: {
+			ru: 'Запуск и ведение контекстной рекламы начинается от 1.3 млн сумов и является ежемесячной оплатой.',
+			en: 'The setup and management of contextual advertising start from 1.3 million UZS per month.',
+			uz: 'Kontekst reklamani ishga tushirish va yuritish 1.3 million so‘mdan boshlanadi va har oylik to‘lov sifatida amalga oshiriladi.'
+		  }
+	  },
+	  {
+		slug: 'context-launch',
+		img: 'https://ucarecdn.com/05c1ed8f-3a18-4185-b226-2061441d1287/-/preview/1000x999/',
+		title: {
+		  ru: 'Сроки',
+		  en: 'Timelines',
+		  uz: 'Muddati '
+		},
+		subtitle: {
+		  ru: "Настройка занимает от 3 дней. Первые результаты ощущается сразу после запуска и становятся лучше со временем.",
+		  en: "The setup process takes at least 3 days. Initial results are noticeable immediately after launch and improve over time.",
+		  uz: "Sozlash 3 kun ichida amalga oshiriladi. Birinchi natijalar reklama ishga tushirilishi bilan seziladi va vaqt o‘tishi bilan yanada yaxshilanadi."
+		}
+	  },
+	  {
+		slug: 'context-launch',
+		img: 'https://ucarecdn.com/7823c92e-79b3-4da0-aef9-d8fec6b534c4/-/preview/1000x999/',
+		title: {
+		  ru: 'Результат',
+		  en: 'Result',
+		  uz: 'Natija '
+		},
+		subtitle: {
+		  ru: "Вы получите горячие лиды, звонки и обращения, от клиентов которые сами ищут вас",
+		  en: "You will receive high-quality leads, calls, and inquiries from clients who are actively searching for your services.",
+		  uz: "Siz issiq liderlar, qo‘ng‘iroqlar va murojaatlar olasiz – mijozlaringiz sizni o‘zlari izlaydi!"
+		}
+	  },
+
+
 
 
 
@@ -108,48 +149,8 @@ export const serviceImageData = [
 
 	
 
-	{
-	  slug: 'ads-launch',
-	  img: Advertising,
-	  title: {
-		ru: 'Для чего нужна\nэта услуга',
-		en: 'Why You Need This Service',
-		uz: 'Bu xizmat nima uchun kerak?'
-	  },
-	  subtitle: {
-		ru: 'Контекстная и таргетированная реклама помогает показывать ваш бизнес именно тем, кто уже заинтересован в ваших товарах или услугах. Это ускоряет привлечение клиентов и увеличивает конверсию.',
-		en: 'Ads are shown to people who are searching for your specific offers or similar products. They are tailored to the right audience, helping you attract potential customers more quickly and accurately.',
-		uz: "Kontekstli va target reklama aynan mahsulotingizga yoki xizmatlaringizga qiziqayotganlarga biznesingizni ko'rsatishga yordam beradi. Bu mijozlarni jalb qilishni tezlashtiradi va konversiyani oshiradi."
-	  }
-	},
-	{
-	  slug: 'ads-launch',
-	  img: 'https://ucarecdn.com/327eed30-073c-4729-a985-f3d95e7c68dc/-/preview/230x230/',
-	  title: {
-		ru: 'Как это работает',
-		en: 'How It Works',
-		uz: 'Bu qanday ishlaydi'
-	  },
-	  subtitle: {
-		ru: 'Реклама показывается людям, которые ищут именно ваши предложения или похожие товары. Она настраивается на нужную аудиторию, что помогает быстрее и точнее привлечь потенциальных клиентов.',
-		en: 'Ads are shown to people who are searching for your specific offers or similar products. They are tailored to the right audience, helping you attract potential customers more quickly and accurately.',
-		uz: "Reklama aynan sizning takliflaringizni yoki o'xshash mahsulotlarni qidirayotgan odamlarga ko'rsatiladi. U kerakli auditoriyaga sozlanadi, bu potentsial mijozlarni yanada tez va to’g’ri jalb qilishga yordam beradi."
-	  }
-	},
-	{
-	  slug: 'ads-launch',
-	  img: 'https://ucarecdn.com/650068a2-cc46-4457-9900-3eae3c7a5abf/-/preview/230x230/',
-	  title: {
-		ru: 'Что я получу',
-		en: 'What You Will Get  ',
-		uz: 'Men nimaga ega bo’laman'
-	  },
-	  subtitle: {
-		ru: 'Вы получите поток целевых клиентов, увеличение продаж и более эффективное использование рекламного бюджета. Ваши объявления будут работать на конкретную аудиторию, готовую к покупке.',
-		en: 'You will get a flow of targeted clients, increased sales, and more efficient use of your advertising budget. Your ads will work for a specific audience ready to make a purchase.',
-		uz: "Siz maqsadli mijozlar oqimiga ega bo’lib, sotuvlaringiz ko'payadi va reklama byudjetidan samaraliroq foydalanasiz. Eʼlonlaringiz sotib olishga tayyor bo'lgan muayyan auditoriyaga mo'ljallangan bo’ladi."
-	  }
-	},
+
+	
 	{
 	  slug: 'seo',
 	  img: SEO,

@@ -174,6 +174,84 @@ Agar o‘z serveringiz bo‘lsa, botni unga joylashtirishimiz mumkin – bu hold
       },
     ],
   },
+  {
+    "slug": "context-launch",
+    "faqs": [
+      {
+        "question": {
+          "ru": "Что такое контекстная реклама простыми словами?",
+          "en": "What is contextual advertising in simple terms?",
+          "uz": "Kontekst reklama nima?"
+        },
+        "answer": {
+          "ru": "Вы платите только за результат, а не за показы. Результатом могут быть переходы на сайт, звонки, заявки или покупки. Мы настраиваем рекламу так, чтобы привлекать только целевых клиентов.",
+          "en": "You pay only for results, not for ad impressions. The results can be website visits, phone calls, inquiries, or purchases. We configure your ads to attract only the most relevant clients.",
+          "uz": "Siz faqat natijalar uchun to‘laysiz, ko‘rsatishlar uchun emas. Natijalar – saytga o‘tishlar, qo‘ng‘iroqlar, buyurtmalar yoki xaridlardir. Biz reklamani faqat kerakli mijozlarga yo‘naltiramiz."
+        }
+      },
+      {
+        "question": {
+          "ru": "Как я могу быть уверен, что мои деньги тратятся именно на рекламу?",
+          "en": "How can I be sure my money is spent on actual advertising?",
+          "uz": "Mening pullarim aynan reklama uchun sarflanayotganiga qanday ishonchim komil bo‘ladi?"
+        },
+        "answer": {
+          "ru": "Мы можем в реальном времени показать рекламный кабинет, где видно, сколько потрачено и какие результаты получены. Также можно запустить кампанию в вашем рекламном кабинете, чтобы вы сами контролировали расходы.",
+          "en": "We can provide real-time access to the ad account, showing exactly how much has been spent and what results have been achieved. Additionally, we can run the campaign directly from your ad account, so you have full control over expenses.",
+          "uz": "Sizga real vaqt rejimida reklamalar kabinetini ko‘rsatishimiz mumkin – qancha sarflanganini va qanday natijalar olinganini ko‘rasiz. Shuningdek, kampaniyani o‘z reklama kabinetingizda ishga tushirishimiz mumkin, shunda siz barcha xarajatlarni nazorat qilasiz."
+        }
+      },
+      {
+        "question": {
+          "ru": "Можно ли запустить рекламу в моем рекламном кабинете?",
+          "en": "Can you launch ads from my existing ad account?",
+          "uz": "Reklamani o‘z kabinetimda yuritsam bo‘ladimi?"
+        },
+        "answer": {
+          "ru": "Да, но если кабинет новый, его нужно полностью настраивать с нуля. Стоимость создания и настройки кабинета на ваше имя составляет 1,3 млн сумов, после чего вы получите полный доступ.",
+          "en": "Yes, but if your account is new, it will require full setup from scratch. The cost of setting up a new ad account in your name is 1.3 million UZS, after which you will have full access.",
+          "uz": "Ha, lekin yangi hisob qaydnomasini sozlash va to‘liq moslashtirish talab etiladi. Shaxsiy reklama kabinetini yaratish va sozlash narxi 1.3 million so‘m, shundan keyin sizga to‘liq kirish huquqi beriladi."
+        }
+      },
+      {
+        "question": {
+          "ru": "Где лучше запускать рекламу: в Google или Яндекс?",
+          "en": "Which platform is better for advertising: Google or Yandex?",
+          "uz": "Google yoki Yandex – qaysi biri yaxshiroq?"
+        },
+        "answer": {
+          "ru": "Если ваш бизнес ориентирован на международную аудиторию – Google. Если основная целевая аудитория в СНГ – стоит протестировать Яндекс. Оптимальный вариант – запустить в обеих системах и выбрать лучший источник заявок.",
+          "en": " If your business targets an international audience – Google is the best choice. If your primary audience is in the CIS region , Yandex is worth testing. The most effective approach is to launch campaigns on both platforms and determine which generates the best leads.",
+          "uz": "Agar biznesingiz xalqaro auditoriyaga mo‘ljallangan bo‘lsa – Google. Agar mijozlaringiz asosan MDH davlatlarida bo‘lsa – Yandex sinab ko‘rilishi kerak. Eng yaxshi usul – ikkala platformada ham reklama ishga tushirish va eng samarali manbani tanlash."
+        }
+      },
+      {
+        "question": {
+          "ru": "Могу ли я сам управлять рекламной кампанией после запуска?",
+          "en": "Can I manage the advertising campaign myself after launch?",
+          "uz": "Reklama kampaniyalarini o‘zim boshqarishim mumkinmi?"
+        },
+        "answer": {
+          "ru": "Да, у нас есть тариф с единовременной оплатой и трёхмесячным сопровождением с обучением, где мы объясним, как вести кампанию самостоятельно и повышать её эффективность.",
+          "en": "Yes! We offer a one-time payment package with three months of support and training, where we teach you how to manage your campaign and improve its effectiveness.",
+          "uz": "Ha, bizda bir martalik to‘lov va 3 oylik qo‘llab-quvvatlash va o‘qitish opsiyasi mavjud. Unda siz mustaqil reklama yuritish va natijalarni yaxshilashni o‘rganasiz."
+        }
+      },
+      {
+        "question": {
+          "ru": "Как долго нужно вести рекламу и когда её можно остановить?",
+          "en": "How long should I run ads, and when can I stop?",
+          "uz": "Reklamani qancha muddat davom ettirish kerak va uni qachon to‘xtatish mumkin?"
+        },
+        "answer": {
+          "ru": "Рекламу лучше вести постоянно, чтобы стабильно привлекать клиентов. Со временем её стоимость снижается: правильно настроенная кампания автоматически уменьшает цену за результат, пока не достигнет минимально возможного уровня.",
+          "en": "Advertising should ideally run continuously to maintain a steady flow of customers. Over time, costs decrease—well-optimized campaigns automatically lower the cost per result until they reach the most efficient level.",
+          "uz": "Reklamani doimiy ravishda yuritish tavsiya etiladi, shunda mijozlarni doimiy jalb qilasiz. Vaqt o‘tishi bilan reklamaning narxi kamayadi – yaxshi sozlangan kampaniya natijalar narxini avtomatik ravishda pasaytiradi."
+        }
+      },
+    ]
+  }
+  
 ];
 
 export const ServiceFaq = () => {

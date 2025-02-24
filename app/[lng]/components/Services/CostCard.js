@@ -9,9 +9,28 @@ import { Autoplay , Navigation } from 'swiper/modules';
 import 'swiper/css';
 import { GrNext , GrPrevious } from "react-icons/gr";
 
+
+
+
+
+
+
+
+
 const CostCard = () => {
   const { slug, lng } = useParams();
   const [filteredData, setFilteredData] = useState([]);
+  const [maxHeight, setMaxHeight] = useState(0);
+  const cardRefs = useRef([]);
+
+
+  useEffect(() => {
+    if (cardRefs.current.length > 0) {
+      const heights = cardRefs.current.map((el) => el?.clientHeight || 0);
+      setMaxHeight(Math.max(...heights));
+    }
+  }, [filteredData]);
+  
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -82,8 +101,8 @@ const CostCard = () => {
           }}
         >
           {filteredData.map((card, index) => (
-            <SwiperSlide key={index} className="w-full relative">
-              <div className="relative 2xl:min-h-[1100px] 2xl:h-[1150px] cursor-pointer   border px-[24px] py-[30px] border-[#F0F0F0] rounded-[30px] mt-[20px]  pb-[150px]">
+            <SwiperSlide key={index} className="w-full relative h-full">
+              <div   ref={(el) => (cardRefs.current[index] = el)}  style={{ minHeight: `${maxHeight}px` }} className="relative  h-full  cursor-pointer   border px-[24px] py-[30px] border-[#F0F0F0] rounded-[30px] mt-[20px]  pb-[150px]">
                 
                 <div>
                   <p className="text-[20px] font-semibold 2xl:font-bold mdl:text-[30px] text-titleDark">

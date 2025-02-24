@@ -4,7 +4,7 @@ import smm from '@/public/images/services/smm.svg'
 import Group from '@/public/images/services/Group.svg'
 import seo from '@/public/images/services/seo.svg'
 import branding from '@/public/images/services/branding.svg'
-import doctor from '@/public/images/serviceImage/doctorICON.png'
+
 
 
 
@@ -65,17 +65,17 @@ export const serviceDataMain = [
 	},
 	{
 	  id: 3,
-	  slug: 'ads-launch',
+	  slug: 'context-launch',
 	  name: {
-		ru: 'Запуск рекламы',
-		uz: 'Reklamani ishga tushirish',
-		en: 'Ad Campaign Launch'
-	  },
-	  shortDescription: {
-		ru: 'Настройка рекламы, которая привлекает нужных клиентов и приносит бизнесу больше прибыли',
-		uz: 'Mijozlarni jalb qilish va daromadni oshirish uchun reklama yaratish',
-		en: 'Setting up advertising that attracts the right customers and brings more profit to the business'
-	  },
+		ru: 'Запуск контекстной рекламы',
+		uz: 'Kontekstli reklamani ishga tushirish',
+		en: 'Launching contextual advertising'
+	},
+	shortDescription: {
+		ru: 'Эффективная настройка рекламных кампаний в поисковых сетях Google и Яндекс',
+		uz: 'Google va Yandex qidiruv tarmoqlarida reklama kampaniyalarini samarali sozlash',
+		en: 'Effective setup of advertising campaigns in Google and Yandex search networks'
+	},
 	  icon: Group,
 	  active: true,
 	  main: true
@@ -114,21 +114,5 @@ export const serviceDataMain = [
 	  active: true,
 	  main: true
 	},
-	{
-	  id: 6,
-	  slug: 'doctor-brand',
-	  name: {
-		ru: 'Доктор Бренд',
-		uz: 'Doktor brend',
-		en: 'Doctor Brand'
-	  },
-	  shortDescription: {
-		ru: 'Доступный тариф для врачей и других специалистов из мира медицины для гарантированного увеличения потока пациентов.',
-		uz: "Bu bemorlar soni ko'payishini kafolatlash uchun shifokorlar va  tibbiyot olamidagi boshqa mutaxassislar uchun qulay tarif.",
-		en: 'An affordable plan for doctors and other medical professionals to ensure an increased patient flow.'
-	  },
-	  icon: doctor,
-	  active: true,
-	  main: true
-	},
+	
   ]

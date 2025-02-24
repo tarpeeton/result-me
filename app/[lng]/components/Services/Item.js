@@ -62,17 +62,17 @@ const ServiceItem = () => {
       }
     },
     {
-      slug: 'ads-launch',
+      slug: 'context-launch',
       title: {
-        ru: 'Запуск контекстной и таргетированной рекламы',
-        en: 'Launching Contextual and Targeted Ads',
-        uz: 'Kontekstli va target reklamani ishga tushirish'
+        ru: 'Запуск контекстной рекламы',
+        en: 'Launching contextual advertising',
+        uz: 'Kontekstli reklamani ishga tushirish'
       },
       imagePath: Add,
       description: {
-        ru: 'Мы предлагаем полный цикл услуг по настройке и запуску контекстной и таргетированной рекламы. Наша цель — привести к вам целевых клиентов, увеличив охваты и конверсии с минимальными затратами.',
-        en: 'We offer a full range of services for setting up and launching contextual and targeted ads. Our goal is to bring targeted clients to you, increasing reach and conversions with minimal costs. We configure the ads to be displayed to your target audience at the right time and in the right places.Why You Need  This Service Contextual and targeted advertising helps show your business to those already interested in your products or services. This speeds up customer acquisition and boosts conversion rates.',
-        uz: "Kontekstli va target reklamani o'rnatish va ishga tushirish bo'yicha to'liq siklli xizmatlarni taklif etamiz. Maqsadimiz - minimal xarajat evaziga qamrovlarni va konversiyalarni oshirish bilan birga maqsadli mijozlarni sizga jalb qilishdir. Reklamani faqat maqsadli auditoriyangizga kerakli vaqtda va kerakli joylarda ko'rsatadigan qilib sozlaymiz."
+        ru: 'Эффективная настройка рекламных кампаний в поисковых сетях Google и Яндекс',
+        en: 'Effective setup of advertising campaigns in Google and Yandex search networks',
+        uz: 'Google va Yandex qidiruv tarmoqlarida reklama kampaniyalarini samarali sozlash'
       }
     },
     {
